@@ -39,7 +39,7 @@ def set_user(user, uid, gid, home_dir):
 
 
 def configure_sudo(user):
-    subprocess.run(["usermod", "-aG", GROUP_SUDO, user], check=True)
+    subprocess.run(["usermod", "-aUG", GROUP_SUDO, user], check=True)
     # Set the group GROUP_SUDO to be able to run sudo without authenticating
     with open(SUDO_PATH + user, "w") as f:
         f.write("%" + GROUP_SUDO + " ALL=(ALL) NOPASSWD:ALL\n")
@@ -79,7 +79,7 @@ def main():
 
     configure_sudo(user)
 
-    configure_ssh_auth_sock(gid)
+    # configure_ssh_auth_sock(gid)
 
     os.chdir(home_dir)
     exec_args = ["/usr/sbin/gosu", "/usr/sbin/gosu", user, BASH_PATH]

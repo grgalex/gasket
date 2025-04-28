@@ -115,6 +115,7 @@ ENV LANGUAGE=en_US.UTF-8
 # Configure bash-completion
 RUN echo "[ -f /etc/bash_completion ] && . /etc/bash_completion" >> /etc/bash.bashrc
 
-COPY /files/entrypoint.py /usr/local/bin
+ENTRYPOINT ["/bin/bash"]
 
-ENTRYPOINT ["python3", "/usr/local/bin/entrypoint.py"]
+# COPY /files/entrypoint.py /usr/local/bin
+# ENTRYPOINT ["python3", "/usr/local/bin/entrypoint.py"]
