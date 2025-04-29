@@ -1,0 +1,1 @@
+cmd_Release/obj.target/object_address.node := g++ -o Release/obj.target/object_address.node -shared -pthread -rdynamic -m64  -Wl,-soname=object_address.node -Wl,--start-group Release/obj.target/object_address/object_address.o -Wl,--end-group 
