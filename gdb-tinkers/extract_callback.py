@@ -21,5 +21,5 @@ def addr2cb(address):
         print(f'Error {e}')
 
 gdb.execute('set print demangle off')
-gdb.execute('addr2cb(140727662896912)')
+addr2cb(140727662896912)
 gdb.execute('quit')
