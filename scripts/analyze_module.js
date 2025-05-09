@@ -1,6 +1,8 @@
 const yargs = require('yargs');
 const fs = require('fs');
 const path = require('path');
+const {SimplePropertyRetriever} = require('./ffdir');
+
 
 result = { 'modules': [],
            'jump_libs': [],
@@ -24,29 +26,55 @@ function parse_args() {
       .argv;
 }
 
-function dir(obj) {
-  const keys = new Set();
+/*
+ * Deduplicate file paths by basename,
+ * prefer real files that do not contain 'build' or 'tmp'.
+ */
+function deduplicate_paths(paths) {
+  const grouped = new Map(); // basename → list of paths
 
-  while (obj && obj !== Object.prototype) {
-    for (const key of Object.getOwnPropertyNames(obj)) {
-      keys.add(key);
+  for (const p of paths) {
+    const base = path.basename(p);
+    if (!grouped.has(base)) {
+      grouped.set(base, []);
     }
-    // for (const sym of Object.getOwnPropertySymbols(obj)) {
-    //   keys.add(sym);
-    // }
-    obj = Object.getPrototypeOf(obj);
+    grouped.get(base).push(p);
   }
 
-  return [...keys].sort();
+  const result = [];
+
+  for (const [, pathList] of grouped) {
+    // Prefer non-build/tmp paths that exist
+    const preferred = pathList.find(
+      p => !p.includes('build') && !p.includes('tmp') && fs.existsSync(p)
+    );
+
+    // If not found, fallback to any existing file
+    const fallback = pathList.find(p => fs.existsSync(p));
+
+    if (preferred) {
+      result.push(path.resolve(preferred));
+    } else if (fallback) {
+      result.push(path.resolve(fallback));
+    }
+  }
+
+  return result;
 }
 
-function recursive_inspect(obj) {
+function dir(obj) {
+  return SimplePropertyRetriever.getOwnAndPrototypeEnumAndNonEnumProps(obj);
 }
 
+function recursive_inspect(obj, jsname) {
+  return;
+}
 
-function analyze_single(mod_file) {
+function analyze_single(mod_file, pkg_root) {
   obj = require(mod_file)
-  recursive_inspect(obj)
+  jsname = get_mod_fqn(mod_file, pkg_root)
+  console.log(`${mod_file}: jsname = ${jsname}`)
+  // recursive_inspect(obj)
 }
 
 function locate_so_modules(packagePath) {
@@ -70,17 +98,30 @@ function locate_so_modules(packagePath) {
   return soFiles;
 }
 
+function get_mod_fqn(fullPath, packageRoot) {
+  const packageName = path.basename(packageRoot);
+  const relativePath = path.relative(packageRoot, fullPath);
+  const noExt = relativePath.replace(/\.[^/.]+$/, ''); // strip extension
+  const dottedPath = noExt.split(path.sep).join('.');
+  return `${packageName}.${dottedPath}`;
+  // const relativePath = path.relative(packageRoot, fullPath);
+  // const noExt = relativePath.replace(/\.node$/, ''); // remove .node
+  // const dotted = noExt.split(path.sep).join('.');    // replace / or \ with .
+  // return dotted;
+}
+
 function main() {
   args = parse_args();
 
   console.log(`Package root = ${args.root}`)
 
   so_files = locate_so_modules(args.root)
-  console.log(`Native extension files = ${so_files}`)
+  so_files = deduplicate_paths(so_files)
+  console.log(`Native extension files :\n${so_files.join('\n')}`)
 
 
   for (const so_file of so_files) {
-    analyze_single(so_file);
+    analyze_single(so_file, args.root);
   }
 }
 
