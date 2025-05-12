@@ -1,5 +1,5 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties#obtaining_properties_by_enumerabilityownership
-const SimplePropertyRetriever = {
+export const SimplePropertyRetriever = {
   getOwnEnumProps(obj) {
     return this._getPropertyNames(obj, true, false, this._enumerable);
     // Or could use for...in filtered with Object.hasOwn or just this: return Object.keys(obj);

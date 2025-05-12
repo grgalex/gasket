@@ -2,7 +2,13 @@ const yargs = require('yargs');
 const fs = require('fs');
 const path = require('path');
 const {SimplePropertyRetriever} = require('./ffdir');
+const v8 = require('v8')
 
+fqn2overloads = {}
+fqn2cb = {}
+fqn2cfuncs = {}
+
+cbs = new Set()
 
 result = { 'modules': [],
            'jump_libs': [],
@@ -63,18 +69,19 @@ function deduplicate_paths(paths) {
 }
 
 function dir(obj) {
+  console.log(`dir(): ${obj}`)
   return SimplePropertyRetriever.getOwnAndPrototypeEnumAndNonEnumProps(obj);
-}
-
-function recursive_inspect(obj, jsname) {
-  return;
 }
 
 function analyze_single(mod_file, pkg_root) {
   obj = require(mod_file)
   jsname = get_mod_fqn(mod_file, pkg_root)
   console.log(`${mod_file}: jsname = ${jsname}`)
-  // recursive_inspect(obj)
+  recursive_inspect(obj, jsname)
+  console.log(`FQN2CB = ${JSON.stringify(fqn2cb, null, 2)}`)
+  console.log(`FQN2OVERLOADS = ${JSON.stringify(fqn2overloads, null, 2)}`)
+  console.log(`CBS = (next line)`)
+  console.log(cbs)
 }
 
 function locate_so_modules(packagePath) {
@@ -102,12 +109,72 @@ function get_mod_fqn(fullPath, packageRoot) {
   const packageName = path.basename(packageRoot);
   const relativePath = path.relative(packageRoot, fullPath);
   const noExt = relativePath.replace(/\.[^/.]+$/, ''); // strip extension
-  const dottedPath = noExt.split(path.sep).join('.');
-  return `${packageName}.${dottedPath}`;
+  // const dottedPath = noExt.split(path.sep).join('.');
+  // return `${packageName}.${dottedPath}`;
+  return `${packageName}/${noExt}`;
   // const relativePath = path.relative(packageRoot, fullPath);
   // const noExt = relativePath.replace(/\.node$/, ''); // remove .node
-  // const dotted = noExt.split(path.sep).join('.');    // replace / or \ with .
-  // return dotted;
+}
+
+function check_bingo(obj, jsname) {
+    res = v8.getcb(obj)
+    if (res == 'NONE') {
+        return
+    } else {
+        jres = JSON.parse(res)
+        cb = jres['callback']
+        overloads = jres['overloads']
+        cbs.add(cb)
+        console.log('CBS = (next line)')
+        console.log(cbs)
+        fqn2cb[jsname] = cb
+        fqn2overloads[jsname] = overloads
+    }
+
+}
+
+function recursive_inspect(obj, jsname) {
+    pending = [[obj, jsname]]
+    console.log(`pending = ${pending}`)
+    seen = new Set()
+
+    // XXX: BFS. Use queue: insert using .push(),
+    //      get head using .shift
+    while (pending.length > 0) {
+        [obj, jsname] = pending.shift()
+        console.log(`jsname = ${jsname}`)
+
+        if (!(obj instanceof(Object))) {
+            continue
+        }
+        if (typeof(obj) == 'function') {
+            check_bingo(obj, jsname)
+        }
+
+        for (const k of dir(obj)) {
+            console.log(`getattr(${jsname}, ${k})`)
+            try {
+              v = obj[k]
+            } catch(error) {
+              console.log(error)
+              continue
+            }
+            if (typeof v == 'undefined' || !(v instanceof(Object))) {
+                continue
+            }
+
+            ident = v8.jid(v)
+            if (seen.has(ident)) {
+                console.log('ALREADY SEEN')
+                continue
+            } else {
+                seen.add(ident)
+            }
+
+            pending.push([v, jsname + '.' + k])
+        }
+        seen.add(v8.jid(obj))
+    }
 }
 
 function main() {
@@ -123,6 +190,8 @@ function main() {
   for (const so_file of so_files) {
     analyze_single(so_file, args.root);
   }
+
+
 }
 
 main()
