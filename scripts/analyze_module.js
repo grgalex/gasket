@@ -9,9 +9,16 @@ const { randomUUID } = require('crypto');
 
 RESOLVE_SCRIPT_PATH = '/home/george.alexopoulos/jsxray/prv-jsxray/scripts/resolve_syms.py'
 
+
+fqn2mod = {}
+fqn2obj = {}
+fqn2overloadsaddr = {}
 fqn2overloads = {}
+fqn2cbaddr = {}
 fqn2cb = {}
 fqn2cfuncs = {}
+
+addr2sym = {}
 
 cbs_set = new Set()
 cbs = []
@@ -115,20 +122,57 @@ function gdb_resolve(addresses) {
 	return result
 }
 
+function extract_cfunc() {}
+
 function analyze_single(mod_file, pkg_root) {
     obj = require(mod_file)
     jsname = get_mod_fqn(mod_file, pkg_root)
+    fqn2mod[jsname] = obj
     console.log(`${mod_file}: jsname = ${jsname}`)
     recursive_inspect(obj, jsname)
 	cbs = Array.from(cbs_set)
-    console.log(`FQN2CB = ${JSON.stringify(fqn2cb, null, 2)}`)
-    console.log(`FQN2OVERLOADS = ${JSON.stringify(fqn2overloads, null, 2)}`)
-    console.log(`CBS = (next line)`)
+    console.log(`FQN2CB_ADRESSES = ${JSON.stringify(fqn2cbaddr, null, 2)}`)
+    console.log(`FQN2OVERLOAD_ADDRESSES = ${JSON.stringify(fqn2overloadsaddr, null, 2)}`)
+    console.log(`CBS_ADDRESSES = (next line)`)
     console.log(cbs)
     // sleepSync(1000)
-	gdb_resolve(cbs)
 
+    var resolve_addresses = new Set(cbs)
+
+    for (let key in fqn2overloadsaddr) {
+        fqn2overloadsaddr[key].forEach(item => resolve_addresses.add(item))
+    }
+
+	var res1 = gdb_resolve(resolve_addresses)
+
+    for (let addr in res1) {
+      addr2sym[addr] = res1[addr]
+    }
+
+    for (let fqn in fqn2overloadsaddr) {
+        for (let addr in fqn2overloadsaddr[fqn]) {
+            b = {'cfunc': addr2sym[addr].cfunc,
+                 'library': addr2sym[addr].library}
+            if (fqn in fqn2overloads) {
+                fqn2overloads[fqn].push(b)
+            } else {
+                fqn2overloads[fqn] = [b]
+            }
+        }
+    }
+
+    for (let fqn in fqn2cbaddr) {
+        addr = fqn2cbaddr[fqn]
+        cb = addr2sym[addr].cfunc
+        fqn2cb[fqn] = cb
+    }
+
+    console.log(`FQN2CB = ${JSON.stringify(fqn2cb, null, 2)}`)
+    console.log(`FQN2OVERLOADS = ${JSON.stringify(fqn2overloads, null, 2)}`)
+    console.log('FQN2OBJ: (next line)')
+    console.log(fqn2obj)
 }
+
 
 function locate_so_modules(packagePath) {
     const soFiles = [];
@@ -173,8 +217,9 @@ function check_bingo(obj, jsname) {
         cbs_set.add(cb)
         console.log('CBS = (next line)')
         console.log(cbs_set)
-        fqn2cb[jsname] = cb
-        fqn2overloads[jsname] = overloads
+        fqn2cbaddr[jsname] = cb
+        fqn2overloadsaddr[jsname] = overloads
+        fqn2obj[jsname] = obj
     }
 }
 
