@@ -11,7 +11,8 @@ fqn2overloads = {}
 fqn2cb = {}
 fqn2cfuncs = {}
 
-cbs = new Set()
+cbs_set = new Set()
+cbs = []
 
 result = { 'modules': [],
            'jump_libs': [],
@@ -75,7 +76,7 @@ function dir(obj) {
     return SimplePropertyRetriever.getOwnAndPrototypeEnumAndNonEnumProps(obj);
 }
 
-function resolve_gdb(addresses) {
+function gdb_resolve(addresses) {
     const tmp_dir = os.tmpdir();
     const addr_file = path.join(tmpDir, `addr_${randomUUID()}.json`);
     const res_file = path.join(tmpDir, `res_${randomUUID()}.json`);
@@ -97,6 +98,8 @@ function resolve_gdb(addresses) {
 	result = JSON.parse(raw);
 	console.log('RESULT:')
 	console.log(result)
+
+	return result
 }
 
 function analyze_single(mod_file, pkg_root) {
@@ -104,10 +107,13 @@ function analyze_single(mod_file, pkg_root) {
     jsname = get_mod_fqn(mod_file, pkg_root)
     console.log(`${mod_file}: jsname = ${jsname}`)
     recursive_inspect(obj, jsname)
+	cbs = Array.from(cbs_set)
     console.log(`FQN2CB = ${JSON.stringify(fqn2cb, null, 2)}`)
     console.log(`FQN2OVERLOADS = ${JSON.stringify(fqn2overloads, null, 2)}`)
     console.log(`CBS = (next line)`)
     console.log(cbs)
+	gdb_resolve(cbs)
+
 }
 
 function locate_so_modules(packagePath) {
