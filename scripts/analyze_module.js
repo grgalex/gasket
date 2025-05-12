@@ -7,6 +7,8 @@ const v8 = require('v8')
 const { spawnSync } = require('child_process');
 const { randomUUID } = require('crypto');
 
+RESOLVE_SCRIPT_PATH = '/home/george.alexopoulos/jsxray/prv-jsxray/scripts/resolve_syms.py'
+
 fqn2overloads = {}
 fqn2cb = {}
 fqn2cfuncs = {}
@@ -17,6 +19,11 @@ cbs = []
 result = { 'modules': [],
            'jump_libs': [],
            'bridges': [],
+}
+
+function sleepSync(seconds) {
+  const end = Date.now() + seconds * 1000;
+  while (Date.now() < end);
 }
 
 function parse_args() {
@@ -78,15 +85,21 @@ function dir(obj) {
 
 function gdb_resolve(addresses) {
     const tmp_dir = os.tmpdir();
-    const addr_file = path.join(tmpDir, `addr_${randomUUID()}.json`);
-    const res_file = path.join(tmpDir, `res_${randomUUID()}.json`);
+    const addr_file = path.join(tmp_dir, `addr_${randomUUID()}.json`);
+    const res_file = path.join(tmp_dir, `res_${randomUUID()}.json`);
+
+    pid = process.pid
 
 	fs.writeFileSync(addr_file, JSON.stringify(cbs, null, 2));
 
-	var cmd = `python3 resolve_syms.py -p ${pid} -i ${addr_file} -o ${res_file}`
-	console.log(`CMD = ${cmd}`)
+	// var cmd = `bash -c 'python3 ${RESOLVE_SCRIPT_PATH} -p ${pid} -i ${addr_file} -o ${res_file}'`
+    args = [RESOLVE_SCRIPT_PATH,
+            '-p', String(pid),
+            '-i', addr_file,
+            '-o', res_file]
+	console.log(`CMD = python3 ${args}`)
 
-	var result = spawnSync('python3', ['-la'], { shell: true, encoding: 'utf-8' });
+	var result = spawnSync('python3', args, { encoding: 'utf-8' });
 	const out = result.stdout
 	console.log('OUT:')
 	console.log(out)
@@ -112,6 +125,7 @@ function analyze_single(mod_file, pkg_root) {
     console.log(`FQN2OVERLOADS = ${JSON.stringify(fqn2overloads, null, 2)}`)
     console.log(`CBS = (next line)`)
     console.log(cbs)
+    // sleepSync(1000)
 	gdb_resolve(cbs)
 
 }
@@ -156,9 +170,9 @@ function check_bingo(obj, jsname) {
         jres = JSON.parse(res)
         cb = jres['callback']
         overloads = jres['overloads']
-        cbs.add(cb)
+        cbs_set.add(cb)
         console.log('CBS = (next line)')
-        console.log(cbs)
+        console.log(cbs_set)
         fqn2cb[jsname] = cb
         fqn2overloads[jsname] = overloads
     }

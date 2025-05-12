@@ -95,7 +95,7 @@ def parse_args():
 
     return p.parse_args()
 
-def run_gdb(symbol_addresses):
+def run_gdb(symbol_addresses, target_pid):
     # XXX: The .py suffix is very important, as GDB uses it to
     #      decide how to interpret the sourced file.
     with tempfile.NamedTemporaryFile(suffix=".py", mode='w') as cmd_file:
@@ -109,11 +109,10 @@ def run_gdb(symbol_addresses):
         cmd_file.write(script)
         cmd_file.flush()
 
-        pid_self_str = str(os.getpid())
-        # print("script = %s" % script)
+        print("script = %s" % script)
 
         # XXX: Need sudo, because otherwise can't trace process.
-        gdb_launch_cmd = f'sudo gdb --batch -ex "source {cmd_file_path}" --pid {pid_self_str}'
+        gdb_launch_cmd = f'sudo gdb --batch -ex "source {cmd_file_path}" --pid {target_pid}'
         # print("LAUNCH_CMD = %s" % gdb_launch_cmd)
         # try:
         #     ret, out, err = utils.run_cmd(gdb_launch_cmd, timeout=None, shell=True)
@@ -151,8 +150,8 @@ def run_gdb(symbol_addresses):
         stderr = ferr.read()
         log.debug(fout.name)
         log.debug(ferr.name)
-        # log.debug(f"STDOUT = {stdout}")
-        # log.debug(f"STDERR = {stderr}")
+        log.info(f"STDOUT = {stdout}")
+        log.info(f"STDERR = {stderr}")
         fout.close()
         ferr.close()
         try:
@@ -200,15 +199,17 @@ def parse_gdb_line(line):
 class Analyzer():
     def __init__(self, input_file, target_pid, output_file):
         self.input_file = input_file
+        self.output_file = output_file
         self.target_pid = target_pid
         self.symbol_addresses = []
         self.resolved = {}
         self.hops = []
     def process(self):
         with open(self.input_file, 'r') as infile:
-            self.addresses = json.loads(infile.read())
+            self.symbol_addresses = json.loads(infile.read())
+        log.info(f'ADDRESSES = {self.symbol_addresses}')
         log.info('Running GDB')
-        gdb_output = run_gdb(self.symbol_addresses)
+        gdb_output = run_gdb(self.symbol_addresses, self.target_pid)
         for line in gdb_output.splitlines():
             hop = parse_gdb_line(line)
             if hop is not None:
@@ -221,8 +222,8 @@ class Analyzer():
 
         bridges = []
 
-        for h in hops:
-            address = h.address
+        for h in self.hops:
+            address = hex(h.address)
             lib = h.library
             cfunc = h.cfunc
             d = {'cfunc': cfunc, 'library': lib}
@@ -275,10 +276,10 @@ class Analyzer():
         # result['count_internal'] = len(result['internal'])
         # result['count_external'] = len(result['external'])
         if self.output_file is None:
-            log.info(json.dumps(result, indent=2))
+            log.info(json.dumps(self.resolved, indent=2))
         else:
             with open(self.output_file, 'w') as outfile:
-                outfile.write(json.dumps(result, indent=2))
+                outfile.write(json.dumps(self.resolved, indent=2))
 
 def main():
     args = parse_args()
