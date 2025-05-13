@@ -405,6 +405,7 @@ function main() {
     output_file = args.output
 
     console.log(`Package root = ${args.root}`)
+    console.log(`Output file = ${args.output}`)
 
     so_files = locate_so_modules(args.root)
     so_files = deduplicate_paths(so_files)
@@ -416,9 +417,10 @@ function main() {
       final_result['modules'].push(so_file)
     }
 
-    if (output_file !== undefined) {
-	    fs.writeFileSync(output_file, JSON.stringify(final_result, null, 2));
-        console.log(`Wrote bridges to ${output_file}`)
+    console.log(`Output file = ${args.output}`)
+    if (args.output !== undefined) {
+	    fs.writeFileSync(args.output, JSON.stringify(final_result, null, 2));
+        console.log(`Wrote bridges to ${args.output}`)
     }
     else {
         console.log(JSON.stringify(final_result, null, 2))
