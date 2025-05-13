@@ -86,7 +86,7 @@ function deduplicate_paths(paths) {
 }
 
 function dir(obj) {
-    console.log(`dir(): ${obj}`)
+    // console.log(`dir(): ${obj}`)
     return SimplePropertyRetriever.getOwnAndPrototypeEnumAndNonEnumProps(obj);
 }
 
