@@ -16,7 +16,7 @@ fqn2overloadsaddr = {}
 fqn2overloads = {}
 fqn2cbaddr = {}
 fqn2cb = {}
-fqn2cfuncs = {}
+fqn2cfunc = {}
 
 addr2sym = {}
 
@@ -122,7 +122,25 @@ function gdb_resolve(addresses) {
 	return result
 }
 
-function extract_cfunc() {}
+function extract_fcb_invoke(fqn) {
+	res = v8.extract_fcb_invoke(fqn[obj])
+    if (res == 'NONE') {
+        return
+    } else {
+        jres = JSON.parse(res)
+		console.log(jres)
+		// XXX: ADD HERE!
+	}
+}
+
+function extract_cfunc(fqn) {
+
+	cb = fqn2cb[fqn]
+
+	if (cb.includes('FunctionCallbackWrapper6Invoke')) {
+		extract_fcb_invoke(fqn)
+	}
+}
 
 function analyze_single(mod_file, pkg_root) {
     obj = require(mod_file)
@@ -172,7 +190,6 @@ function analyze_single(mod_file, pkg_root) {
     console.log('FQN2OBJ: (next line)')
     console.log(fqn2obj)
 }
-
 
 function locate_so_modules(packagePath) {
     const soFiles = [];
