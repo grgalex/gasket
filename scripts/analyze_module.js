@@ -9,6 +9,9 @@ const { randomUUID } = require('crypto');
 
 RESOLVE_SCRIPT_PATH = '/home/george.alexopoulos/jsxray/prv-jsxray/scripts/resolve_syms.py'
 
+objects_examined = 0
+callable_objects = 0
+foreign_callable_objects = 0
 
 fqn2mod = {}
 fqn2obj = {}
@@ -28,9 +31,14 @@ addr2sym = {}
 cbs_set = new Set()
 cbs = []
 
-final_result = { 'modules': [],
-           'jump_libs': [],
-           'bridges': [],
+final_result = {
+    'objects_examined': 0,
+    'callable_objects': 0,
+    'foreign_callable_objects': 0,
+    'duration_sec': 0,
+    'modules': [],
+    'jump_libs': [],
+    'bridges': [],
 }
 
 function sleepSync(seconds) {
@@ -344,6 +352,7 @@ function check_bingo(obj, jsname) {
     if (res == 'NONE') {
         return
     } else {
+        foreign_callable_objects += 1
         jres = JSON.parse(res)
         cb = jres['callback']
         overloads = jres['overloads']
@@ -365,12 +374,14 @@ function recursive_inspect(obj, jsname) {
     //      get head using .shift
     while (pending.length > 0) {
         [obj, jsname] = pending.shift()
+        objects_examined += 1
         console.log(`jsname = ${jsname}`)
 
         if (!(obj instanceof(Object))) {
             continue
         }
         if (typeof(obj) == 'function') {
+            callable_objects += 1
             check_bingo(obj, jsname)
         }
 
@@ -401,6 +412,7 @@ function recursive_inspect(obj, jsname) {
 }
 
 function main() {
+    var start = Date.now()
     args = parse_args();
     output_file = args.output
 
@@ -415,6 +427,14 @@ function main() {
       analyze_single(so_file, args.root);
       final_result['modules'].push(so_file)
     }
+
+    var end = Date.now()
+
+    var duration_sec = Math.round((end - start) / 1000)
+    final_result['duration_sec'] = duration_sec
+    final_result['objects_examined'] = objects_examined
+    final_result['callable_objects'] = callable_objects
+    final_result['foreign_callable_objects'] = foreign_callable_objects
 
     if (output_file !== undefined) {
 	    fs.writeFileSync(output_file, JSON.stringify(final_result, null, 2));

@@ -1,4 +1,8 @@
 {
+  "objects_examined": 55,
+  "callable_objects": 47,
+  "foreign_callable_objects": 7,
+  "duration_sec": 14,
   "modules": [
     "/home/george.alexopoulos/jsxray/tinkers/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node"
   ],
