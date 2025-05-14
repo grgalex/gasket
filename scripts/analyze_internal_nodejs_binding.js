@@ -73,14 +73,16 @@ BUILTIN_BINDING_NAMES_ALL = [
     'zlib'
 ]
 
-BUILTIN_BINDING_NAMES = ['fs']
+BUILTIN_BINDING_NAMES = ['os', 'fs']
 
 objects_examined = 0
 callable_objects = 0
 foreign_callable_objects = 0
 
-
+// XXX: Don't clear
 fqn2failed = {}
+
+
 fqn2mod = {}
 fqn2obj = {}
 fqn2overloadsaddr = {}
@@ -292,7 +294,28 @@ function extract_cfunc_2(fqn) {
     }
 }
 
+function clear_dicts() {
+fqn2mod = {}
+fqn2obj = {}
+fqn2overloadsaddr = {}
+fqn2overloads = {}
+fqn2cbaddr = {}
+fqn2cbaddr2 = {}
+fqn2cb = {}
+fqn2cb2 = {}
+fqn2cfunc = {}
+fqn2cfuncaddr = {}
+
+fqn2type = {}
+
+addr2sym = {}
+
+cbs_set = new Set()
+cbs = []
+}
+
 function analyze_single(mod_name) {
+    clear_dicts()
     obj = process.binding(mod_name)
     jsname = mod_name
     fqn2mod[jsname] = obj

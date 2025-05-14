@@ -1,21 +1,88 @@
 {
-  "objects_examined": 2837,
-  "callable_objects": 1907,
-  "foreign_callable_objects": 68,
-  "duration_sec": 15,
-  "count": 67,
+  "objects_examined": 3389,
+  "callable_objects": 2358,
+  "foreign_callable_objects": 82,
+  "duration_sec": 27,
+  "count": 80,
   "modules": [
+    "os",
     "fs"
   ],
   "jump_libs": [
     "/usr/local/bin/node_g"
   ],
   "failed": {
+    "os.constructor": "NULL_CB",
     "fs.constructor": "NULL_CB",
     "fs.StatWatcher.prototype.__proto__.constructor": "NULL_CB",
     "fs.FSReqCallback.prototype.__proto__.constructor": "NULL_CB"
   },
   "bridges": [
+    {
+      "jsname": "os.getHostname",
+      "cfunc": "node::os::GetHostname(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
+    {
+      "jsname": "os.getLoadAvg",
+      "cfunc": "node::os::GetLoadAvg(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
+    {
+      "jsname": "os.getUptime",
+      "cfunc": "node::os::GetUptime(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
+    {
+      "jsname": "os.getTotalMem",
+      "cfunc": "node::os::GetTotalMemory(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
+    {
+      "jsname": "os.getFreeMem",
+      "cfunc": "node::os::GetFreeMemory(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
+    {
+      "jsname": "os.getCPUs",
+      "cfunc": "node::os::GetCPUInfo(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
+    {
+      "jsname": "os.getInterfaceAddresses",
+      "cfunc": "node::os::GetInterfaceAddresses(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
+    {
+      "jsname": "os.getHomeDirectory",
+      "cfunc": "node::os::GetHomeDirectory(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
+    {
+      "jsname": "os.getUserInfo",
+      "cfunc": "node::os::GetUserInfo(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
+    {
+      "jsname": "os.setPriority",
+      "cfunc": "node::os::SetPriority(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
+    {
+      "jsname": "os.getPriority",
+      "cfunc": "node::os::GetPriority(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
+    {
+      "jsname": "os.getAvailableParallelism",
+      "cfunc": "node::os::GetAvailableParallelism(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
+    {
+      "jsname": "os.getOSInformation",
+      "cfunc": "node::os::GetOSInformation(v8::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/usr/local/bin/node_g"
+    },
     {
       "jsname": "fs.internalModuleStat",
       "cfunc": "_ZN4node2fsL22FastInternalModuleStatEN2v85LocalINS1_6ObjectEEES4_RKNS1_17FastOneByteStringERNS1_22FastApiCallbackOptionsE",
