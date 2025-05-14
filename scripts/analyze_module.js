@@ -227,7 +227,28 @@ function extract_cfunc_2(fqn) {
     }
 }
 
+function clear_dicts() {
+    fqn2mod = {}
+    fqn2obj = {}
+    fqn2overloadsaddr = {}
+    fqn2overloads = {}
+    fqn2cbaddr = {}
+    fqn2cbaddr2 = {}
+    fqn2cb = {}
+    fqn2cb2 = {}
+    fqn2cfunc = {}
+    fqn2cfuncaddr = {}
+
+    fqn2type = {}
+
+    addr2sym = {}
+
+    cbs_set = new Set()
+    cbs = []
+}
+
 function analyze_single(mod_file, pkg_root) {
+	clear_dicts()
     obj = require(mod_file)
     jsname = get_mod_fqn(mod_file, pkg_root)
     fqn2mod[jsname] = obj

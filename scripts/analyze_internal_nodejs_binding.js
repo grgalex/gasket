@@ -295,23 +295,23 @@ function extract_cfunc_2(fqn) {
 }
 
 function clear_dicts() {
-fqn2mod = {}
-fqn2obj = {}
-fqn2overloadsaddr = {}
-fqn2overloads = {}
-fqn2cbaddr = {}
-fqn2cbaddr2 = {}
-fqn2cb = {}
-fqn2cb2 = {}
-fqn2cfunc = {}
-fqn2cfuncaddr = {}
+    fqn2mod = {}
+    fqn2obj = {}
+    fqn2overloadsaddr = {}
+    fqn2overloads = {}
+    fqn2cbaddr = {}
+    fqn2cbaddr2 = {}
+    fqn2cb = {}
+    fqn2cb2 = {}
+    fqn2cfunc = {}
+    fqn2cfuncaddr = {}
 
-fqn2type = {}
+    fqn2type = {}
 
-addr2sym = {}
+    addr2sym = {}
 
-cbs_set = new Set()
-cbs = []
+    cbs_set = new Set()
+    cbs = []
 }
 
 function analyze_single(mod_name) {
