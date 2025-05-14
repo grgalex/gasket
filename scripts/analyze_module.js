@@ -4,7 +4,7 @@ const path = require('path');
 const os = require('os');
 const {SimplePropertyRetriever} = require('./ffdir');
 const v8 = require('v8')
-const { spawnSync } = require('child_process');
+const { execSync, spawnSync } = require('child_process');
 const { randomUUID } = require('crypto');
 
 RESOLVE_SCRIPT_PATH = '/home/george.alexopoulos/jsxray/prv-jsxray/scripts/resolve_syms.py'
@@ -36,6 +36,7 @@ final_result = {
     'callable_objects': 0,
     'foreign_callable_objects': 0,
     'duration_sec': 0,
+    'count': 0,
     'modules': [],
     'jump_libs': [],
     'bridges': [],
@@ -96,6 +97,17 @@ function deduplicate_paths(paths) {
       }
     }
     return result;
+}
+
+function demangle_cpp(mangled) {
+    const cmd = `c++filt '${mangled}'`;
+    try {
+      const out = execSync(cmd, { encoding: 'utf-8', shell: true });
+      return out.trim();
+    } catch (err) {
+      console.error(err);
+      throw err;
+    }
 }
 
 function dir(obj) {
@@ -182,13 +194,35 @@ function extract_cfunc(fqn) {
 
 function extract_cfunc_2(fqn) {
 	cb = fqn2cb2[fqn]
+    
+    // Napi::ObjectWrap::ConstructorCallbackWrapper
+    if (cb.includes('Napi') && cb.includes('ObjectWrap') && cb.includes('ConstructorCallbackWrapper')) {
+        var dem = demangle_cpp(cb)
+        var cls = dem.match(/<([^>]*)>/)[1];
+        var fn = cls + "::" + cls.split("::").pop();
+        console.log(`fn = ${fn}`)
+        // XXX: Spaghettoni
+        var lib = addr2sym[fqn2cbaddr2[fqn]].library
+        b = {
+             'jsname': fqn,
+             'cfunc': fn,
+             'library': lib
+             }
+        final_result['bridges'].push(b)
+        if (!(final_result['jump_libs'].includes(lib)))
+            final_result['jump_libs'].push(lib)
+    }
 
-	if (cb.includes('Napi') && cb.includes('CallbackData')
-        && cb.includes('Wrapper')) {
+    // Generic Napi
+	else if ((cb.includes('Napi') && cb.includes('CallbackData') && cb.includes('Wrapper'))
+           || ((cb.includes('Napi') && cb.includes('InstanceWrap')))
+           || ((cb.includes('Napi') && cb.includes('ObjectWrap')))) {
+
 		extract_napi(fqn)
 	}
+
     else {
-        fqn2cfuncaddr[fqn] = cb
+        fqn2cfuncaddr[fqn] = fqn2cbaddr2[fqn]
     }
 }
 
@@ -298,21 +332,32 @@ function analyze_single(mod_file, pkg_root) {
     console.log('FQN2CFUNCADDR')
     console.log(fqn2cfuncaddr)
 
+    // for (let fqn in fqn2cfunc) {
+    //     cfunc = fqn2cfunc[fqn]
+    //     b = {
+    //          'jsname': fqn,
+    //          'status': cfunc
+    //          }
+    //     final_result['bridges'].push(b)
+    // }
+
     for (let fqn in fqn2cfuncaddr) {
         addr = fqn2cfuncaddr[fqn]
-        lib = addr2sym[addr].library
+        try {
+            lib = addr2sym[addr].library
+        } catch (error) {
+            console.log(`Key = ${addr} not found`)
+            continue
+        }
         b = {
              'jsname': fqn,
-             'cfunc': addr2sym[addr].cfunc,
+             'cfunc': demangle_cpp(addr2sym[addr].cfunc),
              'library': lib
              }
         final_result['bridges'].push(b)
         if (!(final_result['jump_libs'].includes(lib)))
             final_result['jump_libs'].push(lib)
     }
-
-    console.log(`FQN2CFUNC = ${JSON.stringify(fqn2cfunc, null, 2)}`)
-    console.log(`FQN2OVERLOADS = ${JSON.stringify(fqn2overloads, null, 2)}`)
 }
 
 function locate_so_modules(packagePath) {
@@ -435,6 +480,7 @@ function main() {
     final_result['objects_examined'] = objects_examined
     final_result['callable_objects'] = callable_objects
     final_result['foreign_callable_objects'] = foreign_callable_objects
+    final_result['count'] = final_result['bridges'].length
 
     if (output_file !== undefined) {
 	    fs.writeFileSync(output_file, JSON.stringify(final_result, null, 2));
