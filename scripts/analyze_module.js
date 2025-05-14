@@ -152,15 +152,10 @@ function extract_fcb_invoke(fqn) {
     obj = fqn2obj[fqn]
 	res = v8.extract_fcb_invoke(obj)
     if (res == 'NONE') {
-        fqn2cfunc[fqn] = 'FAILED'
+        fqn2failed[fqn] = 'EXTRACT_FCB_INOKE'
     } else { /* res = address of cb2 */
-		// console.log(res)
-        if (res == 'NONE') {
-            fqn2cfunc[fqn] = 'FAILED'
-        } else {
-            fqn2type[fqn] = 'fcb'
-            fqn2cbaddr2[fqn] = res
-        }
+        fqn2type[fqn] = 'fcb'
+        fqn2cbaddr2[fqn] = res
 	}
 }
 
@@ -169,25 +164,34 @@ function extract_napi(fqn) {
     obj = fqn2obj[fqn]
 	res = v8.extract_napi(obj)
     if (res == 'NONE') {
-        fqn2cfunc[fqn] = 'FAILED'
-    } else { /* res = address of cb2 */
-        res = res
-		console.log(`v8.extract_napi(${fqn}) = ${res}`)
-        if (res == 'NONE') {
-            fqn2cfunc[fqn] = 'FAILED'
-        } else {
-            fqn2type[fqn] = 'napi'
-            fqn2cfuncaddr[fqn] = res
-        }
+        fqn2failed[fqn] = 'EXTRACT_NAPI'
+    } else {
+        fqn2type[fqn] = 'napi'
+        fqn2cfuncaddr[fqn] = res
+	}
+}
+
+function extract_nan(fqn) {
+    obj = fqn2obj[fqn]
+	res = v8.extract_nan(obj)
+    if (res == 'NONE') {
+        fqn2failed[fqn] = 'EXTRACT_NAN'
+    } else {
+        fqn2type[fqn] = 'nan'
+        fqn2cfuncaddr[fqn] = res
 	}
 }
 
 function extract_cfunc(fqn) {
 	cb = fqn2cb[fqn]
 
-	if (cb.includes('FunctionCallbackWrapper6Invoke')) {
+	if (cb.includes('v8impl')
+            && cb.includes('FunctionCallbackWrapper6Invoke')) {
 		extract_fcb_invoke(fqn)
 	}
+    else if (cb.includes('Nan') && cb.includes('impl') && cb.includes('Nan::imp::FunctionCallbackWrapper')) {
+        extract_nan(fqn)
+    }
     else {
         fqn2cfuncaddr[fqn] = fqn2cbaddr[fqn]
     }
@@ -367,14 +371,6 @@ function analyze_single(mod_file, pkg_root) {
     console.log('FQN2CFUNCADDR')
     console.log(fqn2cfuncaddr)
 
-    // for (let fqn in fqn2cfunc) {
-    //     cfunc = fqn2cfunc[fqn]
-    //     b = {
-    //          'jsname': fqn,
-    //          'status': cfunc
-    //          }
-    //     final_result['bridges'].push(b)
-    // }
 
     for (let fqn in fqn2cfuncaddr) {
         addr = fqn2cfuncaddr[fqn]
