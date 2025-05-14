@@ -260,7 +260,7 @@ function extract_cfunc(fqn) {
 
 function extract_cfunc_2(fqn) {
 	cb = fqn2cb2[fqn]
-    
+
     // Napi::ObjectWrap::ConstructorCallbackWrapper
     if (cb.includes('Napi') && cb.includes('ObjectWrap') && cb.includes('ConstructorCallbackWrapper')) {
         var dem = demangle_cpp(cb)
@@ -293,12 +293,12 @@ function extract_cfunc_2(fqn) {
 }
 
 function analyze_single(mod_name) {
-    obj = process.binding(mod_name) 
-    jsname = mod_name 
+    obj = process.binding(mod_name)
+    jsname = mod_name
     fqn2mod[jsname] = obj
     recursive_inspect(obj, jsname)
 	cbs = Array.from(cbs_set)
-    
+
     // XXX: Initialize Set with CBS!
     var resolve_addresses = new Set(cbs)
 

@@ -13,6 +13,7 @@ objects_examined = 0
 callable_objects = 0
 foreign_callable_objects = 0
 
+fqn2failed = {}
 fqn2mod = {}
 fqn2obj = {}
 fqn2overloadsaddr = {}
@@ -188,13 +189,13 @@ function extract_cfunc(fqn) {
 		extract_fcb_invoke(fqn)
 	}
     else {
-        fqn2cfuncaddr[fqn] = cb
+        fqn2cfuncaddr[fqn] = fqn2cbaddr[fqn]
     }
 }
 
 function extract_cfunc_2(fqn) {
 	cb = fqn2cb2[fqn]
-    
+
     // Napi::ObjectWrap::ConstructorCallbackWrapper
     if (cb.includes('Napi') && cb.includes('ObjectWrap') && cb.includes('ConstructorCallbackWrapper')) {
         var dem = demangle_cpp(cb)
@@ -233,18 +234,25 @@ function analyze_single(mod_file, pkg_root) {
     console.log(`${mod_file}: jsname = ${jsname}`)
     recursive_inspect(obj, jsname)
 	cbs = Array.from(cbs_set)
-    // console.log(`FQN2CB_ADRESSES = ${JSON.stringify(fqn2cbaddr, null, 2)}`)
-    // console.log(`FQN2OVERLOAD_ADDRESSES = ${JSON.stringify(fqn2overloadsaddr, null, 2)}`)
-    // console.log(`CBS_ADDRESSES = (next line)`)
-    // console.log(cbs)
-    // sleepSync(1000)
-    
     // XXX: Initialize Set with CBS!
     var resolve_addresses = new Set(cbs)
+
+    // for (let key in fqn2overloadsaddr) {
+    //     new_addrs = []
+    //     for (let addr of fqn2overloadsaddr[key]) {
+    //         console.log(addr)
+    //         dec_addr = String(Number(addr))
+    //         console.log(dec_addr)
+    //         new_addrs.push(dec_addr)
+    //     }
+    //     fqn2overloadsaddr[key] = new_addrs
+    // }
 
     for (let key in fqn2overloadsaddr) {
         fqn2overloadsaddr[key].forEach(item => resolve_addresses.add(item))
     }
+
+    console.log(`FQN2OVERLOADSADDR = ${JSON.stringify(fqn2overloadsaddr, null, 2)}`)
 
 	var res1 = gdb_resolve(Array.from(resolve_addresses))
     for (let addr in res1) {
@@ -252,8 +260,14 @@ function analyze_single(mod_file, pkg_root) {
     }
 
     for (let fqn in fqn2overloadsaddr) {
-        for (let addr in fqn2overloadsaddr[fqn]) {
-            lib = addr2sym[addr].library
+        for (let addr of fqn2overloadsaddr[fqn]) {
+            try {
+                lib = addr2sym[addr].library
+            } catch (error){
+                console.log(`Error: ${error}`)
+                fqn2failed[fqn] = 'OVERLOAD_RESOLUTION'
+                continue
+            }
             b = {
                  'jsname': fqn,
                  'cfunc': addr2sym[addr].cfunc,
@@ -347,6 +361,7 @@ function analyze_single(mod_file, pkg_root) {
             lib = addr2sym[addr].library
         } catch (error) {
             console.log(`Key = ${addr} not found`)
+            fqn2failed[fqn] = 'CFUNC_ADDRESS_RESOLUTION'
             continue
         }
         b = {
@@ -395,15 +410,22 @@ function get_mod_fqn(fullPath, packageRoot) {
 function check_bingo(obj, jsname) {
     res = v8.getcb(obj)
     if (res == 'NONE') {
+        // fqn2failed[jsname] = 'FAILED_GETCB'
         return
     } else {
         foreign_callable_objects += 1
         jres = JSON.parse(res)
         cb = jres['callback']
         overloads = jres['overloads']
+        console.log(`FQN = ${jsname}`)
+        console.log(`cb = ${cb}`)
+        if (cb == '0') {
+            fqn2failed[jsname] = 'NULL_CB'
+            return
+        }
         cbs_set.add(cb)
-        console.log('CBS = (next line)')
-        console.log(cbs_set)
+        // console.log('CBS = (next line)')
+        // console.log(cbs_set)
         fqn2cbaddr[jsname] = cb
         fqn2overloadsaddr[jsname] = overloads
         fqn2obj[jsname] = obj
@@ -419,14 +441,12 @@ function recursive_inspect(obj, jsname) {
     //      get head using .shift
     while (pending.length > 0) {
         [obj, jsname] = pending.shift()
-        objects_examined += 1
         console.log(`jsname = ${jsname}`)
 
         if (!(obj instanceof(Object))) {
             continue
         }
         if (typeof(obj) == 'function') {
-            callable_objects += 1
             check_bingo(obj, jsname)
         }
 
@@ -438,9 +458,13 @@ function recursive_inspect(obj, jsname) {
               console.log(error)
               continue
             }
+            objects_examined += 1
             if (typeof v == 'undefined' || !(v instanceof(Object))) {
                 continue
             }
+
+            if (typeof(obj) == 'function')
+                callable_objects += 1
 
             ident = v8.jid(v)
             if (seen.has(ident)) {
@@ -482,6 +506,7 @@ function main() {
     final_result['foreign_callable_objects'] = foreign_callable_objects
     final_result['count'] = final_result['bridges'].length
 
+    final_result['failed'] = fqn2failed
     if (output_file !== undefined) {
 	    fs.writeFileSync(output_file, JSON.stringify(final_result, null, 2));
         console.log(`Wrote bridges to ${output_file}`)
