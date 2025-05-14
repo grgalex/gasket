@@ -13,6 +13,8 @@ objects_examined = 0
 callable_objects = 0
 foreign_callable_objects = 0
 
+cur_file = 'none'
+
 fqn2failed = {}
 fqn2mod = {}
 fqn2obj = {}
@@ -213,6 +215,8 @@ function extract_cfunc_2(fqn) {
              'cfunc': fn,
              'library': lib
              }
+
+        console.log(b)
         final_result['bridges'].push(b)
         if (!(final_result['jump_libs'].includes(lib)))
             final_result['jump_libs'].push(lib)
@@ -225,6 +229,44 @@ function extract_cfunc_2(fqn) {
 
 		extract_napi(fqn)
 	}
+
+    else if (cb.includes('neon') && cb.includes('sys')) {
+        var name = v8.extract_neon(fqn2obj[fqn])
+        if (name !== 'NONE') {
+            const match = name.match(/#([^>]+)>/);
+            if (match) {
+                fn = match[1];
+            } else { /* failed regex */
+                fqn2failed[fqn] = 'NEON_FAIL'
+                return;
+            }
+            lib = cur_file
+            b = {
+                 'jsname': fqn,
+                 'cfunc': fn,
+                 'library': lib
+                 }
+            final_result['bridges'].push(b)
+            if (!(final_result['jump_libs'].includes(lib)))
+                final_result['jump_libs'].push(lib)
+        }
+    }
+    // napi-rs
+    if (cb.includes('_napi_internal_register')) {
+        var fn = demangle_cpp(cb)
+        console.log(`fn = ${fn}`)
+        var lib = addr2sym[fqn2cbaddr2[fqn]].library
+        b = {
+             'jsname': fqn,
+             'cfunc': fn,
+             'library': lib
+             }
+
+        console.log(b)
+        final_result['bridges'].push(b)
+        if (!(final_result['jump_libs'].includes(lib)))
+            final_result['jump_libs'].push(lib)
+    }
 
     else {
         fqn2cfuncaddr[fqn] = fqn2cbaddr2[fqn]
@@ -253,6 +295,7 @@ function clear_dicts() {
 
 function analyze_single(mod_file, pkg_root) {
 	clear_dicts()
+    cur_file = mod_file
     obj = require(mod_file)
     jsname = get_mod_fqn(mod_file, pkg_root)
     fqn2mod[jsname] = obj
@@ -340,8 +383,12 @@ function analyze_single(mod_file, pkg_root) {
 
     for (let fqn in fqn2cbaddr2) {
         addr = fqn2cbaddr2[fqn]
-        cb = addr2sym[addr].cfunc
-        fqn2cb2[fqn] = cb
+        try {
+            cb = addr2sym[addr].cfunc
+        } catch (error) {
+            console.log(`fqn = ${fqn}, fqn2cbaddr2 resolve ${error}`)
+        }
+            fqn2cb2[fqn] = cb
     }
 
     for (let fqn in fqn2cb2) {
@@ -499,8 +546,8 @@ function recursive_inspect(obj, jsname) {
 
 function main() {
     var start = Date.now()
-    args = parse_args();
-    output_file = args.output
+    const args = parse_args();
+    var output_file = args.output
 
     console.log(`Package root = ${args.root}`)
 
