@@ -87,7 +87,7 @@ function deduplicate_paths(paths) {
     for (const [, pathList] of grouped) {
       // Prefer non-build/tmp paths that exist
       const preferred = pathList.find(
-        p => !p.includes('build') && !p.includes('tmp') && fs.existsSync(p)
+        p => !p.includes('darwin') && !p.includes('build') && !p.includes('tmp') && fs.existsSync(p)
       );
 
       // If not found, fallback to any existing file
@@ -268,6 +268,23 @@ function extract_cfunc_2(fqn) {
             final_result['jump_libs'].push(lib)
     }
 
+    // node-bindgen
+    if (cb.includes('napi_')) {
+        var fn = demangle_cpp(cb)
+        console.log(`fn = ${fn}`)
+        var lib = addr2sym[fqn2cbaddr2[fqn]].library
+        b = {
+             'jsname': fqn,
+             'cfunc': fn,
+             'library': lib
+             }
+
+        console.log(b)
+        final_result['bridges'].push(b)
+        if (!(final_result['jump_libs'].includes(lib)))
+            final_result['jump_libs'].push(lib)
+    }
+
     else {
         fqn2cfuncaddr[fqn] = fqn2cbaddr2[fqn]
     }
@@ -296,7 +313,12 @@ function clear_dicts() {
 function analyze_single(mod_file, pkg_root) {
 	clear_dicts()
     cur_file = mod_file
-    obj = require(mod_file)
+    try {
+        obj = require(mod_file)
+    } catch(error) {
+        console.log(error)
+        return
+    }
     jsname = get_mod_fqn(mod_file, pkg_root)
     fqn2mod[jsname] = obj
     console.log(`${mod_file}: jsname = ${jsname}`)
