@@ -10,7 +10,16 @@
         "<!(node -p \"require('node-addon-api').gyp\")"
       ],
       "cflags_cc!": [ "-fno-exceptions" ],
-      "ldflags": ['-L/home/george.alexopoulos/jsxray/prv-node/out/Debug/ -lnode'],
+      # "cflags_cc": [ "-fsanitize=address" ],
+      # 'link_settings': {
+      #   'libraries': [
+      #     "-fsanitize=address",
+      #     # '-lnode',
+      #    ],
+      #   # 'library_dirs': [
+      #   #   '/home/george.alexopoulos/jsxray/prv-node/out/Debug',
+      #   # ],
+      # },
       "xcode_settings": {
         "GCC_ENABLE_CPP_EXCEPTIONS": "YES"
       },
