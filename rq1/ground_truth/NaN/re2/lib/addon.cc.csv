@@ -1,0 +1,10 @@
+WrappedRE2::Replace
+WrappedRE2::ToString
+GetUtf8Length
+GetUtf16Length
+WrappedRE2::Test
+WrappedRE2::Exec
+WrappedRE2::Search
+WrappedRE2::Split
+WrappedRE2::Match
+WrappedRE2::New
