@@ -1,0 +1,13 @@
+metadata
+pipeline
+cache
+concurrency
+counters
+simd
+libvipsVersion
+format
+block
+_maxColourDistance
+_isUsingJemalloc
+_isUsingX64V2
+stats
