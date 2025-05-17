@@ -1,0 +1,136 @@
+{
+  "objects_examined": 1476,
+  "callable_objects": 991,
+  "foreign_callable_objects": 23,
+  "duration_sec": 14,
+  "count": 23,
+  "modules": [
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/android-arm/node.napi.armv7.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/android-arm64/node.napi.armv8.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/darwin-x64+arm64/node.napi.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-arm/node.napi.armv6.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.musl.node"
+  ],
+  "jump_libs": [
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+  ],
+  "bridges": [
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.db_init",
+      "cfunc": "db_init(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.db_open",
+      "cfunc": "db_open(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.db_close",
+      "cfunc": "db_close(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.db_put",
+      "cfunc": "db_put(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.db_get",
+      "cfunc": "db_get(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.db_get_many",
+      "cfunc": "db_get_many(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.db_del",
+      "cfunc": "db_del(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.db_clear",
+      "cfunc": "db_clear(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.db_approximate_size",
+      "cfunc": "db_approximate_size(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.db_compact_range",
+      "cfunc": "db_compact_range(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.db_get_property",
+      "cfunc": "db_get_property(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.destroy_db",
+      "cfunc": "destroy_db(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.repair_db",
+      "cfunc": "repair_db(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.iterator_init",
+      "cfunc": "iterator_init(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.iterator_seek",
+      "cfunc": "iterator_seek(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.iterator_end",
+      "cfunc": "iterator_end(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.iterator_next",
+      "cfunc": "iterator_next(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.batch_do",
+      "cfunc": "batch_do(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.batch_init",
+      "cfunc": "batch_init(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.batch_put",
+      "cfunc": "batch_put(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.batch_del",
+      "cfunc": "batch_del(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.batch_clear",
+      "cfunc": "batch_clear(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    },
+    {
+      "jsname": "leveldown/prebuilds/linux-x64/node.napi.glibc.batch_write",
+      "cfunc": "batch_write(napi_env__*, napi_callback_info__*)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/leveldown/prebuilds/linux-x64/node.napi.glibc.node"
+    }
+  ],
+  "failed": {}
+}

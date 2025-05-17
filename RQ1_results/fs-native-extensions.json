@@ -1,0 +1,95 @@
+{
+  "objects_examined": 1187,
+  "callable_objects": 847,
+  "foreign_callable_objects": 14,
+  "duration_sec": 14,
+  "count": 14,
+  "modules": [
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/android-arm/fs-native-extensions.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/android-arm64/fs-native-extensions.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/android-ia32/fs-native-extensions.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/android-x64/fs-native-extensions.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/darwin-arm64/fs-native-extensions.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/darwin-x64/fs-native-extensions.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-arm64/fs-native-extensions.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/win32-arm64/fs-native-extensions.node",
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/win32-x64/fs-native-extensions.node"
+  ],
+  "jump_libs": [
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+  ],
+  "bridges": [
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_try_lock",
+      "cfunc": "fs_ext_napi_try_lock",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_wait_for_lock",
+      "cfunc": "fs_ext_napi_wait_for_lock",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_try_downgrade_lock",
+      "cfunc": "fs_ext_napi_try_downgrade_lock",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_wait_for_downgrade_lock",
+      "cfunc": "fs_ext_napi_wait_for_downgrade_lock",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_try_upgrade_lock",
+      "cfunc": "fs_ext_napi_try_upgrade_lock",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_wait_for_upgrade_lock",
+      "cfunc": "fs_ext_napi_wait_for_upgrade_lock",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_unlock",
+      "cfunc": "fs_ext_napi_unlock",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_trim",
+      "cfunc": "fs_ext_napi_trim",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_sparse",
+      "cfunc": "fs_ext_napi_sparse",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_swap",
+      "cfunc": "fs_ext_napi_swap",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_get_attr",
+      "cfunc": "fs_ext_napi_get_attr",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_set_attr",
+      "cfunc": "fs_ext_napi_set_attr",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_remove_attr",
+      "cfunc": "fs_ext_napi_remove_attr",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    },
+    {
+      "jsname": "fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.fs_ext_napi_list_attrs",
+      "cfunc": "fs_ext_napi_list_attrs",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/fs-native-extensions/prebuilds/linux-x64/fs-native-extensions.node"
+    }
+  ],
+  "failed": {}
+}

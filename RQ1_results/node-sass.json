@@ -1,0 +1,206 @@
+{
+  "objects_examined": 2025,
+  "callable_objects": 1234,
+  "foreign_callable_objects": 38,
+  "duration_sec": 15,
+  "count": 38,
+  "modules": [
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+  ],
+  "jump_libs": [
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+  ],
+  "bridges": [
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.render",
+      "cfunc": "render(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.renderSync",
+      "cfunc": "render_sync(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.renderFile",
+      "cfunc": "render_file(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.renderFileSync",
+      "cfunc": "render_file_sync(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.libsassVersion",
+      "cfunc": "libsass_version(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Number",
+      "cfunc": "SassTypes::SassValueWrapper<SassTypes::Number>::New(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.String",
+      "cfunc": "SassTypes::SassValueWrapper<SassTypes::String>::New(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Color",
+      "cfunc": "SassTypes::SassValueWrapper<SassTypes::Color>::New(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Boolean",
+      "cfunc": "SassTypes::Boolean::New(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.List",
+      "cfunc": "SassTypes::SassValueWrapper<SassTypes::List>::New(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Map",
+      "cfunc": "SassTypes::SassValueWrapper<SassTypes::Map>::New(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Null",
+      "cfunc": "SassTypes::Null::New(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Error",
+      "cfunc": "SassTypes::SassValueWrapper<SassTypes::Error>::New(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Number.prototype.getValue",
+      "cfunc": "SassTypes::Number::GetValue(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Number.prototype.getUnit",
+      "cfunc": "SassTypes::Number::GetUnit(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Number.prototype.setValue",
+      "cfunc": "SassTypes::Number::SetValue(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Number.prototype.setUnit",
+      "cfunc": "SassTypes::Number::SetUnit(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.String.prototype.getValue",
+      "cfunc": "SassTypes::String::GetValue(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.String.prototype.setValue",
+      "cfunc": "SassTypes::String::SetValue(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Color.prototype.getR",
+      "cfunc": "SassTypes::Color::GetR(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Color.prototype.getG",
+      "cfunc": "SassTypes::Color::GetG(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Color.prototype.getB",
+      "cfunc": "SassTypes::Color::GetB(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Color.prototype.getA",
+      "cfunc": "SassTypes::Color::GetA(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Color.prototype.setR",
+      "cfunc": "SassTypes::Color::SetR(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Color.prototype.setG",
+      "cfunc": "SassTypes::Color::SetG(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Color.prototype.setB",
+      "cfunc": "SassTypes::Color::SetB(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Color.prototype.setA",
+      "cfunc": "SassTypes::Color::SetA(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Boolean.prototype.getValue",
+      "cfunc": "SassTypes::Boolean::GetValue(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.List.prototype.getLength",
+      "cfunc": "SassTypes::List::GetLength(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.List.prototype.getSeparator",
+      "cfunc": "SassTypes::List::GetSeparator(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.List.prototype.setSeparator",
+      "cfunc": "SassTypes::List::SetSeparator(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.List.prototype.getValue",
+      "cfunc": "SassTypes::List::GetValue(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.List.prototype.setValue",
+      "cfunc": "SassTypes::List::SetValue(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Map.prototype.getLength",
+      "cfunc": "SassTypes::Map::GetLength(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Map.prototype.getKey",
+      "cfunc": "SassTypes::Map::GetKey(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Map.prototype.setKey",
+      "cfunc": "SassTypes::Map::SetKey(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Map.prototype.getValue",
+      "cfunc": "SassTypes::Map::GetValue(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    },
+    {
+      "jsname": "node-sass/vendor/linux-x64-127/binding.types.Map.prototype.setValue",
+      "cfunc": "SassTypes::Map::SetValue(Nan::FunctionCallbackInfo<v8::Value> const&)",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/node-sass/vendor/linux-x64-127/binding.node"
+    }
+  ],
+  "failed": {}
+}

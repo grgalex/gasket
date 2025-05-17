@@ -73,7 +73,7 @@ BUILTIN_BINDING_NAMES_ALL = [
     'zlib'
 ]
 
-BUILTIN_BINDING_NAMES = ['os', 'fs']
+BUILTIN_BINDING_NAMES = ['fs']
 
 objects_examined = 0
 callable_objects = 0

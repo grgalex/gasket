@@ -45,7 +45,8 @@
 //     extern void _v8_internal_Print_Object(void* object);
 // }
 
-typedef void (*PrintObjectFn)(void*);
+// typedef void (*PrintObjectFn)(void*);
+typedef std::string (*PrintObjectFn)(void*);
 
 typedef struct {
       const size_t _staticArgCount = 6;
@@ -64,12 +65,13 @@ Napi::Value jid2(const Napi::CallbackInfo& info) {
 	Napi::Env env = info.Env();
 	std::string ret;
     void* handle = dlopen(NULL, RTLD_LAZY);
+    PrintObjectFn print_fn;
 
-    PrintObjectFn print_fn = (PrintObjectFn)dlsym(handle, "_v8_internal_Print_Object");
+    // PrintObjectFn print_fn = (PrintObjectFn)dlsym(handle, "_v8_internal_Print_Object");
 	ret = "hello";
 
-    if (!print_fn)
-        print_fn = (PrintObjectFn)dlsym(handle, "_Z25_v8_internal_Print_ObjectPv");
+    // if (!print_fn)
+    print_fn = (PrintObjectFn)dlsym(handle, "_Z35_v8_internal_Print_Object_To_StringPv");
 
     if (!print_fn) {
         ret = "NULL_DLSYM";
@@ -83,12 +85,12 @@ Napi::Value jid2(const Napi::CallbackInfo& info) {
     auto new_info = (CallbackInfoPublic&)(info);
 	auto x = *(new_info._argv);
 	y = *(void **)x;
-    z = *(void **)(x+sizeof(void *))
+    // z = *(void **)(x+sizeof(void *))
 
     // ret = _v8_internal_Print_Object_To_String(y);
     // _v8_internal_Print_Object(y);
     if (print_fn)
-        print_fn(y);
+        ret = print_fn(y);
 	// ret = node::v8_utils::deno_jid(y);
 	// node::v8_utils::jid(argz);
 out:

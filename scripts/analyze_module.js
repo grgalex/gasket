@@ -191,7 +191,7 @@ function extract_cfunc(fqn) {
             && cb.includes('FunctionCallbackWrapper6Invoke')) {
 		extract_fcb_invoke(fqn)
 	}
-    else if (cb.includes('Nan') && cb.includes('impl') && cb.includes('Nan::imp::FunctionCallbackWrapper')) {
+    else if (cb.includes('Nan') && cb.includes('imp')) {
         extract_nan(fqn)
     }
     else {
@@ -252,7 +252,7 @@ function extract_cfunc_2(fqn) {
         }
     }
     // napi-rs
-    if (cb.includes('_napi_internal_register')) {
+    else if (cb.includes('_napi_internal_register')) {
         var fn = demangle_cpp(cb)
         console.log(`fn = ${fn}`)
         var lib = addr2sym[fqn2cbaddr2[fqn]].library
@@ -269,7 +269,7 @@ function extract_cfunc_2(fqn) {
     }
 
     // node-bindgen
-    if (cb.includes('napi_')) {
+    else if (cb.includes('napi_')) {
         var fn = demangle_cpp(cb)
         console.log(`fn = ${fn}`)
         var lib = addr2sym[fqn2cbaddr2[fqn]].library
@@ -574,7 +574,7 @@ function main() {
     console.log(`Package root = ${args.root}`)
 
     so_files = locate_so_modules(args.root)
-    so_files = deduplicate_paths(so_files)
+    // so_files = deduplicate_paths(so_files)
     console.log(`Native extension files :\n${so_files.join('\n')}`)
 
 
