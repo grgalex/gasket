@@ -1,0 +1,14 @@
+fs_ext_napi_try_lock
+fs_ext_napi_wait_for_lock
+fs_ext_napi_try_downgrade_lock
+fs_ext_napi_wait_for_downgrade_lock
+fs_ext_napi_try_upgrade_lock
+fs_ext_napi_wait_for_upgrade_lock
+fs_ext_napi_unlock
+fs_ext_napi_trim
+fs_ext_napi_sparse
+fs_ext_napi_swap
+fs_ext_napi_get_attr
+fs_ext_napi_set_attr
+fs_ext_napi_remove_attr
+fs_ext_napi_list_attrs
