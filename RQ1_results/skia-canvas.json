@@ -1,0 +1,886 @@
+{
+  "objects_examined": 6459,
+  "callable_objects": 3407,
+  "foreign_callable_objects": 174,
+  "duration_sec": 15,
+  "count": 174,
+  "modules": [
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+  ],
+  "jump_libs": [
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+  ],
+  "bridges": [
+    {
+      "jsname": "skia-canvas/lib/v8/index.Image_new",
+      "cfunc": "skia_canvas::image::new",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Image_get_src",
+      "cfunc": "skia_canvas::image::get_src",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Image_set_src",
+      "cfunc": "skia_canvas::image::set_src",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Image_set_data",
+      "cfunc": "skia_canvas::image::set_data",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Image_get_width",
+      "cfunc": "skia_canvas::image::get_width",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Image_get_height",
+      "cfunc": "skia_canvas::image::get_height",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Image_get_complete",
+      "cfunc": "skia_canvas::image::get_complete",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Image_pixels",
+      "cfunc": "skia_canvas::image::pixels",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_new",
+      "cfunc": "skia_canvas::path::new",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_from_path",
+      "cfunc": "skia_canvas::path::from_path",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_from_svg",
+      "cfunc": "skia_canvas::path::from_svg",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_addPath",
+      "cfunc": "skia_canvas::path::addPath",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_closePath",
+      "cfunc": "skia_canvas::path::closePath",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_moveTo",
+      "cfunc": "skia_canvas::path::moveTo",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_lineTo",
+      "cfunc": "skia_canvas::path::lineTo",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_bezierCurveTo",
+      "cfunc": "skia_canvas::path::bezierCurveTo",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_quadraticCurveTo",
+      "cfunc": "skia_canvas::path::quadraticCurveTo",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_conicCurveTo",
+      "cfunc": "skia_canvas::path::conicCurveTo",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_arc",
+      "cfunc": "skia_canvas::path::arc",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_arcTo",
+      "cfunc": "skia_canvas::path::arcTo",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_ellipse",
+      "cfunc": "skia_canvas::path::ellipse",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_rect",
+      "cfunc": "skia_canvas::path::rect",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_roundRect",
+      "cfunc": "skia_canvas::path::roundRect",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_op",
+      "cfunc": "skia_canvas::path::op",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_interpolate",
+      "cfunc": "skia_canvas::path::interpolate",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_simplify",
+      "cfunc": "skia_canvas::path::simplify",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_unwind",
+      "cfunc": "skia_canvas::path::unwind",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_round",
+      "cfunc": "skia_canvas::path::round",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_trim",
+      "cfunc": "skia_canvas::path::trim",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_jitter",
+      "cfunc": "skia_canvas::path::jitter",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_offset",
+      "cfunc": "skia_canvas::path::offset",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_transform",
+      "cfunc": "skia_canvas::path::transform",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_bounds",
+      "cfunc": "skia_canvas::path::bounds",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_contains",
+      "cfunc": "skia_canvas::path::contains",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_edges",
+      "cfunc": "skia_canvas::path::edges",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_get_d",
+      "cfunc": "skia_canvas::path::get_d",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Path2D_set_d",
+      "cfunc": "skia_canvas::path::set_d",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasGradient_linear",
+      "cfunc": "skia_canvas::gradient::linear",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasGradient_radial",
+      "cfunc": "skia_canvas::gradient::radial",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasGradient_conic",
+      "cfunc": "skia_canvas::gradient::conic",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasGradient_addColorStop",
+      "cfunc": "skia_canvas::gradient::addColorStop",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasGradient_repr",
+      "cfunc": "skia_canvas::gradient::repr",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasPattern_from_image",
+      "cfunc": "skia_canvas::pattern::from_image",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasPattern_from_image_data",
+      "cfunc": "skia_canvas::pattern::from_image_data",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasPattern_from_canvas",
+      "cfunc": "skia_canvas::pattern::from_canvas",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasPattern_setTransform",
+      "cfunc": "skia_canvas::pattern::setTransform",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasPattern_repr",
+      "cfunc": "skia_canvas::pattern::repr",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasTexture_new",
+      "cfunc": "skia_canvas::texture::new",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasTexture_repr",
+      "cfunc": "skia_canvas::texture::repr",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.FontLibrary_get_families",
+      "cfunc": "skia_canvas::font_library::get_families",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.FontLibrary_has",
+      "cfunc": "skia_canvas::font_library::has",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.FontLibrary_family",
+      "cfunc": "skia_canvas::font_library::family",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.FontLibrary_addFamily",
+      "cfunc": "skia_canvas::font_library::addFamily",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.FontLibrary_reset",
+      "cfunc": "skia_canvas::font_library::reset",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Canvas_new",
+      "cfunc": "skia_canvas::canvas::new",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Canvas_get_engine",
+      "cfunc": "skia_canvas::canvas::get_engine",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Canvas_set_engine",
+      "cfunc": "skia_canvas::canvas::set_engine",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Canvas_get_engine_status",
+      "cfunc": "skia_canvas::canvas::get_engine_status",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Canvas_get_width",
+      "cfunc": "skia_canvas::canvas::get_width",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Canvas_set_width",
+      "cfunc": "skia_canvas::canvas::set_width",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Canvas_get_height",
+      "cfunc": "skia_canvas::canvas::get_height",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Canvas_set_height",
+      "cfunc": "skia_canvas::canvas::set_height",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Canvas_save",
+      "cfunc": "skia_canvas::canvas::save",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Canvas_saveSync",
+      "cfunc": "skia_canvas::canvas::saveSync",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Canvas_toBuffer",
+      "cfunc": "skia_canvas::canvas::toBuffer",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.Canvas_toBufferSync",
+      "cfunc": "skia_canvas::canvas::toBufferSync",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_new",
+      "cfunc": "skia_canvas::context::api::new",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_resetSize",
+      "cfunc": "skia_canvas::context::api::resetSize",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_size",
+      "cfunc": "skia_canvas::context::api::get_size",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_size",
+      "cfunc": "skia_canvas::context::api::set_size",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_reset",
+      "cfunc": "skia_canvas::context::api::reset",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_save",
+      "cfunc": "skia_canvas::context::api::save",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_restore",
+      "cfunc": "skia_canvas::context::api::restore",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_transform",
+      "cfunc": "skia_canvas::context::api::transform",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_translate",
+      "cfunc": "skia_canvas::context::api::translate",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_scale",
+      "cfunc": "skia_canvas::context::api::scale",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_rotate",
+      "cfunc": "skia_canvas::context::api::rotate",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_resetTransform",
+      "cfunc": "skia_canvas::context::api::resetTransform",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_currentTransform",
+      "cfunc": "skia_canvas::context::api::get_currentTransform",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_currentTransform",
+      "cfunc": "skia_canvas::context::api::set_currentTransform",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_createProjection",
+      "cfunc": "skia_canvas::context::api::createProjection",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_beginPath",
+      "cfunc": "skia_canvas::context::api::beginPath",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_rect",
+      "cfunc": "skia_canvas::context::api::rect",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_roundRect",
+      "cfunc": "skia_canvas::context::api::roundRect",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_arc",
+      "cfunc": "skia_canvas::context::api::arc",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_ellipse",
+      "cfunc": "skia_canvas::context::api::ellipse",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_moveTo",
+      "cfunc": "skia_canvas::context::api::moveTo",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_lineTo",
+      "cfunc": "skia_canvas::context::api::lineTo",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_arcTo",
+      "cfunc": "skia_canvas::context::api::arcTo",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_bezierCurveTo",
+      "cfunc": "skia_canvas::context::api::bezierCurveTo",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_quadraticCurveTo",
+      "cfunc": "skia_canvas::context::api::quadraticCurveTo",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_conicCurveTo",
+      "cfunc": "skia_canvas::context::api::conicCurveTo",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_closePath",
+      "cfunc": "skia_canvas::context::api::closePath",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_isPointInPath",
+      "cfunc": "skia_canvas::context::api::isPointInPath",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_isPointInStroke",
+      "cfunc": "skia_canvas::context::api::isPointInStroke",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_clip",
+      "cfunc": "skia_canvas::context::api::clip",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_fill",
+      "cfunc": "skia_canvas::context::api::fill",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_stroke",
+      "cfunc": "skia_canvas::context::api::stroke",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_fillRect",
+      "cfunc": "skia_canvas::context::api::fillRect",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_strokeRect",
+      "cfunc": "skia_canvas::context::api::strokeRect",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_clearRect",
+      "cfunc": "skia_canvas::context::api::clearRect",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_fillStyle",
+      "cfunc": "skia_canvas::context::api::get_fillStyle",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_fillStyle",
+      "cfunc": "skia_canvas::context::api::set_fillStyle",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_strokeStyle",
+      "cfunc": "skia_canvas::context::api::get_strokeStyle",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_strokeStyle",
+      "cfunc": "skia_canvas::context::api::set_strokeStyle",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_getLineDash",
+      "cfunc": "skia_canvas::context::api::getLineDash",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_setLineDash",
+      "cfunc": "skia_canvas::context::api::setLineDash",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_lineCap",
+      "cfunc": "skia_canvas::context::api::get_lineCap",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_lineCap",
+      "cfunc": "skia_canvas::context::api::set_lineCap",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_lineDashFit",
+      "cfunc": "skia_canvas::context::api::get_lineDashFit",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_lineDashFit",
+      "cfunc": "skia_canvas::context::api::set_lineDashFit",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_lineDashMarker",
+      "cfunc": "skia_canvas::context::api::get_lineDashMarker",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_lineDashMarker",
+      "cfunc": "skia_canvas::context::api::set_lineDashMarker",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_lineDashOffset",
+      "cfunc": "skia_canvas::context::api::get_lineDashOffset",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_lineDashOffset",
+      "cfunc": "skia_canvas::context::api::set_lineDashOffset",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_lineJoin",
+      "cfunc": "skia_canvas::context::api::get_lineJoin",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_lineJoin",
+      "cfunc": "skia_canvas::context::api::set_lineJoin",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_lineWidth",
+      "cfunc": "skia_canvas::context::api::get_lineWidth",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_lineWidth",
+      "cfunc": "skia_canvas::context::api::set_lineWidth",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_miterLimit",
+      "cfunc": "skia_canvas::context::api::get_miterLimit",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_miterLimit",
+      "cfunc": "skia_canvas::context::api::set_miterLimit",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_drawImage",
+      "cfunc": "skia_canvas::context::api::drawImage",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_drawCanvas",
+      "cfunc": "skia_canvas::context::api::drawCanvas",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_getImageData",
+      "cfunc": "skia_canvas::context::api::getImageData",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_putImageData",
+      "cfunc": "skia_canvas::context::api::putImageData",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_imageSmoothingEnabled",
+      "cfunc": "skia_canvas::context::api::get_imageSmoothingEnabled",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_imageSmoothingEnabled",
+      "cfunc": "skia_canvas::context::api::set_imageSmoothingEnabled",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_imageSmoothingQuality",
+      "cfunc": "skia_canvas::context::api::get_imageSmoothingQuality",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_imageSmoothingQuality",
+      "cfunc": "skia_canvas::context::api::set_imageSmoothingQuality",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_fillText",
+      "cfunc": "skia_canvas::context::api::fillText",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_strokeText",
+      "cfunc": "skia_canvas::context::api::strokeText",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_measureText",
+      "cfunc": "skia_canvas::context::api::measureText",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_outlineText",
+      "cfunc": "skia_canvas::context::api::outlineText",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_font",
+      "cfunc": "skia_canvas::context::api::get_font",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_font",
+      "cfunc": "skia_canvas::context::api::set_font",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_textAlign",
+      "cfunc": "skia_canvas::context::api::get_textAlign",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_textAlign",
+      "cfunc": "skia_canvas::context::api::set_textAlign",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_textBaseline",
+      "cfunc": "skia_canvas::context::api::get_textBaseline",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_textBaseline",
+      "cfunc": "skia_canvas::context::api::set_textBaseline",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_direction",
+      "cfunc": "skia_canvas::context::api::get_direction",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_direction",
+      "cfunc": "skia_canvas::context::api::set_direction",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_letterSpacing",
+      "cfunc": "skia_canvas::context::api::get_letterSpacing",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_letterSpacing",
+      "cfunc": "skia_canvas::context::api::set_letterSpacing",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_wordSpacing",
+      "cfunc": "skia_canvas::context::api::get_wordSpacing",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_wordSpacing",
+      "cfunc": "skia_canvas::context::api::set_wordSpacing",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_fontHinting",
+      "cfunc": "skia_canvas::context::api::get_fontHinting",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_fontHinting",
+      "cfunc": "skia_canvas::context::api::set_fontHinting",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_fontVariant",
+      "cfunc": "skia_canvas::context::api::get_fontVariant",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_fontVariant",
+      "cfunc": "skia_canvas::context::api::set_fontVariant",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_fontStretch",
+      "cfunc": "skia_canvas::context::api::get_fontStretch",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_fontStretch",
+      "cfunc": "skia_canvas::context::api::set_fontStretch",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_textWrap",
+      "cfunc": "skia_canvas::context::api::get_textWrap",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_textWrap",
+      "cfunc": "skia_canvas::context::api::set_textWrap",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_textDecoration",
+      "cfunc": "skia_canvas::context::api::get_textDecoration",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_textDecoration",
+      "cfunc": "skia_canvas::context::api::set_textDecoration",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_globalAlpha",
+      "cfunc": "skia_canvas::context::api::get_globalAlpha",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_globalAlpha",
+      "cfunc": "skia_canvas::context::api::set_globalAlpha",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_globalCompositeOperation",
+      "cfunc": "skia_canvas::context::api::get_globalCompositeOperation",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_globalCompositeOperation",
+      "cfunc": "skia_canvas::context::api::set_globalCompositeOperation",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_filter",
+      "cfunc": "skia_canvas::context::api::get_filter",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_filter",
+      "cfunc": "skia_canvas::context::api::set_filter",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_shadowBlur",
+      "cfunc": "skia_canvas::context::api::get_shadowBlur",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_shadowBlur",
+      "cfunc": "skia_canvas::context::api::set_shadowBlur",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_shadowColor",
+      "cfunc": "skia_canvas::context::api::get_shadowColor",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_shadowColor",
+      "cfunc": "skia_canvas::context::api::set_shadowColor",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_shadowOffsetX",
+      "cfunc": "skia_canvas::context::api::get_shadowOffsetX",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_get_shadowOffsetY",
+      "cfunc": "skia_canvas::context::api::get_shadowOffsetY",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_shadowOffsetX",
+      "cfunc": "skia_canvas::context::api::set_shadowOffsetX",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.CanvasRenderingContext2D_set_shadowOffsetY",
+      "cfunc": "skia_canvas::context::api::set_shadowOffsetY",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.App_launch",
+      "cfunc": "skia_canvas::gui::launch",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.App_quit",
+      "cfunc": "skia_canvas::gui::quit",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.App_closeWindow",
+      "cfunc": "skia_canvas::gui::close",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.App_openWindow",
+      "cfunc": "skia_canvas::gui::open",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    },
+    {
+      "jsname": "skia-canvas/lib/v8/index.App_setRate",
+      "cfunc": "skia_canvas::gui::set_rate",
+      "library": "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/skia-canvas/lib/v8/index.node"
+    }
+  ],
+  "failed": {}
+}
