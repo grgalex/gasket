@@ -1,0 +1,27 @@
+{
+  "objects_examined": 1145,
+  "callable_objects": 831,
+  "foreign_callable_objects": 13,
+  "duration_sec": 14,
+  "count": 0,
+  "modules": [
+    "/home/george.alexopoulos/jsxray/data/RQ1/node_modules/@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.node"
+  ],
+  "jump_libs": [],
+  "bridges": [],
+  "failed": {
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.renderAsync": "CFUNC_ADDRESS_RESOLUTION",
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.BBox": "CFUNC_ADDRESS_RESOLUTION",
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.Resvg": "CFUNC_ADDRESS_RESOLUTION",
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.RenderedImage": "CFUNC_ADDRESS_RESOLUTION",
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.AsyncRenderer": "CFUNC_ADDRESS_RESOLUTION",
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.Resvg.prototype.cropByBBox": "CFUNC_ADDRESS_RESOLUTION",
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.Resvg.prototype.getBBox": "CFUNC_ADDRESS_RESOLUTION",
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.Resvg.prototype.imagesToResolve": "CFUNC_ADDRESS_RESOLUTION",
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.Resvg.prototype.innerBBox": "CFUNC_ADDRESS_RESOLUTION",
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.Resvg.prototype.render": "CFUNC_ADDRESS_RESOLUTION",
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.Resvg.prototype.resolveImage": "CFUNC_ADDRESS_RESOLUTION",
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.Resvg.prototype.toString": "CFUNC_ADDRESS_RESOLUTION",
+    "@resvg/resvg-js-linux-x64-gnu/resvgjs.linux-x64-gnu.RenderedImage.prototype.asPng": "CFUNC_ADDRESS_RESOLUTION"
+  }
+}

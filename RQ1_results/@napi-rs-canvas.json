@@ -1,0 +1,521 @@
+{
+  "objects_examined": 4163,
+  "callable_objects": 2239,
+  "foreign_callable_objects": 101,
+  "duration_sec": 16,
+  "count": 101,
+  "modules": [
+    "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+  ],
+  "jump_libs": [
+    "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+  ],
+  "bridges": [
+    {
+      "jsname": "test/skia.linux-x64-gnu.convertSVGTextToPath",
+      "cfunc": "canvas::svg::_napi_internal_register_convert_svg_text_to_path::h32338ec695909813",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.clearAllCache",
+      "cfunc": "canvas::_napi_internal_register_clear_all_cache::h2d7e09f32de1fee5",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_new::h59cb32c2345ec5ab",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.SVGCanvas",
+      "cfunc": "canvas::__napi_impl_helper_SVGCanvas_8::_napi_internal_register_new::hc704eeea40766feb",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasElement",
+      "cfunc": "canvas::__napi_impl_helper_CanvasElement_6::_napi_internal_register_new::hea7207d2cf9fbb62",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.ImageData",
+      "cfunc": "canvas::image::__napi_impl_helper_ImageData_2::_napi_internal_register_new::hd06553d5e15ed423",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Image",
+      "cfunc": "canvas::image::__napi_impl_helper_Image_3::_napi_internal_register_new::hc0b6adb8089adfc1",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasPattern",
+      "cfunc": "canvas::pattern::__napi_impl_helper_CanvasPattern_5::_napi_internal_register_new::h0308b771d3c8b2de",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_new::h0c2e3ca6e44e2473",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.GlobalFonts.register",
+      "cfunc": "canvas::global_fonts::global_fonts::_napi_internal_register_register::h5246e2ba772782fd",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.GlobalFonts.registerFromPath",
+      "cfunc": "canvas::global_fonts::global_fonts::_napi_internal_register_register_from_path::h3dceccb15f3c0429",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.GlobalFonts.getFamilies",
+      "cfunc": "canvas::global_fonts::global_fonts::_napi_internal_register_get_families::hdf1b24b01f6f09dd",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.GlobalFonts.loadSystemFonts",
+      "cfunc": "canvas::global_fonts::global_fonts::_napi_internal_register_load_system_fonts::h2b3462eb1d834b61",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.GlobalFonts.loadFontsFromDir",
+      "cfunc": "canvas::global_fonts::global_fonts::_napi_internal_register_load_fonts_from_dir::h71995995ed4578c9",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.GlobalFonts.setAlias",
+      "cfunc": "canvas::global_fonts::global_fonts::_napi_internal_register_set_alias::hfb5c79e07eca20eb",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.GlobalFonts.remove",
+      "cfunc": "canvas::global_fonts::global_fonts::_napi_internal_register_remove::h7811690a9f9fe882",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasGradient.prototype.addColorStop",
+      "cfunc": "canvas::gradient::__napi_impl_helper_CanvasGradient_1::_napi_internal_register_add_color_stop::h088a6ce6c9f1ed87",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.addPath",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_add_path::h56e9981fee19090f",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.arc",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_arc::hf81b9370c256ae86",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.arcTo",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_arc_to::h55d4cf855682ce2c",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.asWinding",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_as_winding::h2ac9a88bc33c52fd",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.bezierCurveTo",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_bezier_curve_to::hbdcf58bf32186029",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.closePath",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_close_path::h42a67de8d865df46",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.computeTightBounds",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_compute_tight_bounds::h972912d8e5429b45",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.dash",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_dash::h1ccfc81b22c0360c",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.ellipse",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_ellipse::h5dce9b8139324c49",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.equals",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_equals::h6d4a877e6904c974",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.getBounds",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_get_bounds::hc0c7fed9ed65647e",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.getFillType",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_get_fill_type::hbedbfe3ed8822802",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.getFillTypeString",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_get_fill_type_string::h9271f0e8e184c9e9",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.isPointInPath",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_is_point_in_path::hd2baace1cc7c6e2a",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.lineTo",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_line_to::h141fe7878d3fb247",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.moveTo",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_move_to::h0ea79e3c81612bff",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.op",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_op::h3456fe2b96ab3a5f",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.quadraticCurveTo",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_quadratic_curve_to::h26f74becb6d1d89f",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.rect",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_rect::h6a167178e408bb18",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.round",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_round::hb4b27d0e5011ee91",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.roundRect",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_round_rect::h78435e417595fb24",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.setFillType",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_set_fill_type::h8819338294e68d9b",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.simplify",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_simplify::hcdb69313982f0619",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.stroke",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_stroke::h9bcc9410af2bfa5f",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.toSVGString",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_to_svg_string::hf14641cc8732fdd4",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.transform",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_transform::h626f2cfa730cd806",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.Path.prototype.trim",
+      "cfunc": "canvas::path::__napi_impl_helper_Path_4::_napi_internal_register_trim::h3b0c7acc2ab316fd",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.SVGCanvas.prototype.getContent",
+      "cfunc": "canvas::__napi_impl_helper_SVGCanvas_8::_napi_internal_register_get_content::h5a785824469f196c",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.SVGCanvas.prototype.getContext",
+      "cfunc": "canvas::__napi_impl_helper_SVGCanvas_8::_napi_internal_register_get_context::h27baab02e356fbeb",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasElement.prototype.data",
+      "cfunc": "canvas::__napi_impl_helper_CanvasElement_6::_napi_internal_register_data::h6fc4ed4021767e09",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasElement.prototype.encode",
+      "cfunc": "canvas::__napi_impl_helper_CanvasElement_6::_napi_internal_register_encode::hfb98ad7a075c58ed",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasElement.prototype.encodeStream",
+      "cfunc": "canvas::__napi_impl_helper_CanvasElement_6::_napi_internal_register_encode_stream::hba6db062bfa6945c",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasElement.prototype.encodeSync",
+      "cfunc": "canvas::__napi_impl_helper_CanvasElement_6::_napi_internal_register_encode_sync::h126b760e7ffa8da9",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasElement.prototype.getContext",
+      "cfunc": "canvas::__napi_impl_helper_CanvasElement_6::_napi_internal_register_get_context::h4da78d312c33828e",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasElement.prototype.savePng",
+      "cfunc": "canvas::__napi_impl_helper_CanvasElement_6::_napi_internal_register_save_png::ha2d80a2ac3b7e596",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasElement.prototype.toBuffer",
+      "cfunc": "canvas::__napi_impl_helper_CanvasElement_6::_napi_internal_register_to_buffer::hc615b31ea24cb97c",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasElement.prototype.toDataURL",
+      "cfunc": "canvas::__napi_impl_helper_CanvasElement_6::_napi_internal_register_to_data_url::h80a8f667ada641f5",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasElement.prototype.toDataURLAsync",
+      "cfunc": "canvas::__napi_impl_helper_CanvasElement_6::_napi_internal_register_to_data_url_async::hbf826140753726cc",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasPattern.prototype.setTransform",
+      "cfunc": "canvas::pattern::__napi_impl_helper_CanvasPattern_5::_napi_internal_register_set_transform::hb39ab84acc64c30a",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.arc",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_arc::hee291b21e29aef5b",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.arcTo",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_arc_to::h9ce7c2051637cc8f",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.beginPath",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_begin_path::h0e09137fae85f8a5",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.bezierCurveTo",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_bezier_curve_to::h3add8edb31f381a6",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.clearRect",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_clear_rect::h99d8823625dd9f0c",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.clip",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_clip::hba523ae4d7d3bc72",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.closePath",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_close_path::h42cf12f008b654ac",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.createConicGradient",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_create_conic_gradient::h643b4e2cb1022b23",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.createImageData",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_create_image_data::h7077878e27553520",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.createLinearGradient",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_create_linear_gradient::h4dd929e113ed498f",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.createPattern",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_create_pattern::ha1cf3122b93cfd1a",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.createRadialGradient",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_create_radial_gradient::h04156393f5c06601",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.drawImage",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_draw_image::h9380f198b679d442",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.ellipse",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_ellipse::h8b398dfceae8e221",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.fill",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_fill::hf922133d7c3d92ed",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.fillRect",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_fill_rect::h99db67cecea9936c",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.fillText",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_fill_text::hafdb4b544c160df4",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.getContextAttributes",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_get_context_attributes::hdcb8af5d37579d14",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.getImageData",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_get_image_data::hb397d4a08f088877",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.getLineDash",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_get_line_dash::h9516010aeef14166",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.getTransform",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_get_transform::h671ab86d2bb1bd8c",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.isPointInPath",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_is_point_in_path::h3e2dfae0bec72f33",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.isPointInStroke",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_is_point_in_stroke::h869eeda1a338e594",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.lineTo",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_line_to::h116235aa7d399017",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.measureText",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_measure_text::hb2c82e5884a6e05a",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.moveTo",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_move_to::hbcd3d664010fd850",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.putImageData",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_put_image_data::heb2d465c360602db",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.quadraticCurveTo",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_quadratic_curve_to::h14d9ca6fbef805c5",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.rect",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_rect::h68d8fccc801dc782",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.resetTransform",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_reset_transform::h2cdbea906e791548",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.restore",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_restore::hd302179ae39e2ffe",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.rotate",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_rotate::h64dc62c4cbdba8fb",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.roundRect",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_round_rect::h509f849116ece183",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.save",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_save::h62625d8d0f25a79c",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.scale",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_scale::h42417e0aa4bcd8d0",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.setLineDash",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_set_line_dash::h3497bb52ef9842b3",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.setTransform",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_set_transform::h9807e662003b6e66",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.stroke",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_stroke::h1ee99148ba11429d",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.strokeRect",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_stroke_rect::hec735bc4eac2444e",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.strokeText",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_stroke_text::h9eaf256f4fef5001",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.transform",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_transform::h268fb9e6290d3f97",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasRenderingContext2D.prototype.translate",
+      "cfunc": "canvas::ctx::__napi_impl_helper_CanvasRenderingContext2D_0::_napi_internal_register_translate::h2cc7ee2a444c6b29",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.CanvasGradient",
+      "cfunc": "napi::bindgen_runtime::module_register::noop::h5ccfac1e1d498759",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.FontKey",
+      "cfunc": "napi::bindgen_runtime::module_register::noop::h5ccfac1e1d498759",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    },
+    {
+      "jsname": "test/skia.linux-x64-gnu.AsyncDataUrl",
+      "cfunc": "napi::bindgen_runtime::module_register::noop::h5ccfac1e1d498759",
+      "library": "/home/george.alexopoulos/jsxray/tinkers/canvas/test/skia.linux-x64-gnu.node"
+    }
+  ],
+  "failed": {}
+}
