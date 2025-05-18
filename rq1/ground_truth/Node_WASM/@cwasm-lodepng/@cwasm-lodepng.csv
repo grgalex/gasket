@@ -1,0 +1,5 @@
+_initialize
+lodepng_decode32,
+lodepng_encode32,
+malloc
+free
