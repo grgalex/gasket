@@ -1,0 +1,16 @@
+op_delete_env
+op_env
+op_exec_path
+op_exit
+op_get_env
+op_get_exit_code
+op_gid
+op_hostname
+op_loadavg
+op_network_interfaces
+op_os_release
+op_os_uptime
+op_set_env
+op_set_exit_code
+op_system_memory_info
+op_uid
