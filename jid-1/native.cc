@@ -93,6 +93,7 @@ Napi::Value jid2(const Napi::CallbackInfo& info) {
         ret = print_fn(y);
 	// ret = node::v8_utils::deno_jid(y);
 	// node::v8_utils::jid(argz);
+    // ret = std::to_string(reinterpret_cast<uintptr_t>(y));
 out:
 	return Napi::String::New(env, ret);
 }
