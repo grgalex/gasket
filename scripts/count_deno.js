@@ -1,13 +1,17 @@
 import {SimplePropertyRetriever} from './ffdir.js'
-import importSync from 'npm:import-sync';
-import yargs from 'npm:yargs';
+import yargz from 'npm:yargs';
+import { hideBin } from 'npm:yargs/helpers'
+import * as fs from 'node:fs'
+import * as path from 'node:path'
 
-var module = {}
-process.dlopen(module, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-1/build/Debug/native.node', 0)
+const yargs = yargz(hideBin(process.argv))
 
-var objects_examined = 0
-var callable_objects = 0
-var foreign_callable_objects = 0
+self.mod = {}
+process.dlopen(mod, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-1/build/Debug/native.node', 0)
+
+self.objects_examined = 0
+self.callable_objects = 0
+self.foreign_callable_objects = 0
 
 function parse_args() {
     return yargs
@@ -27,11 +31,12 @@ function parse_args() {
 }
 
 
-var final_result = {
+self.final_result = {
     'objects_examined': 0,
     'callable_objects': 0,
     'foreign_callable_objects': 0,
     'duration_sec': 0,
+    'modules': []
 }
 
 function dir(obj) {
@@ -65,15 +70,15 @@ function recursive_inspect(obj, jsname) {
               console.log(error)
               continue
             }
-            objects_examined += 1
+            self.objects_examined += 1
             if (typeof v == 'undefined' || !(v instanceof(Object))) {
                 continue
             }
 
             if (typeof(obj) == 'function')
-                callable_objects += 1
+                self.callable_objects += 1
 
-            ident = module.exports.id(v)
+            ident = self.mod.exports.id(v)
             if (seen.has(ident)) {
                 console.log('ALREADY SEEN')
                 continue
@@ -83,7 +88,7 @@ function recursive_inspect(obj, jsname) {
 
             pending.push([v, jsname + '.' + k])
         }
-        seen.add(module.exports.id(obj))
+        seen.add(self.mod.exports.id(obj))
     }
 }
 
@@ -98,7 +103,7 @@ function locate_js_modules(packagePath) {
 
             if (stat.isDirectory()) {
                 walkDir(fullPath); // Recursive call for directories
-            } else if (file.endsWith('js') || (file.endsWith('ts'))) {
+            } else if (file.endsWith('ts')) {
                 soFiles.push(path.resolve(fullPath)); // Add .so files to the list
             }
         });
@@ -109,49 +114,50 @@ function locate_js_modules(packagePath) {
 }
 
 function analyze_single(mod_file, pkg_root) {
-	clear_dicts()
-    cur_file = mod_file
-        obj = importSync(mod_file)
+    var cur_file = mod_file
+    var obj = import(mod_file)
 
-    jsname = get_mod_fqn(mod_file, pkg_root)
-    fqn2mod[jsname] = obj
+    var jsname = 'foo' 
     console.log(`${mod_file}: jsname = ${jsname}`)
     recursive_inspect(obj, jsname)
 }
 
-function main() {
+export function foo() {
+    console.log('started!')
     var start = Date.now()
     const args = parse_args();
     var output_file = args.output
 
     console.log(`Package root = ${args.root}`)
 
-    so_files = locate_js_modules(args.root)
+    var so_files = locate_js_modules(args.root)
+
+    console.log(`FILES = ${so_files}`)
 
     for (const so_file of so_files) {
-      analyze_single(so_file, args.root);
-      final_result['modules'].push(so_file)
+      try {
+          analyze_single(so_file, args.root);
+          self.final_result['modules'].push(so_file)
+      } catch(error){
+          console.log(`ERROR WHILE INSPECTING ${so_file}: ${error}`)
+      }
     }
 
     var end = Date.now()
 
     var duration_sec = Math.round((end - start) / 1000)
-    final_result['duration_sec'] = duration_sec
-    final_result['objects_examined'] = objects_examined
-    final_result['callable_objects'] = callable_objects
-    final_result['foreign_callable_objects'] = foreign_callable_objects
-    final_result['count'] = final_result['bridges'].length
+    self.final_result['duration_sec'] = duration_sec
+    self.final_result['objects_examined'] = objects_examined
+    self.final_result['callable_objects'] = callable_objects
+    self.final_result['foreign_callable_objects'] = foreign_callable_objects
 
-    final_result['failed'] = fqn2failed
     if (output_file !== undefined) {
-	    fs.writeFileSync(output_file, JSON.stringify(final_result, null, 2));
+	    fs.writeFileSync(output_file, JSON.stringify(self.final_result, null, 2));
         console.log(`Wrote bridges to ${output_file}`)
     }
     else {
-        console.log(JSON.stringify(final_result, null, 2))
+        console.log(JSON.stringify(self.final_result, null, 2))
     }
 }
 
-
-main()
-
+foo()

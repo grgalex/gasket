@@ -1,0 +1,19 @@
+{
+  "objects_examined": 5346,
+  "callable_objects": 4422,
+  "foreign_callable_objects": 0,
+  "duration_sec": 0,
+  "modules": [
+    "/home/george.alexopoulos/jsxray/deno-sqlite3/mod.ts",
+    "/home/george.alexopoulos/jsxray/deno-sqlite3/src/blob.ts",
+    "/home/george.alexopoulos/jsxray/deno-sqlite3/src/ffi.ts",
+    "/home/george.alexopoulos/jsxray/deno-sqlite3/src/util.ts",
+    "/home/george.alexopoulos/jsxray/deno-sqlite3/src/database.ts",
+    "/home/george.alexopoulos/jsxray/deno-sqlite3/src/constants.ts",
+    "/home/george.alexopoulos/jsxray/deno-sqlite3/src/statement.ts",
+    "/home/george.alexopoulos/jsxray/deno-sqlite3/scripts/build.ts",
+    "/home/george.alexopoulos/jsxray/deno-sqlite3/test/test.ts",
+    "/home/george.alexopoulos/jsxray/deno-sqlite3/test/deps.ts",
+    "/home/george.alexopoulos/jsxray/deno-sqlite3/deps.ts"
+  ]
+}
