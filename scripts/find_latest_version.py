@@ -40,7 +40,7 @@ def main():
             print(e)
             continue
         ver = out.strip()
-        pkg2ver[pkg] =
+        pkg2ver[pkg] = ver
         print(f"{pkg}:{ver}")
 
     for pkg, ver in pkg2ver.items():
