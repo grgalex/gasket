@@ -21,6 +21,10 @@ def parse_args():
 
 
 def main():
+    args = parse_args()
+    if args.input is None:
+        print("Must provide input CSV file")
+        sys.exit(1)
     package_names = utils.load_csv(args.input)
     pkg2ver = {}
 
