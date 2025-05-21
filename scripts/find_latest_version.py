@@ -1,16 +1,38 @@
+import argparse
+
 import utils
 
-INPUT_FILE = 'npm_ne.csv'
-OUTPUT_FILE = 'npm_versioned.csv'
 
-package_names = utils.load_csv(INPUT_FILE)
-pkg2ver = {}
+def parse_args():
+    p = argparse.ArgumentParser(description='Get latest versions of npm packages in a given csv')
+    p.add_argument(
+        "-i",
+        "--input",
+        default=None,
+        help=("Input file"),
+    )
+    p.add_argument(
+        "-o",
+        "--output",
+        default=None,
+        help=("Output file"),
+    )
+    return p.parse_args()
 
-for pkg in package_names:
-    cmd = ['npm', 'show', pkg, 'version']
-    try:
-        ret, out, err = utils.run_cmd(cmd)
-    except Exception as e:
-        print(e)
-    ver = out
-    print(f"{pkg}:{ver}")
+
+def main():
+    package_names = utils.load_csv(args.input)
+    pkg2ver = {}
+
+    for pkg in package_names:
+        cmd = ['npm', 'show', pkg, 'version']
+        try:
+            ret, out, err = utils.run_cmd(cmd)
+        except Exception as e:
+            print(e)
+        ver = out
+        print(f"{pkg}:{ver}")
+
+if __name__ == "__main__":
+    main()
+
