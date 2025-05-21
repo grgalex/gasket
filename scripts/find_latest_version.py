@@ -34,7 +34,7 @@ def main():
             ret, out, err = utils.run_cmd(cmd)
         except Exception as e:
             print(e)
-        ver = out
+        ver = out.strip()
         print(f"{pkg}:{ver}")
 
 if __name__ == "__main__":
