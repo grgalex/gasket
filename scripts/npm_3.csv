@@ -307,7 +307,6 @@ node-expat
 node-qconf
 node-opus
 @bobnil/microsleep
-@bobrippling/osx-mouse-cocoa
 ref-array
 xkeychain
 node-vad
@@ -645,7 +644,6 @@ node-gtk
 @hirelofty/vue_deckgl
 @hirelofty/vue_deckgl_test
 msgpack
-osx-temperature-sensor
 @hola.org/uws
 abstract-socket
 freetype-draw
@@ -1172,7 +1170,6 @@ memwatch-next
 @sphereledger/circles-ubi-network
 @spirale-tech/firebird-cc
 bsdiff-nodejs
-@splayer/osx-mouse-cocoa
 @sportsbet/bunyan-syslog
 @spot-parking/node-openalpr
 @sproutsocial/seedlings
@@ -2493,7 +2490,6 @@ electron-desktop-frame
 electron-desktopish
 electron-disable-minimize
 electron-diskusage
-osx-mouse
 electron-drivelist
 electron-edge
 electron-edge-js-selfcontained
@@ -2511,7 +2507,6 @@ electron-named-image
 electron-native-toolkit
 electron-node-helloworld
 electron-nspanel
-electron-osxlaunchservices
 electron-overlay
 electron-panel-window
 electron-penetrate
@@ -4568,8 +4563,6 @@ node-oracle
 node-orangepi-dht11-sensor
 node-orbidx
 node-os-calls
-node-osx
-node-osx-mediacontrol
 node-p4
 node-pafe
 tesseract_native
@@ -5025,22 +5018,6 @@ ospipe
 osrm-nb
 ossp-uuid
 osunp
-osx
-osx-audio
-osx-dialog
-osx-fileicon
-osx-keychain-key
-osx-keylogger
-osx-mouse-cocoa
-osx-mouse-with-middle
-osx-mouselistener
-osx-notify
-osx-system-sounds
-osx-tag
-osx-theme
-osxaudioswitch
-osxreachability
-osxsleep
 otagai
 otapi
 otis.js
