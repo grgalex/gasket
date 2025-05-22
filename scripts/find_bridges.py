@@ -305,7 +305,7 @@ def main():
     # for pkg in package_names:
     #     do_single(pkg, args.always)
 
-    with concurrent.futures.ProcessPoolExecutor(max_workers=20) as executor:
+    with concurrent.futures.ProcessPoolExecutor(max_workers=3) as executor:
         for pkg in package_names:
             executor.submit(do_single, pkg, args.always)
 
