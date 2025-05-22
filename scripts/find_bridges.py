@@ -300,14 +300,14 @@ def main():
     #     sanitized = utils.sanitize_package_name(p)
     #     package_names.append(sanitized)
 
-    log.info(f"package_names = {package_names}")
+    # log.info(f"package_names = {package_names}")
 
-    for pkg in package_names:
-        do_single(pkg, args.always)
+    # for pkg in package_names:
+    #     do_single(pkg, args.always)
 
-    # with concurrent.futures.ProcessPoolExecutor(max_workers=20) as executor:
-    #     for pkg in package_names:
-    #         executor.submit(do_single, pkg, args.always, False, args.binary_always)
+    with concurrent.futures.ProcessPoolExecutor(max_workers=20) as executor:
+        for pkg in package_names:
+            executor.submit(do_single, pkg, args.always)
 
 if __name__ == "__main__":
     main()
