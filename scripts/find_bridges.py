@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 import json
 import argparse
@@ -68,11 +69,16 @@ class JavascriptBridger():
     def __init__(self, package, always):
         self.always = always
         self.package = package
+        self.stripped = False
         self.sanitized_package = utils.sanitize_package_name(self.package)
         self.name = package.split(':')[0]
-        self.sname = sanitized_package.split(':')[0]
+        self.sname = self.sanitized_package.split(':')[0]
         self.version = package.split(':')[1]
-        self.sversion = sanitized_package.split(':')[0]
+        self.sversion = self.sanitized_package.split(':')[1]
+
+
+        self.jsname_stripped = set()
+
 
         self.n2cgpath = None
 
@@ -102,6 +108,8 @@ class JavascriptBridger():
             log.info(f"Use -A to force recreation.")
             return 0
         else:
+            if os.path.exists(self.tmp_install_dir):
+                shutil.rmtree(self.tmp_install_dir)
             utils.create_dir(self.tmp_install_dir)
             cmd = [
                 'npm',
@@ -126,15 +134,46 @@ class JavascriptBridger():
 
     def find_bridges(self):
         log.info(f"Generating bridges for {self.package}")
-        bridges_dir = self.bridges_dir
-        if not os.path.exists(bridges_dir):
-            utils.create_dir(bridges_dir)
-        bridges_path = self.bridges_path
+        if os.path.exists(self.bridges_path) and not self.always:
+            log.info(f"Bridges for {self.package} already exist at {self.bridges_path} - Skipping...")
+            log.info(f"Use -A to force recreation.")
+            return 0
+        else:
+            bridges_dir = self.bridges_dir
+            if not os.path.exists(bridges_dir):
+                utils.create_dir(bridges_dir)
+            cmd = [
+                'node_g',
+                'analyze_module.js',
+                '-r', self.pkg_inner_dir,
+                '-o', self.bridges_path
+            ]
+            log.info(cmd)
+            try:
+                ret, out, err = utils.run_cmd(cmd)
+            except Exception as e:
+                log.error(e)
+                return -1
+            if ret != 0:
+                log.error(f"cmd {cmd} returned non-zero exit code {ret}")
+                log.info(out)
+                log.info(err)
+                return ret
+
+        return 0
+    
+    def install_package_build_from_source(self):
+        log.info(f"Installing (BUILD-FROM-SOURCE) {self.package}")
+        # XXX: Remove old installation (prebuilt). Build from source!
+        if os.path.exists(self.tmp_install_dir):
+            shutil.rmtree(self.tmp_install_dir)
+        utils.create_dir(self.tmp_install_dir)
         cmd = [
-            'node_g',
-            'analyze_module.js',
-            '-r', self.pkg_inner_dir,
-            '-o', self.bridges_path
+            'npm',
+            'install',
+            '--build-from-source',
+            '--prefix', self.tmp_install_dir,
+            "{}@{}".format(self.name, self.version)
         ]
         log.info(cmd)
         try:
@@ -146,17 +185,41 @@ class JavascriptBridger():
             log.error(f"cmd {cmd} returned non-zero exit code {ret}")
             log.info(out)
             log.info(err)
+            if os.path.exists(self.tmp_install_dir):
+                shutil.rmtree(self.tmp_install_dir)
             return ret
+        return 0
 
+    def check_bridges(self):
+        log.info(f"Checking bridges for {self.package}, ensuring not failed/stripped")
+        self.stripped = False
+        bridges_json_path = self.bridges_path
+        with open(bridges_json_path, 'r') as infile:
+            bridges_orig_raw = json.loads(infile.read())
+        bridges_orig = bridges_orig_raw['bridges']
+        failed_orig = bridges_orig_raw['failed']
+
+        jsnames_ok = set()
+
+        for b in bridges_orig:
+            # XXX: Add final comp
+            jsnames_ok.add(b['jsname'].split('.')[-1])
+
+        for k,v in failed_orig.items():
+            kk = k.split('.')[-1]
+            if v == 'CFUNC_ADDRESS_RESOLUTION' and kk not in jsnames_ok:
+                log.warning(f"jsname = {kk} not in bridges while having rebuilt")
+                self.stripped = True
+                return -1
         return 0
 
     def generate_bridges_csv(self):
         log.info(f"Generating CSV bridges for {self.package}")
         bridges_json_path = self.bridges_path
-        bridges_new = []
+        bridges_new = set()
         with open(bridges_json_path, 'r') as infile:
             bridges_orig_raw = json.loads(infile.read())
-        bridges_orig = bridges_oriw_raw['bridges']
+        bridges_orig = bridges_orig_raw['bridges']
         for b in bridges_orig:
             jsname = b['jsname']
             cfunc = b['cfunc']
@@ -173,12 +236,12 @@ class JavascriptBridger():
                 log.error(f"Couldn't exract new jsname/cfunc for bridge: {b}")
                 return -1
 
-            bridges_new.append({'jsname': new_jsname, 'cfunc': new_cfunc})
+            bridges_new.add((new_jsname, new_cfunc))
 
         with open(self.bridges_csv_path, 'w') as outfile:
             for bn in bridges_new:
-                j = bn['jsname']
-                c = bn['cfunc']
+                j = bn[0]
+                c = bn[1]
                 outfile.write(f'({j},{c})\n')
             outfile.flush()
 
@@ -190,6 +253,24 @@ class JavascriptBridger():
             return ret
 
         ret = self.find_bridges()
+        if ret != 0:
+            return ret
+
+        ret = self.check_bridges()
+        if ret < 0:
+            if self.stripped:
+                log.warning(f"Package {self.package} is stripped. Reinstalling from source...")
+                # XXX: Remove old bridges.
+                if os.path.exists(self.bridges_dir):
+                    shutil.rmtree(self.bridges_dir)
+                ret = self.install_package_build_from_source()
+                if ret != 0:
+                    return ret
+                ret = self.find_bridges()
+                if ret != 0:
+                    return ret
+
+        ret = self.check_bridges()
         if ret != 0:
             return ret
 
