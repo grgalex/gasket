@@ -1,0 +1,8 @@
+(setRuntimeParams,LabelResolverNode)
+(name,String)
+(label_type,Number)
+(length,Number)
+(offset,Number)
+(text,String)
+(closest_text,String)
+(score,Number)

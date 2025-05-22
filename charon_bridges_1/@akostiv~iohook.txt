@@ -1,0 +1,3 @@
+(startHook,StartHook)
+(stopHook,StopHook)
+(debugEnable,DebugEnable)

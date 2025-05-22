@@ -1,0 +1,5 @@
+(add,Add)
+(isStopRequested,IsStopRequested)
+(remove,Remove)
+(run,Run)
+(stop,Stop)

@@ -1,0 +1,5 @@
+(PngImg,PngImgAdapter)
+(r,Number)
+(g,Number)
+(b,Number)
+(a,Number)

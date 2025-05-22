@@ -1,0 +1,6 @@
+(read,read)
+(readReg8,readReg8)
+(readReg16,readReg16)
+(write,write)
+(writeReg8,writeReg8)
+(writeReg16,writeReg16)

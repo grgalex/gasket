@@ -1,0 +1,2 @@
+(cpu,Number)
+(memory,Number)

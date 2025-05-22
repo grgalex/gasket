@@ -1,0 +1,6 @@
+(syscall,String)
+(errno,Number)
+(code,Number)
+(now,Now)
+(nowDouble,NowDouble)
+(nowStruct,NowStruct)

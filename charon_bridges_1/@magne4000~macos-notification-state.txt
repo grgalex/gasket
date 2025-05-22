@@ -1,0 +1,2 @@
+(getNotificationState,isolate)
+(getDoNotDisturb,isolate)

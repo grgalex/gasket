@@ -1,0 +1,3 @@
+(genAddressByPubKey,GenAddressByPubKeyMethod)
+(composeUnsignedTx,ComposeUnsignedTxMethod)
+(buildRawTx,BuildRawTxMethod)

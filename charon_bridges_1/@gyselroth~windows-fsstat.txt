@@ -1,0 +1,3 @@
+(ino,Number)
+(size,Number)
+(lstatSync,lstatSync)

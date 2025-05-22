@@ -1,0 +1,2 @@
+(getMemo,GetMemoMethod)
+(getTx,GetTxMethod)

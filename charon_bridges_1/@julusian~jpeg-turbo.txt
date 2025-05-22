@@ -1,0 +1,5 @@
+(bufferSize,BufferSize)
+(compress,CompressAsync)
+(compressSync,CompressSync)
+(decompress,DecompressAsync)
+(decompressSync,DecompressSync)

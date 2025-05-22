@@ -1,0 +1,4 @@
+(syslog,WriteSyslog)
+(option,Option)
+(facility,Facility)
+(priority,Priority)

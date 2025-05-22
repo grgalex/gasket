@@ -1,0 +1,6 @@
+(code,Number)
+(name,String)
+(desc,String)
+(Stream,LZMAStream)
+(setBufsize,LZMAStream)
+(memlimitSet,LZMAStream)

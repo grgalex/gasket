@@ -1,0 +1,3 @@
+(RegisterLogger,RegisterLogger)
+(Log,Log)
+(Flush,Flush)

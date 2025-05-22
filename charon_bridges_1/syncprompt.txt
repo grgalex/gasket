@@ -1,0 +1,2 @@
+(sync_prompt,syncPrompt)
+(set_echo,setEcho)
