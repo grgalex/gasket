@@ -73,18 +73,22 @@ class BridgeComparator():
         self.jsxray_total = 0
         self.charon_total = 0
         self.num_packages_jsxray_more = 0
+        self.num_packages_jsxray_more_charon_nonzero = 0
         self.num_packages_charon_more = 0
         self.analyzed_packages = []
         self.differences = []
         self.packages_jsxray_more = []
+        self.packages_jsxray_more_charon_nonzero = []
         self.final_stats = {'num_packages': None,
                             'jsxray_total': None,
                             'charon_total': None,
                             'num_packages_jsxray_more': None,
                             'num_packages_charon_more': None,
+                            'num_packages_jsxray_more_charon_nonzero': None,
                             'num_packages_diff': None,
                             'packages': None,
                             'packages_jsxray_more': None,
+                            'packages_jsxray_more_charon_nonzero': None,
                             'differences': None
                             }
 
@@ -118,6 +122,8 @@ class BridgeComparator():
                 if num_jsxray > num_charon:
                     self.num_packages_jsxray_more += 1
                     self.packages_jsxray_more.append(pkg_dirty)
+                    if num_charon > 0:
+                        self.packages_jsxray_more_charon_nonzero.append(pkg_dirty)
                     diffs = []
                     for b in jsxray_bridges:
                         if b not in charon_bridges:
@@ -142,12 +148,18 @@ class BridgeComparator():
                             'jsxray_total': self.jsxray_total,
                             'charon_total': self.charon_total,
                             'num_packages_jsxray_more': self.num_packages_jsxray_more,
+                            'num_packages_jsxray_more_charon_nonzero': len(self.packages_jsxray_more_charon_nonzero), 
                             'num_packages_charon_more': self.num_packages_charon_more,
                             'num_packages_diff': len(self.differences),
                             'packages': self.analyzed_packages,
                             'packages_jsxray_more': self.packages_jsxray_more,
+                            'packages_jsxray_more_charon_nonzero': self.packages_jsxray_more_charon_nonzero,
                             'differences': self.differences
                             }
+        with open('packages_jsxray_more_charon_nonzero.csv', 'w') as outfile:
+            for p in self.packages_jsxray_more_charon_nonzero:
+                outfile.write(f"{p}\n")
+
         with open('packages_jsxray_more.csv', 'w') as outfile:
             for p in self.packages_jsxray_more:
                 outfile.write(f"{p}\n")
