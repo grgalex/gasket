@@ -266,12 +266,24 @@ class JavascriptBridger():
         if ret != 0:
             return ret
 
+        rebuilt = False
+
         ret = self.find_bridges()
         if ret != 0:
-            return ret
+            log.warning(f"Bridge generation failed for {self.package}. Reinstalling from source...")
+            # XXX: Remove old bridges.
+            if os.path.exists(self.bridges_dir):
+                shutil.rmtree(self.bridges_dir)
+            ret = self.install_package_build_from_source()
+            if ret != 0:
+                return ret
+            rebuilt = True
+            ret = self.find_bridges()
+            if ret != 0:
+                return ret
 
         ret = self.check_bridges()
-        if ret < 0:
+        if ret < 0 and not rebuilt:
             if self.stripped:
                 log.warning(f"Package {self.package} is stripped. Reinstalling from source...")
                 # XXX: Remove old bridges.

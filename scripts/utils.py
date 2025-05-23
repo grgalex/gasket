@@ -55,7 +55,7 @@ def get_mod_import_name(mod_path, pkg_root_path):
     return import_name
 
 def run_cmd(opts, timeout=None, shell=False):
-    cmd = sp.Popen(opts, stdout=sp.PIPE, stderr=sp.PIPE, text=True, shell=shell)
+    cmd = sp.Popen(opts, stdin=sp.DEVNULL, stdout=sp.PIPE, stderr=sp.PIPE, text=True, shell=shell)
     out, err = cmd.communicate(timeout=None)
     ret = cmd.returncode
     log.debug(opts)
