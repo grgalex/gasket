@@ -1,0 +1,4 @@
+(node_supercop_sign,node_supercop_sign)
+(node_supercop_create_seed,node_supercop_create_seed)
+(node_supercop_verify,node_supercop_verify)
+(node_supercop_create_key_pair,node_supercop_create_key_pair)

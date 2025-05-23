@@ -1,0 +1,8 @@
+(register_as_event_loop,register_as_event_loop)
+(transaction,transaction)
+(get_cluster_count,get_cluster_count)
+(unref_as_event_loop,unref_as_event_loop)
+(release_as_event_loop,release_as_event_loop)
+(client,client)
+(ref_as_event_loop,ref_as_event_loop)
+(setDefaultLogging,setDefaultLogging)

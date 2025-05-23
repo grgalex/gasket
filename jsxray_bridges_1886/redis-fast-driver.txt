@@ -1,0 +1,4 @@
+(RedisConnector,New)
+(redisCmd,RedisCmd)
+(disconnect,Disconnect)
+(connect,Connect)

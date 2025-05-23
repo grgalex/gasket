@@ -1,0 +1,2 @@
+(blake2s,Blake2s)
+(blake2b,Blake2b)

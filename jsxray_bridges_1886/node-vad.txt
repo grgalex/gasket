@@ -1,0 +1,4 @@
+(vad_setmode,vadSetMode_)
+(vad_init,vadInit_)
+(vad_alloc,vadAlloc_)
+(vad_processAudio,vadProcessAudioBuffer_)

@@ -1,0 +1,7 @@
+(predict,CalcPrediction)
+(Model,TModel)
+(getTreeCount,GetModelTreeCount)
+(getDimensionsCount,GetModelDimensionsCount)
+(getFloatFeaturesCount,GetModelFloatFeaturesCount)
+(loadModel,LoadFullFromFile)
+(getCatFeaturesCount,GetModelCatFeaturesCount)

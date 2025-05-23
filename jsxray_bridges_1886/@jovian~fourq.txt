@@ -1,0 +1,8 @@
+(generateKeyPair,GenerateKeyPair)
+(verify,Verify)
+(generateFromSeedECDH,GenerateFromSeedECDH)
+(sign,Sign)
+(xorCryptSHA512,XorCryptSHA512)
+(generateKeyPairECDH,GenerateKeyPairECDH)
+(generateFromSeed,GenerateFromSeed)
+(getSharedSecretECDH,GetSharedSecretECDH)

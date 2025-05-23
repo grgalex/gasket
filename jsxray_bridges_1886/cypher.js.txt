@@ -1,0 +1,2 @@
+(js/build/Debug/native-cypher,ParseQuery)
+(target/native-cypher,ParseQuery)

@@ -1,0 +1,6 @@
+(resume,Resume)
+(pause,Pause)
+(stop,Stop)
+(start,Start)
+(target/nsfw,NSFW)
+(vscode-nsfw/build/Debug/nsfw,NSFW)

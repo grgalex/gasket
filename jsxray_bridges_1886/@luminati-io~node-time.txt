@@ -1,0 +1,4 @@
+(tzset,Tzset)
+(mktime,Mktime)
+(localtime,Localtime)
+(time,Time_)

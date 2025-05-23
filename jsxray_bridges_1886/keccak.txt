@@ -1,0 +1,6 @@
+(initialize,Initialize)
+(squeeze,Squeeze)
+(absorbLastFewBits,AbsorbLastFewBits)
+(copy,Copy)
+(glibc,KeccakWrapper)
+(absorb,Absorb)

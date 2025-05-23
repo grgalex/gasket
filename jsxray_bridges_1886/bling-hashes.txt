@@ -1,0 +1,4 @@
+(cityHash32,_CityHash32)
+(calcHash,CalcHash)
+(cityHash64,_CityHash64)
+(cityHash128,_CityHash128)

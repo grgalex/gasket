@@ -1,0 +1,2 @@
+(decodeChunk,DecodeChunk)
+(ALACDecoder,New)

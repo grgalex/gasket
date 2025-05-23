@@ -1,0 +1,2 @@
+(getPackageVersion,GetPackageVersion)
+(getBundleVersion,GetBundleVersion)

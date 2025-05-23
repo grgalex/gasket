@@ -1,0 +1,2 @@
+(ioctl_dedupe_range,IoctlDedupeRangeAsync)
+(ioctl_dedupe_range_sync,IoctlDedupeRangeSync)

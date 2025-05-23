@@ -1,0 +1,3 @@
+(mask,Mask)
+(unmask,Unmask)
+(napi,IsValidUTF8)

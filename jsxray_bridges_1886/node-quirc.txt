@@ -1,0 +1,2 @@
+(decodeRaw,NodeQuircDecodeRawAsync)
+(decodeEncoded,NodeQuircDecodeEncodedAsync)

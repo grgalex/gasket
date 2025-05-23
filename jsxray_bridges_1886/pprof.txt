@@ -1,0 +1,6 @@
+(stopProfiling,StopProfiling)
+(startProfiling,StartProfiling)
+(getAllocationProfile,GetAllocationProfile)
+(setSamplingInterval,SetSamplingInterval)
+(startSamplingHeapProfiler,StartSamplingHeapProfiler)
+(stopSamplingHeapProfiler,StopSamplingHeapProfiler)

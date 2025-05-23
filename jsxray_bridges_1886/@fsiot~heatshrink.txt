@@ -1,0 +1,8 @@
+(end,decoder_method_end)
+(HSDecoder,decoder_constructor)
+(sink,encoder_method_sink)
+(poll,decoder_method_poll)
+(HSEncoder,encoder_constructor)
+(sink,decoder_method_sink)
+(poll,encoder_method_poll)
+(end,encoder_method_end)

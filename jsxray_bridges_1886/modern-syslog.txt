@@ -1,0 +1,4 @@
+(setlogmask,SetLogMask)
+(syslog,SysLog)
+(closelog,CloseLog)
+(openlog,OpenLog)

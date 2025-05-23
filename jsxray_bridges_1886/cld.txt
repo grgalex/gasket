@@ -1,0 +1,2 @@
+(detect,Detect)
+(detectAsync,DetectAsync)

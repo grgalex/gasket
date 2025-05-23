@@ -1,0 +1,4 @@
+(now,now)
+(gettime,gettime)
+(gettimeofday,_gettimeofday)
+(now,gettime_ms)

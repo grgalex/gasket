@@ -1,0 +1,4 @@
+(sha512crypt,sha512crypt)
+(sha256cryptasync,sha256cryptasync)
+(sha256crypt,sha256crypt)
+(sha512cryptasync,sha512cryptasync)

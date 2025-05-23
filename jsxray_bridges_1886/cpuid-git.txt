@@ -1,0 +1,1 @@
+(getCPUID,GetCPUID)

@@ -1,0 +1,6 @@
+(Blake384,BlakeWrapper384)
+(Blake256,BlakeWrapper256)
+(Blake224,BlakeWrapper224)
+(digest,Digest)
+(Blake512,BlakeWrapper512)
+(update,Update)

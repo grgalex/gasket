@@ -1,0 +1,8 @@
+(addBBox,addBBox)
+(addPolygon,addPolygon)
+(addAnnulus,addAnnulus)
+(SpatialIndex,New)
+(addCircle,addCircle)
+(queryIntersect,queryIntersect)
+(remove,remove)
+(queryPoint,queryPoint)

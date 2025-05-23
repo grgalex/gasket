@@ -1,0 +1,5 @@
+(chacent/build/Debug/addon,New)
+(size,Size)
+(remove,Remove)
+(truncate,Truncate)
+(map,Map)

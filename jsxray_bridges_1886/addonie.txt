@@ -1,0 +1,5 @@
+(ClassExample,ClassExample)
+(add,AddWrapped)
+(hello,HelloWrapped)
+(getValue,GetValue)
+(add,Add)

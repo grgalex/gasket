@@ -1,0 +1,3 @@
+(nowDouble,NowDouble)
+(nowStruct,NowStruct)
+(now,Now)
