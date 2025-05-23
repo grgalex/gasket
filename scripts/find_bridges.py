@@ -198,6 +198,11 @@ class JavascriptBridger():
             with open(bridges_json_path, 'r') as infile:
                 bridges_orig_raw = json.loads(infile.read())
             bridges_orig = bridges_orig_raw['bridges']
+            modules_orig = bridges_orig_raw['modules']
+
+            if (len(modules_orig) == 0) or (len(bridges_orig) == 0):
+                self.stripped = True
+                return -1
             failed_orig = bridges_orig_raw['failed']
 
             jsnames_ok = set()
