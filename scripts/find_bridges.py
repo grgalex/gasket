@@ -139,6 +139,8 @@ class JavascriptBridger():
             log.info(f"Use -A to force recreation.")
             return 0
         else:
+            if not os.path.exists(self.tmp_install_dir):
+                return -1
             bridges_dir = self.bridges_dir
             if not os.path.exists(bridges_dir):
                 utils.create_dir(bridges_dir)
@@ -238,8 +240,8 @@ class JavascriptBridger():
                 jsname = b['jsname']
                 cfunc = b['cfunc']
 
-                # XXX: Keep only basename
-                new_jsname = jsname.split('.')[-1]
+                # XXX: Keep only basename.
+                new_jsname = jsname.split('.')[-1].split('/')[-1]
                 # XXX: Keep only "last" function name.
                 #      Obliterate namespaces ("::")
                 #      Obliterate arg types ("(int...)")
