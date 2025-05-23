@@ -13,8 +13,10 @@ lzma-native
 rpio
 ganache-cli
 keccak
+node-rdkafka
 usb
 blake-hash
+weak-napi
 secp256k1
 argon2
 native-watchdog
@@ -41,6 +43,7 @@ tree-sitter
 node-pty-prebuilt-multiarch
 posix-socket
 @cryptlex/lexactivator
+gl
 @arition/torch-js
 nsfw
 aerospike

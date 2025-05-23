@@ -75,6 +75,7 @@ class BridgeComparator():
         self.num_packages_jsxray_more = 0
         self.num_packages_jsxray_more_charon_nonzero = 0
         self.num_packages_charon_more = 0
+        self.num_packages_both_nonzero = 0
         self.analyzed_packages = []
         self.differences = []
         self.packages_jsxray_more = []
@@ -82,6 +83,7 @@ class BridgeComparator():
         self.final_stats = {'num_packages': None,
                             'jsxray_total': None,
                             'charon_total': None,
+                            'num_packages_both_nonzero': None,
                             'num_packages_jsxray_more': None,
                             'num_packages_charon_more': None,
                             'num_packages_jsxray_more_charon_nonzero': None,
@@ -113,6 +115,7 @@ class BridgeComparator():
                 self.jsxray_total += num_jsxray
                 if os.path.exists(charon_file):
                     log.info(f'FOUND CHARON FILE: {charon_file}')
+                    self.num_packages_both_nonzero += 1
                     charon_bridges = utils.load_csv(charon_file)
                     num_charon = len(charon_bridges)
                     self.charon_total += num_charon
@@ -147,6 +150,7 @@ class BridgeComparator():
         self.final_stats = {'num_packages': self.num_packages,
                             'jsxray_total': self.jsxray_total,
                             'charon_total': self.charon_total,
+                            'num_packages_both_nonzero': self.num_packages_both_nonzero,
                             'num_packages_jsxray_more': self.num_packages_jsxray_more,
                             'num_packages_jsxray_more_charon_nonzero': len(self.packages_jsxray_more_charon_nonzero), 
                             'num_packages_charon_more': self.num_packages_charon_more,
