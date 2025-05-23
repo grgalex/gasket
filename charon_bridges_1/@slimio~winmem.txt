@@ -1,0 +1,3 @@
+(getPerformanceInfo,getPerformanceInfo)
+(globalMemoryStatus,globalMemoryStatus)
+(getProcessMemory,getProcessMemory)

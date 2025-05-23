@@ -1,0 +1,2 @@
+(crc16,Crc)
+(keyHashSlot,HashSlot)

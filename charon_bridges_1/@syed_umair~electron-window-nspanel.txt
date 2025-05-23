@@ -1,0 +1,3 @@
+(MakeFullScreenPanel,MakeFullScreenPanel)
+(MakeNormalPanel,MakeNormalPanel)
+(MakeKeyWindow,MakeKeyWindow)

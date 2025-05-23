@@ -1,0 +1,6 @@
+(devices,HID)
+(close,close)
+(read,read)
+(write,write)
+(getFeatureReport,getFeatureReport)
+(sendFeatureReport,sendFeatureReport)

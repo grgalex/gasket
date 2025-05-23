@@ -1,0 +1,6 @@
+(getVolume,getVolume)
+(getVolumeRange,getVolumeRange)
+(setVolume,setVolume)
+(getMute,getMute)
+(toggleMute,toggleMute)
+(setMute,setMute)

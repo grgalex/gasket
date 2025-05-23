@@ -1,0 +1,4 @@
+(setInfo,SetInfo)
+(encode,Encode)
+(quit,Quit)
+(decode,Decode)

@@ -1,0 +1,6 @@
+(new_keypair,new_keypair)
+(pubkey_to_address256,pubkey_to_address256)
+(verify_sig,verify_sig)
+(base58_encode,base58_encode)
+(base58_decode,base58_decode)
+(sha256_midstate,sha256_midstate)

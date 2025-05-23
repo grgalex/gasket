@@ -1,0 +1,7 @@
+(getHandle,getHandle)
+(capture,capture)
+(getOptions,getOptions)
+(setOptions,setOptions)
+(getChannelOptions,getChannelOptions)
+(setChannelOptions,setChannelOptions)
+(getBuffers,getBuffers)

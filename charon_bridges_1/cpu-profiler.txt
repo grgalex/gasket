@@ -1,0 +1,5 @@
+(getProfilesCount,CpuProfiler)
+(getProfile,CpuProfiler)
+(startProfiling,CpuProfiler)
+(stopProfiling,CpuProfiler)
+(deleteAllProfiles,CpuProfiler)

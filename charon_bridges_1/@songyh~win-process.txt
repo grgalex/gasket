@@ -1,0 +1,5 @@
+(killProcess,KillProcess)
+(findProcess,FindProcessId)
+(findProcessId,FindProcessId)
+(findProcessName,FindProcessName)
+(findProcessPath,FindProcessPath)

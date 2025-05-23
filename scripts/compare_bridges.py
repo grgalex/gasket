@@ -54,6 +54,12 @@ def parse_args():
         default=None,
         help=("Provide path to the CSV containing the user/repo pairs"),
     )
+    p.add_argument(
+        "-o",
+        "--output",
+        default=None,
+        help=("Outputito fileito"),
+    )
     return p.parse_args()
 
 class BridgeComparator():
@@ -62,6 +68,7 @@ class BridgeComparator():
         self.output_file = output_file
         self.jsxray_dir = os.path.join(JSXRAY_ROOT, 'data/jsxray_bridges')
         self.charon_dir = os.path.join(JSXRAY_ROOT, 'data/charon_bridges')
+        log.info(f'CHARON_DIR = {self.charon_dir}')
         self.num_packages = 0
         self.jsxray_total = 0
         self.charon_total = 0
@@ -69,6 +76,7 @@ class BridgeComparator():
         self.num_packages_charon_more = 0
         self.analyzed_packages = []
         self.differences = []
+        self.packages_jsxray_more = []
         self.final_stats = {'num_packages': None,
                             'jsxray_total': None,
                             'charon_total': None,
@@ -76,6 +84,7 @@ class BridgeComparator():
                             'num_packages_charon_more': None,
                             'num_packages_diff': None,
                             'packages': None,
+                            'packages_jsxray_more': None,
                             'differences': None
                             }
 
@@ -84,27 +93,45 @@ class BridgeComparator():
         for pkg_dirty in self.packages:
             pkg = utils.sanitize_package_name(pkg_dirty)
 
-            jsxray_file = os.path.join(self.jsxray_dir, pkg + '.csv')
-            charon_file = os.path.join(self.charon_dir, pkg + '.csv')
+            jsxray_file = os.path.join(self.jsxray_dir, pkg + '.txt')
+            charon_file = os.path.join(self.charon_dir, pkg + '.txt')
+            log.info(f'charon file: {charon_file}')
             if os.path.exists(jsxray_file):
+                jsxray_bridges = utils.load_csv(jsxray_file)
+                num_jsxray = len(jsxray_bridges)
+                # XXX: Skip those with zero .node files
+                if num_jsxray == 0:
+                    continue
                 self.num_packages += 1
                 self.analyzed_packages.append(pkg_dirty)
                 jsxray_bridges = utils.load_csv(jsxray_file)
                 num_jsxray = len(jsxray_bridges)
                 self.jsxray_total += num_jsxray
                 if os.path.exists(charon_file):
+                    log.info(f'FOUND CHARON FILE: {charon_file}')
                     charon_bridges = utils.load_csv(charon_file)
                     num_charon = len(charon_bridges)
                     self.charon_total += num_charon
                 else:
                     num_charon = 0
+                    charon_bridges = []
                 if num_jsxray > num_charon:
                     self.num_packages_jsxray_more += 1
+                    self.packages_jsxray_more.append(pkg_dirty)
+                    diffs = []
+                    for b in jsxray_bridges:
+                        if b not in charon_bridges:
+                            diffs.append(b)
+
                     d = {'package': pkg_dirty, 'jsxray': num_jsxray, 'charon': num_charon}
                     self.differences.append(d)
-                else if num_charon > num_jsxray:
+                elif num_charon > num_jsxray:
                     self.num_packages_charon_more += 1
-                    d = {'package': pkg_dirty, 'jsxray': num_jsxray, 'charon': num_charon}
+                    diffs = []
+                    for b in charon_bridges:
+                        if b not in jsxray_bridges:
+                            diffs.append(b)
+                    d = {'package': pkg_dirty, 'jsxray': num_jsxray, 'charon': num_charon, 'diffs': diffs}
                     self.differences.append(d)
 
 
@@ -118,16 +145,18 @@ class BridgeComparator():
                             'num_packages_charon_more': self.num_packages_charon_more,
                             'num_packages_diff': len(self.differences),
                             'packages': self.analyzed_packages,
+                            'packages_jsxray_more': self.packages_jsxray_more,
                             'differences': self.differences
                             }
+        with open('packages_jsxray_more.csv', 'w') as outfile:
+            for p in self.packages_jsxray_more:
+                outfile.write(f"{p}\n")
 
         if self.output_file is None:
             log.info(json.dumps(self.final_stats, indent=2))
         else:
             with open(self.output_file, 'w') as outfile:
                 outfile.write(json.dumps(self.final_stats, indent=2))
-
-        return ret
 
 def main():
     args = parse_args()

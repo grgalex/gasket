@@ -1,0 +1,7 @@
+(sec,Number)
+(usec,Number)
+(nsec,Number)
+(gettimeofday,_gettimeofday)
+(now,now)
+(gettime,gettime)
+(now,gettime_ms)

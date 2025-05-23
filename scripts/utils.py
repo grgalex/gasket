@@ -9,9 +9,11 @@ log = logging.getLogger(__name__)
 def load_csv(filename):
     package_names = []
     with open(filename, 'r') as file:
-        csv_reader = csv.reader(file)
-        # XXX: Ignore empty lines (in order not to explode at empty newlines)
-        package_names = [row[0] for row in csv_reader if row]
+        for line in file:
+            l = line.strip()
+            #XXX: Ignore empty lines
+            if l:
+                package_names.append(l)
     return package_names
 
 def to_mod_name(name):

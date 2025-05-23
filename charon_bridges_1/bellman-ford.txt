@@ -1,0 +1,6 @@
+(add_node,add_node)
+(add_edge,add_edge)
+(update_edge,update_edge)
+(print,print)
+(trim,trim)
+(bellmanford,bellmanford)

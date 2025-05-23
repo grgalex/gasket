@@ -1,0 +1,4 @@
+(getMe,GetMe)
+(getContact,GetContact)
+(getContactsCount,GetContactsCount)
+(getContacts,GetContacts)

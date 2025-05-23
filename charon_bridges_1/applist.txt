@@ -1,0 +1,2 @@
+(get_applist_sync,GetApplistSync)
+(get_applist,GetApplist)

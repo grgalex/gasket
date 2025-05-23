@@ -1,0 +1,3 @@
+(gen_salt,BCryptGenerateSalt)
+(hashpw,BCryptHashPW)
+(compare,BCryptCompare)

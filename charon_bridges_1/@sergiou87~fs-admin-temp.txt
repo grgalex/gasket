@@ -1,0 +1,3 @@
+(getAuthorizationForm,GetAuthorizationForm)
+(clearAuthorizationCache,ClearAuthorizationCache)
+(spawnAsAdmin,SpawnAsAdmin)

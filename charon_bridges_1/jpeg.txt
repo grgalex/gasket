@@ -1,0 +1,8 @@
+(encode,JpegEncodeAsync)
+(encodeSync,JpegEncodeSync)
+(setQuality,SetQuality)
+(setSmoothing,SetSmoothing)
+(push,Push)
+(reset,Reset)
+(setBackground,SetBackground)
+(dimensions,Dimensions)

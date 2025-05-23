@@ -1,0 +1,2 @@
+(getConsoleCodePage,GetConsoleCodePage)
+(setConsoleCodePage,SetConsoleCodePage)

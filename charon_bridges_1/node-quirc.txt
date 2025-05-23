@@ -1,0 +1,3 @@
+(data,data)
+(decodeEncoded,NodeQuircDecodeEncodedAsync)
+(decodeRaw,NodeQuircDecodeRawAsync)

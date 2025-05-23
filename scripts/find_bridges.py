@@ -97,7 +97,7 @@ class JavascriptBridger():
 
         self.bridges_csv_dir = os.path.join(JSXRAY_ROOT, 'data/jsxray_bridges')
         utils.create_dir(self.bridges_csv_dir)
-        self.bridges_csv_path = os.path.join(self.bridges_csv_dir, self.sname + '.csv')
+        self.bridges_csv_path = os.path.join(self.bridges_csv_dir, self.sname + '.txt')
 
         utils.create_dir(os.path.join(self.bridges_apps_root, self.namesnip))
 
@@ -194,59 +194,73 @@ class JavascriptBridger():
         log.info(f"Checking bridges for {self.package}, ensuring not failed/stripped")
         self.stripped = False
         bridges_json_path = self.bridges_path
-        with open(bridges_json_path, 'r') as infile:
-            bridges_orig_raw = json.loads(infile.read())
-        bridges_orig = bridges_orig_raw['bridges']
-        failed_orig = bridges_orig_raw['failed']
+        if os.path.exists(bridges_json_path):
+            with open(bridges_json_path, 'r') as infile:
+                bridges_orig_raw = json.loads(infile.read())
+            bridges_orig = bridges_orig_raw['bridges']
+            failed_orig = bridges_orig_raw['failed']
 
-        jsnames_ok = set()
+            jsnames_ok = set()
 
-        for b in bridges_orig:
-            # XXX: Add final comp
-            jsnames_ok.add(b['jsname'].split('.')[-1])
+            for b in bridges_orig:
+                # XXX: Add final comp
+                jsnames_ok.add(b['jsname'].split('.')[-1])
 
-        for k,v in failed_orig.items():
-            kk = k.split('.')[-1]
-            if v == 'CFUNC_ADDRESS_RESOLUTION' and kk not in jsnames_ok:
-                log.warning(f"jsname = {kk} not in bridges while having rebuilt")
-                self.stripped = True
-                return -1
-        return 0
+            for k,v in failed_orig.items():
+                kk = k.split('.')[-1]
+                if v == 'CFUNC_ADDRESS_RESOLUTION' and kk not in jsnames_ok:
+                    log.warning(f"jsname = {kk} not in bridges while having rebuilt")
+                    self.stripped = True
+                    return -1
+            return 0
+        else:
+            # XXX: analyze_module.js blew up. No bridges were generated.
+            return -1
 
     def generate_bridges_csv(self):
         log.info(f"Generating CSV bridges for {self.package}")
-        bridges_json_path = self.bridges_path
-        bridges_new = set()
-        with open(bridges_json_path, 'r') as infile:
-            bridges_orig_raw = json.loads(infile.read())
-        bridges_orig = bridges_orig_raw['bridges']
-        for b in bridges_orig:
-            jsname = b['jsname']
-            cfunc = b['cfunc']
+        if os.path.exists(self.bridges_csv_path) and not self.always:
+            log.info(f"Bridges .txt for {self.package} already exist at {self.bridges_csv_path} - Skipping...")
+            log.info(f"Use -A to force recreation.")
+            return 0
+        else:
+            bridges_json_path = self.bridges_path
+            bridges_new = set()
+            with open(bridges_json_path, 'r') as infile:
+                bridges_orig_raw = json.loads(infile.read())
+            bridges_orig = bridges_orig_raw['bridges']
+            for b in bridges_orig:
+                jsname = b['jsname']
+                cfunc = b['cfunc']
 
-            # XXX: Keep only basename
-            new_jsname = jsname.split('.')[-1]
-            # XXX: Keep only "last" function name.
-            #      Obliterate namespaces ("::")
-            #      Obliterate arg types ("(int...)")
-            match = re.search(r"(?:\w+::)?(\w+)(?:\(|$)", cfunc)
-            if match:
-                new_cfunc = match.group(1)
-            else:
-                log.error(f"Couldn't exract new jsname/cfunc for bridge: {b}")
-                return -1
+                # XXX: Keep only basename
+                new_jsname = jsname.split('.')[-1]
+                # XXX: Keep only "last" function name.
+                #      Obliterate namespaces ("::")
+                #      Obliterate arg types ("(int...)")
+                match = re.search(r"(?:\w+::)?(\w+)(?:\(|$)", cfunc)
+                if match:
+                    new_cfunc = match.group(1)
+                else:
+                    log.error(f"Couldn't exract new jsname/cfunc for bridge: {b}")
+                    return -1
 
-            bridges_new.add((new_jsname, new_cfunc))
+                bridges_new.add((new_jsname, new_cfunc))
 
-        with open(self.bridges_csv_path, 'w') as outfile:
-            for bn in bridges_new:
-                j = bn[0]
-                c = bn[1]
-                outfile.write(f'({j},{c})\n')
-            outfile.flush()
+            with open(self.bridges_csv_path, 'w') as outfile:
+                for bn in bridges_new:
+                    j = bn[0]
+                    c = bn[1]
+                    outfile.write(f'({j},{c})\n')
+                outfile.flush()
+            return 0
 
     def process(self):
         log.info(f"Processing 'package': {self.package}")
+        if os.path.exists(self.bridges_csv_path) and not self.always:
+            log.info(f"Bridges .txt for {self.package} already exist at {self.bridges_csv_path} - Skipping...")
+            log.info(f"Use -A to force recreation.")
+            return 0
 
         ret = self.install_package()
         if ret != 0:

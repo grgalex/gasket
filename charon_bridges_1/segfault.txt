@@ -1,0 +1,3 @@
+(registerHandler,RegisterHandler)
+(causeSegfault,CauseSegfault)
+(causeAbort,CauseAbort)
