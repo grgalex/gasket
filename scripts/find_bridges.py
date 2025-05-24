@@ -71,6 +71,8 @@ class JavascriptBridger():
         self.package = package
         self.stripped = False
         self.sanitized_package = utils.sanitize_package_name(self.package)
+        if ':' not in package:
+            log.error('MUST PROVIDE VERSIONED PACKAGE')
         self.name = package.split(':')[0]
         self.sname = self.sanitized_package.split(':')[0]
         self.version = package.split(':')[1]
@@ -338,7 +340,7 @@ def main():
     # for pkg in package_names:
     #     do_single(pkg, args.always)
 
-    with concurrent.futures.ProcessPoolExecutor(max_workers=3) as executor:
+    with concurrent.futures.ProcessPoolExecutor(max_workers=5) as executor:
         for pkg in package_names:
             executor.submit(do_single, pkg, args.always)
 

@@ -1,0 +1,1241 @@
+{
+  "num_packages": 319,
+  "jsxray_total": 4656,
+  "charon_total": 2236,
+  "num_packages_jsxray_more": 113,
+  "num_packages_charon_more": 69,
+  "num_packages_diff": 182,
+  "packages": [
+    "label",
+    "node-sass",
+    "keytar",
+    "0x-monorepo-development",
+    "nan",
+    "sqlite3",
+    "bcrypt",
+    "leveldown",
+    "deasync",
+    "microtime",
+    "iconv",
+    "sharp",
+    "2020xmunode",
+    "@discordjs/opus",
+    "2famsg",
+    "sleep",
+    "nan-check",
+    "3a",
+    "3a-ui",
+    "addon-tools-raub",
+    "bufferutil",
+    "utf-8-validate",
+    "3dwayfinder-angular",
+    "libxmljs",
+    "grpc",
+    "posix",
+    "snappy",
+    "xz",
+    "ttf2woff2",
+    "64",
+    "nice-napi",
+    "wiring-pi",
+    "lzma-native",
+    "rpio",
+    "ganache-cli",
+    "keccak",
+    "dtrace-provider",
+    "libxmljs2",
+    "usb",
+    "node-addon-api",
+    "nodegit",
+    "macro-inferno",
+    "native-node-utils",
+    "@aabuhijleh/forcefocus",
+    "@aabuhijleh/native-reg",
+    "nodejieba",
+    "@abandonware/bleno",
+    "napi-thread-safe-callback",
+    "@abandonware/bluetooth-hci-socket",
+    "@abandonware/noble",
+    "blake-hash",
+    "audio-io",
+    "bcrypto",
+    "@achingbrain/node-syslog",
+    "realm",
+    "secp256k1",
+    "argon2",
+    "@adeperio/forcefocus",
+    "native-watchdog",
+    "@adobe/nodegit",
+    "heapdump",
+    "couchbase",
+    "i2c-bus",
+    "spi-device",
+    "@agoric/cosmos",
+    "node-lmdb",
+    "re2",
+    "murmurhash-native",
+    "eccrypto",
+    "@airbnb/node-memwatch",
+    "odbc",
+    "isolated-vm",
+    "better-sqlite3",
+    "@akiflow/electron-panel-window",
+    "@akikowo/chemical-balancer",
+    "@akimasa/vscode-sqlite3",
+    "@alac/decoder",
+    "@alac/encoder",
+    "@web3-js/websocket",
+    "electron-edge-js",
+    "midi",
+    "node-cmake",
+    "fs-xattr",
+    "@alfredosc8/hummus",
+    "@alfredosc8/hummus2",
+    "@alien.sh/signals",
+    "node-pty",
+    "@alminde/tfjs-node",
+    "icon-sdk-js",
+    "@sls-next/lambda-at-edge",
+    "iltorb",
+    "bigint-buffer",
+    "fd-lock",
+    "node-uname",
+    "@animetosho/parpar",
+    "yencode",
+    "platform-folders",
+    "nodehun",
+    "tree-sitter",
+    "tree-sitter-bash",
+    "tree-sitter-c",
+    "tree-sitter-c-sharp",
+    "tree-sitter-css",
+    "tree-sitter-html",
+    "tree-sitter-javascript",
+    "tree-sitter-php",
+    "dd-trace",
+    "@apocentre/xoshiro",
+    "node-pty-prebuilt-multiarch",
+    "posix-socket",
+    "@appliedblockchain/mantle-server",
+    "@appoptics/apm-bindings",
+    "@cryptlex/lexactivator",
+    "cxs",
+    "segfault-handler",
+    "@arition/torch-js",
+    "nsfw",
+    "bstring",
+    "aerospike",
+    "ursa-optional",
+    "ref-wchar-napi",
+    "@asoltys/tiny-secp256k1",
+    "v8-profiler-next",
+    "@parcel/watcher",
+    "@ataberkylmz/hx711",
+    "git-utils",
+    "tree-sitter-cpp",
+    "tree-sitter-go",
+    "tree-sitter-embedded-template",
+    "tree-sitter-jsdoc",
+    "tree-sitter-regex",
+    "tree-sitter-python",
+    "tree-sitter-ql",
+    "tree-sitter-ruby",
+    "tree-sitter-typescript",
+    "@atom/nsfw",
+    "gc-stats",
+    "@caspertech/node-cmake",
+    "@tensorflow/tfjs-node",
+    "@axosoft/spellchecker",
+    "@azure/msal-node-extensions",
+    "@b2wads/lru-native2",
+    "jointjs",
+    "@bam.tech/react-native-fast-image",
+    "bdb",
+    "bsip",
+    "mrmr",
+    "spellchecker",
+    "utp-native",
+    "@beam.space/beam.image",
+    "pi-spi",
+    "rpi-ws281x-native",
+    "pigpio",
+    "ember-one-way-controls",
+    "@serialport/bindings",
+    "highwayhash",
+    "edge-js",
+    "@bigemap/usb-detection",
+    "@bimdata/utils",
+    "@bitdisaster/exe-icon-extractor",
+    "@bithighlander/usb-detection",
+    "node-expat",
+    "@hyperbridge/reserve",
+    "@eosrio/node-abieos",
+    "node-opus",
+    "xkeychain",
+    "node-vad",
+    "@brandingbrand/react-native-fast-image",
+    "@breeffy/react-native-reanimated",
+    "@brightproductions/nan",
+    "@bryphe/esy-bash",
+    "@bsport/common",
+    "@buckle2000/pty.js",
+    "@buckyos/node-kcp",
+    "@buckyos/socketwatcher",
+    "@buckyos/segfault-handler",
+    "@bugsnag/plugin-electron-app",
+    "@bugsnag/plugin-electron-client-state-persistence",
+    "farmhash",
+    "event-loop-stats",
+    "@calculux/connector",
+    "socketcan",
+    "@capacitor-community/flipper",
+    "@carbon-io/carbon-jsdoc",
+    "@careteen/webpack",
+    "@celo/ganache-cli",
+    "@celtium/doge-idle-time",
+    "@cfg.plat/lodepng",
+    "robotjs",
+    "ed25519",
+    "@chainsafe/blst",
+    "@chatopera/bless",
+    "crfsuite",
+    "userid",
+    "@chenng/images",
+    "@churunmin/fluent-bit-src",
+    "ibm_db",
+    "@circl-tyo/circl-ui-library",
+    "mongodb-client-encryption",
+    "@tensorflow/tfjs-node-gpu",
+    "@clusterws/cws",
+    "ced",
+    "sodium-native",
+    "@codeporter/robotjs",
+    "@codeverse/ember-data-has-many-query",
+    "@coding-blocks/express-jsonapi-controller",
+    "detect-character-encoding",
+    "fs-ext",
+    "@connectedyard/phin-ecdh",
+    "@conr2d/bcrypto",
+    "@contaquanto/chevronlib",
+    "@contrast/agent",
+    "unix-dgram",
+    "@corbinu/couchbase",
+    "bignum",
+    "@cryptlex/lexfloatclient",
+    "modern-syslog",
+    "@cspanring/ember-cli-trackjs",
+    "@cubbit/enigma",
+    "@cymen/node-postal",
+    "generate-rsa-keypair",
+    "registry-js",
+    "ttf2woff2-no-gyp",
+    "hummus",
+    "@davedoesdev/fs-ext",
+    "fuse-native",
+    "kerberos",
+    "ntrujs",
+    "@deedmob/redux-form-react-submitbutton",
+    "turbo-net",
+    "pondjs",
+    "pathwatcher",
+    "erlpack",
+    "@julusian/jpeg-turbo",
+    "native-keymap",
+    "drivelist",
+    "find-git-repositories",
+    "@theia/node-pty",
+    "ref-array-di",
+    "syncprompt",
+    "@dhruvit_r/pathwatcher",
+    "@digital-generation/gen-characteristics",
+    "@digituz/rest-flex",
+    "@divy-work/native-utils",
+    "@divy-work/spin-cc",
+    "epoll",
+    "tree-sitter-java",
+    "@dooub/rocksdb-nodejs",
+    "napi-macros",
+    "native-is-elevated",
+    "spdlog",
+    "vscode-nsfw",
+    "vscode-sqlite3",
+    "@drorgl/node-addon-tracer",
+    "@drorgl/talib",
+    "@easyts/create-env",
+    "lz4",
+    "nanomsg",
+    "blake2",
+    "@elm-tooling/tree-sitter-elm",
+    "get-cursor-position",
+    "lzo",
+    "@epas1117/test-kushki-react-native",
+    "@episensor/bluetooth-hci-socket",
+    "@ericvanwyk/tree-sitter-oberon0",
+    "@estrattonbailey/frame",
+    "@eth-optimism/ganache-cli",
+    "@ethikz/inject-html-webpack-plugin",
+    "@eugenepankov/system-idle-time",
+    "node-cint64",
+    "@expo/traveling-fastlane-linux",
+    "annoy",
+    "sodium",
+    "@faressoft/node-pty-prebuilt",
+    "diskusage",
+    "@felixrieseberg/spellchecker",
+    "keyboard-layout",
+    "@fivepointseven/electron",
+    "@fivetrandevelopers/zetasql",
+    "@flat/lame",
+    "pg-query-native",
+    "@floffah/node-memwatch",
+    "@flowaccount/node-icu-tokenizer",
+    "@flyskywhy/react-native-gcanvas",
+    "talib",
+    "tulind",
+    "node-snap7",
+    "execSync",
+    "@frosttusk/ginger",
+    "@fsiot/heatshrink",
+    "@fullpage/react-fullpage",
+    "tree-sitter-rust",
+    "@funcmaticjs/package",
+    "@fuse-open/fuselibs",
+    "@fusion-ui/baseweb",
+    "cmark-gfm",
+    "@ganeshmogare/bodmas",
+    "@gatsbyjs/sharp",
+    "os-service",
+    "@gbkwiatt/node-rpi-ws281x-native",
+    "raw-socket",
+    "dbus",
+    "@genee/desktop-idle",
+    "@geode/genepi",
+    "fontnik",
+    "@gera2ld/robotjs",
+    "node-zopfli",
+    "@getjerry/lambda-at-edge",
+    "cld",
+    "@gifyourgame/spawn-as-admin",
+    "@gilsdav/robotjs",
+    "@giltayar/ah-theyre-here-esm-nodejs",
+    "@gisheri/react-fancy-component",
+    "@gizeta/speaker",
+    "@glaced/gles2-2.0",
+    "@glaced/glfw",
+    "get-uv-event-loop-napi-h",
+    "@gmwalletionbackup/node_modules",
+    "@gooddollar/v8-android-jit-nointl"
+  ],
+  "differences": [
+    {
+      "package": "node-sass",
+      "jsxray": 0,
+      "charon": 32
+    },
+    {
+      "package": "keytar",
+      "jsxray": 0,
+      "charon": 6
+    },
+    {
+      "package": "0x-monorepo-development",
+      "jsxray": 26,
+      "charon": 0
+    },
+    {
+      "package": "sqlite3",
+      "jsxray": 20,
+      "charon": 2
+    },
+    {
+      "package": "leveldown",
+      "jsxray": 23,
+      "charon": 0
+    },
+    {
+      "package": "deasync",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "microtime",
+      "jsxray": 3,
+      "charon": 6
+    },
+    {
+      "package": "iconv",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "sharp",
+      "jsxray": 0,
+      "charon": 16
+    },
+    {
+      "package": "@discordjs/opus",
+      "jsxray": 7,
+      "charon": 1
+    },
+    {
+      "package": "2famsg",
+      "jsxray": 0,
+      "charon": 2
+    },
+    {
+      "package": "nan-check",
+      "jsxray": 0,
+      "charon": 3
+    },
+    {
+      "package": "3a",
+      "jsxray": 0,
+      "charon": 32
+    },
+    {
+      "package": "3a-ui",
+      "jsxray": 0,
+      "charon": 32
+    },
+    {
+      "package": "bufferutil",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "utf-8-validate",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "3dwayfinder-angular",
+      "jsxray": 0,
+      "charon": 33
+    },
+    {
+      "package": "libxmljs",
+      "jsxray": 1444,
+      "charon": 11
+    },
+    {
+      "package": "posix",
+      "jsxray": 26,
+      "charon": 23
+    },
+    {
+      "package": "nice-napi",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "lzma-native",
+      "jsxray": 34,
+      "charon": 6
+    },
+    {
+      "package": "rpio",
+      "jsxray": 35,
+      "charon": 0
+    },
+    {
+      "package": "ganache-cli",
+      "jsxray": 26,
+      "charon": 1
+    },
+    {
+      "package": "keccak",
+      "jsxray": 6,
+      "charon": 0
+    },
+    {
+      "package": "dtrace-provider",
+      "jsxray": 0,
+      "charon": 6
+    },
+    {
+      "package": "libxmljs2",
+      "jsxray": 69,
+      "charon": 76
+    },
+    {
+      "package": "usb",
+      "jsxray": 28,
+      "charon": 17
+    },
+    {
+      "package": "nodegit",
+      "jsxray": 0,
+      "charon": 551
+    },
+    {
+      "package": "@aabuhijleh/native-reg",
+      "jsxray": 0,
+      "charon": 2
+    },
+    {
+      "package": "@abandonware/bluetooth-hci-socket",
+      "jsxray": 0,
+      "charon": 10
+    },
+    {
+      "package": "blake-hash",
+      "jsxray": 6,
+      "charon": 4
+    },
+    {
+      "package": "audio-io",
+      "jsxray": 0,
+      "charon": 6
+    },
+    {
+      "package": "secp256k1",
+      "jsxray": 20,
+      "charon": 1
+    },
+    {
+      "package": "argon2",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "@adeperio/forcefocus",
+      "jsxray": 0,
+      "charon": 1
+    },
+    {
+      "package": "native-watchdog",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "spi-device",
+      "jsxray": 2,
+      "charon": 10
+    },
+    {
+      "package": "@agoric/cosmos",
+      "jsxray": 0,
+      "charon": 2
+    },
+    {
+      "package": "node-lmdb",
+      "jsxray": 32,
+      "charon": 55
+    },
+    {
+      "package": "re2",
+      "jsxray": 10,
+      "charon": 0
+    },
+    {
+      "package": "murmurhash-native",
+      "jsxray": 16,
+      "charon": 5
+    },
+    {
+      "package": "eccrypto",
+      "jsxray": 0,
+      "charon": 1
+    },
+    {
+      "package": "@airbnb/node-memwatch",
+      "jsxray": 4,
+      "charon": 1
+    },
+    {
+      "package": "isolated-vm",
+      "jsxray": 54,
+      "charon": 0
+    },
+    {
+      "package": "better-sqlite3",
+      "jsxray": 29,
+      "charon": 0
+    },
+    {
+      "package": "@akimasa/vscode-sqlite3",
+      "jsxray": 20,
+      "charon": 23
+    },
+    {
+      "package": "@alac/decoder",
+      "jsxray": 2,
+      "charon": 1
+    },
+    {
+      "package": "@alac/encoder",
+      "jsxray": 2,
+      "charon": 1
+    },
+    {
+      "package": "electron-edge-js",
+      "jsxray": 0,
+      "charon": 3
+    },
+    {
+      "package": "midi",
+      "jsxray": 11,
+      "charon": 9
+    },
+    {
+      "package": "node-cmake",
+      "jsxray": 0,
+      "charon": 1
+    },
+    {
+      "package": "fs-xattr",
+      "jsxray": 8,
+      "charon": 0
+    },
+    {
+      "package": "node-pty",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "@alminde/tfjs-node",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "iltorb",
+      "jsxray": 4,
+      "charon": 2
+    },
+    {
+      "package": "bigint-buffer",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "fd-lock",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "node-uname",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "@animetosho/parpar",
+      "jsxray": 25,
+      "charon": 22
+    },
+    {
+      "package": "platform-folders",
+      "jsxray": 14,
+      "charon": 0
+    },
+    {
+      "package": "nodehun",
+      "jsxray": 25,
+      "charon": 0
+    },
+    {
+      "package": "tree-sitter",
+      "jsxray": 100,
+      "charon": 0
+    },
+    {
+      "package": "@apocentre/xoshiro",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "node-pty-prebuilt-multiarch",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "posix-socket",
+      "jsxray": 13,
+      "charon": 0
+    },
+    {
+      "package": "@appliedblockchain/mantle-server",
+      "jsxray": 0,
+      "charon": 24
+    },
+    {
+      "package": "@appoptics/apm-bindings",
+      "jsxray": 33,
+      "charon": 75
+    },
+    {
+      "package": "@cryptlex/lexactivator",
+      "jsxray": 79,
+      "charon": 0
+    },
+    {
+      "package": "@arition/torch-js",
+      "jsxray": 13,
+      "charon": 2
+    },
+    {
+      "package": "nsfw",
+      "jsxray": 8,
+      "charon": 0
+    },
+    {
+      "package": "bstring",
+      "jsxray": 13,
+      "charon": 14
+    },
+    {
+      "package": "aerospike",
+      "jsxray": 8,
+      "charon": 0
+    },
+    {
+      "package": "ursa-optional",
+      "jsxray": 21,
+      "charon": 20
+    },
+    {
+      "package": "@asoltys/tiny-secp256k1",
+      "jsxray": 0,
+      "charon": 13
+    },
+    {
+      "package": "v8-profiler-next",
+      "jsxray": 15,
+      "charon": 17
+    },
+    {
+      "package": "@parcel/watcher",
+      "jsxray": 0,
+      "charon": 6
+    },
+    {
+      "package": "@ataberkylmz/hx711",
+      "jsxray": 10,
+      "charon": 0
+    },
+    {
+      "package": "git-utils",
+      "jsxray": 28,
+      "charon": 27
+    },
+    {
+      "package": "tree-sitter-ql",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "@atom/nsfw",
+      "jsxray": 3,
+      "charon": 2
+    },
+    {
+      "package": "gc-stats",
+      "jsxray": 1,
+      "charon": 6
+    },
+    {
+      "package": "@caspertech/node-cmake",
+      "jsxray": 0,
+      "charon": 1
+    },
+    {
+      "package": "@tensorflow/tfjs-node",
+      "jsxray": 10,
+      "charon": 0
+    },
+    {
+      "package": "@axosoft/spellchecker",
+      "jsxray": 8,
+      "charon": 1
+    },
+    {
+      "package": "@b2wads/lru-native2",
+      "jsxray": 9,
+      "charon": 8
+    },
+    {
+      "package": "bdb",
+      "jsxray": 23,
+      "charon": 0
+    },
+    {
+      "package": "mrmr",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "utp-native",
+      "jsxray": 19,
+      "charon": 0
+    },
+    {
+      "package": "pigpio",
+      "jsxray": 0,
+      "charon": 56
+    },
+    {
+      "package": "ember-one-way-controls",
+      "jsxray": 0,
+      "charon": 2
+    },
+    {
+      "package": "@serialport/bindings",
+      "jsxray": 12,
+      "charon": 16
+    },
+    {
+      "package": "highwayhash",
+      "jsxray": 5,
+      "charon": 0
+    },
+    {
+      "package": "edge-js",
+      "jsxray": 0,
+      "charon": 4
+    },
+    {
+      "package": "@bimdata/utils",
+      "jsxray": 0,
+      "charon": 32
+    },
+    {
+      "package": "node-expat",
+      "jsxray": 11,
+      "charon": 10
+    },
+    {
+      "package": "@hyperbridge/reserve",
+      "jsxray": 0,
+      "charon": 37
+    },
+    {
+      "package": "@eosrio/node-abieos",
+      "jsxray": 9,
+      "charon": 0
+    },
+    {
+      "package": "node-opus",
+      "jsxray": 7,
+      "charon": 6
+    },
+    {
+      "package": "xkeychain",
+      "jsxray": 0,
+      "charon": 3
+    },
+    {
+      "package": "node-vad",
+      "jsxray": 4,
+      "charon": 5
+    },
+    {
+      "package": "@bsport/common",
+      "jsxray": 0,
+      "charon": 2
+    },
+    {
+      "package": "@buckle2000/pty.js",
+      "jsxray": 0,
+      "charon": 10
+    },
+    {
+      "package": "@buckyos/node-kcp",
+      "jsxray": 15,
+      "charon": 14
+    },
+    {
+      "package": "@buckyos/socketwatcher",
+      "jsxray": 4,
+      "charon": 3
+    },
+    {
+      "package": "@bugsnag/plugin-electron-app",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "@bugsnag/plugin-electron-client-state-persistence",
+      "jsxray": 13,
+      "charon": 0
+    },
+    {
+      "package": "@calculux/connector",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "socketcan",
+      "jsxray": 11,
+      "charon": 10
+    },
+    {
+      "package": "@celtium/doge-idle-time",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "@cfg.plat/lodepng",
+      "jsxray": 2,
+      "charon": 3
+    },
+    {
+      "package": "@chatopera/bless",
+      "jsxray": 0,
+      "charon": 5
+    },
+    {
+      "package": "crfsuite",
+      "jsxray": 11,
+      "charon": 3
+    },
+    {
+      "package": "userid",
+      "jsxray": 5,
+      "charon": 0
+    },
+    {
+      "package": "ibm_db",
+      "jsxray": 52,
+      "charon": 59
+    },
+    {
+      "package": "mongodb-client-encryption",
+      "jsxray": 18,
+      "charon": 0
+    },
+    {
+      "package": "@tensorflow/tfjs-node-gpu",
+      "jsxray": 10,
+      "charon": 0
+    },
+    {
+      "package": "@clusterws/cws",
+      "jsxray": 0,
+      "charon": 30
+    },
+    {
+      "package": "ced",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "sodium-native",
+      "jsxray": 157,
+      "charon": 0
+    },
+    {
+      "package": "detect-character-encoding",
+      "jsxray": 1,
+      "charon": 22
+    },
+    {
+      "package": "@connectedyard/phin-ecdh",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "@conr2d/bcrypto",
+      "jsxray": 397,
+      "charon": 0
+    },
+    {
+      "package": "@corbinu/couchbase",
+      "jsxray": 22,
+      "charon": 0
+    },
+    {
+      "package": "bignum",
+      "jsxray": 37,
+      "charon": 36
+    },
+    {
+      "package": "@cryptlex/lexfloatclient",
+      "jsxray": 24,
+      "charon": 0
+    },
+    {
+      "package": "@cubbit/enigma",
+      "jsxray": 5,
+      "charon": 0
+    },
+    {
+      "package": "@cymen/node-postal",
+      "jsxray": 0,
+      "charon": 2
+    },
+    {
+      "package": "generate-rsa-keypair",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "registry-js",
+      "jsxray": 0,
+      "charon": 8
+    },
+    {
+      "package": "ttf2woff2-no-gyp",
+      "jsxray": 0,
+      "charon": 1
+    },
+    {
+      "package": "kerberos",
+      "jsxray": 10,
+      "charon": 0
+    },
+    {
+      "package": "@deedmob/redux-form-react-submitbutton",
+      "jsxray": 0,
+      "charon": 2
+    },
+    {
+      "package": "turbo-net",
+      "jsxray": 12,
+      "charon": 0
+    },
+    {
+      "package": "pondjs",
+      "jsxray": 0,
+      "charon": 2
+    },
+    {
+      "package": "native-keymap",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "drivelist",
+      "jsxray": 1,
+      "charon": 20
+    },
+    {
+      "package": "find-git-repositories",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "@theia/node-pty",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "ref-array-di",
+      "jsxray": 0,
+      "charon": 1
+    },
+    {
+      "package": "@digituz/rest-flex",
+      "jsxray": 0,
+      "charon": 2
+    },
+    {
+      "package": "@divy-work/native-utils",
+      "jsxray": 15,
+      "charon": 16
+    },
+    {
+      "package": "epoll",
+      "jsxray": 5,
+      "charon": 0
+    },
+    {
+      "package": "@dooub/rocksdb-nodejs",
+      "jsxray": 28,
+      "charon": 0
+    },
+    {
+      "package": "native-is-elevated",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "spdlog",
+      "jsxray": 15,
+      "charon": 14
+    },
+    {
+      "package": "vscode-nsfw",
+      "jsxray": 6,
+      "charon": 0
+    },
+    {
+      "package": "vscode-sqlite3",
+      "jsxray": 20,
+      "charon": 23
+    },
+    {
+      "package": "@drorgl/node-addon-tracer",
+      "jsxray": 0,
+      "charon": 3
+    },
+    {
+      "package": "@drorgl/talib",
+      "jsxray": 3,
+      "charon": 5
+    },
+    {
+      "package": "@easyts/create-env",
+      "jsxray": 0,
+      "charon": 23
+    },
+    {
+      "package": "blake2",
+      "jsxray": 4,
+      "charon": 3
+    },
+    {
+      "package": "lzo",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "@episensor/bluetooth-hci-socket",
+      "jsxray": 12,
+      "charon": 0
+    },
+    {
+      "package": "@ericvanwyk/tree-sitter-oberon0",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "@estrattonbailey/frame",
+      "jsxray": 0,
+      "charon": 2
+    },
+    {
+      "package": "@eth-optimism/ganache-cli",
+      "jsxray": 26,
+      "charon": 1
+    },
+    {
+      "package": "@ethikz/inject-html-webpack-plugin",
+      "jsxray": 0,
+      "charon": 34
+    },
+    {
+      "package": "node-cint64",
+      "jsxray": 23,
+      "charon": 22
+    },
+    {
+      "package": "annoy",
+      "jsxray": 11,
+      "charon": 10
+    },
+    {
+      "package": "sodium",
+      "jsxray": 386,
+      "charon": 0
+    },
+    {
+      "package": "@faressoft/node-pty-prebuilt",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "@felixrieseberg/spellchecker",
+      "jsxray": 1,
+      "charon": 8
+    },
+    {
+      "package": "keyboard-layout",
+      "jsxray": 5,
+      "charon": 4
+    },
+    {
+      "package": "@flat/lame",
+      "jsxray": 96,
+      "charon": 0
+    },
+    {
+      "package": "@floffah/node-memwatch",
+      "jsxray": 4,
+      "charon": 1
+    },
+    {
+      "package": "@flowaccount/node-icu-tokenizer",
+      "jsxray": 1,
+      "charon": 3
+    },
+    {
+      "package": "talib",
+      "jsxray": 3,
+      "charon": 5
+    },
+    {
+      "package": "tulind",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "node-snap7",
+      "jsxray": 63,
+      "charon": 66
+    },
+    {
+      "package": "execSync",
+      "jsxray": 0,
+      "charon": 1
+    },
+    {
+      "package": "@fsiot/heatshrink",
+      "jsxray": 8,
+      "charon": 0
+    },
+    {
+      "package": "@funcmaticjs/package",
+      "jsxray": 0,
+      "charon": 2
+    },
+    {
+      "package": "cmark-gfm",
+      "jsxray": 6,
+      "charon": 2
+    },
+    {
+      "package": "@ganeshmogare/bodmas",
+      "jsxray": 8,
+      "charon": 0
+    },
+    {
+      "package": "os-service",
+      "jsxray": 0,
+      "charon": 5
+    },
+    {
+      "package": "raw-socket",
+      "jsxray": 12,
+      "charon": 11
+    },
+    {
+      "package": "dbus",
+      "jsxray": 14,
+      "charon": 9
+    },
+    {
+      "package": "node-zopfli",
+      "jsxray": 4,
+      "charon": 2
+    },
+    {
+      "package": "cld",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "@giltayar/ah-theyre-here-esm-nodejs",
+      "jsxray": 0,
+      "charon": 2
+    },
+    {
+      "package": "@glaced/gles2-2.0",
+      "jsxray": 143,
+      "charon": 0
+    },
+    {
+      "package": "@glaced/glfw",
+      "jsxray": 50,
+      "charon": 0
+    }
+  ]
+}

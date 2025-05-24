@@ -163,7 +163,7 @@ class BridgeComparator():
                             'num_packages_jsxray_more': self.num_packages_jsxray_more,
                             'num_packages_jsxray_more_charon_nonzero': len(self.packages_jsxray_more_charon_nonzero), 
                             'num_packages_charon_more': self.num_packages_charon_more,
-                            'num_packages_diff': len(self.differences),
+                            'num_packages_diff': len(self.packages_different_bridges),
                             'packages': self.analyzed_packages,
                             'packages_different_bridges': self.packages_different_bridges,
                             'packages_jsxray_more': self.packages_jsxray_more,

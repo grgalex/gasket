@@ -1,0 +1,986 @@
+{
+  "num_packages": 152,
+  "jsxray_total": 1083,
+  "charon_total": 486,
+  "num_packages_both_nonzero": 134,
+  "num_packages_jsxray_more": 83,
+  "num_packages_jsxray_more_charon_nonzero": 15,
+  "num_packages_charon_more": 14,
+  "num_packages_diff": 94,
+  "packages": [
+    "curve25519-n2",
+    "@opendrives/getent",
+    "rpi-ws281x",
+    "@oxyflour/ncc",
+    "@pano.video/robotjs",
+    "oniguruma",
+    "@paulcbetts/gc",
+    "@paulcbetts/system-idle-time",
+    "electron-overlay-window",
+    "gphoto2",
+    "fasttext",
+    "@pitzzae/volume-list",
+    "curve25519-n",
+    "murmurhash3",
+    "@primecode/async-qrcode",
+    "applicationinsights-native-metrics",
+    "@pubgcorp/node-xed",
+    "@quan-to/chevronlib",
+    "@quanitux/nsfw",
+    "@qujingling/sqlite3",
+    "msgpackr-extract",
+    "@raghb1/node-memwatch",
+    "@rainblock/ethereum-block",
+    "bigint-hash",
+    "@sapphire/type",
+    "@raygun-nickj/mmap-io",
+    "@reconbot/bindings-cpp",
+    "krb5",
+    "@ripreact/hsl",
+    "@risingstack/event-loop-stats",
+    "@risingstack/gc-stats",
+    "@robinsage/eccrypto",
+    "clear-env",
+    "nan-async-example",
+    "clipboard-data",
+    "cm256",
+    "cmake2json",
+    "register-scheme",
+    "computron",
+    "confusablematcher-js-interop",
+    "corelink-trail-smoothifier",
+    "corona-school-matching",
+    "cue-sdk",
+    "cpp-add",
+    "cpp-hexgenerator",
+    "cpp-time",
+    "getrusage",
+    "crc64-ecma182",
+    "crc64cpp",
+    "crypt3-passwd",
+    "crypto-incognito",
+    "node-snowball",
+    "cubiomes",
+    "cue-sdk-cove",
+    "turtlecoin-crypto",
+    "darknet-bindings",
+    "node-datachannel",
+    "dblogger",
+    "ddamsign",
+    "deadline-math",
+    "debstep",
+    "decimal102",
+    "decoder1090-c",
+    "deltachat-node",
+    "deps-verdaccio",
+    "desktop-idle-prebuild",
+    "desktop-idle-prebuilt",
+    "desktopshortcuts",
+    "detect-fullscreen",
+    "dev_fastlz",
+    "devlz",
+    "diat-addon",
+    "dicom-dimse-native",
+    "discord-game",
+    "wise-inspection",
+    "displays",
+    "dotnode-js",
+    "spi-node",
+    "drive-name",
+    "dualshock",
+    "duckdb",
+    "dumpme",
+    "dvbtee",
+    "nc-screen",
+    "dylib",
+    "naudiodon",
+    "easy-sleep",
+    "easybotics-rpi-rgb-led-matrix",
+    "eboxprinter",
+    "libtidy-updated",
+    "efsw",
+    "xprofiler",
+    "ele-500-sql3",
+    "ele6-sqlite3",
+    "electron-active-window",
+    "transparent-titlebar",
+    "native_tst",
+    "electron-clipboard-files",
+    "electron-disable-minimize",
+    "electron-diskusage",
+    "electron-drivelist",
+    "electron-fsdes",
+    "elios-protocol",
+    "ems",
+    "enhanced_promise",
+    "enigmawrap",
+    "equate",
+    "eris-profiler",
+    "eris-sleep",
+    "eris-snapshot",
+    "espresso-logic-minimizer",
+    "essy-fft",
+    "essy-nnls",
+    "mountutils",
+    "secp256k1-native",
+    "evdev",
+    "event-loop-native",
+    "exclusive-keyboard",
+    "fast-bigint",
+    "fast-feed",
+    "fast-find-in-files",
+    "fast-is-utf8",
+    "node-redis-crc16",
+    "fast-string-search",
+    "fast-uuidv4",
+    "fastnoisejs",
+    "fastpug",
+    "fasttail",
+    "fdpassing",
+    "rapid-crc",
+    "fileworkbyaleksbelka",
+    "finalize-addon",
+    "oniguruma-prebuilt",
+    "fit-native",
+    "fjt-walter",
+    "flatbuffers-addon",
+    "flocon-new",
+    "flow-parser-bin",
+    "floweejs",
+    "flush-all",
+    "fmemory",
+    "freetype2",
+    "forcefocus",
+    "frk",
+    "frog-jump-master",
+    "fs-extended-attributes",
+    "fsctl",
+    "fstime",
+    "fullname-native",
+    "tree-sitter-func",
+    "fuzzaldrin-plus-fast",
+    "udev"
+  ],
+  "packages_different_bridges": [
+    "rpi-ws281x",
+    "@oxyflour/ncc",
+    "oniguruma",
+    "@paulcbetts/gc",
+    "@paulcbetts/system-idle-time",
+    "electron-overlay-window",
+    "gphoto2",
+    "fasttext",
+    "@pitzzae/volume-list",
+    "curve25519-n",
+    "applicationinsights-native-metrics",
+    "@quanitux/nsfw",
+    "@qujingling/sqlite3",
+    "msgpackr-extract",
+    "@raghb1/node-memwatch",
+    "@rainblock/ethereum-block",
+    "bigint-hash",
+    "@raygun-nickj/mmap-io",
+    "@reconbot/bindings-cpp",
+    "@ripreact/hsl",
+    "clear-env",
+    "nan-async-example",
+    "clipboard-data",
+    "cm256",
+    "register-scheme",
+    "computron",
+    "confusablematcher-js-interop",
+    "corelink-trail-smoothifier",
+    "corona-school-matching",
+    "cue-sdk",
+    "crc64cpp",
+    "crypt3-passwd",
+    "cubiomes",
+    "cue-sdk-cove",
+    "darknet-bindings",
+    "node-datachannel",
+    "dblogger",
+    "deadline-math",
+    "debstep",
+    "decimal102",
+    "decoder1090-c",
+    "deltachat-node",
+    "deps-verdaccio",
+    "desktopshortcuts",
+    "dicom-dimse-native",
+    "discord-game",
+    "duckdb",
+    "dvbtee",
+    "nc-screen",
+    "dylib",
+    "naudiodon",
+    "easy-sleep",
+    "easybotics-rpi-rgb-led-matrix",
+    "libtidy-updated",
+    "efsw",
+    "xprofiler",
+    "ele-500-sql3",
+    "ele6-sqlite3",
+    "electron-active-window",
+    "transparent-titlebar",
+    "ems",
+    "enhanced_promise",
+    "equate",
+    "eris-profiler",
+    "eris-sleep",
+    "eris-snapshot",
+    "essy-fft",
+    "essy-nnls",
+    "secp256k1-native",
+    "evdev",
+    "event-loop-native",
+    "fast-bigint",
+    "fast-is-utf8",
+    "fast-string-search",
+    "fast-uuidv4",
+    "fastnoisejs",
+    "fastpug",
+    "fasttail",
+    "fdpassing",
+    "fileworkbyaleksbelka",
+    "finalize-addon",
+    "oniguruma-prebuilt",
+    "flatbuffers-addon",
+    "flocon-new",
+    "floweejs",
+    "flush-all",
+    "frog-jump-master",
+    "fs-extended-attributes",
+    "fsctl",
+    "fstime",
+    "fullname-native",
+    "tree-sitter-func",
+    "fuzzaldrin-plus-fast",
+    "udev"
+  ],
+  "packages_jsxray_more": [
+    "oniguruma",
+    "@paulcbetts/gc",
+    "@paulcbetts/system-idle-time",
+    "electron-overlay-window",
+    "gphoto2",
+    "fasttext",
+    "@pitzzae/volume-list",
+    "curve25519-n",
+    "@quanitux/nsfw",
+    "msgpackr-extract",
+    "@raghb1/node-memwatch",
+    "@rainblock/ethereum-block",
+    "bigint-hash",
+    "@raygun-nickj/mmap-io",
+    "@ripreact/hsl",
+    "clear-env",
+    "clipboard-data",
+    "cm256",
+    "register-scheme",
+    "computron",
+    "confusablematcher-js-interop",
+    "corelink-trail-smoothifier",
+    "corona-school-matching",
+    "cue-sdk",
+    "crc64cpp",
+    "crypt3-passwd",
+    "cubiomes",
+    "cue-sdk-cove",
+    "darknet-bindings",
+    "node-datachannel",
+    "dblogger",
+    "deadline-math",
+    "debstep",
+    "decimal102",
+    "decoder1090-c",
+    "deltachat-node",
+    "deps-verdaccio",
+    "desktopshortcuts",
+    "dicom-dimse-native",
+    "discord-game",
+    "duckdb",
+    "dvbtee",
+    "nc-screen",
+    "dylib",
+    "naudiodon",
+    "easy-sleep",
+    "easybotics-rpi-rgb-led-matrix",
+    "libtidy-updated",
+    "efsw",
+    "xprofiler",
+    "electron-active-window",
+    "transparent-titlebar",
+    "ems",
+    "enhanced_promise",
+    "equate",
+    "eris-profiler",
+    "eris-sleep",
+    "eris-snapshot",
+    "essy-fft",
+    "essy-nnls",
+    "secp256k1-native",
+    "evdev",
+    "event-loop-native",
+    "fast-bigint",
+    "fast-is-utf8",
+    "fast-string-search",
+    "fast-uuidv4",
+    "fastpug",
+    "fasttail",
+    "fdpassing",
+    "finalize-addon",
+    "oniguruma-prebuilt",
+    "flatbuffers-addon",
+    "flocon-new",
+    "floweejs",
+    "flush-all",
+    "frog-jump-master",
+    "fs-extended-attributes",
+    "fsctl",
+    "fstime",
+    "tree-sitter-func",
+    "fuzzaldrin-plus-fast",
+    "udev"
+  ],
+  "packages_jsxray_more_charon_nonzero": [
+    "gphoto2",
+    "fasttext",
+    "@quanitux/nsfw",
+    "@raghb1/node-memwatch",
+    "computron",
+    "cue-sdk",
+    "cue-sdk-cove",
+    "dblogger",
+    "deps-verdaccio",
+    "dvbtee",
+    "easybotics-rpi-rgb-led-matrix",
+    "efsw",
+    "ems",
+    "fuzzaldrin-plus-fast",
+    "udev"
+  ],
+  "differences": [
+    {
+      "package": "@oxyflour/ncc",
+      "jsxray": 28,
+      "charon": 38,
+      "diffs": [
+        "(x,Number)",
+        "(y,Number)",
+        "(z,Number)",
+        "(COMPOUND,Number)",
+        "(COMPSOLID,Number)",
+        "(EDGE,Number)",
+        "(FACE,Number)",
+        "(SHAPE,Number)",
+        "(SHELL,Number)",
+        "(SOLID,Number)",
+        "(VERTEX,Number)",
+        "(WIRE,Number)",
+        "(mass,props)",
+        "(p,Shape)",
+        "(s,props)",
+        "(l,props)"
+      ]
+    },
+    {
+      "package": "oniguruma",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "@paulcbetts/gc",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "@paulcbetts/system-idle-time",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "electron-overlay-window",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "gphoto2",
+      "jsxray": 8,
+      "charon": 6
+    },
+    {
+      "package": "fasttext",
+      "jsxray": 7,
+      "charon": 2
+    },
+    {
+      "package": "@pitzzae/volume-list",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "curve25519-n",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "@pubgcorp/node-xed",
+      "jsxray": 1,
+      "charon": 2,
+      "diffs": [
+        "(len,Number)"
+      ]
+    },
+    {
+      "package": "@quanitux/nsfw",
+      "jsxray": 3,
+      "charon": 2
+    },
+    {
+      "package": "@qujingling/sqlite3",
+      "jsxray": 20,
+      "charon": 23,
+      "diffs": [
+        "(idle,IdleGetter)",
+        "(completed,CompletedGetter)",
+        "(failed,FailedGetter)",
+        "(remaining,RemainingGetter)",
+        "(pageCount,PageCountGetter)",
+        "(open,OpenGetter)"
+      ]
+    },
+    {
+      "package": "msgpackr-extract",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "@raghb1/node-memwatch",
+      "jsxray": 4,
+      "charon": 1
+    },
+    {
+      "package": "@rainblock/ethereum-block",
+      "jsxray": 3,
+      "charon": 0
+    },
+    {
+      "package": "bigint-hash",
+      "jsxray": 6,
+      "charon": 0
+    },
+    {
+      "package": "@raygun-nickj/mmap-io",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "@reconbot/bindings-cpp",
+      "jsxray": 12,
+      "charon": 16,
+      "diffs": [
+        "(cts,data)",
+        "(dsr,data)",
+        "(dcd,data)",
+        "(lowLatency,data)",
+        "(baudRate,data)"
+      ]
+    },
+    {
+      "package": "@ripreact/hsl",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "@risingstack/gc-stats",
+      "jsxray": 1,
+      "charon": 3,
+      "diffs": [
+        "(pause,data)",
+        "(pauseMS,data)"
+      ]
+    },
+    {
+      "package": "clear-env",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "clipboard-data",
+      "jsxray": 3,
+      "charon": 0
+    },
+    {
+      "package": "cm256",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "register-scheme",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "computron",
+      "jsxray": 3,
+      "charon": 1
+    },
+    {
+      "package": "confusablematcher-js-interop",
+      "jsxray": 8,
+      "charon": 0
+    },
+    {
+      "package": "corelink-trail-smoothifier",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "corona-school-matching",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "cue-sdk",
+      "jsxray": 17,
+      "charon": 4
+    },
+    {
+      "package": "crc64cpp",
+      "jsxray": 6,
+      "charon": 0
+    },
+    {
+      "package": "crypt3-passwd",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "cubiomes",
+      "jsxray": 26,
+      "charon": 0
+    },
+    {
+      "package": "cue-sdk-cove",
+      "jsxray": 20,
+      "charon": 6
+    },
+    {
+      "package": "darknet-bindings",
+      "jsxray": 12,
+      "charon": 0
+    },
+    {
+      "package": "node-datachannel",
+      "jsxray": 89,
+      "charon": 0
+    },
+    {
+      "package": "dblogger",
+      "jsxray": 10,
+      "charon": 9
+    },
+    {
+      "package": "deadline-math",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "debstep",
+      "jsxray": 3,
+      "charon": 0
+    },
+    {
+      "package": "decimal102",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "decoder1090-c",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "deltachat-node",
+      "jsxray": 205,
+      "charon": 0
+    },
+    {
+      "package": "deps-verdaccio",
+      "jsxray": 21,
+      "charon": 6
+    },
+    {
+      "package": "desktopshortcuts",
+      "jsxray": 9,
+      "charon": 0
+    },
+    {
+      "package": "devlz",
+      "jsxray": 1,
+      "charon": 2,
+      "diffs": [
+        "(add,Add)"
+      ]
+    },
+    {
+      "package": "dicom-dimse-native",
+      "jsxray": 9,
+      "charon": 0
+    },
+    {
+      "package": "discord-game",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "displays",
+      "jsxray": 1,
+      "charon": 5,
+      "diffs": [
+        "(height,DisplayImpl)",
+        "(width,DisplayImpl)",
+        "(left,DisplayImpl)",
+        "(top,DisplayImpl)"
+      ]
+    },
+    {
+      "package": "spi-node",
+      "jsxray": 2,
+      "charon": 3,
+      "diffs": [
+        "(spiSupported,Boolean)"
+      ]
+    },
+    {
+      "package": "duckdb",
+      "jsxray": 28,
+      "charon": 0
+    },
+    {
+      "package": "dvbtee",
+      "jsxray": 9,
+      "charon": 8
+    },
+    {
+      "package": "nc-screen",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "dylib",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "naudiodon",
+      "jsxray": 3,
+      "charon": 0
+    },
+    {
+      "package": "easy-sleep",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "easybotics-rpi-rgb-led-matrix",
+      "jsxray": 14,
+      "charon": 13
+    },
+    {
+      "package": "libtidy-updated",
+      "jsxray": 17,
+      "charon": 0
+    },
+    {
+      "package": "efsw",
+      "jsxray": 3,
+      "charon": 2
+    },
+    {
+      "package": "xprofiler",
+      "jsxray": 18,
+      "charon": 0
+    },
+    {
+      "package": "ele-500-sql3",
+      "jsxray": 20,
+      "charon": 23,
+      "diffs": [
+        "(open,OpenGetter)",
+        "(idle,IdleGetter)",
+        "(completed,CompletedGetter)",
+        "(failed,FailedGetter)",
+        "(remaining,RemainingGetter)",
+        "(pageCount,PageCountGetter)"
+      ]
+    },
+    {
+      "package": "ele6-sqlite3",
+      "jsxray": 20,
+      "charon": 23,
+      "diffs": [
+        "(open,OpenGetter)",
+        "(idle,IdleGetter)",
+        "(completed,CompletedGetter)",
+        "(failed,FailedGetter)",
+        "(remaining,RemainingGetter)",
+        "(pageCount,PageCountGetter)"
+      ]
+    },
+    {
+      "package": "electron-active-window",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "transparent-titlebar",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "ems",
+      "jsxray": 7,
+      "charon": 4
+    },
+    {
+      "package": "enhanced_promise",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "equate",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "eris-profiler",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "eris-sleep",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "eris-snapshot",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "essy-fft",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "essy-nnls",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "secp256k1-native",
+      "jsxray": 26,
+      "charon": 0
+    },
+    {
+      "package": "evdev",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "event-loop-native",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "fast-bigint",
+      "jsxray": 16,
+      "charon": 0
+    },
+    {
+      "package": "fast-feed",
+      "jsxray": 1,
+      "charon": 4,
+      "diffs": [
+        "(name,name)",
+        "(length,length)",
+        "(author,name)"
+      ]
+    },
+    {
+      "package": "fast-is-utf8",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "fast-string-search",
+      "jsxray": 6,
+      "charon": 0
+    },
+    {
+      "package": "fast-uuidv4",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "fastnoisejs",
+      "jsxray": 25,
+      "charon": 39,
+      "diffs": [
+        "(SetSeed,FastNoiseJs)",
+        "(SetFrequency,FastNoiseJs)",
+        "(SetInterp,FastNoiseJs)",
+        "(SetNoiseType,FastNoiseJs)",
+        "(SetFractalOctaves,FastNoiseJs)",
+        "(SetFractalLacunarity,FastNoiseJs)",
+        "(SetFractalGain,FastNoiseJs)",
+        "(SetFractalType,FastNoiseJs)",
+        "(SetCellularDistanceFunction,FastNoiseJs)",
+        "(SetCellularReturnType,FastNoiseJs)",
+        "(SetCellularDistance2Indices,FastNoiseJs)",
+        "(SetCellularJitter,FastNoiseJs)",
+        "(Value,Number)",
+        "(ValueFractal,Number)",
+        "(Perlin,Number)",
+        "(PerlinFractal,Number)",
+        "(Simplex,Number)",
+        "(SimplexFractal,Number)",
+        "(Cellular,Number)",
+        "(Cubic,Number)",
+        "(CubicFractal,Number)",
+        "(WhiteNoise,Number)",
+        "(Linear,Number)",
+        "(Hermite,Number)",
+        "(Quintic,Number)",
+        "(FBM,Number)",
+        "(Billow,Number)",
+        "(RigidMulti,Number)",
+        "(Euclidean,Number)",
+        "(Manhattan,Number)",
+        "(Natural,Number)",
+        "(CellValue,Number)",
+        "(NoiseLookup,Number)",
+        "(Distance,Number)",
+        "(Distance2,Number)",
+        "(Distance2Add,Number)",
+        "(Distance2Sub,Number)",
+        "(Distance2Mul,Number)",
+        "(Distance2Div,Number)"
+      ]
+    },
+    {
+      "package": "fastpug",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "fasttail",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "fdpassing",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "fileworkbyaleksbelka",
+      "jsxray": 3,
+      "charon": 16,
+      "diffs": [
+        "(close,close)",
+        "(open,open)",
+        "(query,query)",
+        "(bindQuery,bind_query)",
+        "(prepare,prepare)",
+        "(readColumn,read_column)",
+        "(beginTransaction,begin_transaction)",
+        "(commit,commit)",
+        "(rollback,rollback)",
+        "(nextResult,read_next_result)",
+        "(callProcedure,call_procedure)",
+        "(unbind,unbind)",
+        "(freeStatement,free_statement)",
+        "(cancelQuery,cancel_statement)",
+        "(pollingMode,polling_mode)",
+        "(type,type_name)"
+      ]
+    },
+    {
+      "package": "finalize-addon",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "oniguruma-prebuilt",
+      "jsxray": 4,
+      "charon": 0
+    },
+    {
+      "package": "flatbuffers-addon",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "flocon-new",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "floweejs",
+      "jsxray": 13,
+      "charon": 0
+    },
+    {
+      "package": "flush-all",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "freetype2",
+      "jsxray": 2,
+      "charon": 5,
+      "diffs": [
+        "(setCharSize,FontFace)",
+        "(setPixelSizes,FontFace)",
+        "(setTransform,FontFace)"
+      ]
+    },
+    {
+      "package": "frog-jump-master",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "fs-extended-attributes",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "fsctl",
+      "jsxray": 5,
+      "charon": 0
+    },
+    {
+      "package": "fstime",
+      "jsxray": 2,
+      "charon": 0
+    },
+    {
+      "package": "tree-sitter-func",
+      "jsxray": 1,
+      "charon": 0
+    },
+    {
+      "package": "fuzzaldrin-plus-fast",
+      "jsxray": 8,
+      "charon": 3
+    },
+    {
+      "package": "udev",
+      "jsxray": 5,
+      "charon": 1
+    }
+  ]
+}

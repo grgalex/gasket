@@ -1,3 +1,5 @@
+rpi-ws281x
+@oxyflour/ncc
 oniguruma
 @paulcbetts/gc
 @paulcbetts/system-idle-time
@@ -6,14 +8,18 @@ gphoto2
 fasttext
 @pitzzae/volume-list
 curve25519-n
+applicationinsights-native-metrics
 @quanitux/nsfw
+@qujingling/sqlite3
 msgpackr-extract
 @raghb1/node-memwatch
 @rainblock/ethereum-block
 bigint-hash
 @raygun-nickj/mmap-io
+@reconbot/bindings-cpp
 @ripreact/hsl
 clear-env
+nan-async-example
 clipboard-data
 cm256
 register-scheme
@@ -45,9 +51,10 @@ dylib
 naudiodon
 easy-sleep
 easybotics-rpi-rgb-led-matrix
-libtidy-updated
 efsw
 xprofiler
+ele-500-sql3
+ele6-sqlite3
 electron-active-window
 transparent-titlebar
 ems
@@ -65,9 +72,11 @@ fast-bigint
 fast-is-utf8
 fast-string-search
 fast-uuidv4
+fastnoisejs
 fastpug
 fasttail
 fdpassing
+fileworkbyaleksbelka
 finalize-addon
 oniguruma-prebuilt
 flatbuffers-addon
@@ -78,6 +87,7 @@ frog-jump-master
 fs-extended-attributes
 fsctl
 fstime
+fullname-native
 tree-sitter-func
 fuzzaldrin-plus-fast
 udev
