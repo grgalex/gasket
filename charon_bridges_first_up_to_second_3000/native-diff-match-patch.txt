@@ -1,0 +1,5 @@
+(patch_make,PatchMake)
+(patch_apply,PatchApply)
+(set_Patch_DeleteThreshold,set_Patch_DeleteThreshold)
+(set_Match_Threshold,set_Match_Threshold)
+(set_Match_Distance,set_Match_Distance)

@@ -1,0 +1,2 @@
+(imageHash,ImageHashAsync)
+(imageHashMH,MHImageHashAsync)

@@ -1,0 +1,4 @@
+(Blake224,BlakeWrapper224)
+(Blake256,BlakeWrapper256)
+(Blake384,BlakeWrapper384)
+(Blake512,BlakeWrapper512)

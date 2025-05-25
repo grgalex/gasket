@@ -1,0 +1,4 @@
+(configure,Addon)
+(render,Addon)
+(reset,Addon)
+(sleep,Addon)

@@ -1,0 +1,3 @@
+(state,Number)
+(setServer,IndiClient)
+(setBLOBMode,IndiClient)

@@ -1,0 +1,2 @@
+(compressSync,Method)
+(add,Add)

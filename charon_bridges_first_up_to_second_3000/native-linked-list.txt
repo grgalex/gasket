@@ -1,0 +1,4 @@
+(addOne,addOne)
+(size,size)
+(get,get)
+(remove,remove)

@@ -1,0 +1,3 @@
+(mapserv,MapservAsync)
+(FromFile,FromFileAsync)
+(FromString,FromStringAsync)

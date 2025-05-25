@@ -1,0 +1,2 @@
+(shm_open,open)
+(shm_unlink,unlink)

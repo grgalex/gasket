@@ -1,0 +1,6 @@
+(resize,NanNew)
+(thumbnail,NanNew)
+(resize,resizeAsync)
+(thumbnail,thumbnailAsync)
+(width,Integer)
+(height,Integer)

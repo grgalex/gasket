@@ -1,0 +1,7 @@
+(load,Load)
+(get,Get)
+(set,Set)
+(has,Has)
+(keys,Keys)
+(del,Del)
+(call,Call)

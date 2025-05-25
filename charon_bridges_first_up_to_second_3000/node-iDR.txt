@@ -1,0 +1,8 @@
+(InitComm,DR_InitComm)
+(CloseComm,DR_CloseComm)
+(Authenticate,DR_Authenticate)
+(ReadBaseInfos,DR_ReadBaseInfos)
+(ICReadCardSN,DR_IC_ReadCardSN)
+(StartRealReadCard,DR_Start_RealReadCard)
+(StopRealReadCard,DR_Stop_RealReadCard)
+(ShutDownAntenna,DR_Routon_ShutDownAntenna)

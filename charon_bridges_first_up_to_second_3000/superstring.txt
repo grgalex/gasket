@@ -1,0 +1,7 @@
+(word,get_word)
+(matchIndices,get_match_indices)
+(score,get_score)
+(oldStart,get_old_start)
+(newStart,get_new_start)
+(oldEnd,get_old_end)
+(newEnd,get_new_end)

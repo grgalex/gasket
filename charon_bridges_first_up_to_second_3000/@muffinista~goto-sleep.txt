@@ -1,0 +1,2 @@
+(gotoSleep,gotoSleep)
+(lockScreen,lockScreen)

@@ -1,0 +1,6 @@
+(connect,Connect)
+(sendKeyEventScancode,SendKeyEventScancode)
+(sendPointerEvent,SendPointerEvent)
+(sendClipboard,SendClipboard)
+(close,Close)
+(requestKeyframe,RequestKeyframe)

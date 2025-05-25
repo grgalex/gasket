@@ -1,0 +1,2 @@
+(add,BloomFilterWrap)
+(exists,BloomFilterWrap)

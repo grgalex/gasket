@@ -1,0 +1,5 @@
+(statusCode,Number)
+(user,String)
+(userSid,String)
+(remainingAttempts,Number)
+(authenticate,Authenticate)

@@ -1,0 +1,6 @@
+(get,Get)
+(set,Set)
+(remove,Remove)
+(clear,Clear)
+(size,Size)
+(stats,Stats)

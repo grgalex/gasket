@@ -1,0 +1,2 @@
+(decode_signal,DecodeSignal)
+(encode_signal,EncodeSignal)

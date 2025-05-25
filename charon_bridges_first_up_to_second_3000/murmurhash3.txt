@@ -1,0 +1,4 @@
+(murmur32,murmur32_async)
+(murmur128,murmur128_async)
+(murmur32Sync,murmur32_sync)
+(murmur128Sync,murmur128_sync)

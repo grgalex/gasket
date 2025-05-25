@@ -1,0 +1,3 @@
+(addSlow,AddSlow)
+(addFast,AddSlow)
+(setResultBuffer,SetResultBuffer)

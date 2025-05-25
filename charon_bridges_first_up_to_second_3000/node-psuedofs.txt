@@ -1,0 +1,4 @@
+(InitPseudoFS,PseudoFs)
+(psuedoFS,PseudoFs)
+(readPseudo,PseudoFs)
+(writePseudo,PseudoFs)

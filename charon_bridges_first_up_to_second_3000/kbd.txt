@@ -1,0 +1,6 @@
+(getLineSync,GetLineSync)
+(getKeySync,GetKeySync)
+(setEcho,SetEcho)
+(setCanonical,SetCanonical)
+(getLine,GetLine)
+(getKey,GetKey)

@@ -1,0 +1,2 @@
+(statSync,statSync)
+(lstatSync,lstatSync)

@@ -1,0 +1,6 @@
+(start,start)
+(stop,stop)
+(step,step)
+(get,get)
+(copy,copy)
+(paste,paste)

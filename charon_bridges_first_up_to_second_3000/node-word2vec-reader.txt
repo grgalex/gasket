@@ -1,0 +1,5 @@
+(initialize,Initialize)
+(getVector,GetVector)
+(findClosestWords,FindClosestWords)
+(getVocabSize,GetVocabSize)
+(getEmbeddingDim,GetEmbeddingDim)

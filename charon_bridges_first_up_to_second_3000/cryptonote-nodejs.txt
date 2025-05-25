@@ -1,0 +1,1 @@
+(cryptonote_hash,cryptonote_hash)

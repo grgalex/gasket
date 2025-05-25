@@ -1,0 +1,2 @@
+(fromFile,FromFile)
+(recognize,Recognize)

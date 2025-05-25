@@ -1,0 +1,7 @@
+(init,PfioInit)
+(deinit,PfioDeinit)
+(digital_read,PfioDigitalRead)
+(digital_write,PfioDigitalWrite)
+(read_input,PfioReadInput)
+(read_output,PfioReadOutput)
+(write_output,PfioWriteOutput)

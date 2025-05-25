@@ -1,0 +1,8 @@
+(PulseAudioInit,PulseAudioInit)
+(PulseAudioUninit,PulseAudioUninit)
+(getVolume,GetVolume)
+(setVolume,SetVolume)
+(isMuted,IsMuted)
+(mute,Mute)
+(unmute,Unmute)
+(on,On)

@@ -1,0 +1,2 @@
+(diffFactor,DiffFactor)
+(diffImage,DiffImage)

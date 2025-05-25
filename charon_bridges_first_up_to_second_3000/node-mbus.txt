@@ -1,0 +1,6 @@
+(openSerial,OpenSerial)
+(openTCP,OpenTCP)
+(close,Close)
+(get,Get)
+(scan,ScanSecondary)
+(setPrimaryId,SetPrimaryId)

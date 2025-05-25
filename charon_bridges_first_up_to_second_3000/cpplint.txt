@@ -1,0 +1,6 @@
+(triggerReport,TriggerReport)
+(setEvents,SetEvents)
+(setSignal,SetSignal)
+(setFileName,SetFileName)
+(setDirectory,SetDirectory)
+(setVerbose,SetVerbose)

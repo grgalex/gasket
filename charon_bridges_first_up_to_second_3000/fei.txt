@@ -1,0 +1,4 @@
+(init,Init)
+(terminate,Terminate)
+(getVersion,GetVersion)
+(getVersionString,GetVersionString)

@@ -1,0 +1,3 @@
+(init,initICTCLAS)
+(segment,segment)
+(importDictFile,importDictFile)

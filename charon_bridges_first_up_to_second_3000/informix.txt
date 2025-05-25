@@ -1,0 +1,8 @@
+(connect,connect)
+(prepare,prepare)
+(exec,exec)
+(fetch,fetch)
+(close,close)
+(free,free)
+(disconnect,disconnect)
+(serial,serial)

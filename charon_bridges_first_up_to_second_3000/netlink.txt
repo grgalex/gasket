@@ -1,0 +1,4 @@
+(name,String)
+(errno,Number)
+(code,String)
+(syscall,String)

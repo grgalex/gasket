@@ -1,0 +1,2 @@
+(setText,SetText)
+(getText,GetText)

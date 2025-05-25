@@ -1,0 +1,2 @@
+(setAsDesktopFrame,setAsDesktopFrame)
+(clearDesktopFrame,clearDesktopFrame)

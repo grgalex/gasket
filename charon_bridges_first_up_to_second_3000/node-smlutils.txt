@@ -1,0 +1,7 @@
+(reload,Reload)
+(path,GetPath)
+(name,GetName)
+(description,GetDescription)
+(author,GetAuthor)
+(version,GetVersion)
+(hasSetup,HasSetup)

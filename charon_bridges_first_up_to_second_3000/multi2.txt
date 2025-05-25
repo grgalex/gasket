@@ -1,0 +1,5 @@
+(setRound,SetRound)
+(setSystemKey,SetSystemKey)
+(setInitialCbc,SetInitialCbc)
+(setScrambleKey,SetScrambleKey)
+(decrypt,Decrypt)

@@ -1,0 +1,3 @@
+(genAddressByPriKey,GenAddressByPriKeyMethod)
+(genAddressByPubKey,GenAddressByPubKeyMethod)
+(fillBlock,FillBlockMethod)

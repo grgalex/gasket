@@ -1,0 +1,5 @@
+(x,Number)
+(y,Number)
+(press,Press)
+(move,Move)
+(getPos,GetPos)

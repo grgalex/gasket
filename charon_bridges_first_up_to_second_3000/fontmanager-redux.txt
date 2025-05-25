@@ -1,0 +1,8 @@
+(path,String)
+(postscriptName,String)
+(family,String)
+(style,String)
+(weight,Number)
+(width,Number)
+(italic,Boolean)
+(monospace,Boolean)

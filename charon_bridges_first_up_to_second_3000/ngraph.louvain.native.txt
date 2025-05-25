@@ -1,0 +1,5 @@
+(addLink,AddLink)
+(getModularity,GetModularity)
+(optimizeModularity,OptimizeModularity)
+(getClass,GetClass)
+(renumber,Renumber)

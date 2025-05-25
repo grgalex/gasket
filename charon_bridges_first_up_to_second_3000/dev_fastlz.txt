@@ -1,0 +1,1 @@
+(compressSync,CompressSync)

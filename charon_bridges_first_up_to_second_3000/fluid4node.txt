@@ -1,0 +1,7 @@
+(settings_setstr,FluidSynth)
+(synth_sfload,FluidSynth)
+(new_audio_driver,FluidSynth)
+(synth_noteon,FluidSynth)
+(synth_noteoff,FluidSynth)
+(synth_program_change,FluidSynth)
+(synth_set_gain,FluidSynth)

@@ -1,0 +1,4 @@
+(authenticate,__authenticate)
+(cat,__cat)
+(open,__open)
+(file_contents,__file_contents)

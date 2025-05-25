@@ -1,0 +1,5 @@
+(findPath,js_findPath)
+(setSearchRegion,js_SetFindRange)
+(setSaveFindeResult,js_SetSaveFindResult)
+(testastar,_test2)
+(getVersion,_getVersion)

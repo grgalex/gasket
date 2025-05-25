@@ -1,0 +1,2 @@
+(checkWindow,checkWindow)
+(hello,sayHello)

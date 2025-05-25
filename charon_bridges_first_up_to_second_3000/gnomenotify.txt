@@ -1,0 +1,8 @@
+(show,Show)
+(update,Update)
+(close,Close)
+(set_hint,SetHint)
+(clear_hints,ClearHints)
+(set_timeout,SetTimeout)
+(set_category,SetCategory)
+(set_urgency,SetUrgency)

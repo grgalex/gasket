@@ -1,0 +1,8 @@
+(get,Get)
+(set,Set)
+(remove,Remove)
+(clear,Clear)
+(size,Size)
+(stats,Stats)
+(setMaxAge,SetMaxAge)
+(setMaxElements,SetMaxElements)

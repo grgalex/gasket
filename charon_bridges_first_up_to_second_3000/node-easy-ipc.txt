@@ -1,0 +1,6 @@
+(INFINITE,Number)
+(FileMapping,FileMapping)
+(Mutex,Mutex)
+(IPC,IPC)
+(createMap,createMap)
+(setValue,setValue)

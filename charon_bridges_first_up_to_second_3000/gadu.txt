@@ -1,0 +1,6 @@
+(version,Version)
+(login,Login)
+(logoff,Logoff)
+(send,SendMessage)
+(notify,Notify)
+(changeStatus,ChangeStatus)

@@ -1,0 +1,3 @@
+(palette,palette)
+(region,region)
+(point,point)

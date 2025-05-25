@@ -1,0 +1,3 @@
+(distance,Number)
+(count,Number)
+(word,String)

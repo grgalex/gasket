@@ -1,0 +1,5 @@
+(getDests,getDests)
+(getDefault,getDefault)
+(getJobs,getJobs)
+(cancelJob,cancelJob)
+(printFile,printFile)

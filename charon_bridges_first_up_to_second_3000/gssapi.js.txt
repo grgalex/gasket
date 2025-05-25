@@ -1,0 +1,7 @@
+(acceptSecContext,acceptSecContext)
+(initSecContext,initSecContext)
+(setKeytabPath,setKeytabPath)
+(GssSecContext,GssSecContext)
+(verifyCredentials,verifyCredentials)
+(kinit,kinit)
+(kdestroy,kdestroy)

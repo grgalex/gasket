@@ -1,0 +1,7 @@
+(get,get)
+(set,set)
+(del,remove)
+(clear,removeAll)
+(mget,getMultiple)
+(mset,setMultiple)
+(mdel,removeMultiple)

@@ -1,0 +1,7 @@
+(trace,Trace)
+(debug,Debug)
+(info,Info)
+(warn,Warn)
+(error,Error)
+(fatal,Fatal)
+(getLevel,GetLevel)

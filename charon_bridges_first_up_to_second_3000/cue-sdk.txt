@@ -1,0 +1,4 @@
+(CorsairSetLedColors,corsairSetLedColors)
+(CorsairSetLedColorsBuffer,corsairSetLedColorsBuffer)
+(CorsairSetLedColorsFlushBufferAsync,corsairSetLedColorsFlushBufferAsync)
+(CorsairSetLayerPriority,corsairSetLayerPriority)

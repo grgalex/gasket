@@ -1,0 +1,4 @@
+(exports,Setup)
+(idle,Emitter)
+(time,Number)
+(exports,Setup)

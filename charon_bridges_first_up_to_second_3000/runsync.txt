@@ -1,0 +1,3 @@
+(spawnSync,SpawnSync)
+(status,Number)
+(pid,Number)

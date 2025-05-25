@@ -1,0 +1,5 @@
+(get,GetValue)
+(set,SetValue)
+(delete,DeleteValue)
+(keys,Keys)
+(size,Size)

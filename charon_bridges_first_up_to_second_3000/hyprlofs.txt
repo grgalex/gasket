@@ -1,0 +1,6 @@
+(mount,HyprlofsFilesystem)
+(unmount,HyprlofsFilesystem)
+(addMappings,HyprlofsFilesystem)
+(listMappings,HyprlofsFilesystem)
+(removeMappings,HyprlofsFilesystem)
+(removeAll,HyprlofsFilesystem)

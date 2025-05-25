@@ -1,0 +1,4 @@
+(SetMaxThreads,NODE_SetMaxThreads)
+(SolveBoard,NODE_SolveBoard)
+(CalcDDtable,NODE_CalcDDtable)
+(Par,NODE_Par)

@@ -1,0 +1,3 @@
+(SeedRandom,SeedRandom)
+(Srand,Srand)
+(Rand,Rand)

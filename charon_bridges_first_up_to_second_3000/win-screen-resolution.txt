@@ -1,0 +1,4 @@
+(getAvailableDisplayMode,GetAvailableDisplayMode)
+(getCurrentDisplayMode,GetCurrentDisplayMode)
+(getActiveDisplays,GetActiveDisplays)
+(changePrimaryDisplay,ChangePrimaryDisplay)

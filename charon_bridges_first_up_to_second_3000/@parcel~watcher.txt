@@ -1,0 +1,6 @@
+(path,String)
+(type,String)
+(writeSnapshot,writeSnapshot)
+(getEventsSince,getEventsSince)
+(subscribe,subscribe)
+(unsubscribe,unsubscribe)

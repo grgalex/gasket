@@ -1,0 +1,4 @@
+(init,init)
+(reset,reset)
+(render,render)
+(setBrightness,setBrightness)

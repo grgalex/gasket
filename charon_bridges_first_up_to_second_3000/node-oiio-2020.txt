@@ -1,0 +1,6 @@
+(width,img)
+(height,img)
+(channels,img)
+(channelnames,img)
+(read,ReadImage)
+(write,WriteImage)

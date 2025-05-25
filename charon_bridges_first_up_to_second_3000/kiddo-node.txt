@@ -1,0 +1,6 @@
+(mouseSetPosition,SetPosition)
+(mouseHoldLeftClick,HoldLeftClick)
+(mouseUnholdLeftClick,UnholdLeftClick)
+(mouseHoldRightClick,HoldRightClick)
+(mouseUnholdRightClick,UnholdRightClick)
+(mouseRelease,Release)

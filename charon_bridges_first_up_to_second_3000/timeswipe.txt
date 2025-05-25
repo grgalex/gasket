@@ -1,0 +1,8 @@
+(SetMode,TimeSwipeNAPI)
+(SetSensorOffsets,TimeSwipeNAPI)
+(SetSensorGains,TimeSwipeNAPI)
+(SetSensorTransmissions,TimeSwipeNAPI)
+(SetBurstSize,TimeSwipeNAPI)
+(SetSampleRate,TimeSwipeNAPI)
+(SetSettings,TimeSwipeNAPI)
+(GetSettings,TimeSwipeNAPI)

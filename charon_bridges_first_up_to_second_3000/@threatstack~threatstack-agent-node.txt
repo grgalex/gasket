@@ -1,0 +1,2 @@
+(is_sqli,is_sqli)
+(is_xss,is_xss)

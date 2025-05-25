@@ -1,0 +1,5 @@
+(dispose,FunctionTemplate)
+(compiled,FunctionTemplate)
+(output,FunctionTemplate)
+(rawOutput,FunctionTemplate)
+(log,FunctionTemplate)

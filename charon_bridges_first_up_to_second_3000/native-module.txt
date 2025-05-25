@@ -1,0 +1,6 @@
+(add,Add)
+(exports,RunCallback)
+(exports,CreateFunction)
+(hello,Method)
+(createObject,CreateObject)
+(exports,CreateObject)

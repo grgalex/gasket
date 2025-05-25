@@ -1,0 +1,6 @@
+(name,String)
+(running,Boolean)
+(internal,Boolean)
+(address,String)
+(broadcast,String)
+(listInterfaces,ListInterfaces)

@@ -1,0 +1,5 @@
+(getMonitorList,getMonitorList)
+(getNumberAdapters,getNumberAdapters)
+(refresh,refresh)
+(setVCP,setVCP)
+(getVCP,getVCP)

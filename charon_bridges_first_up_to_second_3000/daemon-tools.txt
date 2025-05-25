@@ -1,0 +1,6 @@
+(start,Start)
+(lock,LockD)
+(closeIO,CloseIO)
+(chroot,Chroot)
+(setreuid_username,SetREUID_username)
+(setreuid,SetREUID)

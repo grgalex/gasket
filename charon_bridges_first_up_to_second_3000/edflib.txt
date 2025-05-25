@@ -1,0 +1,2 @@
+(getData,EdfWrapper)
+(getHeader,EdfWrapper)

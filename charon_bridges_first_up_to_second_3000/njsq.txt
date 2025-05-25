@@ -1,0 +1,4 @@
+(_wrapperInfo,GetWrapperInfo_)
+(_componentInfo,GetComponentInfo_)
+(_register,Register_)
+(_call,Call_)

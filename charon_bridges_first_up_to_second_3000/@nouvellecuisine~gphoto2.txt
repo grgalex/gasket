@@ -1,0 +1,7 @@
+(getConfig,GetConfig)
+(setConfigValue,SetConfigValue)
+(takePicture,TakePicture)
+(downloadPicture,DownloadPicture)
+(waitEvent,WaitEvent)
+(list,List)
+(setLogLevel,SetLogLevel)

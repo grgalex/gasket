@@ -1,0 +1,5 @@
+(createMouseHook,createMouseHook)
+(enableMouseMove,enableMouseMove)
+(disableMouseMove,disableMouseMove)
+(pauseMouseEvents,pauseMouseEvents)
+(resumeMouseEvents,resumeMouseEvents)

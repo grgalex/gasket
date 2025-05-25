@@ -1,0 +1,5 @@
+(getProclist,GetProclist)
+(getNetload,GetNetload)
+(getUptime,GetUptime)
+(getNetlist,GetNetlist)
+(getProcArgs,GetProcArgs)

@@ -1,0 +1,8 @@
+(on,On)
+(addEventListener,On)
+(off,Off)
+(removeEventListener,Off)
+(removeAllEventListeners,Clear)
+(clearEventListener,Clear)
+(emit,Emit)
+(self,Self)

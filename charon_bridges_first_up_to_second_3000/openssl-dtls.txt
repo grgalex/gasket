@@ -1,0 +1,8 @@
+(handler,handler)
+(close,close)
+(getPeerCert,getPeerCert)
+(send,send)
+(setCiphers,setCiphers)
+(setCertAndKey,setCertAndKey)
+(setCA,setCA)
+(setVerifyLevel,setVerifyLevel)

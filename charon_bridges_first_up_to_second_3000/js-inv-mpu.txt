@@ -1,0 +1,4 @@
+(startMpu,startMpu)
+(readMpu,readMpu)
+(setSampleFreq,setSampleFreq)
+(setDlpf,setDlpf)

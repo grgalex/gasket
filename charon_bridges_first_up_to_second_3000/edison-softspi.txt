@@ -1,0 +1,4 @@
+(write,write)
+(frequency,frequency)
+(mode,mode)
+(betweenByteDelay_us,betweenByteDelay_us)

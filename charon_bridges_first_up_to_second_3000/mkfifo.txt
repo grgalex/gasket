@@ -1,0 +1,2 @@
+(mkfifoSync,MkfifoSync)
+(mkfifo,MkfifoAsync)

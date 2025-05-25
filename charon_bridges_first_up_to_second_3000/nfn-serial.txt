@@ -1,0 +1,7 @@
+(open,openSerial)
+(close,closeSerial)
+(reset,resetSerial)
+(config,configSerial)
+(clear,clearData)
+(read,readData)
+(write,writeData)

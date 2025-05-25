@@ -1,0 +1,4 @@
+(SumLyra2REv2,SumLyra2REv2)
+(SumLyra2RE,SumLyra2RE)
+(SumScryptN,SumScryptN)
+(SumAllium,SumAllium)

@@ -1,0 +1,5 @@
+(read,Method)
+(read,Method)
+(result,Number)
+(humidity,Number)
+(temperature,Number)

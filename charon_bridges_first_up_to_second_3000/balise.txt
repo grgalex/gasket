@@ -1,0 +1,8 @@
+(setGlobalOption,SetGlobalOption)
+(loadSourceCode,LoadSourceCode)
+(loadSourceFile,LoadSourceFile)
+(loadBinaryFile,LoadBinaryFile)
+(setGlobalVariable,SetGlobalVariable)
+(getGlobalVariable,GetGlobalVariable)
+(executeFunction,ExecuteFunction)
+(executeFunctionReturningBuffer,ExecuteFunctionReturningBuffer)

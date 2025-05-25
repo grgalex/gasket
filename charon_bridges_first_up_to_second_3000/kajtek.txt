@@ -1,0 +1,2 @@
+(getMany,GetMany)
+(putMany,PutMany)

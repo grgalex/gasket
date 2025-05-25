@@ -1,0 +1,4 @@
+(LogiLedInit,W_LogiLedInit)
+(LogiLedSaveCurrentLighting,W_LogiLedSaveCurrentLighting)
+(LogiLedRestoreLighting,W_LogiLedRestoreLighting)
+(LogiLedSetLighting,W_LogiLedSetLighting)

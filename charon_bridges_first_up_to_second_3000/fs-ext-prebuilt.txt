@@ -1,0 +1,5 @@
+(seek,Seek)
+(fcntl,Fcntl)
+(flock,Flock)
+(utime,UTime)
+(statVFS,StatVFS)

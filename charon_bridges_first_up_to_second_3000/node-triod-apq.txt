@@ -1,0 +1,3 @@
+(ntuples,Number)
+(nfields,Number)
+(ExecStatus,String)

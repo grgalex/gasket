@@ -1,0 +1,6 @@
+(MakeKeypair,NanNew)
+(Sign,NanNew)
+(Verify,NanNew)
+(MakeKeypair,MakeKeypair)
+(Sign,Sign)
+(Verify,Verify)

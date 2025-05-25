@@ -1,0 +1,7 @@
+(mousePos,MousePos)
+(mouseMove,MouseMove)
+(mouseDown,MouseDown)
+(mouseUp,MouseUp)
+(mousePress,MousePress)
+(mouseWheel,MouseWheel)
+(mouseDelay,MouseDelay)

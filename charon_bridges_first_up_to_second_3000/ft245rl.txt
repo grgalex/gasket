@@ -1,0 +1,5 @@
+(1,PVOID)
+(write,Write)
+(open,Open)
+(close,Close)
+(findAll,FindAll)

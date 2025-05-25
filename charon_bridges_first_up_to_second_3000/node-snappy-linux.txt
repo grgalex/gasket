@@ -1,0 +1,3 @@
+(compress,Compress)
+(uncompress,Uncompress)
+(isValidCompressed,isValidCompressed)

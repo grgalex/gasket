@@ -1,0 +1,8 @@
+(SetWorkingDirectory,FileSystem)
+(SetReplication,FileSystem)
+(size,Number)
+(replication,Number)
+(block_size,Number)
+(permissions,Number)
+(last_mod,Number)
+(last_access,Number)

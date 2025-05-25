@@ -1,0 +1,7 @@
+(addScaledRow,addScaledRow)
+(get,get)
+(innerProduct,innerProduct)
+(scale,scale)
+(set,set)
+(setAll,setAll)
+(setRow,setRow)

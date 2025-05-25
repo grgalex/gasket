@@ -1,0 +1,4 @@
+(getCurrentActiveWindowTitle,GetCurrentActiveWindowTitle)
+(storeActiveWindow,StoreActiveWindow)
+(activateStoredWindow,ActivateStoredWindow)
+(checkStoredWindow,CheckStoredWindow)

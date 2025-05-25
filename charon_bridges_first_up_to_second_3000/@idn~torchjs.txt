@@ -1,0 +1,5 @@
+(New,New)
+(forward,forward)
+(is_cuda_available,is_cuda_available)
+(cuda,cuda)
+(cpu,cpu)

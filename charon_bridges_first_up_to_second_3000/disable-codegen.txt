@@ -1,0 +1,6 @@
+(allowCodeGenerationFromStrings,NanNew)
+(isCodeGenerationFromStringsAllowed,NanNew)
+(setErrorMessageForCodeGenerationFromStrings,NanNew)
+(allowCodeGenerationFromStrings,AllowCodeGenerationFromStrings)
+(isCodeGenerationFromStringsAllowed,IsCodeGenerationFromStringsAllowed)
+(setErrorMessageForCodeGenerationFromStrings,SetErrorMessageForCodeGenerationFromStrings)

@@ -1,0 +1,3 @@
+(allow,AllowScreenCaptureDevices)
+(startPlugin,StartScreenCapturePlugin)
+(stopPlugin,StopScreenCapturePlugin)

@@ -1,0 +1,3 @@
+(GetHeapMetrics,heap_metrics)
+(DumpHeapMetrics,heap_metrics)
+(ForceGC,heap_metrics)

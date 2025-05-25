@@ -1,0 +1,2 @@
+(DecodePKCS8,DecodeEncryptedPrivateKey)
+(CertificateSerial,ExtractCertificateSerial)

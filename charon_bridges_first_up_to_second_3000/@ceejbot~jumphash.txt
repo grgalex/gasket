@@ -1,0 +1,2 @@
+(jumphash,JumpConsistentHash)
+(jumpbuffer,JumpBuffer)

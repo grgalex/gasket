@@ -1,0 +1,8 @@
+(getPortCount,GetPortCount)
+(getPortName,GetPortName)
+(openPort,OpenPort)
+(openVirtualPort,OpenVirtualPort)
+(closePort,ClosePort)
+(isPortOpen,IsPortOpen)
+(sendMessage,SendMessage)
+(ignoreTypes,IgnoreTypes)

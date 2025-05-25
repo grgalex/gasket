@@ -1,0 +1,3 @@
+(ftok,Method_Ftok)
+(read,Method_Read)
+(write,Method_Write)

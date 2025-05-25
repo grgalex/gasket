@@ -1,0 +1,1 @@
+(native_tst_function,native_tst_function)

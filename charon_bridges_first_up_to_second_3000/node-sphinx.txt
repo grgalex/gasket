@@ -1,0 +1,5 @@
+(recognizerInit,RecognizerInit)
+(recognizerStart,RecognizerStart)
+(recognizerStop,RecognizerStop)
+(recognizeFromFile,RecognizeFromFile)
+(getRecognizerStatus,getRecognizerStatus)

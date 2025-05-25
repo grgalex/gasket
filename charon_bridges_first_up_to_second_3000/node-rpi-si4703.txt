@@ -1,0 +1,8 @@
+(powerOn,PowerOnWrap)
+(powerOff,PowerOffWrap)
+(setChannel,SetChannelWrap)
+(getChannel,GetChannelWrap)
+(seekUp,SeekUpWrap)
+(seekDown,SeekDownWrap)
+(setVolume,SetVolumeWrap)
+(readRDS,ReadRDSWrap)

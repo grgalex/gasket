@@ -1,0 +1,6 @@
+(sum,Sum)
+(add,Sum)
+(sub,Sub)
+(minus,Sub)
+(multiply,Mult)
+(divide,Div)

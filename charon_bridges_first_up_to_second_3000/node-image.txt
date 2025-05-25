@@ -1,0 +1,6 @@
+(load,load)
+(save,save)
+(unload,unload)
+(convertTo32Bits,convertTo32Bits)
+(convertTo24Bits,convertTo24Bits)
+(getVersion,getVersion)

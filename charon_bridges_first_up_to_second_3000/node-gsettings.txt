@@ -1,0 +1,4 @@
+(set_gsetting,set_gsetting)
+(get_gsetting,get_gsetting)
+(get_gsetting_keys,get_gsetting_keys)
+(schema_exists,schema_exists)

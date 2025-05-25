@@ -1,0 +1,4 @@
+(getProcessID,getProcessID)
+(getModuleBaseAddr,getModuleBaseAddr)
+(readMemory,readMemory)
+(writeMemory,writeMemory)

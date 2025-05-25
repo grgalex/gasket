@@ -1,0 +1,8 @@
+(connect,isolate)
+(Bootstrap,isolate)
+(GetConstantValue,isolate)
+(MakeFunction,isolate)
+(MakeClass,isolate)
+(ObjectPropertyGetter,isolate)
+(ObjectPropertySetter,isolate)
+(StartLoop,isolate)

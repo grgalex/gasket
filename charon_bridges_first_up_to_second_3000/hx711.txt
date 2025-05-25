@@ -1,0 +1,8 @@
+(read,read)
+(setScale,setScale)
+(setOffset,setOffset)
+(tare,tare)
+(getUnits,getUnits)
+(setGain,setGain)
+(getOffset,getOffset)
+(getScale,getScale)

@@ -1,0 +1,4 @@
+(copySync,ClipboardCopy)
+(copy,ClipboardCopyAsync)
+(pasteSync,ClipboardPaste)
+(paste,ClipboardPasteAsync)

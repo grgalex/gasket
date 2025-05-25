@@ -1,0 +1,6 @@
+(open,Open)
+(close,Close)
+(capture,Capture)
+(cookies,Cookies)
+(setCookies,SetCookies)
+(processEvents,ProcessEvents)

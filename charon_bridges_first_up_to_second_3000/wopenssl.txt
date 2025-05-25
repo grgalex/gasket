@@ -1,0 +1,7 @@
+(getAltNames,get_altnames)
+(getSubject,get_subject)
+(getIssuer,get_issuer)
+(parseCert,parse_cert)
+(extractP12,extract_p12)
+(altNames,altNames)
+(extensions,extensions)

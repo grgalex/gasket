@@ -1,0 +1,5 @@
+(write,ZCtx)
+(writeSync,ZCtx)
+(init,ZCtx)
+(close,ZCtx)
+(reset,ZCtx)

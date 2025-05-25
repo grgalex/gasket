@@ -1,0 +1,8 @@
+(imgWidth,Number)
+(imgHeight,Number)
+(minX,Number)
+(minY,Number)
+(maxX,Number)
+(maxY,Number)
+(pixelsCount,Number)
+(pixelsGroups,detect_groups_async)

@@ -1,0 +1,5 @@
+(existWindowHandle,ExistWindowHandle)
+(findWindowHandle,FindWindowHandle)
+(enumAllWindows,EnumAllWindows)
+(enumDesktop,EnumDesktop)
+(createWindow,CreateAWindow)

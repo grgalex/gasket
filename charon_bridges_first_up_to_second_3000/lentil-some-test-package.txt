@@ -1,0 +1,6 @@
+(getIdleTime,desktopIdleGetIdleTime)
+(desktopMouseWheelIdleTime,desktopMouseWheelIdle)
+(desktopMouseMoveIdleTime,desktopMouseMoveIdle)
+(desktopKeyDownIdleTime,desktopKeyDown)
+(desktopLeftMouseClickIdleTime,desktopLeftMouseClick)
+(desktopRightMouseClickIdleTime,desktopRightMouseClick)

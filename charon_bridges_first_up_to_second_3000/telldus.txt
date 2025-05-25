@@ -1,0 +1,5 @@
+(AsyncCaller,telldus_v8)
+(SyncCaller,telldus_v8)
+(addDeviceEventListener,telldus_v8)
+(addSensorEventListener,telldus_v8)
+(addRawDeviceEventListener,telldus_v8)

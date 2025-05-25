@@ -1,0 +1,8 @@
+(list,List)
+(get,Get)
+(set,Set)
+(remove,Remove)
+(llist,LList)
+(lget,LGet)
+(lset,LSet)
+(lremove,LRemove)

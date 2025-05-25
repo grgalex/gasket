@@ -1,0 +1,6 @@
+(empty,HashEmpty)
+(append,HashAppend)
+(prepend,HashPrepend)
+(concat,HashConcat)
+(equals,HashEquals)
+(serialize,HashSerialize)

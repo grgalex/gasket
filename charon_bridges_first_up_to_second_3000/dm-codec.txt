@@ -1,0 +1,5 @@
+(width,Number)
+(height,Number)
+(channels,Number)
+(encode,encode)
+(decode,decode)

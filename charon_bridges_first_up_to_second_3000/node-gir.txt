@@ -1,0 +1,2 @@
+(connect,GIRObject)
+(disconnect,GIRObject)

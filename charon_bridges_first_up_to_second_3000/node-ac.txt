@@ -1,0 +1,6 @@
+(reset,reset)
+(addDictionary,addDictionary)
+(addCheckItem,addCheckItem)
+(buildChecker,buildChecker)
+(checkText,checkText)
+(checkTextFile,checkTextFile)

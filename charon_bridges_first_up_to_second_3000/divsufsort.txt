@@ -1,0 +1,2 @@
+(divsufsort,divsufsort_)
+(divbwt,divbwt_)

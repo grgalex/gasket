@@ -1,0 +1,6 @@
+(save,AsyncSaveTag)
+(saveSync,SyncSaveTag)
+(isEmpty,IsEmpty)
+(tag,AsyncTag)
+(tagSync,SyncTag)
+(read,AsyncReadFile)

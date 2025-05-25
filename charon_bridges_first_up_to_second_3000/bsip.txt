@@ -1,0 +1,7 @@
+(siphash,siphash)
+(siphash256,siphash)
+(siphash32,siphash32)
+(siphash64,siphash64)
+(siphash32k256,siphash32k256)
+(siphash64k256,siphash64k256)
+(sipmod,sipmod)

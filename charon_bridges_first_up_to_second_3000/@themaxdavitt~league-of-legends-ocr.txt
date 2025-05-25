@@ -1,0 +1,7 @@
+(blueGold,String)
+(redGold,String)
+(time,String)
+(blueTowers,String)
+(redTowers,String)
+(blueKills,String)
+(redKills,String)

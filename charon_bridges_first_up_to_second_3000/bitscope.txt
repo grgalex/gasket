@@ -1,0 +1,5 @@
+(init,bitscope_init)
+(setup,bitscope_setup)
+(trace,bitscope_trace)
+(acquire,bitscope_acquire)
+(close,bitscope_close)

@@ -1,0 +1,6 @@
+(debug,LogDebug)
+(log,LogVerbose)
+(info,LogInfo)
+(warn,LogWarning)
+(warning,LogWarning)
+(error,LogError)

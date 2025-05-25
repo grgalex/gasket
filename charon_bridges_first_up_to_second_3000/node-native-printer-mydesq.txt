@@ -1,0 +1,5 @@
+(listPrinters,listPrinters)
+(printerInfo,printerInfo)
+(printerOptions,printerOptions)
+(defaultPrinterName,defaultPrinterName)
+(print,print)

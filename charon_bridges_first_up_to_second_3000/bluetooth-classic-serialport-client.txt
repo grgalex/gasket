@@ -1,0 +1,6 @@
+(listPairedDevices,ListPairedDevices)
+(sdpSearch,SdpSearch)
+(inquire,Inquire)
+(write,Write)
+(read,Read)
+(close,Close)

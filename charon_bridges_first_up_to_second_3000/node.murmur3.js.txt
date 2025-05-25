@@ -1,0 +1,4 @@
+(hash,hash)
+(hash64,hash64)
+(hash_bytes,hash_bytes)
+(crc32,calc)

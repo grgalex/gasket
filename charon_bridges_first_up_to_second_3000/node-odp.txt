@@ -1,0 +1,7 @@
+(executeReader,ExecuteReader)
+(executeNonQuery,ExecuteNonQuery)
+(executeScalar,ExecuteScalar)
+(Dispose,Dispose)
+(open,Open)
+(close,Close)
+(dispose,Dispose)

@@ -1,0 +1,3 @@
+(hello,Method)
+(giveMeGiggles,Giggles)
+(add,Add)

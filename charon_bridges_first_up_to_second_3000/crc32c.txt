@@ -1,0 +1,4 @@
+(openSocket,Batcher)
+(closeSocket,Batcher)
+(compute,Batcher)
+(compute,Compute)

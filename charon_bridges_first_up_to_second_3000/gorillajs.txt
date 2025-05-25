@@ -1,0 +1,7 @@
+(open,PtyOpen)
+(startProcess,PtyStartProcess)
+(resize,PtyResize)
+(kill,PtyKill)
+(pty,name)
+(fork,PtyFork)
+(process,PtyGetProc)

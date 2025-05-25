@@ -1,0 +1,6 @@
+(init,NDbusInit)
+(deinit,NDbusClose)
+(invokeMethod,NDbusInvokeMethod)
+(sendSignal,NDbusSendSignal)
+(addMatch,NDbusAddMatch)
+(removeMatch,NDbusRemoveMatch)

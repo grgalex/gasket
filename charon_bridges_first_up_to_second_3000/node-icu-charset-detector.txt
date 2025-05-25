@@ -1,0 +1,3 @@
+(getName,CharsetMatch)
+(getLanguage,CharsetMatch)
+(getConfidence,CharsetMatch)

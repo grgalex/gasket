@@ -1,0 +1,4 @@
+(discover,DiscoverInit)
+(name,name)
+(getPlugins,GetPlugins)
+(inspect,Inspect)

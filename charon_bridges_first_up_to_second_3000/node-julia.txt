@@ -1,0 +1,8 @@
+(getHIndex,getHIndex)
+(getPath,getPath)
+(getModuleName,getModuleName)
+(exec,exec)
+(eval,doEval)
+(exec,doExec)
+(import,doImport)
+(newScript,newScript)

@@ -1,0 +1,4 @@
+(getBlockSize,GetBlockSize)
+(copy,Copy)
+(decompress,Decompress)
+(compress,Compress)

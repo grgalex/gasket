@@ -1,0 +1,3 @@
+(spiSupported,Boolean)
+(transfer,Transfer)
+(readSpiSettings,ReadSpiSettings)

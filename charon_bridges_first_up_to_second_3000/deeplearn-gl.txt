@@ -1,0 +1,4 @@
+(setError,WebGLRenderingContext)
+(size,size)
+(name,name)
+(cleanup,WebGLRenderingContext)

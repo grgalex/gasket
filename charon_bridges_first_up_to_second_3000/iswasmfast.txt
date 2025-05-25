@@ -1,0 +1,8 @@
+(slope,Number)
+(intercept,Number)
+(r2,Number)
+(levenstein,Levenstein)
+(fibonacci,Fibonacci)
+(fermat,Fermat)
+(regression,Regression)
+(sha256,Sha256)

@@ -1,0 +1,4 @@
+(setPrototype,SetPrototype)
+(run,Run)
+(getGlobal,GetGlobal)
+(VmOne,VmOne)

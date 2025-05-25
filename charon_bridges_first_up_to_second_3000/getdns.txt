@@ -1,0 +1,6 @@
+(lookup,GNContext)
+(cancel,GNContext)
+(destroy,GNContext)
+(getAddress,GNContext)
+(getHostname,GNContext)
+(getService,GNContext)

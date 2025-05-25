@@ -1,0 +1,4 @@
+(dlopen,Dlopen)
+(dlclose,Dlclose)
+(dlsym,Dlsym)
+(dlerror,Dlerror)

@@ -1,0 +1,4 @@
+(width,Number)
+(height,Number)
+(add,SumAsyncPromise)
+(processImage,ProcessImage)

@@ -1,0 +1,2 @@
+(exports,CreateObject)
+(write,Write)

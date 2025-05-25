@@ -1,0 +1,4 @@
+(open,isolate)
+(close,isolate)
+(isOpened,isolate)
+(getFrameSize,isolate)

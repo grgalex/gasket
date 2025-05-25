@@ -1,0 +1,7 @@
+(num_fields,Num_Fields)
+(all_fields,All_Fields)
+(hits,Get_Hits)
+(get_schema,Get_Schema)
+(getField,Get_Field)
+(total_hits,Total_Hits)
+(hits_next,Hits_Next)

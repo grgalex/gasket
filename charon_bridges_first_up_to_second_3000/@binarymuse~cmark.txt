@@ -1,0 +1,3 @@
+(renderHtmlSync,render_html_sync)
+(renderHtml,render_html_async)
+(cmark_version,String)

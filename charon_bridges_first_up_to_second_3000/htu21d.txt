@@ -1,0 +1,5 @@
+(humidity,Humidity)
+(temperature,Temp)
+(reset,Reset)
+(setMode,Mode)
+(setHeater,Heater)

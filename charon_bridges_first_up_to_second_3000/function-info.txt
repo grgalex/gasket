@@ -1,0 +1,2 @@
+(getFunctionInfo,NanNew)
+(getFunctionInfo,GetFunctionInfo)

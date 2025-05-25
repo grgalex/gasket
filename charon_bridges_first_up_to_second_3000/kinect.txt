@@ -1,0 +1,7 @@
+(close,Close)
+(led,Led)
+(tilt,Tilt)
+(setDepthCallback,SetDepthCallback)
+(setVideoCallback,SetVideoCallback)
+(pause,Pause)
+(resume,Resume)

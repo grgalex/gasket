@@ -1,0 +1,4 @@
+(predict,Predict)
+(nn,Nn)
+(getSentenceVector,GetSentenceVector)
+(train,Train)

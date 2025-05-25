@@ -1,0 +1,4 @@
+(open,canOpen)
+(read,canRead)
+(write,canWrite)
+(close,canClose)

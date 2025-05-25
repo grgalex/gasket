@@ -1,0 +1,8 @@
+(getVersion,GetVersion)
+(setColorFormat,PreProcessInfo)
+(setResizeAlgorithm,PreProcessInfo)
+(setVariant,PreProcessInfo)
+(setPreProcessChannel,PreProcessInfo)
+(setPrecision,OutputInfo)
+(setPrecision,InputInfo)
+(setLayout,InputInfo)

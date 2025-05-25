@@ -1,0 +1,8 @@
+(time,NanNew)
+(cputime,NanNew)
+(time,Time)
+(cputime,CpuTime)
+(cputime,Cputime)
+(time,Time)
+(cputime,CpuTime)
+(cputime,Cputime)

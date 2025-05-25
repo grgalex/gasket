@@ -1,0 +1,3 @@
+(add,ifile_class)
+(match,ifile_class)
+(add_mime,ifile_class)

@@ -1,0 +1,7 @@
+(_API_consoleLog,isolate)
+(_API_getSharedVariableValue,isolate)
+(_API_setSharedVariableValue,isolate)
+(createThread,onCreateThread)
+(getMaxThreadCount,onGetMaxThreadCount)
+(getSharedVariableValue,SharedFunctions)
+(setSharedVariableValue,SharedFunctions)

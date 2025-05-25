@@ -1,0 +1,7 @@
+(connect,Connect)
+(rumble,Rumble)
+(led,Led)
+(ir,IrReporting)
+(acc,AccReporting)
+(ext,ExtReporting)
+(button,ButtonReporting)

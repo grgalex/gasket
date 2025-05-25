@@ -1,0 +1,4 @@
+(init,Syslog)
+(log,Syslog)
+(setMask,Syslog)
+(close,Syslog)

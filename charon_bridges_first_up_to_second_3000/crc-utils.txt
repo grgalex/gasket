@@ -1,0 +1,2 @@
+(crc32_combine,crc32_combine)
+(crc32_combine_multi,crc32_combine_multi)

@@ -1,0 +1,2 @@
+(scrypt,scrypt)
+(scryptn,scryptn)

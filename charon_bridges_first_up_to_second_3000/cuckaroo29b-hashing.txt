@@ -1,0 +1,2 @@
+(cuckaroo29b,cuckaroo29b)
+(cycle_hash,cycle_hash)

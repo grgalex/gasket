@@ -1,0 +1,5 @@
+(Version,Version)
+(Complete,Complete)
+(Diagnose,Diagnose)
+(MemoryUsage,MemoryUsage)
+(ClearCache,ClearCache)

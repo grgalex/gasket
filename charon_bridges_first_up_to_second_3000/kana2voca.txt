@@ -1,0 +1,2 @@
+(kana2voca,kana2voca)
+(kana2vocaSync,kana2voca_sync)

@@ -1,0 +1,6 @@
+(cryptonight,cryptonight)
+(cryptonight_async,cryptonight_async)
+(cryptonight_light,cryptonight_light)
+(cryptonight_light_async,cryptonight_light_async)
+(cryptonight_heavy,cryptonight_heavy)
+(cryptonight_heavy_async,cryptonight_heavy_async)

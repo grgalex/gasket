@@ -1,0 +1,7 @@
+(SetBridge,TimeSwipeNAPI)
+(SetSensorOffsets,TimeSwipeNAPI)
+(SetSensorGains,TimeSwipeNAPI)
+(SetSensorTransmissions,TimeSwipeNAPI)
+(SetSecondary,TimeSwipeNAPI)
+(SetSettings,TimeSwipeNAPI)
+(GetSettings,TimeSwipeNAPI)

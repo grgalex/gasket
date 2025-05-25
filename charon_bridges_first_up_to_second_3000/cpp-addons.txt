@@ -1,0 +1,8 @@
+(accumulate,accumulate)
+(hello,hello)
+(add,add)
+(getAddTimes,getAddTimes)
+(getAccumulatorInstance,getAccumulatorInstance)
+(accumulateAsync,accumulateAsync)
+(getPerson,getPerson)
+(getFunction,getFunction)

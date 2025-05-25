@@ -1,0 +1,6 @@
+(sendSync,send)
+(write,Write)
+(onMessage,onMessageBind)
+(getPipeFile,GetPipeFile)
+(listen,Listen)
+(stop,Stop)

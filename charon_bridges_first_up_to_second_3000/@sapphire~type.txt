@@ -1,0 +1,2 @@
+(getPromiseDetails,GetPromiseDetails)
+(getProxyDetails,GetProxyDetails)

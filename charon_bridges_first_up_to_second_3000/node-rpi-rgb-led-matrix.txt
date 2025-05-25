@@ -1,0 +1,8 @@
+(getWidth,GetWidth)
+(getHeight,GetHeight)
+(setPixel,SetPixel)
+(clear,Clear)
+(fill,Fill)
+(setImageBuffer,SetImageBuffer)
+(draw,Draw)
+(scroll,Scroll)

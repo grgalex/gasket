@@ -1,0 +1,6 @@
+(plusOne,PlusOne)
+(sysname,sysname)
+(nodename,nodename)
+(release,release)
+(version,version)
+(machine,machine)

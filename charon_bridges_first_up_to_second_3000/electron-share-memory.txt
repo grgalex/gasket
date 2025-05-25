@@ -1,0 +1,3 @@
+(SetShareMemory,SetShareMemory)
+(GetShareMemory,GetShareMemory)
+(ClearShareMemory,ClearShareMemory)

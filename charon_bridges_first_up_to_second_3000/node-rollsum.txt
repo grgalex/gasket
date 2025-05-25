@@ -1,0 +1,4 @@
+(feed,Feed)
+(end,End)
+(getLength,GetLength)
+(getHashLength,GetHashLength)

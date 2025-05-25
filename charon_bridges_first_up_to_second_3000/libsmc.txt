@@ -1,0 +1,7 @@
+(name,name)
+(Open,Open)
+(Close,Close)
+(IsOpticalDiskDriveFull,IsOpticalDiskDriveFull)
+(IsBatteryPowered,IsBatteryPowered)
+(GetFans,GetFans)
+(GetFanInformation,GetFanInformation)
