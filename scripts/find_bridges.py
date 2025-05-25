@@ -340,7 +340,7 @@ def main():
     # for pkg in package_names:
     #     do_single(pkg, args.always)
 
-    with concurrent.futures.ProcessPoolExecutor(max_workers=5) as executor:
+    with concurrent.futures.ProcessPoolExecutor(max_workers=10) as executor:
         for pkg in package_names:
             executor.submit(do_single, pkg, args.always)
 
