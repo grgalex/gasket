@@ -157,12 +157,16 @@ class JavascriptBridger():
                 ret, out, err = utils.run_cmd(cmd)
             except Exception as e:
                 log.error(e)
+                log.warn(out)
+                log.warn(err)
                 return -1
             if ret != 0:
                 log.error(f"cmd {cmd} returned non-zero exit code {ret}")
-                log.info(out)
-                log.info(err)
+                log.warn(out)
+                log.warn(err)
                 return ret
+            log.info(out)
+            log.info(err)
 
         return 0
     
