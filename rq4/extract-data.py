@@ -74,7 +74,7 @@ def gen_histogram(data1, data2, histogram_filename):
     # nu_bins = min(13, nu_bins)
 
     # Plot first histogram (red)
-    ax.hist(data1, bins=bins, color='red', alpha=0.5, label='GASKET')
+    _, edges, _ = ax.hist(data1, bins=bins, color='red', alpha=0.5, label='GASKET')
 
     # Plot second histogram (blue)
     # ax.hist(charon_zeros, bins=[-0.5, 0.5], color='blue', alpha=0.5, label='CHARON')
@@ -83,6 +83,7 @@ def gen_histogram(data1, data2, histogram_filename):
     # Grid and legend
     # ax.grid(True, color='gray', linestyle='--', linewidth=0.5)
     ax.legend()
+    plt.xticks(edges)
 
     # Title and axis labels
     ax.set_title('Overlapping Histograms (Purple Overlap)')
