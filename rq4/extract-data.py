@@ -49,6 +49,7 @@ def gen_histogram(data1, data2, histogram_filename):
     # Create the figure and axes
     fig, ax = plt.subplots(figsize=(8, 6))
 
+    data1.append(0)
     data1 = reject_outliers(np.array(data1))
     data2 = reject_outliers(np.array(data2))
 
@@ -73,7 +74,7 @@ def gen_histogram(data1, data2, histogram_filename):
     ax.hist(data2, bins=nu_bins, color='blue', alpha=0.5, label='CHARON')
 
     # Grid and legend
-    ax.grid(True, color='gray', linestyle='--', linewidth=0.5)
+    # ax.grid(True, color='gray', linestyle='--', linewidth=0.5)
     ax.legend()
 
     # Title and axis labels
