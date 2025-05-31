@@ -43,9 +43,10 @@ def gen_histogram(data1, data2, histogram_filename):
     print(f"MAX_OVERALL = {max_overall}")
 
     bins = np.linspace(0, max_overall, 13)
+    print(bins)
 
     # Plot first histogram (red)
-    ax.hist(data1, bins=bins, color='red', alpha=0.5, label='GASKET')
+    ax.hist(data1, bins='auto', color='red', alpha=0.5, label='GASKET')
 
     # Plot second histogram (blue)
     ax.hist(data2, bins=bins, color='blue', alpha=0.5, label='CHARON')
