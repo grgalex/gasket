@@ -89,7 +89,7 @@ def gen_histogram(data1, data2, histogram_filename):
     plt.gca().spines['left'].set_visible(False)  # Remove left spine
     plt.gca().spines['bottom'].set_visible(False)  # Remove bottom spine
 
-    plt.xlim(0, max(data1))  # Limit x-axis to the range of the samples
+    # plt.xlim(0, max(data1))  # Limit x-axis to the range of the samples
     plt.ylim(0, np.max(np.histogram(data1, bins=bins)[0]))  # Limit y-axis to the maximum frequency
     # Title and axis labels
     # ax.set_title('Overlapping Histograms (Purple Overlap)')
