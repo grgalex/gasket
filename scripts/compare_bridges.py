@@ -81,6 +81,8 @@ class BridgeComparator():
         self.packages_jsxray_more = []
         self.packages_jsxray_more_charon_nonzero = []
         self.packages_different_bridges = []
+        self.jsxray_samples = []
+        self.charon_samples = []
         self.final_stats = {'num_packages': None,
                             'jsxray_total': None,
                             'charon_total': None,
@@ -114,6 +116,7 @@ class BridgeComparator():
                 self.analyzed_packages.append(pkg_dirty)
                 jsxray_bridges = utils.load_csv(jsxray_file)
                 num_jsxray = len(jsxray_bridges)
+                self.jsxray_samples.append(num_jsxray)
                 self.jsxray_total += num_jsxray
                 if os.path.exists(charon_file):
                     log.info(f'FOUND CHARON FILE: {charon_file}')
@@ -125,6 +128,7 @@ class BridgeComparator():
                     num_charon = 0
                     charon_bridges = []
 
+                self.charon_samples.append(num_charon)
                 are_different = False
                 for b in jsxray_bridges:
                     if b not in charon_bridges:
@@ -161,7 +165,7 @@ class BridgeComparator():
                             'charon_total': self.charon_total,
                             'num_packages_both_nonzero': self.num_packages_both_nonzero,
                             'num_packages_jsxray_more': self.num_packages_jsxray_more,
-                            'num_packages_jsxray_more_charon_nonzero': len(self.packages_jsxray_more_charon_nonzero), 
+                            'num_packages_jsxray_more_charon_nonzero': len(self.packages_jsxray_more_charon_nonzero),
                             'num_packages_charon_more': self.num_packages_charon_more,
                             'num_packages_diff': len(self.packages_different_bridges),
                             'packages': self.analyzed_packages,
@@ -181,6 +185,12 @@ class BridgeComparator():
         with open('packages_different_bridges.csv', 'w') as outfile:
             for p in self.packages_different_bridges:
                 outfile.write(f"{p}\n")
+
+        with open('jsxray_samples.json', 'w') as outfile:
+            outfile.write(json.dumps(self.jsxray_samples, indent=2))
+
+        with open('charon_samples.json', 'w') as outfile:
+            outfile.write(json.dumps(self.charon_samples, indent=2))
 
         if self.output_file is None:
             log.info(json.dumps(self.final_stats, indent=2))
