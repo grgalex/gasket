@@ -3,7 +3,7 @@ import json
 import matplotlib.pyplot as plt
 import numpy as np
 
-MAX_VALUE = 35
+MAX_VALUE = 21
 
 def get_data():
     data_jsxray = []
@@ -48,7 +48,7 @@ def reject_outliers(data, m=2):
 
 def gen_histogram(data1, data2, histogram_filename):
     # Create the figure and axes
-    fig, ax = plt.subplots(figsize=(8.27, 2))
+    fig, ax = plt.subplots(figsize=(8.27, 4))
 
     # charon_zeros = [d for d in data2 if d == 0]
     # data2 = [d for d in data2 if not d == 0]
