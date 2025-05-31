@@ -87,8 +87,8 @@ def gen_histogram(data1, data2, histogram_filename):
 
     # Title and axis labels
     ax.set_title('Overlapping Histograms (Purple Overlap)')
-    ax.set_xlabel('Numer of Packages')
-    ax.set_ylabel('Number of bridges found')
+    ax.set_xlabel('# Bridges found')
+    ax.set_ylabel('# Packages')
 
     # Save to PDF
     plt.tight_layout()
