@@ -49,8 +49,8 @@ def gen_histogram(data1, data2, histogram_filename):
     # Create the figure and axes
     fig, ax = plt.subplots(figsize=(8, 6))
 
-    charon_zeros = [d for d in data2 if d == 0]
-    data2 = [d for d in data2 if not d == 0]
+    # charon_zeros = [d for d in data2 if d == 0]
+    # data2 = [d for d in data2 if not d == 0]
 
     # data1.append(0)
     data1 = reject_outliers(np.array(data1))
