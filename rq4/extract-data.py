@@ -48,7 +48,7 @@ def reject_outliers(data, m=2):
 
 def gen_histogram(data1, data2, histogram_filename):
     # Create the figure and axes
-    fig, ax = plt.subplots(figsize=(8.27, 4))
+    fig, ax = plt.subplots(figsize=(8.27, 2))
 
     # charon_zeros = [d for d in data2 if d == 0]
     # data2 = [d for d in data2 if not d == 0]
@@ -56,6 +56,9 @@ def gen_histogram(data1, data2, histogram_filename):
     # data1.append(0)
     data1 = reject_outliers(np.array(data1))
     data2 = reject_outliers(np.array(data2))
+
+    print(len(data1))
+    print(len(data2))
 
 
     max1 = max(data1)
