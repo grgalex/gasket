@@ -3,6 +3,7 @@ import json
 import matplotlib.pyplot as plt
 import numpy as np
 
+MAX_VALUE = 40
 
 def get_data():
     data_jsxray = []
@@ -42,7 +43,7 @@ def optimal_bins(data):
 #     return list(data[abs(data - np.mean(data)) < m * np.std(data)])
 
 def reject_outliers(data, m=2):
-    return list(data[data  < 60])
+    return list(data[data  < MAX_VALUE])
 
 
 def gen_histogram(data1, data2, histogram_filename):
