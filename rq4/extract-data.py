@@ -63,19 +63,21 @@ def gen_histogram(data1, data2, histogram_filename):
 
     print(f"MAX_OVERALL = {max_overall}")
 
-    # bins = np.linspace(0, max_overall, 13)
-    # print(bins)
+    bins = np.linspace(0, max_overall, 13)
+    bins[0] = 0.5
+    bins = np.insert(bins, 0, -0.5)
+    print(bins)
 
-    nu_bins = max([optimal_bins(data1), optimal_bins(data2)])
-    
-    nu_bins = min(13, nu_bins)
+    # nu_bins = max([optimal_bins(data1), optimal_bins(data2)])
+    # 
+    # nu_bins = min(13, nu_bins)
 
     # Plot first histogram (red)
-    ax.hist(data1, bins=nu_bins, color='red', alpha=0.5, label='GASKET')
+    ax.hist(data1, bins=bins, color='red', alpha=0.5, label='GASKET')
 
     # Plot second histogram (blue)
-    ax.hist(charon_zeros, bins=[-0.5, 0.5], color='blue', alpha=0.5, label='CHARON')
-    ax.hist(data2, bins=nu_bins, color='blue', alpha=0.5, label='CHARON')
+    # ax.hist(charon_zeros, bins=[-0.5, 0.5], color='blue', alpha=0.5, label='CHARON')
+    ax.hist(data2, bins=bins, color='blue', alpha=0.5, label='CHARON')
 
     # Grid and legend
     # ax.grid(True, color='gray', linestyle='--', linewidth=0.5)
