@@ -39,8 +39,12 @@ def optimal_bins(data):
     return max(num_bins, 5)  # Ensure at least 5 bins
 
 
+# def reject_outliers(data, m=2):
+#     return list(data[abs(data - np.mean(data)) < m * np.std(data)])
+
 def reject_outliers(data, m=2):
-    return list(data[abs(data - np.mean(data)) < m * np.std(data)])
+    return list(data[data  < 60])
+
 
 def gen_histogram(data1, data2, histogram_filename):
     # Create the figure and axes
