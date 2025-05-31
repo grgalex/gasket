@@ -5,9 +5,13 @@ posix
 lzma-native
 ganache-cli
 usb
+nodegit
+@abandonware/bluetooth-hci-socket
 blake-hash
+node-hid
 secp256k1
 murmurhash-native
+@aimelo/lua
 @airbnb/node-memwatch
 @alac/decoder
 @alac/encoder

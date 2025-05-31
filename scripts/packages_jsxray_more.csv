@@ -7,6 +7,7 @@ iconv
 bufferutil
 utf-8-validate
 libxmljs
+grpc
 posix
 nice-napi
 lzma-native
@@ -15,13 +16,19 @@ ganache-cli
 keccak
 node-rdkafka
 usb
+nodegit
+nodejieba
+@abandonware/bluetooth-hci-socket
 blake-hash
+node-hid
 weak-napi
+bcrypto
 secp256k1
 argon2
 native-watchdog
 re2
 murmurhash-native
+@aimelo/lua
 @airbnb/node-memwatch
 isolated-vm
 better-sqlite3
@@ -239,6 +246,7 @@ caliban
 casclib
 catboost
 catboost-model
+cbor-extract
 chacent
 checkpromise
 child_process_tiny
@@ -319,6 +327,7 @@ goosig
 weak-value-map
 grpc-patch
 grpc-zjl
+libtidy
 gssapi.js
 h3-node
 lru-native2
@@ -503,6 +512,7 @@ shannon-bindings
 xxhash-addon
 sigignore
 silk-sdk
+simdjson
 xd-synchttp
 simple_c_parser
 skia-n-api

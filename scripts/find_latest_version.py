@@ -32,7 +32,7 @@ def main():
     final = []
 
     for pkg in package_names:
-        time.sleep(0.5)
+        time.sleep(0.01)
         cmd = ['npm', 'show', pkg, 'version']
         try:
             ret, out, err = utils.run_cmd(cmd)
