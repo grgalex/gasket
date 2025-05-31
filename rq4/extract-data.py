@@ -83,15 +83,21 @@ def gen_histogram(data1, data2, histogram_filename):
     # Grid and legend
     # ax.grid(True, color='gray', linestyle='--', linewidth=0.5)
     ax.legend()
-    # plt.xticks(edges)
+    plt.xticks(edges)
+    plt.gca().spines['top'].set_visible(False)  # Remove top spine
+    plt.gca().spines['right'].set_visible(False)  # Remove right spine
+    plt.gca().spines['left'].set_visible(False)  # Remove left spine
+    plt.gca().spines['bottom'].set_visible(False)  # Remove bottom spine
 
+    plt.xlim(0, max(data1))  # Limit x-axis to the range of the samples
+    plt.ylim(0, np.max(np.histogram(data1, bins=bins)[0]))  # Limit y-axis to the maximum frequency
     # Title and axis labels
     # ax.set_title('Overlapping Histograms (Purple Overlap)')
     ax.set_xlabel('# Bridges found')
     ax.set_ylabel('# Packages')
 
     # Save to PDF
-    plt.tight_layout()
+    plt.tight_layout(pad=0)
     plt.savefig(histogram_filename, dpi=300, bbox_inches='tight', transparent=True)
     plt.close()
 
