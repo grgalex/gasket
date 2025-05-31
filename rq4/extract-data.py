@@ -88,6 +88,10 @@ def gen_histogram(data1, data2, histogram_filename):
     # Grid and legend
     # ax.grid(True, color='gray', linestyle='--', linewidth=0.5)
     ax.legend()
+    
+    x_ticks = [0] + [int(t) for t in bins[2:]]
+    plt.xticks(x_ticks)
+
     # plt.xticks(edges)
     plt.gca().spines['top'].set_visible(False)  # Remove top spine
     plt.gca().spines['right'].set_visible(False)  # Remove right spine
