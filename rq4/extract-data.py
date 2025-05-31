@@ -25,13 +25,22 @@ def get_data():
         }
     ]
 
+def reject_outliers(data, m=2):
+    return list(data[abs(data - np.mean(data)) < m * np.std(data)])
+
 def gen_histogram(data1, data2, histogram_filename):
     # Create the figure and axes
     fig, ax = plt.subplots(figsize=(8, 6))
 
+    data1 = reject_outliers(np.array(data1))
+    data2 = reject_outliers(np.array(data2))
+
+
     max1 = max(data1)
     max2 = max(data2)
     max_overall = max([max1, max2])
+
+    print(f"MAX_OVERALL = {max_overall}")
 
     bins = np.linspace(0, max_overall, 13)
 
