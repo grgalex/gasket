@@ -83,6 +83,9 @@ class BridgeComparator():
         self.packages_different_bridges = []
         self.jsxray_samples = []
         self.charon_samples = []
+
+        self.num_same = 0
+        self.num_charon_nonzero = 0
         self.final_stats = {'num_packages': None,
                             'jsxray_total': None,
                             'charon_total': None,
@@ -128,6 +131,19 @@ class BridgeComparator():
                     num_charon = 0
                     charon_bridges = []
 
+                same1 = True
+                same2 = False
+                for b in jsxray_bridges:
+                    if b not in charon_bridges:
+                        same1 = False
+                if len(jsxray_bridges) == len(charon_bridges) and same1:
+                    same2 = True
+                if same2:
+                    self.num_same += 1
+                
+                if num_charon > 0:
+                    self.num_charon_nonzero += 1
+
                 self.charon_samples.append(num_charon)
                 are_different = False
                 for b in jsxray_bridges:
@@ -146,7 +162,7 @@ class BridgeComparator():
                             diffs.append(b)
 
                     d = {'package': pkg_dirty, 'jsxray': num_jsxray, 'charon': num_charon}
-                    self.differences.append(d)
+                    # self.differences.append(d)
                 elif num_charon > num_jsxray:
                     self.num_packages_charon_more += 1
                     diffs = []
@@ -163,6 +179,8 @@ class BridgeComparator():
         self.final_stats = {'num_packages': self.num_packages,
                             'jsxray_total': self.jsxray_total,
                             'charon_total': self.charon_total,
+                            'num_same': self.num_same,
+                            'num_charon_nonzero': self.num_charon_nonzero,
                             'num_packages_both_nonzero': self.num_packages_both_nonzero,
                             'num_packages_jsxray_more': self.num_packages_jsxray_more,
                             'num_packages_jsxray_more_charon_nonzero': len(self.packages_jsxray_more_charon_nonzero),
