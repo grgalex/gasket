@@ -38,7 +38,6 @@ def optimal_bins(data):
 
     return max(num_bins, 5)  # Ensure at least 5 bins
 
-
 # def reject_outliers(data, m=2):
 #     return list(data[abs(data - np.mean(data)) < m * np.std(data)])
 
@@ -64,6 +63,8 @@ def gen_histogram(data1, data2, histogram_filename):
     # print(bins)
 
     nu_bins = max([optimal_bins(data1), optimal_bins(data2)])
+    
+    nu_bins = min(13, nu_bins)
 
     # Plot first histogram (red)
     ax.hist(data1, bins=nu_bins, color='red', alpha=0.5, label='GASKET')
