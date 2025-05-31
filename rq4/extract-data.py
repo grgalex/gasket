@@ -64,7 +64,9 @@ def gen_histogram(data1, data2, histogram_filename):
 
     print(f"MAX_OVERALL = {max_overall}")
 
-    bins = np.linspace(0, max_overall, 13)
+    # bins = np.linspace(0, max_overall, 13)
+    bins = np.linspace(1, max_overall, 11)  # 11 edges for 10 bins
+    bins = np.round(bins).astype(int)
     bins[0] = 0.5
     bins = np.insert(bins, 0, -0.5)
     print(bins)
