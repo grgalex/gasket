@@ -3,7 +3,7 @@ import json
 import matplotlib.pyplot as plt
 import numpy as np
 
-MAX_VALUE = 40
+MAX_VALUE = 35
 
 def get_data():
     data_jsxray = []
@@ -86,7 +86,7 @@ def gen_histogram(data1, data2, histogram_filename):
     # plt.xticks(edges)
 
     # Title and axis labels
-    ax.set_title('Overlapping Histograms (Purple Overlap)')
+    # ax.set_title('Overlapping Histograms (Purple Overlap)')
     ax.set_xlabel('# Bridges found')
     ax.set_ylabel('# Packages')
 
