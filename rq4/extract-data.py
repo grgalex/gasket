@@ -25,6 +25,20 @@ def get_data():
         }
     ]
 
+def optimal_bins(data):
+    """Compute the optimal number of bins using Freedman-Diaconis Rule."""
+    q25, q75 = np.percentile(data, [25, 75])
+    iqr = q75 - q25
+    bin_width = 2 * iqr / (len(data) ** (1/3))
+
+    if bin_width > 0:
+        num_bins = int(np.ceil((max(data) - min(data)) / bin_width))
+    else:
+        num_bins = 13  # Fallback if data is uniform
+
+    return max(num_bins, 5)  # Ensure at least 5 bins
+
+
 def reject_outliers(data, m=2):
     return list(data[abs(data - np.mean(data)) < m * np.std(data)])
 
@@ -42,14 +56,16 @@ def gen_histogram(data1, data2, histogram_filename):
 
     print(f"MAX_OVERALL = {max_overall}")
 
-    bins = np.linspace(0, max_overall, 13)
-    print(bins)
+    # bins = np.linspace(0, max_overall, 13)
+    # print(bins)
+
+    nu_bins = max([optimal_bins(data1), optimal_bins(data2)])
 
     # Plot first histogram (red)
-    ax.hist(data1, bins='auto', color='red', alpha=0.5, label='GASKET')
+    ax.hist(data1, bins=nu_bins, color='red', alpha=0.5, label='GASKET')
 
     # Plot second histogram (blue)
-    ax.hist(data2, bins='auto', color='blue', alpha=0.5, label='CHARON')
+    ax.hist(data2, bins=nu_bins, color='blue', alpha=0.5, label='CHARON')
 
     # Grid and legend
     ax.grid(True, color='gray', linestyle='--', linewidth=0.5)
@@ -64,54 +80,6 @@ def gen_histogram(data1, data2, histogram_filename):
     plt.tight_layout()
     plt.savefig(histogram_filename, dpi=300, bbox_inches='tight', transparent=True)
     plt.close()
-
-
-# def generate_histogram(samples, use_log, histogram_filename):
-#     """Generate histogram and save it as a PDF without white space."""
-#     plt.figure(figsize=(4, 1))  # Fixed height (1 inch)
-#
-#     nu_bins = len(set(samples))
-#     if use_log:
-#         new_samples = []
-#         for s in samples:
-#             if s < 1:
-#                 new_samples.append(s + 1)
-#             else:
-#                 new_samples.append(s)
-#         samples = new_samples
-#         plt.xscale('log')
-#         bins = np.logspace(np.log10(min(samples)), np.log10(max(samples)), 20)
-#     else:
-#         if nu_bins > 12:
-#             nu_bins = 12
-#         bins = np.linspace(min(samples), max(samples), nu_bins + 1)
-#
-#     # Create histogram
-#     # bins = optimal_bins(samples)
-#
-#     plt.hist(samples, bins=bins, color='red', edgecolor='white', linewidth=0.8)
-#
-#     # Remove all axis labels and ticks
-#     plt.xticks([])  # Remove xticks
-#     plt.yticks([])  # Remove yticks
-#     plt.gca().spines['top'].set_visible(False)  # Remove top spine
-#     plt.gca().spines['right'].set_visible(False)  # Remove right spine
-#     plt.gca().spines['left'].set_visible(False)  # Remove left spine
-#     plt.gca().spines['bottom'].set_visible(False)  # Remove bottom spine
-#
-#     plt.gca().tick_params(axis='x', which='both', bottom=False, top=False)  # Hides all x ticks
-#     plt.gca().tick_params(axis='y', which='both', left=False, right=False)  # Hides all y ticks
-#     # Set the limits to be tight around the bars, no padding
-#     plt.xlim(min(samples), max(samples))  # Limit x-axis to the range of the samples
-#     plt.ylim(0, np.max(np.histogram(samples, bins=bins)[0]))  # Limit y-axis to the maximum frequency
-#
-#     # Use tight_layout to remove extra space around the plot
-#     plt.tight_layout(pad=0)  # Ensure no padding around the plot
-#
-#     # Save histogram as PDF with tight bounding box to remove white space around it
-#     plt.savefig(histogram_filename, dpi=300, bbox_inches='tight', transparent=True)
-#     plt.close()
-#
 
 
 def generate_latex_table(sample_data):
