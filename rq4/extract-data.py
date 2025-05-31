@@ -49,7 +49,7 @@ def gen_histogram(data1, data2, histogram_filename):
     ax.hist(data1, bins='auto', color='red', alpha=0.5, label='GASKET')
 
     # Plot second histogram (blue)
-    ax.hist(data2, bins=bins, color='blue', alpha=0.5, label='CHARON')
+    ax.hist(data2, bins='auto', color='blue', alpha=0.5, label='CHARON')
 
     # Grid and legend
     ax.grid(True, color='gray', linestyle='--', linewidth=0.5)
