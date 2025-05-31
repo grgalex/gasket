@@ -67,8 +67,11 @@ def gen_histogram(data1, data2, histogram_filename):
     # bins = np.linspace(0, max_overall, 13)
     bins = np.linspace(1, max_overall, 11)  # 11 edges for 10 bins
     bins = np.round(bins).astype(int)
-    bins[0] = 0.5
-    bins = np.insert(bins, 0, -0.5)
+    print(bins)
+    extra_bin = np.array([-0.5, 0.5])
+    # bins[0] = 0.5
+    bins = np.concatenate((extra_bin, bins))
+    # bins = np.insert(bins, 0, -0.5)
     print(bins)
 
     # nu_bins = max([optimal_bins(data1), optimal_bins(data2)])
