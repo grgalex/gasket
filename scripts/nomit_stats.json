@@ -1,0 +1,100 @@
+{
+    "packages_with_flows": 577,
+    "num_jsxray_missing_bridges_file": 485,
+    "num_jsxray_try_build": 485,
+    "num_jsxray_super_prioritize": 1,
+    "num_jsxray_prioritize": 0,
+    "jsxray_results": {
+        "num_packages": 90,
+        "num_flows": 803
+    },
+    "charon_results": {
+        "num_packages": 68,
+        "num_flows": 719
+    },
+    "num_jsxray_only": 23,
+    "num_charon_only": 160,
+    "num_nobody_found": 1,
+    "jsxray_only": {
+        "node-cint64": [
+            "ToString"
+        ],
+        "pele": [
+            "Squeeze"
+        ],
+        "@luminati-io~mmap-io": [
+            "mmap_incore"
+        ],
+        "@bugsnag~plugin-electron-client-state-persistence": [
+            "updateUser",
+            "install",
+            "leaveBreadcrumb",
+            "updateMetadata",
+            "updateFeatureFlags",
+            "updateContext"
+        ],
+        "node-mbed-dtls": [
+            "MbedtlsError",
+            "DtlsSocket"
+        ],
+        "essy-nnls": [
+            "NNLS"
+        ],
+        "webrtcvad": [
+            "Process"
+        ],
+        "@lydiaswap~lydia-swap-periphery": [
+            "Squeeze"
+        ],
+        "cubiomes": [
+            "_isViableStructurePos"
+        ],
+        "ganache-cli": [
+            "Squeeze"
+        ],
+        "node-kcp-x": [
+            "Setmtu"
+        ],
+        "node-lmdb": [
+            "open"
+        ],
+        "git-utils": [
+            "CheckoutHead"
+        ],
+        "node-navquery": [
+            "Load"
+        ],
+        "keccak": [
+            "squeeze"
+        ],
+        "@raygun-nickj~mmap-io": [
+            "mmap_incore"
+        ],
+        "ckmeans-native": [
+            "MyFunction"
+        ],
+        "@baliset~mmap-io": [
+            "mmap_incore"
+        ],
+        "@eth-optimism~ganache-cli": [
+            "Squeeze"
+        ],
+        "ems": [
+            "NodeJSinitialize"
+        ],
+        "@cathodique~mmap-io": [
+            "mmap_incore"
+        ],
+        "essy-fft": [
+            "rfft"
+        ],
+        "register-scheme": [
+            "registerProtocolHandler"
+        ]
+    },
+    "nobody_found": {
+        "ttf2woff2": [
+            "package/src/index.ts"
+        ]
+    }
+}
