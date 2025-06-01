@@ -9,6 +9,7 @@ import shutil
 import multiprocessing
 import concurrent.futures
 import tempfile
+from collections import defaultdict
 
 import utils
 
@@ -84,6 +85,9 @@ class BridgeComparator():
         self.jsxray_samples = []
         self.charon_samples = []
 
+        self.all_bridges = defaultdict(dict)
+        self.charon_pkgs_no_bridges_file = []
+
         self.num_same = 0
         self.num_charon_nonzero = 0
         self.final_stats = {'num_packages': None,
@@ -121,7 +125,9 @@ class BridgeComparator():
                 num_jsxray = len(jsxray_bridges)
                 self.jsxray_samples.append(num_jsxray)
                 self.jsxray_total += num_jsxray
+                cf = False
                 if os.path.exists(charon_file):
+                    cf = True
                     log.info(f'FOUND CHARON FILE: {charon_file}')
                     self.num_packages_both_nonzero += 1
                     charon_bridges = utils.load_csv(charon_file)
@@ -130,6 +136,11 @@ class BridgeComparator():
                 else:
                     num_charon = 0
                     charon_bridges = []
+                
+                if not cf:
+                    self.charon_pkgs_no_bridges_file.append(pkg)
+                self.all_bridges[pkg_dirty]['Gasket'] = jsxray_bridges
+                self.all_bridges[pkg_dirty]['Charon'] = charon_bridges
 
                 same1 = True
                 same2 = False
@@ -209,6 +220,11 @@ class BridgeComparator():
 
         with open('charon_samples.json', 'w') as outfile:
             outfile.write(json.dumps(self.charon_samples, indent=2))
+
+        with open('all_bridges.json', 'w') as outfile:
+            r = {'pkgs_charon_no_bridges_file': self.charon_pkgs_no_bridges_file,
+                 'all_bridges': self.all_bridges}
+            outfile.write(json.dumps(r, indent=2))
 
         if self.output_file is None:
             log.info(json.dumps(self.final_stats, indent=2))
