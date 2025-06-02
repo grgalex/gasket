@@ -6,90 +6,183 @@
     "num_jsxray_prioritize": 0,
     "jsxray_results": {
         "num_packages": 90,
-        "num_flows": 803
+        "num_flows": 456
     },
     "charon_results": {
         "num_packages": 68,
-        "num_flows": 719
+        "num_flows": 404
     },
     "num_jsxray_only": 23,
-    "num_charon_only": 160,
+    "num_charon_only": 1,
     "num_nobody_found": 1,
     "jsxray_only": {
         "node-cint64": [
-            "ToString"
+            [
+                "ToString",
+                1
+            ]
         ],
         "pele": [
-            "Squeeze"
+            [
+                "Squeeze",
+                1
+            ]
         ],
         "@luminati-io~mmap-io": [
-            "mmap_incore"
+            [
+                "mmap_incore",
+                3
+            ]
         ],
         "@bugsnag~plugin-electron-client-state-persistence": [
-            "updateUser",
-            "install",
-            "leaveBreadcrumb",
-            "updateMetadata",
-            "updateFeatureFlags",
-            "updateContext"
+            [
+                "updateUser",
+                2
+            ],
+            [
+                "install",
+                2
+            ],
+            [
+                "leaveBreadcrumb",
+                2
+            ],
+            [
+                "updateMetadata",
+                2
+            ],
+            [
+                "updateFeatureFlags",
+                2
+            ],
+            [
+                "updateContext",
+                2
+            ]
         ],
         "node-mbed-dtls": [
-            "MbedtlsError",
-            "DtlsSocket"
+            [
+                "MbedtlsError",
+                1
+            ],
+            [
+                "DtlsSocket",
+                1
+            ]
         ],
         "essy-nnls": [
-            "NNLS"
+            [
+                "NNLS",
+                2
+            ]
         ],
         "webrtcvad": [
-            "Process"
+            [
+                "Process",
+                1
+            ]
         ],
         "@lydiaswap~lydia-swap-periphery": [
-            "Squeeze"
+            [
+                "Squeeze",
+                1
+            ]
         ],
         "cubiomes": [
-            "_isViableStructurePos"
+            [
+                "_isViableStructurePos",
+                2
+            ]
         ],
         "ganache-cli": [
-            "Squeeze"
+            [
+                "Squeeze",
+                1
+            ]
         ],
         "node-kcp-x": [
-            "Setmtu"
+            [
+                "Setmtu",
+                1
+            ]
         ],
         "node-lmdb": [
-            "open"
+            [
+                "open",
+                1
+            ]
         ],
         "git-utils": [
-            "CheckoutHead"
+            [
+                "CheckoutHead",
+                1
+            ]
         ],
         "node-navquery": [
-            "Load"
+            [
+                "Load",
+                1
+            ]
         ],
         "keccak": [
-            "squeeze"
+            [
+                "squeeze",
+                1
+            ]
         ],
         "@raygun-nickj~mmap-io": [
-            "mmap_incore"
+            [
+                "mmap_incore",
+                3
+            ]
         ],
         "ckmeans-native": [
-            "MyFunction"
+            [
+                "MyFunction",
+                9
+            ]
         ],
         "@baliset~mmap-io": [
-            "mmap_incore"
+            [
+                "mmap_incore",
+                3
+            ]
         ],
         "@eth-optimism~ganache-cli": [
-            "Squeeze"
+            [
+                "Squeeze",
+                1
+            ]
         ],
         "ems": [
-            "NodeJSinitialize"
+            [
+                "NodeJSinitialize",
+                2
+            ]
         ],
         "@cathodique~mmap-io": [
-            "mmap_incore"
+            [
+                "mmap_incore",
+                3
+            ]
         ],
         "essy-fft": [
-            "rfft"
+            [
+                "rfft",
+                1
+            ]
         ],
         "register-scheme": [
-            "registerProtocolHandler"
+            [
+                "registerProtocolHandler",
+                1
+            ]
+        ]
+    },
+    "charon_only": {
+        "spi-device": [
+            "Transfer",
+            "TransferSync"
         ]
     },
     "nobody_found": {

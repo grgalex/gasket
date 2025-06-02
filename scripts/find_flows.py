@@ -97,7 +97,13 @@ class VulnFinder():
             sources = []
             dirty = self.file2dirty[f]
             log.info(dirty)
+            # with open(f, 'r') as infile:
+            #     tmp = infile.readlines()
+            #     if len(tmp) > 17:
+            #         print(f"file: {f}, count = {len(tmp)}")
+            #         continue
             with open(f, 'r') as infile:
+                seen = set()
                 text = infile.read()
                 matches = re.findall(r"\((.*?)\)", text)
                 for line in matches:
@@ -106,21 +112,25 @@ class VulnFinder():
                     kind = None
                     if '.js' in line:
                         src = line.split(',')[0].lstrip('(')
+                        sink = line.split(',')[5]
                         kind = 'JS'
                     else:
                         src = line.split(',')[3]
+                        sink = line.split(',')[0] + line.split(',')[1] + line.split(',')[2]
                         kind = 'CFUNC'
 
-                    if kind == 'JS':
+                    if kind == 'JS' and not (src,sink) in seen:
                         if src in self.dirty2flows[dirty]['js'].keys():
                             self.dirty2flows[dirty]['js'][src] += 1
                         else:
                             self.dirty2flows[dirty]['js'][src] = 1
-                    elif kind == 'CFUNC':
+                        seen.add((src,sink))
+                    elif kind == 'CFUNC' and not (src,sink) in seen:
                         if src in self.dirty2flows[dirty]['cfunc'].keys():
                             self.dirty2flows[dirty]['cfunc'][src] += 1
                         else:
                             self.dirty2flows[dirty]['cfunc'][src] = 1
+                        seen.add((src,sink))
 
     def load_bridges(self):
         for p in self.packages_dirty:
@@ -170,8 +180,8 @@ class VulnFinder():
                        jsxray_found = True
 
                    if jsxray_found and not charon_found:
-                       self.jsxrayonly[p].append(func)
-                   elif charon_found and not jsxray_found:
+                       self.jsxrayonly[p].append([func, count])
+                   elif charon_found and not jsxray_found and self.dirty2clean[p] not in self.jsxray_no_bridges:
                        self.charononly[p].append(func)
                    elif not jsxray_found and not charon_found and self.dirty2clean[p] not in self.jsxray_no_bridges:
                        self.nobodyfound[p].append(func)
@@ -188,7 +198,7 @@ class VulnFinder():
                        jsxray_found = True
 
                    if jsxray_found and not charon_found:
-                       self.jsxrayonly[p].append(func)
+                       self.jsxrayonly[p].append([func, count])
                    elif charon_found and not jsxray_found and self.dirty2clean[p] not in self.jsxray_no_bridges:
                        self.charononly[p].append(func)
                    elif not jsxray_found and not charon_found and self.dirty2clean[p] not in self.jsxray_no_bridges:
@@ -235,6 +245,7 @@ class VulnFinder():
         log.info(f"JSXRAY: {self.jsxray_results}")
         log.info(f"CHARON: {self.charon_results}")
         log.info(f"JSXRAY ONLY: {len(self.jsxrayonly.keys())}")
+        log.info(f"CHARON ONLY: {len(self.charononly.keys())}")
 
         self.results = {'packages_with_flows': len(self.packages_dirty),
                         'num_jsxray_missing_bridges_file': len(self.jsxray_no_bridges),
@@ -247,6 +258,7 @@ class VulnFinder():
                         'num_charon_only': len(self.charononly.keys()),
                         'num_nobody_found': len(self.nobodyfound.keys()),
                         'jsxray_only': self.jsxrayonly,
+                        'charon_only': self.charononly,
                         'nobody_found': self.nobodyfound
         }
 
