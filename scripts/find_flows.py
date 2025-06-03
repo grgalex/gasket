@@ -172,12 +172,38 @@ class VulnFinder():
                for func, count in flows['js'].items():
                    charon_found = False
                    jsxray_found = False
-                   if any(func in b[0] for b in cb):
-                       self.charonflows[p][func] = count
-                       charon_found = True
-                   if any(func in b[0] for b in jb):
-                       self.jsxrayflows[p][func] = count
-                       jsxray_found = True
+
+                   cfunc_name = None
+                   for b in jb:
+                       if b[0] == func:
+                           self.jsxrayflows[p][func] = count
+                           jsxray_found = True
+                           cfunc_name = b[1]
+                           break
+                   if cfunc_name is not None:
+                       print(f'bridge = {func, cfunc_name}')
+
+                   for b in cb:
+                       if b[0] == func:
+                           if jsxray_found:
+                               if b[1] == cfunc_name: 
+                                   print(f'jsnames match')
+                                   self.charonflows[p][func] = count
+                                   charon_found = True
+                                   break
+                           else:
+                               self.charonflows[p][func] = count
+                               charon_found = True
+                               break
+                           
+
+                   # if any(func in b[0] for b in jb):
+                   #     self.jsxrayflows[p][func] = count
+                   #     jsxray_found = True
+
+                   # if any(func in b[0] for b in cb):
+                   #     self.charonflows[p][func] = count
+                   #     charon_found = True
 
                    if jsxray_found and not charon_found:
                        self.jsxrayonly[p].append([func, count])
@@ -190,12 +216,34 @@ class VulnFinder():
                charon_found = False
                jsxray_found = False
                for func, count in flows['cfunc'].items():
-                   if any(func in b[1] for b in cb):
-                       self.charonflows[p][func] = count
-                       charon_found = True
-                   if any(func in b[1] for b in jb):
-                       self.jsxrayflows[p][func] = count
-                       jsxray_found = True
+                   jsname = None
+
+                   for b in jb:
+                       if b[1] == func:
+                           self.jsxrayflows[p][func] = count
+                           jsxray_found = True
+                           jsname = b[0]
+                           break
+
+                   # if any(func in b[1] for b in jb):
+                   #     self.jsxrayflows[p][func] = count
+                   #     jsxray_found = True
+                   for b in cb:
+                       if b[1] == func:
+                           if jsxray_found:
+                               if b[0] == jsname:
+                                   self.charonflows[p][func] = count
+                                   charon_found = True
+                                   break
+                           else:
+                               self.charonflows[p][func] = count
+                               charon_found = True
+                               break
+
+
+                   # if any(func in b[1] for b in cb):
+                   #     self.charonflows[p][func] = count
+                   #     charon_found = True
 
                    if jsxray_found and not charon_found:
                        self.jsxrayonly[p].append([func, count])
