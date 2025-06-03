@@ -1,0 +1,19 @@
+{
+  "vulnerable_package": "libxmljs2",
+  "vulnerable_function": "namespaces",
+  "num_dependents": 40,
+  "num_dependents_failed_analysis": 1,
+  "num_dep_vuln": 39,
+  "num_call_vuln": 1,
+  "call_vuln": [
+    "xformatting@2.2.0"
+  ],
+  "found_lines_per_package": {
+    "xformatting@2.2.0": [
+      [
+        "call <libxmljs2>.parseXmlString\u2026.namespaces():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpirryd7ek/package/lib/processor/ElementProcessor.js:158:28:158:52"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "vulnerable_package": "@discordjs/opus",
+  "vulnerable_function": "encode",
+  "num_dependents": 165,
+  "num_dependents_failed_analysis": 0,
+  "num_dep_vuln": 105,
+  "num_call_vuln": 3,
+  "call_vuln": [
+    "@acupofjose/noodle@1.5.1",
+    "noodle.js@1.5.0",
+    "@nia3208/eris@0.13.3"
+  ],
+  "found_lines_per_package": {
+    "noodle.js@1.5.0": [
+      [
+        "call <@discordjs/opus>.OpusEncoder\u2026.encode():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpr4zxorv1/package/src/Connection.js:171:18:171:52"
+      ]
+    ],
+    "@nia3208/eris@0.13.3": [
+      [
+        "call <@discordjs/opus>.OpusEncoder\u2026.encode():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp_jcfo49b/package/lib/voice/Piper.js:330:14:330:52"
+      ]
+    ],
+    "@acupofjose/noodle@1.5.1": [
+      [
+        "call <@discordjs/opus>.OpusEncoder\u2026.encode():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpaewk0mgq/package/src/Connection.ts:185:14:185:48"
+      ]
+    ]
+  }
+}
