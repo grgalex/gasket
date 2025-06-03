@@ -1,0 +1,4 @@
+minkelite: 118 downloads last week
+copilot-core: 7 downloads last week
+sqlite-pool: 4 downloads last week
+electron-user-data: 0 downloads last week
