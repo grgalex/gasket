@@ -6,11 +6,18 @@ const args = process.argv.slice(2);
 let pkg, constraint;
 
 for (let i = 0; i < args.length; i++) {
-+--  7 lines: if (args[i] === '-p' && args[i+1]) {------------------------------------------------------------------------------------------------------------
+    if (args[i] === '-p' && args[i+1]) {
+        pkg = args[i+1];
+        i++;
+    } else if (args[i] === '-s' && args[i+1]) {
+        constraint = args[i+1];
+        i++;
+    }
 }
 
 if (!pkg || !constraint) {
-+--  2 lines: console.error('Usage: node script.js -p <package> -s <constraint>');----------------------------------------------------------------------------
+    console.error('Usage: node script.js -p <package> -s <constraint>');
+    process.exit(1);
 }
 
 // Fetch all versions
@@ -19,5 +26,4 @@ const versions = JSON.parse(versionsJson);
 
 // Filter compatible versions
 const compatibleVersions = versions.filter(version => semver.satisfies(version, constraint));
-
 console.log(JSON.stringify(compatibleVersions));
