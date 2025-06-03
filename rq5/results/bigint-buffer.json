@@ -1,0 +1,408 @@
+{
+  "vulnerable_package": "bigint-buffer",
+  "vulnerable_function": "toBigIntLE",
+  "num_dependents": 198,
+  "num_dependents_failed_analysis": 1,
+  "num_dep_vuln": 197,
+  "num_call_vuln": 56,
+  "call_vuln": [
+    "etquod@1.1.3",
+    "@solarti/buffer-layout-utils@0.2.6",
+    "bmstar2012@1.0.0",
+    "aliquamassumenda@1.4.2",
+    "@dydxprotocol/starkex-lib@1.2.0",
+    "@soda-pro/layout@0.1.0",
+    "trinitycore-srp6@1.1.1",
+    "@xoneorg/buffer-layout@1.0.0",
+    "@switchboard-xyz/web3.js@0.0.4",
+    "@dapplion/lodestar-utils@0.18.1",
+    "@puttest.io/buffer-layout-utils@2.0.0",
+    "@credix/web3.js-cloudflare-enabled-temp@0.0.2-development",
+    "quidemearum@1.3.0",
+    "@castlefinance/vault-sdk@4.0.0-beta",
+    "@trinity-flux/srp6@1.0.1",
+    "l2-sign-sdk@0.1.0-alpha-0.8",
+    "ecmh@0.2.0",
+    "quaeratab@1.4.0",
+    "@solarti/web3.js@1.74.1",
+    "@safecoin/web3.js@1.73.1",
+    "@bbachain/web3.js@1.1.3",
+    "@cartbc/web3.js@1.1.0",
+    "@araviel/web3.js@1.48.0",
+    "emcb-udp-master@0.10.0",
+    "@soda-pro/solana-web3.js@2.0.0",
+    "@azuldev5/web3.js@0.0.0-development",
+    "@chainsafe/lodestar-utils@0.39.0",
+    "@com.put/buffer-layout-utils@1.0.0",
+    "website-sdk@0.0.1",
+    "@cartbc/buffer-layout-utils@0.2.1",
+    "web3-safe-fork.js@0.0.5",
+    "@fycastle/vault-sdk@3.1.0-rc0",
+    "@com.put/buffer-layout@1.0.0",
+    "nesciuntmagnam@1.2.5",
+    "@solana/buffer-layout-utils@0.2.0",
+    "hardhat-fhevm@0.1.6",
+    "@mikaeelmf/apexpro-connector-node@0.3.5",
+    "@puttest.io/buffer-layout@2.0.0",
+    "permissible@1.1.0",
+    "@lodestar/utils@1.30.0",
+    "@safecoin/buffer-layout-utils@0.2.3",
+    "@solanasdk/web3.js@1.98.7",
+    "@azerothcore/ac-nodejs-srp6@1.0.8",
+    "nihilid@1.10.1",
+    "@nonconforme/web-nsa3.js@0.0.0-development",
+    "@xoneorg/buffer-layout-utils@1.0.0",
+    "emcb-udp-coordinator@1.0.0",
+    "@chainsafe/eth2.0-utils@0.1.1",
+    "maximeeos@1.6.0",
+    "@schain/web3.js@2.0.0",
+    "@mundis/sdk@1.0.3",
+    "@exodus/solana-web3.js@1.63.1-exodus.9-rc4",
+    "@imqueue/net@1.3.0",
+    "@bbachain/buffer-layout-utils@1.0.0",
+    "doloribusquasi@1.3.0",
+    "solana-txs-size@2.0.0"
+  ],
+  "found_lines_per_package": {
+    "@safecoin/web3.js@1.73.1": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpdzgd417s/package/lib/index.browser.cjs.js:2173:12:2173:60"
+      ]
+    ],
+    "@solana/buffer-layout-utils@0.2.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp0e_11b4k/package/src/bigint.ts:15:20:15:48"
+      ]
+    ],
+    "@solarti/web3.js@1.74.1": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp2f3179gl/package/lib/index.browser.cjs.js:2224:12:2224:60"
+      ]
+    ],
+    "@lodestar/utils@1.30.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpyj3f6woz/package/lib/bytes.js:39:16:39:33"
+      ]
+    ],
+    "@bbachain/web3.js@1.1.3": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpuz9ust6o/package/lib/index.browser.cjs.js:2395:12:2395:60"
+      ]
+    ],
+    "@chainsafe/lodestar-utils@0.39.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpq8jqwl9y/package/lib/bytes.js:36:16:36:33"
+      ]
+    ],
+    "@exodus/solana-web3.js@1.63.1-exodus.9-rc4": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpsgrt0p4p/package/src/utils/bigint.ts:26:14:26:42"
+      ]
+    ],
+    "@com.put/buffer-layout@1.0.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpg1so6um1/package/lib/Layout.js:885:16:885:77"
+      ]
+    ],
+    "@puttest.io/buffer-layout@2.0.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpvu3fp6dg/package/lib/Layout.js:885:16:885:77"
+      ]
+    ],
+    "@xoneorg/buffer-layout@1.0.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmppg0mz10k/package/lib/Layout.js:885:16:885:77"
+      ]
+    ],
+    "@bbachain/buffer-layout-utils@1.0.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpdel8_xcu/package/src/bigint.ts:16:20:16:48"
+      ]
+    ],
+    "doloribusquasi@1.3.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpnequggkn/package/src/utils/bigint.ts:26:14:26:42"
+      ]
+    ],
+    "@switchboard-xyz/web3.js@0.0.4": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkuhyzqsw/package/lib/index.browser.cjs.js:2341:12:2341:60"
+      ]
+    ],
+    "@chainsafe/eth2.0-utils@0.1.1": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpdz2t83la/package/lib/bytes.js:45:10:45:46"
+      ]
+    ],
+    "@solarti/buffer-layout-utils@0.2.6": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpxxgkjxan/package/src/bigint.ts:16:20:16:48"
+      ]
+    ],
+    "@xoneorg/buffer-layout-utils@1.0.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpsje13haj/package/src/bigint.ts:16:20:16:48"
+      ]
+    ],
+    "nihilid@1.10.1": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp53x128bm/package/src/utils/bigint.ts:26:14:26:42"
+      ]
+    ],
+    "@imqueue/net@1.3.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpq15pzwpw/package/src/binary-list.js:61:23:61:86"
+      ]
+    ],
+    "@puttest.io/buffer-layout-utils@2.0.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp6oxa9ksn/package/src/bigint.ts:16:20:16:48"
+      ]
+    ],
+    "@safecoin/buffer-layout-utils@0.2.3": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp0zouj_um/package/src/bigint.ts:16:20:16:48"
+      ]
+    ],
+    "@cartbc/buffer-layout-utils@0.2.1": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpqwaugh9m/package/src/bigint.ts:15:20:15:48"
+      ]
+    ],
+    "@com.put/buffer-layout-utils@1.0.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmptj7fsrg6/package/src/bigint.ts:16:20:16:48"
+      ]
+    ],
+    "@cartbc/web3.js@1.1.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpm1b6fdnf/package/lib/index.browser.cjs.js:2280:12:2280:60"
+      ]
+    ],
+    "@dydxprotocol/starkex-lib@1.2.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp1tmdr3hm/package/src/lib/crypto-cpp/starkware-crypto.ts:67:10:67:41"
+      ]
+    ],
+    "l2-sign-sdk@0.1.0-alpha-0.8": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpgu3820iu/package/lib/starkex-lib/libs/crypto-cpp/starkware-crypto.js:82:12:82:43"
+      ],
+      [
+        "call <bigint-buffer>.toBigIntLE\u2026.toString():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpgu3820iu/package/lib/starkex-lib/libs/crypto/hash-in-worker-thread.js:57:24:57:123"
+      ]
+    ],
+    "@dapplion/lodestar-utils@0.18.1": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpwp0f36oh/package/lib/bytes.js:42:12:42:48"
+      ]
+    ],
+    "@araviel/web3.js@1.48.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpgqfue49n/package/lib/index.browser.cjs.js:2208:12:2208:60"
+      ]
+    ],
+    "@soda-pro/solana-web3.js@2.0.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpll2vs_o1/package/lib/index.browser.cjs.js:3912:12:3912:60"
+      ]
+    ],
+    "bmstar2012@1.0.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpeic88mah/package/lib/index.browser.cjs.js:2341:12:2341:60"
+      ]
+    ],
+    "emcb-udp-coordinator@1.0.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp2jkjoqmh/package/lib/emcbUDPparser.js:125:29:125:56"
+      ]
+    ],
+    "maximeeos@1.6.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpi37jfrjs/package/src/util/bigint.ts:26:14:26:42"
+      ]
+    ],
+    "nesciuntmagnam@1.2.5": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpj7ycb5bi/package/src/utils/bigint.ts:26:14:26:42"
+      ]
+    ],
+    "@castlefinance/vault-sdk@4.0.0-beta": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpf1srgmty/package/lib/adapters/solend.js:349:16:349:52"
+      ]
+    ],
+    "@schain/web3.js@2.0.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpgw95emyn/package/lib/index.browser.cjs.js:2419:12:2419:60"
+      ]
+    ],
+    "web3-safe-fork.js@0.0.5": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpgaezdvrf/package/lib/index.browser.cjs.js:2419:12:2419:60"
+      ]
+    ],
+    "website-sdk@0.0.1": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp4t9hda4e/package/lib/starkex-lib/lib/crypto-cpp/starkware-crypto.js:82:12:82:43"
+      ]
+    ],
+    "@fycastle/vault-sdk@3.1.0-rc0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp_5wgz0bt/package/lib/adapters/solend.js:399:16:399:52"
+      ]
+    ],
+    "permissible@1.1.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpvif_lw99/package/lib/index.js:67:32:67:99"
+      ]
+    ],
+    "@azerothcore/ac-nodejs-srp6@1.0.8": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmprwfkge51/package/index.js:56:12:56:42"
+      ]
+    ],
+    "emcb-udp-master@0.10.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmphtdt96a0/package/lib/emcbUDPparser.js:139:29:139:56"
+      ]
+    ],
+    "quidemearum@1.3.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmppywppmml/package/src/utils/bigint.ts:26:14:26:42"
+      ]
+    ],
+    "etquod@1.1.3": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp6b2i2upo/package/src/utils/bigint.ts:26:14:26:42"
+      ]
+    ],
+    "hardhat-fhevm@0.1.6": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp6muoinn6/package/src/common/utils.ts:23:18:23:36"
+      ]
+    ],
+    "@nonconforme/web-nsa3.js@0.0.0-development": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpbfrlwz77/package/src/utils/bigint.ts:26:14:26:42"
+      ]
+    ],
+    "@credix/web3.js-cloudflare-enabled-temp@0.0.2-development": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmphk48lpbu/package/lib/index.browser.cjs.js:3244:12:3244:60"
+      ]
+    ],
+    "@azuldev5/web3.js@0.0.0-development": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8qdn0wk7/package/src/utils/bigint.ts:26:14:26:42"
+      ]
+    ],
+    "@mikaeelmf/apexpro-connector-node@0.3.5": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp7pwmum2r/package/lib/pro/starkex-lib/lib/crypto-cpp/starkware-crypto.js:95:12:95:43"
+      ]
+    ],
+    "@mundis/sdk@1.0.3": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp_qe8r0d7/package/lib/index.browser.cjs.js:3127:12:3127:60"
+      ]
+    ],
+    "@trinity-flux/srp6@1.0.1": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp9n2kcpmj/package/src/utils/index.js:29:31:29:66"
+      ]
+    ],
+    "@soda-pro/layout@0.1.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpnm37pdsl/package/src/layout/decode.ts:33:16:33:31"
+      ]
+    ],
+    "ecmh@0.2.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpsu70kez1/package/index.js:47:36:47:67"
+      ]
+    ],
+    "trinitycore-srp6@1.1.1": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpb6_j4p2r/package/index.js:95:12:95:42"
+      ]
+    ],
+    "quaeratab@1.4.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpclrhnvlt/package/src/util/bigint.ts:26:14:26:42"
+      ]
+    ],
+    "@solanasdk/web3.js@1.98.7": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpurspazyl/package/src/utils/bigint.ts:26:14:26:42"
+      ]
+    ],
+    "solana-txs-size@2.0.0": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpfygthjzm/package/lib/index.browser.cjs.js:2147:12:2147:60"
+      ]
+    ],
+    "aliquamassumenda@1.4.2": [
+      [
+        "call <bigint-buffer>.toBigIntLE():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpq06okysw/package/src/util/bigint.ts:26:14:26:42"
+      ]
+    ]
+  }
+}

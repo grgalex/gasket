@@ -1,0 +1,113 @@
+{
+  "vulnerable_package": "bignum",
+  "vulnerable_function": "powm",
+  "num_dependents": 169,
+  "num_dependents_failed_analysis": 0,
+  "num_dep_vuln": 169,
+  "num_call_vuln": 11,
+  "call_vuln": [
+    "bleacon-fork@0.0.7",
+    "rsa-cts2@1.0.8",
+    "@ihconnect/bleacon@0.5.1",
+    "cognito-node-sdk@1.2.0",
+    "@sublim-io/srp@0.3.0",
+    "webmoney@0.1.0-alfa",
+    "bleacon@0.5.1",
+    "srp-hap@0.2.0",
+    "srp@0.2.0",
+    "paillier-bignum@1.2.2",
+    "wm-api@1.0.5"
+  ],
+  "found_lines_per_package": {
+    "bleacon@0.5.1": [
+      [
+        "call <bignum>().powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpsut3sg67/package/estimote/estimote.js:84:13:84:40"
+      ]
+    ],
+    "bleacon-fork@0.0.7": [
+      [
+        "call <bignum>().powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp_75d_qvj/package/estimote/estimote.js:84:13:84:40"
+      ]
+    ],
+    "paillier-bignum@1.2.2": [
+      [
+        "call <bignum>().powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5u81egxr/package/paillier.js:97:12:97:44"
+      ],
+      [
+        "call <bignum>()\u2026.powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5u81egxr/package/paillier.js:97:49:97:73"
+      ],
+      [
+        "call <bignum>.prime\u2026.powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5u81egxr/package/paillier.js:42:12:42:30"
+      ]
+    ],
+    "@ihconnect/bleacon@0.5.1": [
+      [
+        "call <bignum>().powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_bki5h1/package/estimote/estimote.js:84:13:84:40"
+      ]
+    ],
+    "rsa-cts2@1.0.8": [
+      [
+        "call <bignum>().powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpm1ib38ic/package/rsa.js:52:21:52:69"
+      ]
+    ],
+    "webmoney@0.1.0-alfa": [
+      [
+        "call <bignum>.fromBuffer\u2026.powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpiwucojgk/package/lib/signer.js:51:18:51:64"
+      ]
+    ],
+    "wm-api@1.0.5": [
+      [
+        "call <bignum>.fromBuffer\u2026.powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpnn7fdbmx/package/lib/webmoney/signer.js:33:19:33:65"
+      ]
+    ],
+    "srp@0.2.0": [
+      [
+        "call <bignum>().powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpl20ds2yh/package/lib/srp.js:120:15:120:64"
+      ],
+      [
+        "call <bignum>.fromBuffer\u2026.powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpl20ds2yh/package/lib/srp.js:281:25:281:45"
+      ]
+    ],
+    "srp-hap@0.2.0": [
+      [
+        "call <bignum>().powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpvopohdk3/package/lib/srp.js:122:15:122:64"
+      ],
+      [
+        "call <bignum>.fromBuffer\u2026.powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpvopohdk3/package/lib/srp.js:283:25:283:45"
+      ]
+    ],
+    "@sublim-io/srp@0.3.0": [
+      [
+        "call <bignum>().powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpdljvf2ko/package/lib/srp.js:116:19:116:68"
+      ],
+      [
+        "call <bignum>.default\u2026.powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpdljvf2ko/package/lib/srp.js:116:19:116:68"
+      ],
+      [
+        "call <bignum>.fromBuffer\u2026.powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpdljvf2ko/package/lib/srp.js:266:29:266:49"
+      ]
+    ],
+    "cognito-node-sdk@1.2.0": [
+      [
+        "call <bignum>().powm():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp9yr8108b/package/src/AuthenticationHelper.js:106:18:106:35"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "vulnerable_package": "pg-native",
+  "vulnerable_function": "query",
+  "num_dependents": 117,
+  "num_dependents_failed_analysis": 4,
+  "num_dep_vuln": 97,
+  "num_call_vuln": 4,
+  "call_vuln": [
+    "nodesql-db@0.0.15",
+    "@digigov-oss/auditrecord-postgresql-engine@1.0.2",
+    "pg-jc@0.0.17",
+    "coba@1.0.29"
+  ],
+  "found_lines_per_package": {
+    "coba@1.0.29": [
+      [
+        "call <pg-native>().querySync():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmph5vmvgu2/package/template/validations/unique.js:24:16:24:65"
+      ]
+    ],
+    "@digigov-oss/auditrecord-postgresql-engine@1.0.2": [
+      [
+        "call <pg-native>().querySync():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpp3n0_cxn/package/test/test.cjs:26:5:26:337"
+      ],
+      [
+        "call <pg-native>.default\u2026.querySync():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpp3n0_cxn/package/src/engines/postgresql/PostgreSqlEngine.ts:149:21:149:81"
+      ]
+    ],
+    "pg-jc@0.0.17": [
+      [
+        "call <pg-native>().querySync():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpxfbdokei/package/src/ConnectionPoolAndSyncClient.js:181:16:181:49"
+      ]
+    ],
+    "nodesql-db@0.0.15": [
+      [
+        "call <pg-native>().querySync():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpi31j2sjx/package/src/postgres/PostgresqlConnectionClient.js:216:16:216:49"
+      ]
+    ]
+  }
+}

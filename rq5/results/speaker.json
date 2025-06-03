@@ -1,0 +1,1502 @@
+{
+  "vulnerable_package": "speaker",
+  "vulnerable_function": "speaker",
+  "num_dependents": 155,
+  "num_dependents_failed_analysis": 1,
+  "num_dep_vuln": 154,
+  "num_call_vuln": 126,
+  "call_vuln": [
+    "timbre@14.11.25",
+    "ipod@0.2.4",
+    "speaker-cli@1.0.0",
+    "twitter-alarm@0.0.4",
+    "sonare@0.0.0",
+    "justaudio@0.2.1",
+    "stratechery-reader@1.5.0",
+    "epic_rock_radio@1.0.8",
+    "3abn@3.0.1",
+    "lolwut@0.2.1",
+    "airtalk@1.0.10",
+    "remote-speaker@1.0.9",
+    "node-youtube-player@1.0.2",
+    "canoga@1.1.1",
+    "@librorum/aiservice@1.0.3",
+    "handbrake-watch@0.2.2",
+    "tts-speak@1.1.1",
+    "beeplay@0.1.1",
+    "audio-out@0.1.2",
+    "metronome-cli@0.1.0",
+    "hourly-chime@0.0.3",
+    "@kabelsalat/cli@0.0.10",
+    "nineku.fm@2.0.2",
+    "node-ttastromech@1.1.0",
+    "wadcmd@1.0.0",
+    "jscast@0.5.0",
+    "moneymaker@6.6.6",
+    "eartrainer@1.0.4",
+    "youtube-terminal@0.8.0",
+    "node-droid-language@1.0.2",
+    "mike-admin@1.0.5",
+    "terminal-gbc-emulator@0.2.0",
+    "g-sounds@0.3.3",
+    "light-tts@1.2.3",
+    "pico.driver.nodeaudio@1.1.0",
+    "kortslutning@0.0.3",
+    "wavyd@1.0.10",
+    "sonor-typing@1.1.2",
+    "running-death-overdrive@1.0.0",
+    "mocha-funnynyan-reporter@0.0.1",
+    "lisa-speaker-polly@1.1.0",
+    "node-red-contrib-audio@1.0.2",
+    "jinglebells@0.0.4",
+    "trombone@1.1.0",
+    "darudejs-nodestorm@0.0.3",
+    "listen-to-youtube-cli@2.0.0",
+    "peerterminal@1.1.0",
+    "serafintech-player@0.6.1",
+    "node-tts-google@0.0.1",
+    "nyan@1.1.0",
+    "@camilaprav/kittygpt@0.0.41",
+    "pia@0.1.2",
+    "google-tts@1.1.2",
+    "player@0.6.1",
+    "triolet.driver.nodeaudio@0.3.0",
+    "geostorm-ost@0.1.19",
+    "audio-playback@0.1.5-alpha3",
+    "react-delivery@1.0.5",
+    "FAEN@1.0.1",
+    "youtube-audio-player@1.0.0",
+    "morsetick@0.2.1",
+    "@bhznjns/node-mp3-player@1.3.3",
+    "nodejs-youtube-player@1.1.4",
+    "audio-speaker@1.5.1",
+    "twitspot@1.0.9",
+    "kcrw@0.3.0",
+    "banjo-sound@1.0.0",
+    "vinyl-singer@0.0.4",
+    "rudeplay@0.1.2",
+    "node-red-contrib-speaker@0.1.7",
+    "pi-apa102-video@0.3.0",
+    "@serxoz/fat-mp3@0.1.8",
+    "player-cli@1.0.1",
+    "node-red-contrib-audiostream-to-speaker@1.0.2",
+    "vstjs-test@0.0.0",
+    "fat-mp3@0.1.6",
+    "mousai@1.0.1",
+    "darksiders2-ost@0.1.20",
+    "soundify@2.0.60",
+    "jaxcore-say-node@0.0.9",
+    "kickass-player@1.0.0",
+    "@das.laboratory/nyan@1.1.0",
+    "music163-client@0.0.1",
+    "musa@3.0.11",
+    "lofi-girl-cli@1.2.0",
+    "moscil@1.0.0",
+    "av@0.4.9",
+    "jsmusic@0.4.5",
+    "unitgen@1.0.1",
+    "djesbe@0.3.0",
+    "@maggo/blinkblink@0.0.2",
+    "spotipi@1.0.0",
+    "raop-rtsp-server@0.0.10",
+    "decibel@0.1.2",
+    "lofi-cli@1.1.2",
+    "stdaudio@1.0.4",
+    "modulib-cli@0.0.4",
+    "sr-player@1.0.3",
+    "hypnodetoad@1.0.0",
+    "homebridge-radioplayer@1.0.3",
+    "musical-keyboard@1.0.5",
+    "music163-cli@0.6.1",
+    "play-sound-file@0.0.2",
+    "stream-player@0.3.0",
+    "baidu.fm@1.1.2",
+    "node-red-audio-out@1.0.22",
+    "whoa@0.0.2",
+    "tplayer@1.1.1",
+    "friday-module-assistant@1.0.5",
+    "gav@1.0.0",
+    "infiniplayer@0.0.2",
+    "puzzlescript-cli@6.0.0-alpha.2",
+    "voaf@1.1.0",
+    "punssi-buddy@1.0.1",
+    "baidu-reader@1.0.7",
+    "coffee-collider@0.3.2",
+    "say-something@0.1.2",
+    "pi-music@0.0.1",
+    "ytlofi@1.1.2",
+    "node-radio-mini@0.0.4",
+    "breakfast-machine@1.0.0",
+    "musicxml-to-speaker@0.0.3",
+    "polyphonist@0.0.4",
+    "@tilt.dev/untitled-goose-extension@0.1.3",
+    "youtube-sing@1.1.12",
+    "homebridge-radio-player-plus@2.0.0"
+  ],
+  "found_lines_per_package": {
+    "player@0.6.1": [
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpcsetgovh/package/libs/player.js:116:22:116:50"
+      ]
+    ],
+    "av@0.4.9": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpyu4inhj7/package/src/devices/node-speaker.js:30:22:36:9"
+      ]
+    ],
+    "audio-speaker@1.5.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp65f_2a9r/package/direct.js:47:16:47:37"
+      ],
+      [
+        "call <speaker>().close():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp65f_2a9r/package/direct.js:68:5:68:20"
+      ],
+      [
+        "call <speaker>().end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp65f_2a9r/package/direct.js:69:5:69:18"
+      ],
+      [
+        "call <speaker>().write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp65f_2a9r/package/direct.js:66:3:73:5"
+      ]
+    ],
+    "say-something@0.1.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpjve9lk_8/package/lib/say-something.js:96:17:96:30"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpjve9lk_8/package/lib/say-something.js:104:3:106:5"
+      ]
+    ],
+    "timbre@14.11.25": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmptj8lz7jb/package/timbre.node.js:52:24:52:64"
+      ]
+    ],
+    "stream-player@0.3.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpg0dl2t3u/package/lib/stream-player.js:62:20:62:45"
+      ],
+      [
+        "call <speaker>().once():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpg0dl2t3u/package/lib/stream-player.js:128:14:130:9"
+      ]
+    ],
+    "fat-mp3@0.1.6": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpalfrd6os/package/lib/fat-mp3.js:102:19:102:32"
+      ],
+      [
+        "call <speaker>().close():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpalfrd6os/package/lib/fat-mp3.js:118:4:118:25"
+      ]
+    ],
+    "youtube-audio-player@1.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmptql722o3/package/index.js:42:17:42:36"
+      ],
+      [
+        "call <speaker>().end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmptql722o3/package/index.js:64:5:64:18"
+      ]
+    ],
+    "pico.driver.nodeaudio@1.1.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp6iu3bjvi/package/index.js:41:15:46:7"
+      ]
+    ],
+    "coffee-collider@0.3.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpzz6t929o/package/src/cc/common/audioapi-nodeaudio.js:47:24:47:65"
+      ]
+    ],
+    "trombone@1.1.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpa7cbzxpd/package/index.js:17:13:17:32"
+      ]
+    ],
+    "lisa-speaker-polly@1.1.0": [
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp0eniikmx/package/index.js:10:10:14:5"
+      ]
+    ],
+    "justaudio@0.2.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpisdhwvb2/package/index.js:11:10:15:5"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpisdhwvb2/package/index.js:28:11:28:34"
+      ]
+    ],
+    "@camilaprav/kittygpt@0.0.41": [
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpesz3xlop/package/autoassist.bundle.js:150:19:155:11"
+      ],
+      [
+        "call <speaker>.default\u2026.write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpesz3xlop/package/autoassist.bundle.js:158:7:158:28"
+      ],
+      [
+        "call <speaker>.default\u2026.end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpesz3xlop/package/autoassist.bundle.js:177:7:177:23"
+      ]
+    ],
+    "ipod@0.2.4": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp3fpqou7l/package/lib/player.js:62:19:62:32"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp3fpqou7l/package/lib/player.js:70:5:75:7"
+      ]
+    ],
+    "node-tts-google@0.0.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmptqt0jmyg/package/main.js:17:16:17:29"
+      ],
+      [
+        "call <speaker>().close():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmptqt0jmyg/package/main.js:27:5:27:20"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmptqt0jmyg/package/main.js:33:2:35:4"
+      ]
+    ],
+    "pi-apa102-video@0.3.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp9898donm/package/apa102video.js:45:22:45:45"
+      ]
+    ],
+    "unitgen@1.0.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp58ybck3n/package/lib/speaker-binding.js:13:18:19:5"
+      ]
+    ],
+    "metronome-cli@0.1.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpbmt6o9mz/package/bin/sound.js:9:13:9:26"
+      ]
+    ],
+    "node-red-contrib-audiostream-to-speaker@1.0.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp300mf47b/package/index.js:22:21:26:9"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp300mf47b/package/index.js:39:7:42:9"
+      ]
+    ],
+    "terminal-gbc-emulator@0.2.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp1jtgmwpd/package/src/TerminalGameBoy.js:28:34:32:11"
+      ]
+    ],
+    "spotipi@1.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8pio6w5o/package/spotipi.js:136:19:140:5"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8pio6w5o/package/spotipi.js:142:3:144:5"
+      ],
+      [
+        "call <speaker>().end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8pio6w5o/package/spotipi.js:670:4:670:23"
+      ]
+    ],
+    "jaxcore-say-node@0.0.9": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp_a8mkw81/package/lib/say-node.js:44:18:44:38"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp_a8mkw81/package/lib/say-node.js:49:2:51:4"
+      ]
+    ],
+    "lofi-girl-cli@1.2.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpoimkjpx0/package/src/LofiStreamer.js:30:33:30:46"
+      ]
+    ],
+    "friday-module-assistant@1.0.5": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpr4o0feqp/package/src/Main Service.js:15:24:15:43"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpr4o0feqp/package/src/Main Service.js:20:8:20:40"
+      ]
+    ],
+    "gav@1.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpqyk6wykl/package/app.js:24:15:27:3"
+      ],
+      [
+        "call <speaker>().write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpqyk6wykl/package/app.js:146:13:146:32"
+      ],
+      [
+        "call <speaker>().end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpqyk6wykl/package/app.js:158:13:158:26"
+      ]
+    ],
+    "@bhznjns/node-mp3-player@1.3.3": [
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpmr01oc04/package/src/index.ts:92:25:96:11"
+      ]
+    ],
+    "eartrainer@1.0.4": [
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp__u6czga/package/src/tone.js:68:21:72:7"
+      ],
+      [
+        "call <speaker>.default\u2026.end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp__u6czga/package/src/tone.js:76:11:78:13"
+      ],
+      [
+        "call <speaker>.default\u2026.write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp__u6czga/package/src/tone.js:75:9:79:11"
+      ]
+    ],
+    "@serxoz/fat-mp3@0.1.8": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp1sc7a09z/package/lib/fat-mp3.js:104:19:104:32"
+      ],
+      [
+        "call <speaker>().close():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp1sc7a09z/package/lib/fat-mp3.js:120:4:120:25"
+      ]
+    ],
+    "remote-speaker@1.0.9": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpj3ahkopw/package/worker.js:1:15:1:35"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpj3ahkopw/package/worker.js:14:3:14:51"
+      ],
+      [
+        "call <speaker>().write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpj3ahkopw/package/worker.js:18:5:18:24"
+      ],
+      [
+        "call <speaker>()\u2026.bind():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpj3ahkopw/package/worker.js:16:20:16:45"
+      ]
+    ],
+    "twitspot@1.0.9": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp15ig1oo4/package/lib/tidal.js:60:33:60:52"
+      ]
+    ],
+    "ytlofi@1.1.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpzlspg0z7/package/src/ytlofi.ts:22:45:22:58"
+      ]
+    ],
+    "youtube-sing@1.1.12": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp6cd76vs4/package/singer.js:11:17:15:5"
+      ]
+    ],
+    "youtube-terminal@0.8.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp9i7fb9l_/package/index.js:90:17:90:30"
+      ]
+    ],
+    "audio-out@0.1.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkc2x0t_3/package/index.js:4:16:8:5"
+      ],
+      [
+        "call <speaker>().write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkc2x0t_3/package/index.js:9:3:9:29"
+      ]
+    ],
+    "handbrake-watch@0.2.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpyxdgazef/package/src/utils/speaker/speak.js:16:19:20:7"
+      ]
+    ],
+    "kortslutning@0.0.3": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp1flyo6j2/package/index.js:26:17:26:37"
+      ]
+    ],
+    "musical-keyboard@1.0.5": [
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpyx7uwkhl/package/src/tone.ts:34:19:38:5"
+      ],
+      [
+        "call <speaker>.default\u2026.close():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpyx7uwkhl/package/src/tone.ts:68:5:68:25"
+      ],
+      [
+        "call <speaker>.default\u2026.write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpyx7uwkhl/package/src/tone.ts:67:3:69:5"
+      ]
+    ],
+    "musicxml-to-speaker@0.0.3": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpemqtpuf9/package/index.js:13:9:13:92"
+      ]
+    ],
+    "music163-client@0.0.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpw3axqrr4/package/index.js:15:15:15:28"
+      ]
+    ],
+    "node-red-contrib-audio@1.0.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp96wikydv/package/src/audio.js:70:22:70:35"
+      ]
+    ],
+    "@das.laboratory/nyan@1.1.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpcmzrwe_y/package/index.js:17:17:21:5"
+      ]
+    ],
+    "node-youtube-player@1.0.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp_o3sjokm/package/index.js:52:28:56:15"
+      ]
+    ],
+    "node-ttastromech@1.1.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpqnk7506m/package/index.js:125:25:125:38"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpqnk7506m/package/index.js:130:9:133:11"
+      ]
+    ],
+    "infiniplayer@0.0.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:75:21:75:56"
+      ],
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:75:21:75:56"
+      ],
+      [
+        "call <speaker>.box():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:25:13:44:3"
+      ],
+      [
+        "call <speaker>.screen():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:21:16:24:3"
+      ],
+      [
+        "call <speaker>.default.box():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:25:13:44:3"
+      ],
+      [
+        "call <speaker>.default.screen():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:21:16:24:3"
+      ],
+      [
+        "call <speaker>().addOption():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:75:21:76:51"
+      ],
+      [
+        "call <speaker>.default\u2026.addOption():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:75:21:76:51"
+      ],
+      [
+        "call <speaker>.box\u2026.setContent():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:52:5:52:26"
+      ],
+      [
+        "call <speaker>.screen\u2026.append():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:45:1:45:19"
+      ],
+      [
+        "call <speaker>.screen\u2026.render():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:46:1:46:16"
+      ],
+      [
+        "call <speaker>.default\u2026.setContent():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:52:5:52:26"
+      ],
+      [
+        "call <speaker>.default\u2026.append():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:45:1:45:19"
+      ],
+      [
+        "call <speaker>.default\u2026.render():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:46:1:46:16"
+      ],
+      [
+        "call <speaker>()\u2026.toFormat():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:75:21:77:43"
+      ],
+      [
+        "call <speaker>.default\u2026.toFormat():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:75:21:77:43"
+      ],
+      [
+        "call <speaker>()\u2026.pipe():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:75:21:78:55"
+      ],
+      [
+        "call <speaker>.default\u2026.pipe():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:75:21:78:55"
+      ],
+      [
+        "call <speaker>()\u2026.on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:75:21:79:48"
+      ],
+      [
+        "call <speaker>.default\u2026.on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5_c3dfri/package/lib/index.js:75:21:79:48"
+      ]
+    ],
+    "3abn@3.0.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpqrdwycn0/package/lib/index.js:95:31:95:50"
+      ]
+    ],
+    "serafintech-player@0.6.1": [
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkketlfzr/package/libs/player.js:116:22:116:50"
+      ]
+    ],
+    "triolet.driver.nodeaudio@0.3.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpt7zhrkz5/package/index.js:38:15:43:7"
+      ]
+    ],
+    "wadcmd@1.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpwb3ur3nj/package/lump/music.js:33:23:37:11"
+      ],
+      [
+        "call <speaker>().write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpwb3ur3nj/package/lump/music.js:39:9:39:42"
+      ],
+      [
+        "call <speaker>().end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpwb3ur3nj/package/lump/music.js:40:9:40:22"
+      ]
+    ],
+    "vinyl-singer@0.0.4": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpxthchkl4/package/index.js:116:16:116:29"
+      ]
+    ],
+    "@maggo/blinkblink@0.0.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp7pz3fyk_/package/index.js:151:30:155:7"
+      ]
+    ],
+    "stdaudio@1.0.4": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpgww_rilp/package/bin/stdaudio:36:15:36:32"
+      ]
+    ],
+    "raop-rtsp-server@0.0.10": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpg2qfz327/package/bin.js:12:12:16:7"
+      ],
+      [
+        "call <speaker>().write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpg2qfz327/package/bin.js:29:5:29:22"
+      ]
+    ],
+    "running-death-overdrive@1.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmplm02_k4c/package/index.js:22:15:22:28"
+      ]
+    ],
+    "voaf@1.1.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpwfcvfo86/package/lib/useSpeaker.js:6:21:9:7"
+      ]
+    ],
+    "speaker-cli@1.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpnc1wsoka/package/index.js:30:7:30:20"
+      ]
+    ],
+    "punssi-buddy@1.0.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpjljpzxxw/package/index.js:34:20:39:7"
+      ]
+    ],
+    "moneymaker@6.6.6": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp4e8ahva1/package/moneymaker.js:14:23:14:42"
+      ]
+    ],
+    "listen-to-youtube-cli@2.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpd51rrlfy/package/cli.js:38:40:38:53"
+      ]
+    ],
+    "canoga@1.1.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpczazp3be/package/index.js:60:23:60:42"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpczazp3be/package/index.js:63:7:63:48"
+      ]
+    ],
+    "darksiders2-ost@0.1.20": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp_jz99160/package/index.js:51:17:51:30"
+      ]
+    ],
+    "geostorm-ost@0.1.19": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp2bhoi8ow/package/index.js:51:17:51:30"
+      ]
+    ],
+    "node-droid-language@1.0.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpxzojut8l/package/engine/translateEngine.js:85:25:85:38"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpxzojut8l/package/engine/translateEngine.js:90:9:93:11"
+      ]
+    ],
+    "light-tts@1.2.3": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpo0axqdx4/package/index.js:97:33:97:52"
+      ]
+    ],
+    "kcrw@0.3.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp31vcwmui/package/play.js:41:12:41:25"
+      ]
+    ],
+    "homebridge-radioplayer@1.0.3": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp9c70xjur/package/player.js:28:23:28:36"
+      ]
+    ],
+    "jscast@0.5.0": [
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpu1zqjc4u/package/src/plugins/speaker/index.js:13:39:13:52"
+      ]
+    ],
+    "mike-admin@1.0.5": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp39eugtv0/package/lib/mikegyver.js:10:15:13:3"
+      ]
+    ],
+    "musa@3.0.11": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpg_b8mpcp/package/lib/index.js:11:19:11:32"
+      ]
+    ],
+    "baidu.fm@1.1.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp7dq23mjg/package/libs/player.js:190:20:190:33"
+      ],
+      [
+        "call <speaker>().end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp7dq23mjg/package/libs/player.js:144:21:144:39"
+      ]
+    ],
+    "FAEN@1.0.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpk79u5k23/package/index.js:30:16:30:40"
+      ]
+    ],
+    "nodejs-youtube-player@1.1.4": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmph7zjmksv/package/youtube.js:34:20:38:7"
+      ]
+    ],
+    "@kabelsalat/cli@0.0.10": [
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpcpyafs4h/package/src/cli.js:103:17:109:3"
+      ]
+    ],
+    "twitter-alarm@0.0.4": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmps56bc_l_/package/index.js:32:15:32:34"
+      ]
+    ],
+    "vstjs-test@0.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpevdgwpcc/package/playfile.js:24:26:28:3"
+      ]
+    ],
+    "rudeplay@0.1.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpk_5p76i5/package/lib/session.js:71:17:75:4"
+      ]
+    ],
+    "react-delivery@1.0.5": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpoxsvhjh0/package/index.js:15:17:15:30"
+      ],
+      [
+        "call <speaker>().end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpoxsvhjh0/package/index.js:20:3:20:16"
+      ]
+    ],
+    "soundify@2.0.60": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmproggoexk/package/player.js:12:51:12:71"
+      ]
+    ],
+    "stratechery-reader@1.5.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpakkbdv5x/package/polly.js:16:10:20:5"
+      ]
+    ],
+    "sonare@0.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkcat9d1r/package/sound.js:34:18:38:5"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkcat9d1r/package/sound.js:42:3:45:5"
+      ],
+      [
+        "call <speaker>().end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkcat9d1r/package/sound.js:64:4:64:22"
+      ]
+    ],
+    "peerterminal@1.1.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmppkvwwcwc/package/index.js:64:17:64:30"
+      ]
+    ],
+    "player-cli@1.0.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpmlo3t6_v/package/lib/player.js:20:25:20:44"
+      ]
+    ],
+    "sonor-typing@1.1.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp36mkvz0j/package/tools/speaker.js:3:17:7:3"
+      ],
+      [
+        "call <speaker>().write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp36mkvz0j/package/run.js:54:5:54:26"
+      ]
+    ],
+    "node-red-audio-out@1.0.22": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp9yes1j66/package/play_audio_file.js:23:37:23:56"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp9yes1j66/package/play_audio_file.js:23:37:25:29"
+      ],
+      [
+        "call <speaker>()\u2026.on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp9yes1j66/package/play_audio_file.js:23:37:28:29"
+      ]
+    ],
+    "@tilt.dev/untitled-goose-extension@0.1.3": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpyf8azaos/package/index.js:29:21:29:80"
+      ]
+    ],
+    "jinglebells@0.0.4": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp5c3fyvfl/package/index.js:9:15:9:34"
+      ]
+    ],
+    "hypnodetoad@1.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpm21ag50t/package/index.js:20:14:20:27"
+      ]
+    ],
+    "decibel@0.1.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpolicbyec/package/lib/player/player.js:97:12:97:31"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpolicbyec/package/lib/player/player.js:48:13:50:15"
+      ],
+      [
+        "call <speaker>().end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpolicbyec/package/lib/player/player.js:90:9:90:30"
+      ],
+      [
+        "call <speaker>().removeListener():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpolicbyec/package/lib/player/player.js:89:9:89:58"
+      ]
+    ],
+    "darudejs-nodestorm@0.0.3": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkirii4y9/package/darude.js:12:9:12:20"
+      ]
+    ],
+    "lolwut@0.2.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpfkzvievb/package/index.js:122:9:122:19"
+      ]
+    ],
+    "node-red-contrib-speaker@0.1.7": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpy7pem7dk/package/speaker/speaker.js:22:25:26:24"
+      ],
+      [
+        "call <speaker>().write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpy7pem7dk/package/speaker/speaker.js:29:17:29:42"
+      ]
+    ],
+    "breakfast-machine@1.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpj50etmaa/package/index.js:13:9:13:22"
+      ]
+    ],
+    "morsetick@0.2.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpcgupdj83/package/index.js:69:31:74:6"
+      ],
+      [
+        "call <speaker>().removeAllListeners():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpcgupdj83/package/index.js:43:4:43:74"
+      ],
+      [
+        "call <speaker>().pipe():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpcgupdj83/package/index.js:85:4:85:49"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpcgupdj83/package/index.js:134:4:134:55"
+      ],
+      [
+        "call <speaker>().write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpcgupdj83/package/index.js:178:5:178:50"
+      ]
+    ],
+    "moscil@1.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp469defqy/package/index.js:23:23:28:11"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp469defqy/package/test.js:28:9:28:57"
+      ]
+    ],
+    "kickass-player@1.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp1bguv7p2/package/lib/player.js:40:21:40:34"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp1bguv7p2/package/lib/player.js:41:7:44:11"
+      ],
+      [
+        "call <speaker>()\u2026.on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp1bguv7p2/package/lib/player.js:41:7:48:11"
+      ]
+    ],
+    "g-sounds@0.3.3": [
+      [
+        "call <speaker/index>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp_cbi2gwg/package/src/classes/Player.js:29:34:29:60"
+      ]
+    ],
+    "baidu-reader@1.0.7": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmphe8dvvln/package/index.js:54:19:54:32"
+      ]
+    ],
+    "beeplay@0.1.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8n0dajer/package/lib/modules/main.js:22:32:26:9"
+      ]
+    ],
+    "airtalk@1.0.10": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmptrq7k0ua/package/cli.js:70:17:74:5"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmptrq7k0ua/package/cli.js:75:3:75:37"
+      ]
+    ],
+    "jsmusic@0.4.5": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp3ct24xmt/package/src/play.js:15:31:15:44"
+      ]
+    ],
+    "modulib-cli@0.0.4": [
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpcmyaj1t2/package/src/play.js:16:19:16:32"
+      ],
+      [
+        "call <speaker>.default\u2026.once():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpcmyaj1t2/package/src/play.js:39:7:39:37"
+      ],
+      [
+        "call <speaker>.default\u2026.end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpcmyaj1t2/package/src/play.js:40:7:40:20"
+      ]
+    ],
+    "polyphonist@0.0.4": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpgjydnkd9/package/Voice.js:13:16:13:29"
+      ]
+    ],
+    "play-sound-file@0.0.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp3uc5excg/package/index.js:14:21:14:40"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp3uc5excg/package/index.js:16:5:18:7"
+      ]
+    ],
+    "pi-music@0.0.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp3g4uocs8/package/index.js:8:15:8:34"
+      ]
+    ],
+    "nyan@1.1.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp78m5sc0s/package/index.js:17:17:21:5"
+      ]
+    ],
+    "music163-cli@0.6.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpsm2_7trl/package/bin/cmd.js:194:11:194:24"
+      ]
+    ],
+    "mousai@1.0.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpq_nvtdgt/package/lib/index.js:12:17:12:30"
+      ]
+    ],
+    "mocha-funnynyan-reporter@0.0.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp7p64i6sq/package/funnynyan.js:11:15:11:28"
+      ],
+      [
+        "call <speaker>().close():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp7p64i6sq/package/funnynyan.js:26:5:26:20"
+      ]
+    ],
+    "lofi-cli@1.1.2": [
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpaqtt9y0k/package/src/youtube-stream.js:13:23:13:36"
+      ]
+    ],
+    "tplayer@1.1.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp6xdt3_66/package/index.js:11:17:11:30"
+      ]
+    ],
+    "nineku.fm@2.0.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:25:25:25:48"
+      ],
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:25:25:25:48"
+      ],
+      [
+        "call <speaker>.createReadStream():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:53:20:53:54"
+      ],
+      [
+        "call <speaker>.default.createReadStream():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:53:20:53:54"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:72:13:74:15"
+      ],
+      [
+        "call <speaker>().end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:118:13:118:32"
+      ],
+      [
+        "call <speaker>().unpipe():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:90:9:90:30"
+      ],
+      [
+        "call <speaker>().pipe():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:82:9:82:41"
+      ],
+      [
+        "call <speaker>().setVolume():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:57:9:57:55"
+      ],
+      [
+        "call <speaker>().toFormat():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:70:13:70:43"
+      ],
+      [
+        "call <speaker>().kill():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:117:13:117:41"
+      ],
+      [
+        "call <speaker>.default\u2026.on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:72:13:74:15"
+      ],
+      [
+        "call <speaker>.default\u2026.end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:118:13:118:32"
+      ],
+      [
+        "call <speaker>.default\u2026.unpipe():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:90:9:90:30"
+      ],
+      [
+        "call <speaker>.default\u2026.pipe():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:82:9:82:41"
+      ],
+      [
+        "call <speaker>.default\u2026.setVolume():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:57:9:57:55"
+      ],
+      [
+        "call <speaker>.default\u2026.toFormat():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:70:13:70:43"
+      ],
+      [
+        "call <speaker>.default\u2026.kill():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:117:13:117:41"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.then():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:7:71:7:116"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.push():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:95:13:95:39"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.splice():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:292:17:292:46"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.indexOf():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:287:25:287:58"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.getLyricLine():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:327:29:327:56"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.getLyricLineIndexWithTime():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:320:13:321:70"
+      ],
+      [
+        "call <speaker>.default\u2026.then():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:7:71:7:116"
+      ],
+      [
+        "call <speaker>.default\u2026.push():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:95:13:95:39"
+      ],
+      [
+        "call <speaker>.default\u2026.splice():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:292:17:292:46"
+      ],
+      [
+        "call <speaker>.default\u2026.indexOf():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:287:25:287:58"
+      ],
+      [
+        "call <speaker>.default\u2026.getLyricLine():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:327:29:327:56"
+      ],
+      [
+        "call <speaker>.default\u2026.getLyricLineIndexWithTime():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:320:13:321:70"
+      ],
+      [
+        "call <speaker>()\u2026.pipe():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:70:13:70:62"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.getLyrics():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:156:34:156:57"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.getURI():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:168:37:168:57"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.getTime():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:318:20:318:41"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.getAlbum():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:314:68:314:90"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.getSong():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:313:67:313:88"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.getName():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:312:68:312:89"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.getStyles():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/config.js:68:16:68:53"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.getCategories():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:97:48:97:70"
+      ],
+      [
+        "call <speaker>.default\u2026.getLyrics():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:156:34:156:57"
+      ],
+      [
+        "call <speaker>.default\u2026.getURI():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:168:37:168:57"
+      ],
+      [
+        "call <speaker>.default\u2026.getTime():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:318:20:318:41"
+      ],
+      [
+        "call <speaker>.default\u2026.getAlbum():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:314:68:314:90"
+      ],
+      [
+        "call <speaker>.default\u2026.getSong():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:313:67:313:88"
+      ],
+      [
+        "call <speaker>.default\u2026.getName():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:312:68:312:89"
+      ],
+      [
+        "call <speaker>.default\u2026.getStyles():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/config.js:68:16:68:53"
+      ],
+      [
+        "call <speaker>.default\u2026.getCategories():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/shell.js:97:48:97:70"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.startsWith():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:60:13:60:38"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.find():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/config.js:68:16:68:92"
+      ],
+      [
+        "call <speaker>.default\u2026.startsWith():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/sound_player.js:60:13:60:38"
+      ],
+      [
+        "call <speaker>.default\u2026.find():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/config.js:68:16:68:92"
+      ],
+      [
+        "call <speaker>.createReadStream\u2026.getMusics():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/config.js:61:20:61:51"
+      ],
+      [
+        "call <speaker>.default\u2026.getMusics():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp8s2pibxw/package/libs/config.js:61:20:61:51"
+      ]
+    ],
+    "node-radio-mini@0.0.4": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpiknjglzo/package/streams/host-sink.js:7:19:7:32"
+      ]
+    ],
+    "tts-speak@1.1.1": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpsvdjfksq/package/speak/index.js:51:28:51:41"
+      ],
+      [
+        "call <speaker>().on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpsvdjfksq/package/speak/index.js:58:5:60:7"
+      ],
+      [
+        "call <speaker>().close():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpsvdjfksq/package/speak/index.js:76:9:76:37"
+      ]
+    ],
+    "sr-player@1.0.3": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpwg0shxof/package/audioPlayer.js:21:21:21:46"
+      ],
+      [
+        "call <speaker>().end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpwg0shxof/package/audioPlayer.js:34:5:34:24"
+      ]
+    ],
+    "pia@0.1.2": [
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp9h3lb2bb/package/client/local/audioOutputSpeaker.js:13:12:18:5"
+      ]
+    ],
+    "puzzlescript-cli@6.0.0-alpha.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkq563rpa/package/lib/sounds-copypasta/sfxr.js:694:31:698:7"
+      ]
+    ],
+    "wavyd@1.0.10": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpssfortp9/package/wavyd.js:125:13:125:26"
+      ]
+    ],
+    "whoa@0.0.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpat_0r65g/package/lib/whoa.js:31:33:31:46"
+      ]
+    ],
+    "audio-playback@0.1.5-alpha3": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpl0iczh1i/package/index.js:22:23:26:5"
+      ]
+    ],
+    "banjo-sound@1.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp9r1r4ebo/package/index.js:22:24:26:11"
+      ],
+      [
+        "call <speaker>().write():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp9r1r4ebo/package/index.js:59:9:59:33"
+      ]
+    ],
+    "hourly-chime@0.0.3": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp96gvv01x/package/lib/app.js:21:15:21:34"
+      ]
+    ],
+    "homebridge-radio-player-plus@2.0.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpph3hxm0p/package/player.js:25:17:25:30"
+      ]
+    ],
+    "google-tts@1.1.2": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmp_lpmz8k2/package/index.js:49:31:49:50"
+      ]
+    ],
+    "epic_rock_radio@1.0.8": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:40:13:40:37"
+      ],
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:40:13:40:37"
+      ],
+      [
+        "call <speaker>.decode():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:60:20:60:74"
+      ],
+      [
+        "call <speaker>.get():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:66:5:68:7"
+      ],
+      [
+        "call <speaker>.Decoder():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:34:17:34:44"
+      ],
+      [
+        "call <speaker>.Writer():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:71:22:71:53"
+      ],
+      [
+        "call <speaker>.default.Writer():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:71:22:71:53"
+      ],
+      [
+        "call <speaker>.default.Decoder():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:34:17:34:44"
+      ],
+      [
+        "call <speaker>.default.get():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:66:5:68:7"
+      ],
+      [
+        "call <speaker>.default.decode():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:60:20:60:74"
+      ],
+      [
+        "call <speaker>().setVolume():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:72:7:72:23"
+      ],
+      [
+        "call <speaker>.default\u2026.setVolume():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:72:7:72:23"
+      ],
+      [
+        "call <speaker>.Decoder\u2026.pipe():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:73:7:73:27"
+      ],
+      [
+        "call <speaker>.Decoder\u2026.on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:70:5:74:7"
+      ],
+      [
+        "call <speaker>.default\u2026.pipe():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:73:7:73:27"
+      ],
+      [
+        "call <speaker>.default\u2026.on():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpkiwpwdj1/package/index.dist.js:70:5:74:7"
+      ]
+    ],
+    "djesbe@0.3.0": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpz5f_598c/package/src/track.js:48:25:48:44"
+      ],
+      [
+        "call <speaker>().once():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpz5f_598c/package/src/track.js:50:9:50:49"
+      ],
+      [
+        "call <speaker>().end():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpz5f_598c/package/src/track.js:72:7:72:33"
+      ],
+      [
+        "call <speaker>().removeListener():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmpz5f_598c/package/src/track.js:71:21:71:71"
+      ]
+    ],
+    "@librorum/aiservice@1.0.3": [
+      [
+        "call <speaker>():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmproo7ys8l/package/provider_services/lyria-realtime-player.ts:49:26:49:39"
+      ],
+      [
+        "call <speaker>.default():",
+        "  /home/george.alexopoulos/jsxray/data/tmp/tmproo7ys8l/package/provider_services/lyria-realtime-player.ts:49:26:49:39"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "vulnerable_package": "canvas",
+  "vulnerable_function": "foo",
+  "num_dependents": 395,
+  "num_dependents_failed_analysis": 0,
+  "num_dep_vuln": 70,
+  "num_call_vuln": 0,
+  "call_vuln": [],
+  "found_lines_per_package": {}
+}
