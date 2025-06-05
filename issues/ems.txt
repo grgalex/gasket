@@ -1,0 +1,29 @@
+Division by zero when env var. EMS_Ntasks is 0 and ntasks arg is <=0
+
+### Problem
+When the the call to initialize() from JS provides ntasks <= 0, the code falls back to using the value from the env. var EMS_Ntasks, without checking if it's > 0.
+
+As a result, we get a division by zero in C function EMSInitialize() [2].
+
+### How to Reproduce
+
+1. Create a file named test.js, with the following content:
+```
+process.env.EMS_Ntasks = "0";
+var x = require('ems')(0)
+```
+2. Run:
+```
+$ node test.js
+
+Floating point exception (core dumped)
+```
+
+### Proposed Fix
+
+Ensure that nTasks is always > 0. After reading the env var, check its value.
+
+
+
+[1] https://github.com/mogill/ems/blob/ae91db8c53e4b6769a69f82c41f3615f7c63fecf/nodejs/ems.js#L656
+[2] https://github.com/mogill/ems/blob/ae91db8c53e4b6769a69f82c41f3615f7c63fecf/src/ems.cc#L954

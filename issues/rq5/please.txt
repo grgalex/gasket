@@ -1,0 +1,9 @@
+pleaase is transitively vulnerable to GHSA-9v62-24cr-58cx from its node-sass dependency
+
+This package depends on a vulnerable version of `node-sass` (~4.5.0)
+
+It invokes the vulnerable JS Function (`renderSync`) [1] which eventually calls the vulnerable native function.
+
+I haven't investigated the extent to which this is exploitable from pleaaase.
+
+[1] https://github.com/iamvdo/pleeease/blob/bbe17dd688de163b112dc29e649de00fc77942f2/lib/preprocessor.js

@@ -1,0 +1,4 @@
+This is the same case as https://github.com/chrisemunt/mg-dbx/issues/3.
+
+Reporting it separately because it affects a different npm package that uses that same native extensions.
+

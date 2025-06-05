@@ -1,0 +1,50 @@
+Buffer overflow in Register (src/register_linux.cpp) when $HOME is long enough
+
+I managed to trigger a buffer overflow by exploiting the `strcat()` calls on lines 54 [1], 58 [2] and 62 [3] respectively.
+
+---
+
+### Steps:
+1. Set the `HOME` env. variable to a value >= 1023 characters
+```
+export HOME='/a/././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././'
+```
+
+We use repeating special directory entries (`./`) in order to force the length of the `home` string to be >= 1023 chars, while also ensuring that the `Mkdir()` calls [4] do not fail prematurely with an `ENAMETOOLONG` error. (`NAME_MAX`, the maximum file name length on Linux is 255 Bytes, while `PATH_MAX`, the maximum total path size is 4096).
+
+2. Start Node.JS
+3. Import and call the `register` function in JS:
+```
+register = require('register-scheme')
+register('b')
+```
+
+---
+### Result
+
+The resulting call to the `Register()` C++ function will:
+1. Overflow on the call to `strcat(desktopFilePath, "/share")`
+2. Overflow on the call to `strcat(desktopFilePath, "/applications")`
+3. Overflow on the call to `strcat(desktopFilePath, desktopFilename)`
+
+In these cases, the overflow spills from `desktopFilePath` into `desktopFilename`.
+Here's proof through GDB, breaking on line 61 (just before the third `strcat()`)
+```
+(gdb) call (int)strlen(desktopFilePath)
+$1 = 1042
+(gdb) call (int)strlen(desktopFilename)
+$24 = 18 (equal to strlen("share/applications"))
+(gdb) p desktopFilename
+$25 = "share/applications\000X\374\177\000\000\250\375\377\377\377\377\377\377\002\000\000\000\000\000\000\000\220\327>\362\210U\000\000\320E\a\272\210U\000\0
+00\001\000\000\000\000\000\000\000X\316>\362\210U\000\000O/\b|\230\177\000\000\002\000\000\000\000\000\000\000\2407:\362\210U\000\000(\000\000\000\000\000\000
+\000\000\366\266%.\v\275^\220\327>\362\210U"
+```
+---
+### Solution
+1. Quick-n-dirty: Use `strncat`
+2. Slow-n-clean: Use PATH_MAX bufs + `realpath(home)` + more checks.
+
+[1] https://github.com/devsnek/node-register-scheme/blob/e7cc9a63a1f512565da44cb57316d9fb10750e17/src/register_linux.cpp#L54
+[2] https://github.com/devsnek/node-register-scheme/blob/e7cc9a63a1f512565da44cb57316d9fb10750e17/src/register_linux.cpp#L58
+[3] https://github.com/devsnek/node-register-scheme/blob/e7cc9a63a1f512565da44cb57316d9fb10750e17/src/register_linux.cpp#L62
+[4] https://github.com/devsnek/node-register-scheme/blob/e7cc9a63a1f512565da44cb57316d9fb10750e17/src/register_linux.cpp#L51
