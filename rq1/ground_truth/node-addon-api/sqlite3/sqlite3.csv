@@ -18,10 +18,10 @@ Statement::All
 Statement::Each
 Statement::Reset
 Statement::Finalize_
-Instace accessor! Database::Open
-Instance accessor! Backup::IdleGetter
-Instance accessor! Backup::CompletedGetter
-Instance accessor! Backup::FailedGetter
-Instance accessor! Backup::RemainingGetter
-Instance accessor! Backup::PageCountGetter
-Instance accessor! Backup::RetryErrorGetter
+Instance accessor Database::Open
+Instance accessor Backup::IdleGetter
+Instance accessor Backup::CompletedGetter
+Instance accessor Backup::FailedGetter
+Instance accessor Backup::RemainingGetter
+Instance accessor Backup::PageCountGetter
+Instance accessor Backup::RetryErrorGetter

@@ -70,3 +70,4 @@ sqlite3_total_changes
 sqlite3_free
 sqlite3_bind_parameter_count
 sqlite3_load_extension
+sqlite3_update_hook
