@@ -85,6 +85,8 @@ class BridgeComparator():
         self.jsxray_samples = []
         self.charon_samples = []
 
+        self.charon_missing = 0
+
         self.all_bridges = defaultdict(dict)
         self.charon_pkgs_no_bridges_file = []
 
@@ -134,6 +136,7 @@ class BridgeComparator():
                     num_charon = len(charon_bridges)
                     self.charon_total += num_charon
                 else:
+                    self.charon_missing += 1
                     num_charon = 0
                     charon_bridges = []
                 
@@ -203,6 +206,8 @@ class BridgeComparator():
                             'packages_jsxray_more_charon_nonzero': self.packages_jsxray_more_charon_nonzero,
                             'differences': self.differences
                             }
+        print(f"CHARON_MISSING: {self.charon_missing}")
+        exit()
         with open('packages_jsxray_more_charon_nonzero.csv', 'w') as outfile:
             for p in self.packages_jsxray_more_charon_nonzero:
                 outfile.write(f"{p}\n")
