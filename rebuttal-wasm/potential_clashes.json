@@ -1,0 +1,118 @@
+{
+  "next": {
+    "install/cycgods___1.1.4/node_modules/next/dist/server/lib/squoosh/png/squoosh_png_bg.wasm": 6,
+    "install/cycgods___1.1.4/node_modules/next/dist/server/lib/squoosh/resize/squoosh_resize_bg.wasm": 5,
+    "install/cycgods___1.1.4/node_modules/next/dist/server/lib/squoosh/mozjpeg/mozjpeg_node_dec.wasm": 8,
+    "install/cycgods___1.1.4/node_modules/next/dist/compiled/@vercel/og/resvg.wasm": 30,
+    "install/cycgods___1.1.4/node_modules/next/dist/server/lib/squoosh/avif/avif_node_dec.wasm": 12,
+    "install/cycgods___1.1.4/node_modules/next/dist/server/lib/squoosh/png/squoosh_oxipng_bg.wasm": 5,
+    "install/cycgods___1.1.4/node_modules/next/dist/server/lib/squoosh/rotate/rotate.wasm": 4,
+    "install/cycgods___1.1.4/node_modules/next/dist/server/lib/squoosh/webp/webp_node_dec.wasm": 7,
+    "install/cycgods___1.1.4/node_modules/next/dist/server/lib/squoosh/avif/avif_node_enc.wasm": 17,
+    "install/cycgods___1.1.4/node_modules/next/dist/server/lib/squoosh/mozjpeg/mozjpeg_node_enc.wasm": 8,
+    "install/cycgods___1.1.4/node_modules/next/dist/server/lib/squoosh/webp/webp_node_enc.wasm": 7,
+    "install/cycgods___1.1.4/node_modules/next/dist/compiled/@next/react-dev-overlay/dist/mappings.wasm": 25,
+    "install/cycgods___1.1.4/node_modules/next/dist/compiled/@vercel/og/yoga.wasm": 8
+  },
+  "rtoken-analytics": {
+    "install/rtoken-analytics___0.1.3/node_modules/rtoken-analytics/subgraph/build/RToken/RToken.wasm": 15,
+    "install/rtoken-analytics___0.1.3/node_modules/rtoken-analytics/subgraph/build/Contract/Contract.wasm": 15
+  },
+  "three": {
+    "install/@danizean~cyberzone___1.1.3/node_modules/three/examples/jsm/loaders/ifc/web-ifc.wasm": 13,
+    "install/@danizean~cyberzone___1.1.3/node_modules/three/examples/js/libs/basis/basis_transcoder.wasm": 8,
+    "install/@danizean~cyberzone___1.1.3/node_modules/three/examples/js/libs/ammo.wasm.wasm": 1348,
+    "install/@danizean~cyberzone___1.1.3/node_modules/three/examples/js/libs/draco/draco_decoder.wasm": 164,
+    "install/@danizean~cyberzone___1.1.3/node_modules/three/examples/js/libs/draco/gltf/draco_decoder.wasm": 164,
+    "install/@danizean~cyberzone___1.1.3/node_modules/three/examples/jsm/libs/rhino3dm/rhino3dm.wasm": 14
+  },
+  "undici": {
+    "install/@aztec~native___0.87.2/node_modules/undici/lib/llhttp/llhttp.wasm": 34,
+    "install/@aztec~native___0.87.2/node_modules/undici/lib/llhttp/llhttp_simd.wasm": 34
+  },
+  "@stdlib/blas": {
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/dcopy-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/ddot-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/dswap-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/drot-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/idamax-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/sasum-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/daxpy-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/scopy-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/saxpy-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/dnrm2-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/srot-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/dasum-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/dscal-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/snrm2-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/sdot-wasm/src/main.wasm": 4,
+    "install/@stdlib~stats___0.3.3/node_modules/@stdlib/blas/base/cscal-wasm/src/main.wasm": 4
+  },
+  "tree-sitter-php": {
+    "install/tree-sitter-php___0.23.12/node_modules/tree-sitter-php/tree-sitter-php_only.wasm": 3,
+    "install/tree-sitter-php___0.23.12/node_modules/tree-sitter-php/tree-sitter-php.wasm": 3
+  },
+  "@parcel/source-map": {
+    "install/@parcel~source-map___2.1.1/node_modules/@parcel/source-map/parcel_sourcemap_wasm/dist-node/parcel_sourcemap_wasm_bg.wasm": 30,
+    "install/@parcel~source-map___2.1.1/node_modules/@parcel/source-map/parcel_sourcemap_wasm/dist-web/parcel_sourcemap_wasm_bg.wasm": 30
+  },
+  "js-secp256k1": {
+    "install/js-secp256k1___0.2.3/node_modules/js-secp256k1/secp256k1/a.wasm": 9,
+    "install/js-secp256k1___0.2.3/node_modules/js-secp256k1/lib/secp256k1.wasm": 6589,
+    "install/js-secp256k1___0.2.3/node_modules/js-secp256k1/secp256k1/exhaustive_tests.wasm": 9,
+    "install/js-secp256k1___0.2.3/node_modules/js-secp256k1/secp256k1/bench_internal.wasm": 11,
+    "install/js-secp256k1___0.2.3/node_modules/js-secp256k1/secp256k1/bench_ecmult.wasm": 11,
+    "install/js-secp256k1___0.2.3/node_modules/js-secp256k1/secp256k1/tests.wasm": 9
+  },
+  "@squoosh/lib": {
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/squoosh_oxipng_bg-bb6b7672.wasm": 5,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/wp2_node_enc-683ca61a.wasm": 8,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/visdif-16c02bd4.wasm": 8,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/mozjpeg_node_enc-ec78f622.wasm": 8,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/jxl_node_enc-2d1ff5ea.wasm": 13,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/squoosh_png_bg-88a2be24.wasm": 6,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/avif_node_enc-75299187.wasm": 17,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/squoosh_resize_bg-3d426466.wasm": 5,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/imagequant_node-a4aafbae.wasm": 8,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/webp_node_enc-21e7a82d.wasm": 7,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/avif_node_dec-a4c0b69a.wasm": 12,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/rotate-e8fb6784.wasm": 4,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/wp2_node_dec-87bef8e5.wasm": 8,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/webp_node_dec-dde61ffa.wasm": 7,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/jxl_node_dec-07cea3fb.wasm": 9,
+    "install/viacompressor___0.0.8/node_modules/@squoosh/lib/build/mozjpeg_node_dec-4fa549e7.wasm": 8
+  },
+  "@tree-sitter-grammars/tree-sitter-yaml": {
+    "install/apic-apiconnect___1.1.1/node_modules/@swagger-api/apidom-parser-adapter-yaml-1-2/node_modules/@tree-sitter-grammars/tree-sitter-yaml/tree-sitter-json_schema.wasm": 3,
+    "install/apic-apiconnect___1.1.1/node_modules/@swagger-api/apidom-parser-adapter-yaml-1-2/node_modules/@tree-sitter-grammars/tree-sitter-yaml/tree-sitter-core_schema.wasm": 3,
+    "install/apic-apiconnect___1.1.1/node_modules/@swagger-api/apidom-parser-adapter-yaml-1-2/node_modules/@tree-sitter-grammars/tree-sitter-yaml/tree-sitter-yaml.wasm": 3
+  },
+  "tree-sitter-typescript": {
+    "install/tree-sitter-typescript___0.23.2/node_modules/tree-sitter-typescript/tree-sitter-tsx.wasm": 3,
+    "install/tree-sitter-typescript___0.23.2/node_modules/tree-sitter-typescript/tree-sitter-typescript.wasm": 3
+  },
+  "@chainsafe/as-sha256": {
+    "install/@ganache~ethereum-transaction___0.9.2/node_modules/@chainsafe/as-sha256/build/untouched.wasm": 9,
+    "install/@ganache~ethereum-transaction___0.9.2/node_modules/@chainsafe/as-sha256/build/optimized.wasm": 9
+  },
+  "read-wasm-sf2": {
+    "install/read-wasm-sf2___1.0.0/node_modules/read-wasm-sf2/readnode.wasm": 19,
+    "install/read-wasm-sf2___1.0.0/node_modules/read-wasm-sf2/read.wasm": 19
+  },
+  "@nimiq/core": {
+    "install/@nimiq~core___2.1.0/node_modules/@nimiq/core/web/main-wasm/index_bg.wasm": 307,
+    "install/@nimiq~core___2.1.0/node_modules/@nimiq/core/nodejs/worker-wasm/index_bg.wasm": 136,
+    "install/@nimiq~core___2.1.0/node_modules/@nimiq/core/bundler/worker-wasm/index_bg.wasm": 136,
+    "install/@nimiq~core___2.1.0/node_modules/@nimiq/core/bundler/main-wasm/index_bg.wasm": 307,
+    "install/@nimiq~core___2.1.0/node_modules/@nimiq/core/web/crypto-wasm/index_bg.wasm": 11,
+    "install/@nimiq~core___2.1.0/node_modules/@nimiq/core/web/worker-wasm/index_bg.wasm": 136,
+    "install/@nimiq~core___2.1.0/node_modules/@nimiq/core/bundler/crypto-wasm/index_bg.wasm": 11,
+    "install/@nimiq~core___2.1.0/node_modules/@nimiq/core/nodejs/main-wasm/index_bg.wasm": 307,
+    "install/@nimiq~core___2.1.0/node_modules/@nimiq/core/nodejs/crypto-wasm/index_bg.wasm": 11
+  },
+  "tree-sitter-ocaml": {
+    "install/tree-sitter-ocaml___0.24.0/node_modules/tree-sitter-ocaml/tree-sitter-ocaml_interface.wasm": 3,
+    "install/tree-sitter-ocaml___0.24.0/node_modules/tree-sitter-ocaml/tree-sitter-ocaml_type.wasm": 3,
+    "install/tree-sitter-ocaml___0.24.0/node_modules/tree-sitter-ocaml/tree-sitter-ocaml.wasm": 3
+  }
+}
