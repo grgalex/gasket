@@ -532,6 +532,21 @@ function recursive_inspect(obj, jsname) {
         if (!(obj instanceof(Object))) {
             continue
         }
+        desc_names = Object.getOwnPropertyNames(obj)
+        console.log(`NAMES: ${desc_names}`)
+        for (const name of Object.getOwnPropertyNames(obj)) {
+          desc = Object.getOwnPropertyDescriptor(obj, name);
+          descname = jsname + '.' + name
+          console.log(`DESC: ${descname}`)
+          getter = desc['get']
+          setter = desc['set']
+          if (typeof(getter) == 'function') {
+              check_bingo(getter, descname + '.' + 'GET')
+          }
+          if (typeof(setter) == 'function') {
+              check_bingo(setter, descname + '.' + 'SET')
+          }
+        }
         if (typeof(obj) == 'function') {
             check_bingo(obj, jsname)
         }
