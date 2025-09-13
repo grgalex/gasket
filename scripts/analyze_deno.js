@@ -16,6 +16,8 @@ self.objects_examined = 0
 self.callable_objects = 0
 self.foreign_callable_objects = 0
 
+self.cur_file = 'foo'
+
 self.fqn2failed = {}
 self.fqn2mod = {}
 self.fqn2obj = {}
