@@ -130,15 +130,15 @@ Napi::Value getcb(const Napi::CallbackInfo& info) {
     void *sfi_addr;
     void *fti_addr;
 
-    if (info.Length() < 1) {
-		Napi::TypeError::New(env, "Expected 1 argument").ThrowAsJavaScriptException();
-		return env.Null();
-	}
+    // if (info.Length() < 1) {
+	// 	Napi::TypeError::New(env, "Expected 1 argument").ThrowAsJavaScriptException();
+	// 	return env.Null();
+	// }
 
-    if (!info[0]->IsObject()) {
-		Napi::TypeError::New(env, "Not an object").ThrowAsJavaScriptException();
-		return env.Null();
-    }
+    // if (!info[0]->IsObject()) {
+	// 	Napi::TypeError::New(env, "Not an object").ThrowAsJavaScriptException();
+	// 	return env.Null();
+    // }
 
     std::cout << "V8 Object Address: " << address << std::endl;
 
