@@ -5,6 +5,7 @@ import * as fs from 'node:fs'
 import * as os from 'node:os'
 import * as path from 'node:path'
 import {randomUUID}  from 'node:crypto'
+import { execSync, spawnSync } from 'node:child_process';
 
 const yargs = yargz(hideBin(process.argv))
 
@@ -315,7 +316,7 @@ function clear_dicts() {
 
 function recursive_inspect(obj, jsname) {
     var pending = [[obj, jsname]]
-    console.log(`pending = ${pending}`)
+    console.log(`len pending = ${pending.length}`)
     var seen = new Set()
 	var desc_names
 	var desc
@@ -330,28 +331,29 @@ function recursive_inspect(obj, jsname) {
         [obj, jsname] = pending.shift()
         console.log(`jsname = ${jsname}`)
 
-        if (!(obj instanceof(Object))) {
+        if (!(obj instanceof(Object)) && (typeof obj != "object")) {
             continue
         }
-        // desc_names = Object.getOwnPropertyNames(obj)
-        // console.log(`NAMES: ${desc_names}`)
-        // for (const name of Object.getOwnPropertyNames(obj)) {
-        //   desc = Object.getOwnPropertyDescriptor(obj, name);
-        //   descname = jsname + '.' + name
-        //   console.log(`DESC: ${descname}`)
-        //   getter = desc['get']
-        //   setter = desc['set']
-        //   if (typeof(getter) == 'function') {
-        //       check_bingo(getter, descname + '.' + 'GET')
-        //   }
-        //   if (typeof(setter) == 'function') {
-        //       check_bingo(setter, descname + '.' + 'SET')
-        //   }
-        // }
-        // if (typeof(obj) == 'function') {
-        //     check_bingo(obj, jsname)
-        // }
-
+        desc_names = Object.getOwnPropertyNames(obj)
+        console.log(`NAMES: ${desc_names}`)
+        for (const name of Object.getOwnPropertyNames(obj)) {
+          desc = Object.getOwnPropertyDescriptor(obj, name);
+          descname = jsname + '.' + name
+          console.log(`DESC: ${descname}`)
+          getter = desc['get']
+          setter = desc['set']
+          if (typeof(getter) == 'function') {
+              check_bingo(getter, descname + '.' + 'GET')
+          }
+          if (typeof(setter) == 'function') {
+              check_bingo(setter, descname + '.' + 'SET')
+          }
+        }
+        if (typeof(obj) == 'function') {
+            check_bingo(obj, jsname)
+        }
+        console.log(`dir(obj)`)
+        console.log(`${dir(obj)}`)
         for (const k of dir(obj)) {
             console.log(`getattr(${jsname}, ${k})`)
             try {
@@ -404,14 +406,15 @@ function locate_js_modules(packagePath) {
     return soFiles;
 }
 
-function analyze_single(mod_file, pkg_root) {
+async function analyze_single(mod_file, pkg_root) {
 	var addr
 	var lib
 	var obj
 	clear_dicts()
     cur_file = mod_file
     try {
-        obj = import(mod_file)
+        obj = await import(mod_file)
+        // console.log(dir(obj))
     } catch(error) {
         console.log(error)
         return
@@ -594,7 +597,7 @@ function check_bingo(obj, jsname) {
     }
 }
 
-export function foo() {
+async function foo() {
     console.log('started!')
     var start = Date.now()
     const args = parse_args();
@@ -608,7 +611,7 @@ export function foo() {
 
     for (const so_file of so_files) {
       try {
-          analyze_single(so_file, args.root);
+          await analyze_single(so_file, args.root);
           self.final_result['modules'].push(so_file)
       } catch(error){
           console.log(`ERROR WHILE INSPECTING ${so_file}: ${error}`)
@@ -691,4 +694,4 @@ export function foo() {
 // }
 //
 
-foo()
+await foo()
