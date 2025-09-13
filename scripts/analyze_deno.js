@@ -406,6 +406,7 @@ function locate_js_modules(packagePath) {
 function analyze_single(mod_file, pkg_root) {
 	var addr
 	var lib
+	var obj
 	clear_dicts()
     cur_file = mod_file
     try {
