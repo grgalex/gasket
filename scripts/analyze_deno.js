@@ -2,6 +2,7 @@ import {SimplePropertyRetriever} from './ffdir.js'
 import yargz from 'npm:yargs';
 import { hideBin } from 'npm:yargs/helpers'
 import * as fs from 'node:fs'
+import * as os from 'node:os'
 import * as path from 'node:path'
 
 const yargs = yargz(hideBin(process.argv))
