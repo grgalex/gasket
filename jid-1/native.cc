@@ -56,7 +56,7 @@ std::vector<std::string> extract_foreign_data_addresses(const std::vector<void*>
   std::regex address_regex(R"(foreign address\s*:\s*(0x[0-9a-fA-F]+))");
 
   for (void* ptr : overloads) {
-    std::string output = _v8_internal_Print_Object_To_String(ptr);
+    std::string output = print_fn(ptr);
 
     std::smatch match;
     if (std::regex_search(output, match, address_regex)) {
