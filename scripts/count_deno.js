@@ -7,7 +7,8 @@ import * as path from 'node:path'
 const yargs = yargz(hideBin(process.argv))
 
 self.mod = {}
-process.dlopen(mod, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-1/build/Debug/native.node', 0)
+// process.dlopen(mod, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-1/build/Debug/native.node', 0)
+process.dlopen(mod, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-artifact/build/Debug/native.node', 0)
 
 self.objects_examined = 0
 self.callable_objects = 0
@@ -79,6 +80,7 @@ function recursive_inspect(obj, jsname) {
                 self.callable_objects += 1
 
             ident = self.mod.exports.id(v)
+            console.log(ident)
             if (seen.has(ident)) {
                 console.log('ALREADY SEEN')
                 continue
