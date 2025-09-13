@@ -16,26 +16,26 @@ self.objects_examined = 0
 self.callable_objects = 0
 self.foreign_callable_objects = 0
 
-fqn2failed = {}
-fqn2mod = {}
-fqn2obj = {}
-fqn2overloadsaddr = {}
-fqn2overloads = {}
-fqn2cbaddr = {}
-fqn2cbaddr2 = {}
-fqn2cb = {}
-fqn2cb2 = {}
-fqn2cfunc = {}
-fqn2cfuncaddr = {}
+self.fqn2failed = {}
+self.fqn2mod = {}
+self.fqn2obj = {}
+self.fqn2overloadsaddr = {}
+self.fqn2overloads = {}
+self.fqn2cbaddr = {}
+self.fqn2cbaddr2 = {}
+self.fqn2cb = {}
+self.fqn2cb2 = {}
+self.fqn2cfunc = {}
+self.fqn2cfuncaddr = {}
+self.
+self.fqn2type = {}
+self.
+self.addr2sym = {}
+self.
+self.cbs_set = new Set()
+self.cbs = []
 
-fqn2type = {}
-
-addr2sym = {}
-
-cbs_set = new Set()
-cbs = []
-
-final_result = {
+self.final_result = {
     'objects_examined': 0,
     'callable_objects': 0,
     'foreign_callable_objects': 0,
@@ -62,15 +62,6 @@ function parse_args() {
       })
       .help()
       .argv;
-}
-
-
-self.final_result = {
-    'objects_examined': 0,
-    'callable_objects': 0,
-    'foreign_callable_objects': 0,
-    'duration_sec': 0,
-    'modules': []
 }
 
 /*
