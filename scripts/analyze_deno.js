@@ -6,7 +6,7 @@ import * as path from 'node:path'
 
 const yargs = yargz(hideBin(process.argv))
 
-RESOLVE_SCRIPT_PATH = '/home/george.alexopoulos/jsxray/prv-jsxray/scripts/resolve_syms.py'
+(globalThis as any).RESOLVE_SCRIPT_PATH = '/home/george.alexopoulos/jsxray/prv-jsxray/scripts/resolve_syms.py'
 
 self.mod = {}
 // process.dlopen(mod, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-1/build/Debug/native.node', 0)
