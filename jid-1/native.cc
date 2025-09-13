@@ -195,6 +195,7 @@ Napi::Value jid2(const Napi::CallbackInfo& info) {
 
 Napi::Object Init(Napi::Env env, Napi::Object exports) {
   exports.Set("id", Napi::Function::New(env, jid2));
+  exports.Set("getcb", Napi::Function::New(env, getcb));
   return exports;
 }
 
