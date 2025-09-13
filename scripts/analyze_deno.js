@@ -129,7 +129,7 @@ function gdb_resolve(addresses) {
 	fs.writeFileSync(addr_file, JSON.stringify(addresses, null, 2));
 
 	// var cmd = `bash -c 'python3 ${RESOLVE_SCRIPT_PATH} -p ${pid} -i ${addr_file} -o ${res_file}'`
-    args = [RESOLVE_SCRIPT_PATH,
+    var args = [RESOLVE_SCRIPT_PATH,
             '-p', String(pid),
             '-i', addr_file,
             '-o', res_file]
