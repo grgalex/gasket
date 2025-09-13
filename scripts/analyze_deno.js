@@ -10,7 +10,7 @@ globalThis.RESOLVE_SCRIPT_PATH = '/home/george.alexopoulos/jsxray/prv-jsxray/scr
 
 self.mod = {}
 // process.dlopen(mod, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-1/build/Debug/native.node', 0)
-process.dlopen(mod, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-artifact/build/Debug/native.node', 0)
+process.dlopen(mod, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-1/build/Debug/native.node', 0)
 
 self.objects_examined = 0
 self.callable_objects = 0
