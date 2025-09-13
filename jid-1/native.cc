@@ -130,6 +130,9 @@ Napi::Value getcb(const Napi::CallbackInfo& info) {
     void *sfi_addr;
     void *fti_addr;
 
+    if (!print_fn)
+		print_fn = (PrintObjectFn)dlsym(handle, "_Z35_v8_internal_Print_Object_To_StringPv");
+
     // if (info.Length() < 1) {
 	// 	Napi::TypeError::New(env, "Expected 1 argument").ThrowAsJavaScriptException();
 	// 	return env.Null();
