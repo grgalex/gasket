@@ -122,7 +122,7 @@ function gdb_resolve(addresses) {
     const addr_file = path.join(tmp_dir, `addr_${randomUUID()}.json`);
     const res_file = path.join(tmp_dir, `res_${randomUUID()}.json`);
 
-    pid = process.pid
+    var pid = process.pid
 
 	fs.writeFileSync(addr_file, JSON.stringify(addresses, null, 2));
 
@@ -150,8 +150,8 @@ function gdb_resolve(addresses) {
 }
 
 function extract_fcb_invoke(fqn) {
-    obj = fqn2obj[fqn]
-	res = mod.exports.extract_fcb_invoke(obj)
+    var obj = fqn2obj[fqn]
+	var res = mod.exports.extract_fcb_invoke(obj)
     if (res == 'NONE') {
         fqn2failed[fqn] = 'EXTRACT_FCB_INOKE'
     } else { /* res = address of cb2 */
@@ -162,8 +162,8 @@ function extract_fcb_invoke(fqn) {
 
 function extract_napi(fqn) {
     console.log(`Extract napi called: ${fqn}`)
-    obj = fqn2obj[fqn]
-	res = mod.exports.extract_napi(obj)
+    var obj = fqn2obj[fqn]
+	var res = mod.exports.extract_napi(obj)
     if (res == 'NONE') {
         fqn2failed[fqn] = 'EXTRACT_NAPI'
     } else {
@@ -173,8 +173,8 @@ function extract_napi(fqn) {
 }
 
 function extract_nan(fqn) {
-    obj = fqn2obj[fqn]
-	res = mod.exports.extract_nan(obj)
+    var obj = fqn2obj[fqn]
+	var res = mod.exports.extract_nan(obj)
     if (res == 'NONE') {
         fqn2failed[fqn] = 'EXTRACT_NAN'
     } else {
@@ -184,7 +184,7 @@ function extract_nan(fqn) {
 }
 
 function extract_cfunc(fqn) {
-	cb = fqn2cb[fqn]
+	var cb = fqn2cb[fqn]
 
 	if (cb.includes('mod.exports.mpl')
             && cb.includes('FunctionCallbackWrapper6Invoke')) {
@@ -199,7 +199,7 @@ function extract_cfunc(fqn) {
 }
 
 function extract_cfunc_2(fqn) {
-	cb = fqn2cb2[fqn]
+	var cb = fqn2cb2[fqn]
 
     // Napi::ObjectWrap::ConstructorCallbackWrapper
     if (cb.includes('Napi') && cb.includes('ObjectWrap') && cb.includes('ConstructorCallbackWrapper')) {
@@ -312,9 +312,15 @@ function clear_dicts() {
 
 
 function recursive_inspect(obj, jsname) {
-    pending = [[obj, jsname]]
+    var pending = [[obj, jsname]]
     console.log(`pending = ${pending}`)
-    seen = new Set()
+    var seen = new Set()
+	var desc_names
+	var desc
+	var descname
+	var getter
+	var setter
+	var v
 
     // XXX: BFS. Use queue: insert using .push(),
     //      get head using .shift
@@ -360,7 +366,7 @@ function recursive_inspect(obj, jsname) {
             if (typeof(obj) == 'function')
                 callable_objects += 1
 
-            ident = mod.exports.id(v)
+            var ident = mod.exports.id(v)
             if (seen.has(ident)) {
                 console.log('ALREADY SEEN')
                 continue
@@ -398,6 +404,8 @@ function locate_js_modules(packagePath) {
 }
 
 function analyze_single(mod_file, pkg_root) {
+	var addr
+	var lib
 	clear_dicts()
     cur_file = mod_file
     try {
@@ -406,11 +414,11 @@ function analyze_single(mod_file, pkg_root) {
         console.log(error)
         return
     }
-    jsname = get_mod_fqn(mod_file, pkg_root)
+    var jsname = get_mod_fqn(mod_file, pkg_root)
     fqn2mod[jsname] = obj
     console.log(`${mod_file}: jsname = ${jsname}`)
     recursive_inspect(obj, jsname)
-	cbs = Array.from(cbs_set)
+	var cbs = Array.from(cbs_set)
     // XXX: Initialize Set with CBS!
     var resolve_addresses = new Set(cbs)
 
@@ -439,7 +447,7 @@ function analyze_single(mod_file, pkg_root) {
     for (let fqn in fqn2overloadsaddr) {
         for (let addr of fqn2overloadsaddr[fqn]) {
             try {
-                lib = addr2sym[addr].library
+                var lib = addr2sym[addr].library
             } catch (error){
                 console.log(`Error: ${error}`)
                 fqn2failed[fqn] = 'OVERLOAD_RESOLUTION'
@@ -506,7 +514,7 @@ function analyze_single(mod_file, pkg_root) {
 
     console.log('FQN2CFUNCADDR')
     console.log(fqn2cfuncaddr)
-
+	var addr_dec
     resolve_addresses.clear()
     for (let fqn in fqn2cfuncaddr) {
         addr_dec = String(Number(fqn2cfuncaddr[fqn]))
