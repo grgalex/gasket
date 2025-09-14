@@ -571,6 +571,7 @@ function get_mod_fqn(fullPath, packageRoot) {
 
 function check_bingo(obj, jsname, par) {
     var jres
+    var lib
     var cb
     var overloads
     var b
@@ -587,15 +588,18 @@ function check_bingo(obj, jsname, par) {
         overloads = jres['overloads']
         if (overloads.length > 0 &&  "__GASKET_LIBRARY_PATH___" in par) {
             console.log('IN HERE')
+            lib = par['__GASKET_LIBRARY_PATH___']
             b = {
                  'jsname': jsname,
                  'cfunc': jsname.split(".").pop(),
-                 'library': par['__GASKET_LIBRARY_PATH___'],
+                 'library': lib,
                  'DENO_FFI': true
                  }
 
             console.log(b)
             final_result['bridges'].push(b)
+            if (!(final_result['jump_libs'].includes(lib)))
+                final_result['jump_libs'].push(lib)
             return
         }
         console.log(`FQN = ${jsname}`)
