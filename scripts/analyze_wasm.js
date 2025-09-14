@@ -80,8 +80,8 @@ function parseWasmFuncExports(filePath) {
   // 2) regex parse
   const re = /^\s*-\s*func\[(\d+)\]\s*<([^>]*)>\s*->\s*"([^"]*)"\s*$/;
 
-  const nameInAngleByIndex = {};
-  const exportsByIndex = {};
+  const idx2cfunc = {};
+  const idx2jsnames = {};
 
   for (const line of output.split(/\r?\n/)) {
     const m = re.exec(line);
@@ -91,10 +91,10 @@ function parseWasmFuncExports(filePath) {
     const internalName = m[2];
     const exportName = m[3];
 
-    if (!(index in nameInAngleByIndex)) {
-      nameInAngleByIndex[index] = internalName;
+    if (!(index in idx2cfunc)) {
+      idx2cfunc[index] = internalName;
     }
-    (exportsByIndex[index] ??= []).push(exportName);
+    (idx2jsnames[index] ??= []).push(exportName);
   }
 
   return { idx2cfunc, idx2jsnames };
@@ -583,24 +583,10 @@ function recursive_inspect(obj, jsname) {
         [obj, jsname] = pending.shift()
         console.log(`jsname = ${jsname}`)
 
-        if (!(obj instanceof(Object))) {
+        if (!(obj instanceof(Object)) && (typeof obj != "object")) {
             continue
         }
-        desc_names = Object.getOwnPropertyNames(obj)
-        console.log(`NAMES: ${desc_names}`)
-        for (const name of Object.getOwnPropertyNames(obj)) {
-          desc = Object.getOwnPropertyDescriptor(obj, name);
-          descname = jsname + '.' + name
-          console.log(`DESC: ${descname}`)
-          getter = desc['get']
-          setter = desc['set']
-          if (typeof(getter) == 'function') {
-              check_bingo(getter, descname + '.' + 'GET')
-          }
-          if (typeof(setter) == 'function') {
-              check_bingo(setter, descname + '.' + 'SET')
-          }
-        }
+
         if (typeof(obj) == 'function') {
             check_bingo(obj, jsname)
         }
@@ -614,7 +600,7 @@ function recursive_inspect(obj, jsname) {
               continue
             }
             objects_examined += 1
-            if (typeof v == 'undefined' || !(v instanceof(Object))) {
+            if (typeof v == 'undefined' || !(!(obj instanceof(Object)) && (typeof obj != "object"))) {
                 continue
             }
 
@@ -657,12 +643,10 @@ function main() {
     js_files = locate_js_modules(args.root)
 	wasm_files = locate_wasm_files(args.root)
     // so_files = deduplicate_paths(so_files)
-    console.log(`Native extension files :\n${so_files.join('\n')}`)
     console.log(`WASM files :\n${wasm_files.join('\n')}`)
 
     for (const wasm_file of wasm_files) {
 	  analyze_wasm(wasm_file)
-      final_result['wasm_files'].push(wasm_file)
     }
 
 	console.log(`WASM ANALYSIS`)
