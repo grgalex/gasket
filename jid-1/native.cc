@@ -120,18 +120,20 @@ std::string extract_callback_and_overloads_json(const std::string& input) {
 Napi::Value getcb(const Napi::CallbackInfo& info) {
 	Napi::Env env = info.Env();
 	std::string msg;
-
-    void *address;
-    auto new_info = (CallbackInfoPublic&)(info);
-	auto x = *(new_info._argv);
-	address = *(void **)x;
-
     void *jsfunc_addr;
     void *sfi_addr;
     void *fti_addr;
 
-    if (!print_fn)
-		print_fn = (PrintObjectFn)dlsym(handle, "_Z35_v8_internal_Print_Object_To_StringPv");
+    // void *address;
+    auto new_info = (CallbackInfoPublic&)(info);
+	auto x = *(new_info._argv);
+	jsfunc_addr = *(void **)x;
+
+
+    // void* handle = dlopen(NULL, RTLD_LAZY);
+
+    // if (!print_fn)
+	// 	print_fn = (PrintObjectFn)dlsym(handle, "_Z35_v8_internal_Print_Object_To_StringPv");
 
     // if (info.Length() < 1) {
 	// 	Napi::TypeError::New(env, "Expected 1 argument").ThrowAsJavaScriptException();
@@ -143,12 +145,17 @@ Napi::Value getcb(const Napi::CallbackInfo& info) {
 	// 	return env.Null();
     // }
 
-    std::cout << "V8 Object Address: " << address << std::endl;
+    std::cout << "JSFUNC address: " << jsfunc_addr << std::endl;
 
-    jsfunc_addr = *(void**)address;
+    // jsfunc_addr = *(void**)address;
+    // bool sane = ((((uintptr_t)jsfunc_addr >> 47) + 1) & ~1ULL) == 0;
+    // // bool sane = (((jsfunc_addr >> 47) + 1) & ~1ULL) == 0;
+    // if (!sane)
+    //     std::cout << "JSFUNC ADDRESS INSANE" << jsfunc_addr << std::endl;
 
-    if (!jsfunc_addr)
-        goto out_with_null;
+
+    // if (!jsfunc_addr || !sane)
+    //     goto out_with_null;
 
     msg = print_fn(jsfunc_addr);
 
@@ -181,14 +188,13 @@ out:
 Napi::Value jid2(const Napi::CallbackInfo& info) {
 	Napi::Env env = info.Env();
 	std::string ret;
-    void* handle = dlopen(NULL, RTLD_LAZY);
-    PrintObjectFn print_fn;
+    // void* handle = dlopen(NULL, RTLD_LAZY);
     void *y;
     auto new_info = (CallbackInfoPublic&)(info);
 	auto x = *(new_info._argv);
 
-    if (!print_fn)
-		print_fn = (PrintObjectFn)dlsym(handle, "_Z35_v8_internal_Print_Object_To_StringPv");
+    //if (!print_fn)
+	//	print_fn = (PrintObjectFn)dlsym(handle, "_Z35_v8_internal_Print_Object_To_StringPv");
 
 	y = *(void **)x;
     ret = std::to_string(reinterpret_cast<uintptr_t>(y));
@@ -197,6 +203,9 @@ Napi::Value jid2(const Napi::CallbackInfo& info) {
 }
 
 Napi::Object Init(Napi::Env env, Napi::Object exports) {
+  void* handle = dlopen(NULL, RTLD_LAZY);
+  if (!print_fn)
+      print_fn = (PrintObjectFn)dlsym(handle, "_Z35_v8_internal_Print_Object_To_StringPv");
   exports.Set("id", Napi::Function::New(env, jid2));
   exports.Set("getcb", Napi::Function::New(env, getcb));
   return exports;

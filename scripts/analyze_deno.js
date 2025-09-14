@@ -40,6 +40,8 @@ self.
 self.cbs_set = new Set()
 self.cbs = []
 
+self.current_parent = {}
+
 self.final_result = {
     'objects_examined': 0,
     'callable_objects': 0,
@@ -203,6 +205,7 @@ function extract_cfunc(fqn) {
 
 function extract_cfunc_2(fqn) {
 	var cb = fqn2cb2[fqn]
+    var b
 
     // Napi::ObjectWrap::ConstructorCallbackWrapper
     if (cb.includes('Napi') && cb.includes('ObjectWrap') && cb.includes('ConstructorCallbackWrapper')) {
@@ -315,7 +318,7 @@ function clear_dicts() {
 
 
 function recursive_inspect(obj, jsname) {
-    var pending = [[obj, jsname]]
+    var pending = [[obj, jsname, {}]]
     console.log(`len pending = ${pending.length}`)
     var seen = new Set()
 	var desc_names
@@ -324,33 +327,35 @@ function recursive_inspect(obj, jsname) {
 	var getter
 	var setter
 	var v
+    var par = {}
 
     // XXX: BFS. Use queue: insert using .push(),
     //      get head using .shift
     while (pending.length > 0) {
-        [obj, jsname] = pending.shift()
+        [obj, jsname, par] = pending.shift()
         console.log(`jsname = ${jsname}`)
+        // console.log(`dir(par) = ${dir(par)}`)
 
         if (!(obj instanceof(Object)) && (typeof obj != "object")) {
             continue
         }
-        desc_names = Object.getOwnPropertyNames(obj)
-        console.log(`NAMES: ${desc_names}`)
-        for (const name of Object.getOwnPropertyNames(obj)) {
-          desc = Object.getOwnPropertyDescriptor(obj, name);
-          descname = jsname + '.' + name
-          console.log(`DESC: ${descname}`)
-          getter = desc['get']
-          setter = desc['set']
-          if (typeof(getter) == 'function') {
-              check_bingo(getter, descname + '.' + 'GET')
-          }
-          if (typeof(setter) == 'function') {
-              check_bingo(setter, descname + '.' + 'SET')
-          }
-        }
+        // desc_names = Object.getOwnPropertyNames(obj)
+        // console.log(`NAMES: ${desc_names}`)
+        // for (const name of Object.getOwnPropertyNames(obj)) {
+        //   desc = Object.getOwnPropertyDescriptor(obj, name);
+        //   descname = jsname + '.' + name
+        //   console.log(`DESC: ${descname}`)
+        //   getter = desc['get']
+        //   setter = desc['set']
+        //   if (typeof(getter) == 'function') {
+        //       check_bingo(getter, descname + '.' + 'GET', obj)
+        //   }
+        //   if (typeof(setter) == 'function') {
+        //       check_bingo(setter, descname + '.' + 'SET', obj)
+        //   }
+        // }
         if (typeof(obj) == 'function') {
-            check_bingo(obj, jsname)
+            check_bingo(obj, jsname, par)
         }
         console.log(`dir(obj)`)
         console.log(`${dir(obj)}`)
@@ -378,7 +383,7 @@ function recursive_inspect(obj, jsname) {
                 seen.add(ident)
             }
 
-            pending.push([v, jsname + '.' + k])
+            pending.push([v, jsname + '.' + k, obj])
         }
         seen.add(mod.exports.id(obj))
     }
@@ -410,6 +415,8 @@ async function analyze_single(mod_file, pkg_root) {
 	var addr
 	var lib
 	var obj
+    var cb
+    var b
 	clear_dicts()
     cur_file = mod_file
     try {
@@ -444,6 +451,7 @@ async function analyze_single(mod_file, pkg_root) {
 
     console.log(`FQN2OVERLOADSADDR = ${JSON.stringify(fqn2overloadsaddr, null, 2)}`)
 
+    console.log(`RESOLVE_ADDRESSES = ${Array.from(resolve_addresses)}`)
 	var res1 = gdb_resolve(Array.from(resolve_addresses))
     for (let addr in res1) {
       addr2sym[addr] = res1[addr]
@@ -572,16 +580,35 @@ function get_mod_fqn(fullPath, packageRoot) {
     // const noExt = relativePath.replace(/\.node$/, ''); // remove .node
 }
 
-function check_bingo(obj, jsname) {
-    res = mod.exports.getcb(obj)
+function check_bingo(obj, jsname, par) {
+    var jres
+    var cb
+    var overloads
+    var b
+    console.log(`dir(par) = ${dir(par)}`)
+    var res = mod.exports.getcb(obj)
     if (res == 'NONE') {
         // fqn2failed[jsname] = 'FAILED_GETCB'
         return
     } else {
+        // console.log('IN HERE')
         foreign_callable_objects += 1
         jres = JSON.parse(res)
         cb = jres['callback']
         overloads = jres['overloads']
+        if (overloads.length > 0 &&  "__GASKET_LIBRARY_PATH___" in par) {
+            console.log('IN HERE')
+            b = {
+                 'jsname': jsname,
+                 'cfunc': jsname.split(".").pop(),
+                 'library': par['__GASKET_LIBRARY_PATH___'],
+                 'DENO_FFI': true
+                 }
+
+            console.log(b)
+            final_result['bridges'].push(b)
+            return
+        }
         console.log(`FQN = ${jsname}`)
         console.log(`cb = ${cb}`)
         if (cb == '0') {
@@ -592,7 +619,7 @@ function check_bingo(obj, jsname) {
         // console.log('CBS = (next line)')
         // console.log(cbs_set)
         fqn2cbaddr[jsname] = cb
-        fqn2overloadsaddr[jsname] = overloads
+        // fqn2overloadsaddr[jsname] = overloads
         fqn2obj[jsname] = obj
     }
 }
