@@ -665,6 +665,10 @@ function main() {
       final_result['wasm_files'].push(wasm_file)
     }
 
+	console.log(`WASM ANALYSIS`)
+	console.log(`WASM FILE idx2jsnames: ${JSON.stringify(wasm_file_idx2jsnames, null, 2)}`)
+	console.log(`WASM FILE idx2cfunc: ${JSON.stringify(wasm_file_idx2cfunc, null, 2)}`)
+
     for (const js_file of js_files) {
       analyze_single(js_file, args.root);
       final_result['modules'].push(js_file)
