@@ -430,6 +430,11 @@ async function analyze_single(mod_file, pkg_root) {
     fqn2mod[jsname] = obj
     console.log(`${mod_file}: jsname = ${jsname}`)
     recursive_inspect(obj, jsname)
+
+    return
+
+
+
 	var cbs = Array.from(cbs_set)
     // XXX: Initialize Set with CBS!
     var resolve_addresses = new Set(cbs)
@@ -635,6 +640,7 @@ async function foo() {
     var output_file = args.output
 
     console.log(`Package root = ${args.root}`)
+    console.log(`Output file = ${args.output}`)
 
     var so_files = locate_js_modules(args.root)
 
@@ -658,71 +664,12 @@ async function foo() {
     self.final_result['foreign_callable_objects'] = foreign_callable_objects
 
     if (output_file !== undefined) {
-	    fs.writeFileSync(output_file, JSON.stringify(self.final_result, null, 2));
+	    Deno.writeTextFileSync(output_file, JSON.stringify(self.final_result, null, 2));
         console.log(`Wrote bridges to ${output_file}`)
     }
     else {
         console.log(JSON.stringify(self.final_result, null, 2))
     }
 }
-
-// function recursive_inspect(obj, jsname) {
-//     console.log('recursive_inspect')
-//     var pending = [[obj, jsname]]
-//     console.log(pending)
-//     var seen = new Set()
-//     var popped
-//     var v
-//     var ident
-//
-//     // XXX: BFS. Use queue: insert using .push(),
-//     //      get head using .shift
-//     while (pending.length > 0) {
-//         console.log('fib')
-//         popped = pending.shift()
-//         obj = popped[0]
-//         jsname = popped[1]
-//         console.log(`jsname = ${jsname}`)
-//
-//         for (const k of dir(obj)) {
-//             console.log(`getattr(${jsname}, ${k})`)
-//             try {
-//               v = obj[k]
-//             } catch(error) {
-//               console.log(error)
-//               continue
-//             }
-//             self.objects_examined += 1
-//             if (typeof v == 'undefined' || !(v instanceof(Object))) {
-//                 continue
-//             }
-//
-//             if (typeof(obj) == 'function')
-//                 self.callable_objects += 1
-//
-//             ident = self.mod.exports.id(v)
-//             console.log(ident)
-//             if (seen.has(ident)) {
-//                 console.log('ALREADY SEEN')
-//                 continue
-//             } else {
-//                 seen.add(ident)
-//             }
-//
-//             pending.push([v, jsname + '.' + k])
-//         }
-//         seen.add(self.mod.exports.id(obj))
-//     }
-// }
-//
-// function analyze_single(mod_file, pkg_root) {
-//     var cur_file = mod_file
-//     var obj = import(mod_file)
-//
-//     var jsname = 'foo'
-//     console.log(`${mod_file}: jsname = ${jsname}`)
-//     recursive_inspect(obj, jsname)
-// }
-//
 
 await foo()
