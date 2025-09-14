@@ -275,7 +275,7 @@ function locate_js_modules(packagePath) {
 
             if (stat.isDirectory()) {
                 walkDir(fullPath); // Recursive call for directories
-            } else if (file.endsWith('js')) {
+            } else if (file.endsWith('.js')) {
                 soFiles.push(path.resolve(fullPath)); // Add .so files to the list
             }
         });
