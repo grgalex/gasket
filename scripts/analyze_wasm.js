@@ -29,6 +29,7 @@ fqn2cfuncaddr = {}
 
 wasm_file_idx2jsnames = {}
 wasm_file_idx2cfunc = {}
+wasmobject2jsnames = {}
 
 fqn2type = {}
 
@@ -72,32 +73,34 @@ function parse_args() {
 
 
 function parseWasmFuncExports(filePath) {
-  // 1) run wasm-objdump synchronously
-  const output = execSync(`wasm-objdump -xj Export ${filePath}`, {
-    encoding: "utf8",
-  });
+    // 1) run wasm-objdump synchronously
+    const output = execSync(`wasm-objdump -xj Export ${filePath}`, {
+      encoding: "utf8",
+    });
 
-  // 2) regex parse
-  const re = /^\s*-\s*func\[(\d+)\]\s*<([^>]*)>\s*->\s*"([^"]*)"\s*$/;
+    // 2) regex parse
+    const re = /^\s*-\s*func\[(\d+)\]\s*<([^>]*)>\s*->\s*"([^"]*)"\s*$/;
 
-  const idx2cfunc = {};
-  const idx2jsnames = {};
+    const idx2cfunc = {};
+    const idx2jsnames = {};
+	const allJsNames = [];
 
-  for (const line of output.split(/\r?\n/)) {
-    const m = re.exec(line);
-    if (!m) continue;
+    for (const line of output.split(/\r?\n/)) {
+      const m = re.exec(line);
+      if (!m) continue;
 
-    const index = Number(m[1]);
-    const internalName = m[2];
-    const exportName = m[3];
+      const index = Number(m[1]);
+      const internalName = m[2];
+      const exportName = m[3];
 
-    if (!(index in idx2cfunc)) {
-      idx2cfunc[index] = internalName;
+      if (!(index in idx2cfunc)) {
+        idx2cfunc[index] = internalName;
+      }
+      (idx2jsnames[index] ??= []).push(exportName);
+	  allJsNames.push(exportName);
     }
-    (idx2jsnames[index] ??= []).push(exportName);
-  }
 
-  return { idx2cfunc, idx2jsnames };
+    return { idx2cfunc, idx2jsnames, allJsNames };
 }
 
 /*
@@ -135,192 +138,9 @@ function deduplicate_paths(paths) {
     return result;
 }
 
-function demangle_cpp(mangled) {
-    const cmd = `c++filt '${mangled}'`;
-    try {
-      const out = execSync(cmd, { encoding: 'utf-8', shell: true });
-      return out.trim();
-    } catch (err) {
-      console.error(err);
-      throw err;
-    }
-}
-
 function dir(obj) {
     // console.log(`dir(): ${obj}`)
     return SimplePropertyRetriever.getOwnAndPrototypeEnumAndNonEnumProps(obj);
-}
-
-function gdb_resolve(addresses) {
-    const tmp_dir = os.tmpdir();
-    const addr_file = path.join(tmp_dir, `addr_${randomUUID()}.json`);
-    const res_file = path.join(tmp_dir, `res_${randomUUID()}.json`);
-
-    pid = process.pid
-
-	fs.writeFileSync(addr_file, JSON.stringify(addresses, null, 2));
-
-	// var cmd = `bash -c 'python3 ${RESOLVE_SCRIPT_PATH} -p ${pid} -i ${addr_file} -o ${res_file}'`
-    args = [RESOLVE_SCRIPT_PATH,
-            '-p', String(pid),
-            '-i', addr_file,
-            '-o', res_file]
-	// console.log(`CMD = python3 ${args}`)
-
-	var result = spawnSync('python3', args, { encoding: 'utf-8' });
-	const out = result.stdout
-	// console.log('OUT:')
-	// console.log(out)
-	const err = result.stderr
-	// console.log('ERR:')
-	// console.log(err)
-
-	const raw = fs.readFileSync(res_file, 'utf-8');
-	result = JSON.parse(raw);
-	console.log('GDB RESULT:')
-	console.log(result)
-
-	return result
-}
-
-function extract_fcb_invoke(fqn) {
-    obj = fqn2obj[fqn]
-	res = v8.extract_fcb_invoke(obj)
-    if (res == 'NONE') {
-        fqn2failed[fqn] = 'EXTRACT_FCB_INOKE'
-    } else { /* res = address of cb2 */
-        fqn2type[fqn] = 'fcb'
-        fqn2cbaddr2[fqn] = res
-	}
-}
-
-function extract_napi(fqn) {
-    console.log(`Extract napi called: ${fqn}`)
-    obj = fqn2obj[fqn]
-	res = v8.extract_napi(obj)
-    if (res == 'NONE') {
-        fqn2failed[fqn] = 'EXTRACT_NAPI'
-    } else {
-        fqn2type[fqn] = 'napi'
-        fqn2cfuncaddr[fqn] = res
-	}
-}
-
-function extract_nan(fqn) {
-    obj = fqn2obj[fqn]
-	res = v8.extract_nan(obj)
-    if (res == 'NONE') {
-        fqn2failed[fqn] = 'EXTRACT_NAN'
-    } else {
-        fqn2type[fqn] = 'nan'
-        fqn2cfuncaddr[fqn] = res
-	}
-}
-
-function extract_cfunc(fqn) {
-	cb = fqn2cb[fqn]
-
-	if (cb.includes('v8impl')
-            && cb.includes('FunctionCallbackWrapper6Invoke')) {
-		extract_fcb_invoke(fqn)
-	}
-    else if (cb.includes('Nan') && cb.includes('imp')) {
-        extract_nan(fqn)
-    }
-    else {
-        fqn2cfuncaddr[fqn] = fqn2cbaddr[fqn]
-    }
-}
-
-function extract_cfunc_2(fqn) {
-	cb = fqn2cb2[fqn]
-
-    // Napi::ObjectWrap::ConstructorCallbackWrapper
-    if (cb.includes('Napi') && cb.includes('ObjectWrap') && cb.includes('ConstructorCallbackWrapper')) {
-        var dem = demangle_cpp(cb)
-        var cls = dem.match(/<([^>]*)>/)[1];
-        var fn = cls + "::" + cls.split("::").pop();
-        console.log(`fn = ${fn}`)
-        // XXX: Spaghettoni
-        var lib = addr2sym[fqn2cbaddr2[fqn]].library
-        b = {
-             'jsname': fqn,
-             'cfunc': fn,
-             'library': lib
-             }
-
-        console.log(b)
-        final_result['bridges'].push(b)
-        if (!(final_result['jump_libs'].includes(lib)))
-            final_result['jump_libs'].push(lib)
-    }
-
-    // Generic Napi
-	else if ((cb.includes('Napi') && cb.includes('CallbackData') && cb.includes('Wrapper'))
-           || ((cb.includes('Napi') && cb.includes('InstanceWrap')))
-           || ((cb.includes('Napi') && cb.includes('ObjectWrap')))) {
-
-		extract_napi(fqn)
-	}
-
-    else if (cb.includes('neon') && cb.includes('sys')) {
-        var name = v8.extract_neon(fqn2obj[fqn])
-        if (name !== 'NONE') {
-            const match = name.match(/#([^>]+)>/);
-            if (match) {
-                fn = match[1];
-            } else { /* failed regex */
-                fqn2failed[fqn] = 'NEON_FAIL'
-                return;
-            }
-            lib = cur_file
-            b = {
-                 'jsname': fqn,
-                 'cfunc': fn,
-                 'library': lib
-                 }
-            final_result['bridges'].push(b)
-            if (!(final_result['jump_libs'].includes(lib)))
-                final_result['jump_libs'].push(lib)
-        }
-    }
-    // napi-rs
-    else if (cb.includes('_napi_internal_register')) {
-        var fn = demangle_cpp(cb)
-        console.log(`fn = ${fn}`)
-        var lib = addr2sym[fqn2cbaddr2[fqn]].library
-        b = {
-             'jsname': fqn,
-             'cfunc': fn,
-             'library': lib
-             }
-
-        console.log(b)
-        final_result['bridges'].push(b)
-        if (!(final_result['jump_libs'].includes(lib)))
-            final_result['jump_libs'].push(lib)
-    }
-
-    // node-bindgen
-    else if (cb.includes('napi_')) {
-        var fn = demangle_cpp(cb)
-        console.log(`fn = ${fn}`)
-        var lib = addr2sym[fqn2cbaddr2[fqn]].library
-        b = {
-             'jsname': fqn,
-             'cfunc': fn,
-             'library': lib
-             }
-
-        console.log(b)
-        final_result['bridges'].push(b)
-        if (!(final_result['jump_libs'].includes(lib)))
-            final_result['jump_libs'].push(lib)
-    }
-
-    else {
-        fqn2cfuncaddr[fqn] = fqn2cbaddr2[fqn]
-    }
 }
 
 function clear_dicts() {
@@ -547,28 +367,65 @@ function get_mod_fqn(fullPath, packageRoot) {
     // const noExt = relativePath.replace(/\.node$/, ''); // remove .node
 }
 
+function extract_jsnames_from_export(text) {
+  const out = [];
+  const seen = new Set();
+  const re = /#([^:\s]+)\s*:/; // captures the token after '#' up to ':' (name)
+
+  for (const line of text.split(/\r?\n/)) {
+    if (!line.includes("js-to-wasm")) continue;
+    const m = re.exec(line);
+    if (m) {
+      const name = m[1];
+      if (!seen.has(name)) {
+        seen.add(name);
+        out.push(name);
+      }
+    }
+  }
+  return out;
+}
+
+function extract_wasm_instance_address(text) {
+    const re = /-\s*Wasm instance:\s*(0x[0-9a-fA-F]+)/;
+    const m = re.exec(text);
+    return m ? m[1] : null;
+}
+
+function extract_wasm_idx(text) {
+  const re = /-\s*Wasm function index:\s*(\d+)/;
+  const m = re.exec(text);
+  return m ? parseInt(m[1], 10) : null;
+}
+
+function extract_exports_addr(text) {
+  const re = /-\s*exports_object:\s*(0x[0-9a-fA-F]+)/;
+  const m = re.exec(text);
+  return m ? m[1] : null;
+}
+
 function check_bingo(obj, jsname) {
-    res = v8.getcb(obj)
-    if (res == 'NONE') {
+	var res
+	var idx
+	var raw
+
+	raw = v8.job(obj)
+	idxstr = extract_wasm_idx(raw)
+    if (idxstr === null) {
         // fqn2failed[jsname] = 'FAILED_GETCB'
         return
     } else {
-        foreign_callable_objects += 1
-        jres = JSON.parse(res)
-        cb = jres['callback']
-        overloads = jres['overloads']
-        console.log(`FQN = ${jsname}`)
-        console.log(`cb = ${cb}`)
-        if (cb == '0') {
-            fqn2failed[jsname] = 'NULL_CB'
-            return
-        }
-        cbs_set.add(cb)
-        // console.log('CBS = (next line)')
-        // console.log(cbs_set)
-        fqn2cbaddr[jsname] = cb
-        fqn2overloadsaddr[jsname] = overloads
-        fqn2obj[jsname] = obj
+		idx = parseInt(idxstr)
+	    fqn2idx[fqn] = idx
+		wasm_instance_address = parseInt(extract_wasm_instance_address(raw))
+		fqn2wasminstance[jsname] = wasm_instance_address
+		if wasm_instance_address not in wasmobject2jsnames {
+			raw = v8.job_addr(wasm_instance_address)
+			exports_addr = parseInt(extract_exports_addr(raw))
+			raw = v8.jod_addr(exports_addr)
+			jsnames = extract_jsnames_from_export(raw)
+			wasmobject2jsnames[wasm_instance_address] = jsnames
+		}
     }
 }
 
@@ -625,12 +482,16 @@ function analyze_wasm(wasm_file) {
 	var res
 	var idx2cfunc
 	var idx2jsnames
+	var alljsnames
 	res = parseWasmFuncExports(wasm_file)
 	idx2cfunc = res.idx2cfunc
 	idx2jsnames = res.idx2jsnames
+	alljsnames = res.allJsNames
+
 
 	wasm_file_idx2cfunc[wasm_file] = idx2cfunc
 	wasm_file_idx2jsnames[wasm_file] = idx2jsnames
+	wasm_file_jsnames[wasm_file] = alljsnames
 }
 
 function main() {
@@ -652,6 +513,7 @@ function main() {
 	console.log(`WASM ANALYSIS`)
 	console.log(`WASM FILE idx2jsnames: ${JSON.stringify(wasm_file_idx2jsnames, null, 2)}`)
 	console.log(`WASM FILE idx2cfunc: ${JSON.stringify(wasm_file_idx2cfunc, null, 2)}`)
+	console.log(`WASM FILE jsnames: ${JSON.stringify(wasm_file_jsnames, null, 2)}`)
 
     for (const js_file of js_files) {
       analyze_single(js_file, args.root);
