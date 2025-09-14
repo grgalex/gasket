@@ -18,17 +18,16 @@ cur_file = 'none'
 fqn2failed = {}
 fqn2mod = {}
 fqn2obj = {}
-fqn2overloadsaddr = {}
-fqn2overloads = {}
-fqn2cbaddr = {}
-fqn2cbaddr2 = {}
-fqn2cb = {}
-fqn2cb2 = {}
-fqn2cfunc = {}
-fqn2cfuncaddr = {}
+
+foreign_ids = new Set()
+
+fqn2idx = {}
+fqn2wasminstance = {}
+wasminstance2jsnames = {}
 
 wasm_file_idx2jsnames = {}
 wasm_file_idx2cfunc = {}
+wasm_file_jsnames = {}
 wasmobject2jsnames = {}
 
 fqn2type = {}
@@ -146,24 +145,73 @@ function dir(obj) {
 function clear_dicts() {
     fqn2mod = {}
     fqn2obj = {}
-    fqn2overloadsaddr = {}
-    fqn2overloads = {}
-    fqn2cbaddr = {}
-    fqn2cbaddr2 = {}
-    fqn2cb = {}
-    fqn2cb2 = {}
-    fqn2cfunc = {}
-    fqn2cfuncaddr = {}
+    fqn2idx = {}
+    fqn2wasminstance = {}
+    wasminstance2jsnames = {}
+}
 
-    fqn2type = {}
+function resolve_wasm(
+  fqn2idx,
+  fqn2wasminstance,
+  wasminstance2jsnames,
+  wasm_file_jsnames,
+  wasm_file_idx2cfunc
+) {
+    const fileToNameSet = {};
+    for (const [file, names] of Object.entries(wasm_file_jsnames)) {
+      fileToNameSet[file] = new Set(names);
+    }
 
-    addr2sym = {}
+    const fqn2cfunc = {};
+    const fqn2wasmfile = {};
+    const unresolved = [];
+    const ambiguous = [];
 
-    cbs_set = new Set()
-    cbs = []
+    for (const fqn of Object.keys(fqn2idx)) {
+      const idx = fqn2idx[fqn];
+      const inst = fqn2wasminstance[fqn];
+      const jsnames = wasminstance2jsnames[inst] || [];
+
+      // find files whose name set is a superset of jsnames
+      const candidates = [];
+      for (const [file, nameSet] of Object.entries(fileToNameSet)) {
+        const ok = jsnames.every(n => nameSet.has(n));
+        if (ok) candidates.push(file);
+      }
+
+      if (candidates.length === 0) {
+        unresolved.push({ fqn, idx, jsnames });
+        continue;
+      }
+
+      // choose file
+      let chosen = null;
+      const exact = candidates.filter(f => fileToNameSet[f].size === jsnames.length);
+      if (exact.length === 1) {
+        chosen = exact[0];
+      } else if (candidates.length === 1) {
+        chosen = candidates[0];
+      } else {
+        ambiguous.push({ fqn, idx, jsnames, candidates });
+        continue;
+      }
+
+      const idx2cfunc = wasm_file_idx2cfunc[chosen] || {};
+      const cfunc = idx2cfunc[idx];
+      if (cfunc !== undefined) {
+        fqn2cfunc[fqn] = cfunc;
+        fqn2wasmfile[fqn] = chosen;
+      } else {
+        unresolved.push({ fqn, idx, jsnames, file: chosen, reason: "idx not in file" });
+      }
+    }
+
+    return { fqn2cfunc, fqn2wasmfile, unresolved, ambiguous };
 }
 
 function analyze_single(mod_file, pkg_root) {
+    var res
+	var b
 	clear_dicts()
     cur_file = mod_file
     try {
@@ -176,142 +224,23 @@ function analyze_single(mod_file, pkg_root) {
     fqn2mod[jsname] = obj
     console.log(`${mod_file}: jsname = ${jsname}`)
     recursive_inspect(obj, jsname)
-	cbs = Array.from(cbs_set)
-    // XXX: Initialize Set with CBS!
-    var resolve_addresses = new Set(cbs)
 
-    // for (let key in fqn2overloadsaddr) {
-    //     new_addrs = []
-    //     for (let addr of fqn2overloadsaddr[key]) {
-    //         console.log(addr)
-    //         dec_addr = String(Number(addr))
-    //         console.log(dec_addr)
-    //         new_addrs.push(dec_addr)
-    //     }
-    //     fqn2overloadsaddr[key] = new_addrs
-    // }
+    res = resolve_wasm(fqn2idx, fqn2wasminstance, wasminstance2jsnames, wasm_file_jsnames, wasm_file_idx2cfunc)
 
-    for (let key in fqn2overloadsaddr) {
-        fqn2overloadsaddr[key].forEach(item => resolve_addresses.add(item))
-    }
-
-    console.log(`FQN2OVERLOADSADDR = ${JSON.stringify(fqn2overloadsaddr, null, 2)}`)
-
-	var res1 = gdb_resolve(Array.from(resolve_addresses))
-    for (let addr in res1) {
-      addr2sym[addr] = res1[addr]
-    }
-
-    for (let fqn in fqn2overloadsaddr) {
-        for (let addr of fqn2overloadsaddr[fqn]) {
-            try {
-                lib = addr2sym[addr].library
-            } catch (error){
-                console.log(`Error: ${error}`)
-                fqn2failed[fqn] = 'OVERLOAD_RESOLUTION'
-                continue
-            }
-            b = {
-                 'jsname': fqn,
-                 'cfunc': addr2sym[addr].cfunc,
-                 'library': lib
-                 }
+    for (const fqn of Object.keys(res.fqn2cfunc)) {
+		var jumplib = res.fqn2wasmfile[fqn]
+		b = {
+			 'jsname': fqn,
+			 'cfunc': res.fqn2cfunc[fqn],
+			 'library': jumplib
+			 }
             final_result['bridges'].push(b)
-            if (!(final_result['jump_libs'].includes(lib)))
-                final_result['jump_libs'].push(lib)
-        }
+			if (!final_result['jump_libs'].includes(jumplib)) {
+			  final_result['jump_libs'].push(jumplib);
+			}
     }
-
-    for (let fqn in fqn2cbaddr) {
-        addr = fqn2cbaddr[fqn]
-        cb = addr2sym[addr].cfunc
-        fqn2cb[fqn] = cb
-    }
-
-    // console.log(`FQN2CB = ${JSON.stringify(fqn2cb, null, 2)}`)
-    // console.log(`FQN2OVERLOADS = ${JSON.stringify(fqn2overloads, null, 2)}`)
-    // console.log('FQN2OBJ: (next line)')
-    // console.log(fqn2obj)
-
-    for (let fqn in fqn2cbaddr) {
-        extract_cfunc(fqn)
-    }
-
-    console.log(`FQN2CBADDR2 = ${JSON.stringify(fqn2cbaddr2, null, 2)}`)
-
-    // sleepSync(1000)
-
-    resolve_addresses.clear()
-    for (let fqn in fqn2cbaddr2) {
-        addr = fqn2cbaddr2[fqn]
-        resolve_addresses.add(addr)
-    }
-	var res2 = gdb_resolve(Array.from(resolve_addresses))
-    console.log('RES2:')
-    console.log(res2)
-    for (let addr in res2) {
-        addr_dec = String(Number(addr))
-        addr2sym[addr_dec] = res2[addr]
-    }
-
-    console.log(addr2sym)
-
-    for (let fqn in fqn2cbaddr2) {
-        addr = fqn2cbaddr2[fqn]
-        try {
-            cb = addr2sym[addr].cfunc
-        } catch (error) {
-            console.log(`fqn = ${fqn}, fqn2cbaddr2 resolve ${error}`)
-        }
-            fqn2cb2[fqn] = cb
-    }
-
-    for (let fqn in fqn2cb2) {
-        extract_cfunc_2(fqn)
-    }
-
-    console.log('FQN2CFUNCADDR')
-    console.log(fqn2cfuncaddr)
-
-    resolve_addresses.clear()
-    for (let fqn in fqn2cfuncaddr) {
-        addr_dec = String(Number(fqn2cfuncaddr[fqn]))
-        fqn2cfuncaddr[fqn] = addr_dec
-        resolve_addresses.add(addr_dec)
-    }
-    console.log('RESOLVE_ADDRESSES FOR FINAL CFUNCS')
-    console.log(resolve_addresses)
-	var res3 = gdb_resolve(Array.from(resolve_addresses))
-    for (let addr in res3) {
-      addr_dec = String(Number(addr))
-      addr2sym[addr_dec] = res3[addr]
-    }
-
-    console.log('ADDR2SYM')
-    console.log(addr2sym)
-
-    console.log('FQN2CFUNCADDR')
-    console.log(fqn2cfuncaddr)
-
-
-    for (let fqn in fqn2cfuncaddr) {
-        addr = fqn2cfuncaddr[fqn]
-        try {
-            lib = addr2sym[addr].library
-        } catch (error) {
-            console.log(`Key = ${addr} not found`)
-            fqn2failed[fqn] = 'CFUNC_ADDRESS_RESOLUTION'
-            continue
-        }
-        b = {
-             'jsname': fqn,
-             'cfunc': demangle_cpp(addr2sym[addr].cfunc),
-             'library': lib
-             }
-        final_result['bridges'].push(b)
-        if (!(final_result['jump_libs'].includes(lib)))
-            final_result['jump_libs'].push(lib)
-    }
+    final_result['ambiguous'] = res.ambiguous
+    final_result['unresolved'] = res.unresolved
 }
 
 function locate_wasm_files(packagePath) {
@@ -406,32 +335,39 @@ function extract_exports_addr(text) {
 
 function check_bingo(obj, jsname) {
 	var res
+    var fqn
 	var idx
 	var raw
+    var wasm_instance_address
 
+	fqn = jsname
+	console.log(`CHECK BINGO: ${jsname}`)
 	raw = v8.job(obj)
 	idxstr = extract_wasm_idx(raw)
     if (idxstr === null) {
         // fqn2failed[jsname] = 'FAILED_GETCB'
         return
     } else {
+        ident = v8.jid(obj)
+        foreign_ids.add(ident)
 		idx = parseInt(idxstr)
 	    fqn2idx[fqn] = idx
 		wasm_instance_address = parseInt(extract_wasm_instance_address(raw))
 		fqn2wasminstance[jsname] = wasm_instance_address
-		if wasm_instance_address not in wasmobject2jsnames {
+		if (!(wasm_instance_address in wasmobject2jsnames)) {
 			raw = v8.job_addr(wasm_instance_address)
 			exports_addr = parseInt(extract_exports_addr(raw))
-			raw = v8.jod_addr(exports_addr)
+			raw = v8.job_addr(exports_addr)
 			jsnames = extract_jsnames_from_export(raw)
-			wasmobject2jsnames[wasm_instance_address] = jsnames
+			wasminstance2jsnames[wasm_instance_address] = jsnames
 		}
     }
 }
 
 function recursive_inspect(obj, jsname) {
+	var jobstr
     pending = [[obj, jsname]]
-    console.log(`pending = ${pending}`)
+    // console.log(`pending = ${pending}`)
     seen = new Set()
 
     // XXX: BFS. Use queue: insert using .push(),
@@ -457,15 +393,16 @@ function recursive_inspect(obj, jsname) {
               continue
             }
             objects_examined += 1
-            if (typeof v == 'undefined' || !(!(obj instanceof(Object)) && (typeof obj != "object"))) {
-                continue
-            }
+            // if (typeof v == 'undefined' || !(!(obj instanceof(Object)) && (typeof obj != "object"))) {
+            //     continue
+            // }
 
             if (typeof(obj) == 'function')
                 callable_objects += 1
 
             ident = v8.jid(v)
-            if (seen.has(ident)) {
+			jobstr = v8.job(v)
+		    if (seen.has(ident) && !((jobstr ?? '').includes('wasm'))) {
                 console.log('ALREADY SEEN')
                 continue
             } else {
@@ -525,7 +462,7 @@ function main() {
     final_result['duration_sec'] = duration_sec
     final_result['objects_examined'] = objects_examined
     final_result['callable_objects'] = callable_objects
-    final_result['foreign_callable_objects'] = foreign_callable_objects
+    final_result['foreign_callable_objects'] = final_result['bridges'].lengt
     final_result['count'] = final_result['bridges'].length
 
     final_result['failed'] = fqn2failed
@@ -537,5 +474,6 @@ function main() {
         console.log(JSON.stringify(final_result, null, 2))
     }
 }
+
 
 main()
