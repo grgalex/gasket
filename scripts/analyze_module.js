@@ -15,6 +15,8 @@ foreign_callable_objects = 0
 
 cur_file = 'none'
 
+use_heap = false
+
 fqn2failed = {}
 fqn2mod = {}
 fqn2obj = {}
@@ -36,11 +38,14 @@ cbs = []
 
 seen = new Set()
 cfuncs_in_bridges = new Set()
+
 heap_jsfunc_seen = new Set()
 heap_jsfunc_data = {}
 heap_jsfuncs = []
 heap_jsfuncs_before = []
+heap_jsfuncs_before_addresses = []
 heap_jsfuncs_after = []
+heap_jsfuncs_after_addresses = []
 
 final_result = {
     'objects_examined': 0,
@@ -59,7 +64,7 @@ function sleepSync(seconds) {
 }
 
 function parse_args() {
-    return yargs
+    return yargs(process.argv.slice(2))
       .option('root', {
         alias: 'r',
         type: 'string',
@@ -70,6 +75,12 @@ function parse_args() {
         alias: 'o',
         type: 'string',
         description: 'output file',
+      })
+      .option("heap_profiler", {
+        alias: 'p',
+        type: "boolean",
+        describe: "Enable verbose mode",
+        default: false
       })
       .help()
       .argv;
@@ -319,7 +330,6 @@ function clear_dicts() {
 }
 
 function analyze_single(mod_file, pkg_root) {
-    analyze_heap_before()
 	clear_dicts()
     cur_file = mod_file
     try {
@@ -332,9 +342,9 @@ function analyze_single(mod_file, pkg_root) {
     fqn2mod[jsname] = obj
     console.log(`${mod_file}: jsname = ${jsname}`)
     recursive_inspect(obj, jsname)
-
-	analyze_heap()
-
+	if (use_heap) {
+		analyze_heap()
+	}
 	cbs = Array.from(cbs_set)
     // XXX: Initialize Set with CBS!
     var resolve_addresses = new Set(cbs)
@@ -601,10 +611,15 @@ function extractJSFunctions_before(input) {
 
     while ((match = regex.exec(input)) !== null) {
 	    addr = parseInt(match[1]).toString()
-	    if (!(seen.has(addr))) {
-		    heap_jsfuncs_before.push({ address: addr, name: match[2] });
-			seen.add(addr)
-		}
+        let ob = {address: addr, name: match[2]}
+        if (!(heap_jsfuncs_before_addresses.includes(addr))){
+            heap_jsfuncs_before.push(ob);
+            heap_jsfuncs_before_addresses.push(addr);
+        }
+	    // if (!(seen.has(addr))) {
+		//     heap_jsfuncs_before.push({ address: addr, name: match[2] });
+		// 	// seen.add(addr)
+		// }
     }
 }
 
@@ -615,51 +630,64 @@ function extractJSFunctions(input) {
 
     while ((match = regex.exec(input)) !== null) {
 	    addr = parseInt(match[1]).toString()
-	    if (!(seen.has(addr))) {
-		    heap_jsfuncs_after.push({ address: addr, name: match[2] });
-			seen.add(addr)
-		}
+        let ob = {address: addr, name: match[2]}
+        if (!(heap_jsfuncs_after_addresses.includes(addr))) {
+            if (!(heap_jsfuncs_before_addresses.includes(addr))) {
+                heap_jsfuncs_after.push(ob);
+                heap_jsfuncs_after_addresses.push(addr);
+            }
+        }
     }
 }
 
 function analyze_heap_before() {
-	object_addresses = JSON.parse(v8.get_objects())
+	var object_addresses = JSON.parse(v8.get_objects())
+    var addr
+    var raw
 	for (const addr of object_addresses) {
 		raw = v8.job_addr(addr)
-		extractJSFunctions(raw)
-	}
-
-	for (const func of heap_jsfuncs) {
-		addr = func.address
-		name = func.name
-        console.log(`HEAP FUNC: ${addr} NAME=${name}`)
-		check_bingo(addr, name)
+		extractJSFunctions_before(raw)
 	}
 }
 
 
 function analyze_heap() {
-	object_addresses = JSON.parse(v8.get_objects())
+	var object_addresses = JSON.parse(v8.get_objects())
+    var raw
 	for (const addr of object_addresses) {
 		raw = v8.job_addr(addr)
 		extractJSFunctions(raw)
 	}
-    console.log(`HEAP FUNCS BEFORE: ${heap_jsfuncs_before.length}`)
+    // console.log(`HEAP FUNCS BEFORE: ${heap_jsfuncs_before.length}`)
+    // console.log(JSON.stringify(heap_jsfuncs_before, null, 2))
     console.log(`HEAP FUNCS AFTER: ${heap_jsfuncs_after.length}`)
-    heap_jsfuncs = heap_jsfuncs_after.filter(x => !heap_jsfuncs_before.includes(x));
-    console.log(`HEAP JSFUNCS FILTERED: ${heap_jsfuncs.length}`)
+    console.log(JSON.stringify(heap_jsfuncs_after, null, 2))
+
+    heap_jsfuncs = heap_jsfuncs_after
 	for (const func of heap_jsfuncs) {
 		addr = func.address
 		name = func.name
         console.log(`HEAP FUNC: ${addr} NAME=${name}`)
-		check_bingo(addr, name)
+        // check_bingo(addr, name)
+        if (!seen.has(addr)) {
+            check_bingo(addr, name)
+        }
 	}
 }
 
 function main() {
+    // console.log('HERE')
+    // console.log(`HEAP FUNCS BEFORE: ${heap_jsfuncs_before.length}`)
+    // console.log(JSON.stringify(heap_jsfuncs_before, null, 2))
     var start = Date.now()
     const args = parse_args();
     var output_file = args.output
+	if (args.heap_profiler) {
+		use_heap = true
+	}
+	if (use_heap) {
+		analyze_heap_before()
+	}
 
     console.log(`Package root = ${args.root}`)
 
@@ -672,8 +700,6 @@ function main() {
       analyze_single(so_file, args.root);
       final_result['modules'].push(so_file)
     }
-
-	// analyze_heap()
 
     var end = Date.now()
 
