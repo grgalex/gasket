@@ -9,11 +9,16 @@ import { execSync, spawnSync } from 'node:child_process';
 
 const yargs = yargz(hideBin(process.argv))
 
-globalThis.RESOLVE_SCRIPT_PATH = '/home/george.alexopoulos/jsxray/prv-jsxray/scripts/resolve_syms.py';
+if (process.env.GASKET_ROOT) {
+  globalThis.RESOLVE_SCRIPT_PATH = path.join(process.env.GASKET_ROOT, 'resolve_syms.py')
+} else {
+  globalThis.RESOLVE_SCRIPT_PATH = 'resolve-syms'
+}
 
 self.mod = {}
 // process.dlopen(mod, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-1/build/Debug/native.node', 0)
-process.dlopen(mod, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-1/build/Debug/native.node', 0)
+globalThis.JID_PATH = path.join(process.env.GASKET_ROOT, "jid-1/build/Release/native.node")
+process.dlopen(mod, globalThis.JID_PATH, 0)
 
 self.objects_examined = 0
 self.callable_objects = 0
