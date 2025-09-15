@@ -1,3 +1,5 @@
+#!/usr/bin/env deno
+
 import {SimplePropertyRetriever} from './ffdir.js'
 import yargz from 'npm:yargs';
 import { hideBin } from 'npm:yargs/helpers'
