@@ -4,12 +4,17 @@ const yargs = require('yargs');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-const {SimplePropertyRetriever} = require('./ffdir');
 const v8 = require('v8')
 const { execSync, spawnSync } = require('child_process');
 const { randomUUID } = require('crypto');
 
-RESOLVE_SCRIPT_PATH = '/home/george.alexopoulos/jsxray/prv-jsxray/scripts/resolve_syms.py'
+const {SimplePropertyRetriever} = require('gasket-tools/ffdir');
+
+if (process.env.GASKET_ROOT) {
+  RESOLVE_SCRIPT_PATH = path.join(process.env.GASKET_ROOT, 'resolve_syms.py')
+} else {
+  RESOLVE_SCRIPT_PATH = 'resolve-syms'
+}
 
 objects_examined = 0
 callable_objects = 0

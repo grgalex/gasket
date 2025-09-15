@@ -1,46 +1,56 @@
-#!/usr/bin/env node
+#!/usr/bin/env deno
 
-const yargs = require('yargs');
-const fs = require('fs');
-const path = require('path');
-const os = require('os');
-const {SimplePropertyRetriever} = require('./ffdir');
-const v8 = require('v8')
-const { execSync, spawnSync } = require('child_process');
-const { randomUUID } = require('crypto');
+import yargz from 'npm:yargs';
+import { hideBin } from 'npm:yargs/helpers'
+import * as fs from 'node:fs'
+import * as os from 'node:os'
+import * as path from 'node:path'
+import {randomUUID}  from 'node:crypto'
+import { execSync, spawnSync } from 'node:child_process';
+
+import {SimplePropertyRetriever} from 'gasket-tools/ffdir.js'
+
+const yargs = yargz(hideBin(process.argv))
 
 if (process.env.GASKET_ROOT) {
-  RESOLVE_SCRIPT_PATH = path.join(process.env.GASKET_ROOT, 'resolve_syms.py')
+  globalThis.RESOLVE_SCRIPT_PATH = path.join(process.env.GASKET_ROOT, 'resolve_syms.py')
 } else {
-  RESOLVE_SCRIPT_PATH = 'resolve-syms'
+  globalThis.RESOLVE_SCRIPT_PATH = 'resolve-syms'
 }
 
-objects_examined = 0
-callable_objects = 0
-foreign_callable_objects = 0
+self.mod = {}
+// process.dlopen(mod, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-1/build/Debug/native.node', 0)
+globalThis.JID_PATH = path.join(process.env.GASKET_ROOT, "jid-1/build/Release/native.node")
+process.dlopen(mod, globalThis.JID_PATH, 0)
 
-cur_file = 'none'
+self.objects_examined = 0
+self.callable_objects = 0
+self.foreign_callable_objects = 0
 
-fqn2failed = {}
-fqn2mod = {}
-fqn2obj = {}
-fqn2overloadsaddr = {}
-fqn2overloads = {}
-fqn2cbaddr = {}
-fqn2cbaddr2 = {}
-fqn2cb = {}
-fqn2cb2 = {}
-fqn2cfunc = {}
-fqn2cfuncaddr = {}
+self.cur_file = 'foo'
 
-fqn2type = {}
+self.fqn2failed = {}
+self.fqn2mod = {}
+self.fqn2obj = {}
+self.fqn2overloadsaddr = {}
+self.fqn2overloads = {}
+self.fqn2cbaddr = {}
+self.fqn2cbaddr2 = {}
+self.fqn2cb = {}
+self.fqn2cb2 = {}
+self.fqn2cfunc = {}
+self.fqn2cfuncaddr = {}
+self.
+self.fqn2type = {}
+self.
+self.addr2sym = {}
+self.
+self.cbs_set = new Set()
+self.cbs = []
 
-addr2sym = {}
+self.current_parent = {}
 
-cbs_set = new Set()
-cbs = []
-
-final_result = {
+self.final_result = {
     'objects_examined': 0,
     'callable_objects': 0,
     'foreign_callable_objects': 0,
@@ -51,13 +61,9 @@ final_result = {
     'bridges': [],
 }
 
-function sleepSync(seconds) {
-  const end = Date.now() + seconds * 1000;
-  while (Date.now() < end);
-}
 
 function parse_args() {
-    return yargs(process.argv.slice(2))
+    return yargs
       .option('root', {
         alias: 'r',
         type: 'string',
@@ -129,12 +135,12 @@ function gdb_resolve(addresses) {
     const addr_file = path.join(tmp_dir, `addr_${randomUUID()}.json`);
     const res_file = path.join(tmp_dir, `res_${randomUUID()}.json`);
 
-    pid = process.pid
+    var pid = process.pid
 
 	fs.writeFileSync(addr_file, JSON.stringify(addresses, null, 2));
 
 	// var cmd = `bash -c 'python3 ${RESOLVE_SCRIPT_PATH} -p ${pid} -i ${addr_file} -o ${res_file}'`
-    args = [RESOLVE_SCRIPT_PATH,
+    var args = [RESOLVE_SCRIPT_PATH,
             '-p', String(pid),
             '-i', addr_file,
             '-o', res_file]
@@ -157,8 +163,8 @@ function gdb_resolve(addresses) {
 }
 
 function extract_fcb_invoke(fqn) {
-    obj = fqn2obj[fqn]
-	res = v8.extract_fcb_invoke(obj)
+    var obj = fqn2obj[fqn]
+	var res = mod.exports.extract_fcb_invoke(obj)
     if (res == 'NONE') {
         fqn2failed[fqn] = 'EXTRACT_FCB_INOKE'
     } else { /* res = address of cb2 */
@@ -169,8 +175,8 @@ function extract_fcb_invoke(fqn) {
 
 function extract_napi(fqn) {
     console.log(`Extract napi called: ${fqn}`)
-    obj = fqn2obj[fqn]
-	res = v8.extract_napi(obj)
+    var obj = fqn2obj[fqn]
+	var res = mod.exports.extract_napi(obj)
     if (res == 'NONE') {
         fqn2failed[fqn] = 'EXTRACT_NAPI'
     } else {
@@ -180,8 +186,8 @@ function extract_napi(fqn) {
 }
 
 function extract_nan(fqn) {
-    obj = fqn2obj[fqn]
-	res = v8.extract_nan(obj)
+    var obj = fqn2obj[fqn]
+	var res = mod.exports.extract_nan(obj)
     if (res == 'NONE') {
         fqn2failed[fqn] = 'EXTRACT_NAN'
     } else {
@@ -191,9 +197,9 @@ function extract_nan(fqn) {
 }
 
 function extract_cfunc(fqn) {
-	cb = fqn2cb[fqn]
+	var cb = fqn2cb[fqn]
 
-	if (cb.includes('v8impl')
+	if (cb.includes('mod.exports.mpl')
             && cb.includes('FunctionCallbackWrapper6Invoke')) {
 		extract_fcb_invoke(fqn)
 	}
@@ -206,7 +212,8 @@ function extract_cfunc(fqn) {
 }
 
 function extract_cfunc_2(fqn) {
-	cb = fqn2cb2[fqn]
+	var cb = fqn2cb2[fqn]
+    var b
 
     // Napi::ObjectWrap::ConstructorCallbackWrapper
     if (cb.includes('Napi') && cb.includes('ObjectWrap') && cb.includes('ConstructorCallbackWrapper')) {
@@ -237,7 +244,7 @@ function extract_cfunc_2(fqn) {
 	}
 
     else if (cb.includes('neon') && cb.includes('sys')) {
-        var name = v8.extract_neon(fqn2obj[fqn])
+        var name = mod.exports.extract_neon(fqn2obj[fqn])
         if (name !== 'NONE') {
             const match = name.match(/#([^>]+)>/);
             if (match) {
@@ -316,20 +323,127 @@ function clear_dicts() {
     cbs = []
 }
 
-function analyze_single(mod_file, pkg_root) {
+
+
+function recursive_inspect(obj, jsname) {
+    var pending = [[obj, jsname, {}]]
+    console.log(`len pending = ${pending.length}`)
+    var seen = new Set()
+	var desc_names
+	var desc
+	var descname
+	var getter
+	var setter
+	var v
+    var par = {}
+
+    // XXX: BFS. Use queue: insert using .push(),
+    //      get head using .shift
+    while (pending.length > 0) {
+        [obj, jsname, par] = pending.shift()
+        console.log(`jsname = ${jsname}`)
+        // console.log(`dir(par) = ${dir(par)}`)
+
+        if (!(obj instanceof(Object)) && (typeof obj != "object")) {
+            continue
+        }
+        // desc_names = Object.getOwnPropertyNames(obj)
+        // console.log(`NAMES: ${desc_names}`)
+        // for (const name of Object.getOwnPropertyNames(obj)) {
+        //   desc = Object.getOwnPropertyDescriptor(obj, name);
+        //   descname = jsname + '.' + name
+        //   console.log(`DESC: ${descname}`)
+        //   getter = desc['get']
+        //   setter = desc['set']
+        //   if (typeof(getter) == 'function') {
+        //       check_bingo(getter, descname + '.' + 'GET', obj)
+        //   }
+        //   if (typeof(setter) == 'function') {
+        //       check_bingo(setter, descname + '.' + 'SET', obj)
+        //   }
+        // }
+        if (typeof(obj) == 'function') {
+            check_bingo(obj, jsname, par)
+        }
+        console.log(`dir(obj)`)
+        console.log(`${dir(obj)}`)
+        for (const k of dir(obj)) {
+            console.log(`getattr(${jsname}, ${k})`)
+            try {
+              v = obj[k]
+            } catch(error) {
+              console.log(error)
+              continue
+            }
+            objects_examined += 1
+            if (typeof v == 'undefined' || !(v instanceof(Object))) {
+                continue
+            }
+
+            if (typeof(obj) == 'function')
+                callable_objects += 1
+
+            var ident = mod.exports.id(v)
+            if (seen.has(ident)) {
+                console.log('ALREADY SEEN')
+                continue
+            } else {
+                seen.add(ident)
+            }
+
+            pending.push([v, jsname + '.' + k, obj])
+        }
+        seen.add(mod.exports.id(obj))
+    }
+}
+
+
+function locate_js_modules(packagePath) {
+    const soFiles = [];
+
+    function walkDir(dir) {
+        const files = fs.readdirSync(dir);
+        files.forEach(file => {
+            const fullPath = path.join(dir, file);
+            const stat = fs.statSync(fullPath);
+
+            if (stat.isDirectory()) {
+                walkDir(fullPath); // Recursive call for directories
+            } else if (file.endsWith('ts')) {
+                soFiles.push(path.resolve(fullPath)); // Add .so files to the list
+            }
+        });
+    }
+
+    walkDir(packagePath);
+    return soFiles;
+}
+
+async function analyze_single(mod_file, pkg_root) {
+	var addr
+	var lib
+	var obj
+    var cb
+    var b
 	clear_dicts()
     cur_file = mod_file
     try {
-        obj = require(mod_file)
+        obj = await import(mod_file)
+        // console.log(dir(obj))
     } catch(error) {
         console.log(error)
         return
     }
-    jsname = get_mod_fqn(mod_file, pkg_root)
+    var jsname = get_mod_fqn(mod_file, pkg_root)
     fqn2mod[jsname] = obj
     console.log(`${mod_file}: jsname = ${jsname}`)
     recursive_inspect(obj, jsname)
-	cbs = Array.from(cbs_set)
+
+    return
+
+
+
+	var cbs = Array.from(cbs_set)
     // XXX: Initialize Set with CBS!
     var resolve_addresses = new Set(cbs)
 
@@ -350,6 +464,7 @@ function analyze_single(mod_file, pkg_root) {
 
     console.log(`FQN2OVERLOADSADDR = ${JSON.stringify(fqn2overloadsaddr, null, 2)}`)
 
+    console.log(`RESOLVE_ADDRESSES = ${Array.from(resolve_addresses)}`)
 	var res1 = gdb_resolve(Array.from(resolve_addresses))
     for (let addr in res1) {
       addr2sym[addr] = res1[addr]
@@ -358,7 +473,7 @@ function analyze_single(mod_file, pkg_root) {
     for (let fqn in fqn2overloadsaddr) {
         for (let addr of fqn2overloadsaddr[fqn]) {
             try {
-                lib = addr2sym[addr].library
+                var lib = addr2sym[addr].library
             } catch (error){
                 console.log(`Error: ${error}`)
                 fqn2failed[fqn] = 'OVERLOAD_RESOLUTION'
@@ -425,7 +540,7 @@ function analyze_single(mod_file, pkg_root) {
 
     console.log('FQN2CFUNCADDR')
     console.log(fqn2cfuncaddr)
-
+	var addr_dec
     resolve_addresses.clear()
     for (let fqn in fqn2cfuncaddr) {
         addr_dec = String(Number(fqn2cfuncaddr[fqn]))
@@ -467,27 +582,6 @@ function analyze_single(mod_file, pkg_root) {
     }
 }
 
-function locate_so_modules(packagePath) {
-    const soFiles = [];
-
-    function walkDir(dir) {
-        const files = fs.readdirSync(dir);
-        files.forEach(file => {
-            const fullPath = path.join(dir, file);
-            const stat = fs.statSync(fullPath);
-
-            if (stat.isDirectory()) {
-                walkDir(fullPath); // Recursive call for directories
-            } else if (file.endsWith('.node')) {
-                soFiles.push(path.resolve(fullPath)); // Add .so files to the list
-            }
-        });
-    }
-
-    walkDir(packagePath);
-    return soFiles;
-}
-
 function get_mod_fqn(fullPath, packageRoot) {
     const packageName = path.basename(packageRoot);
     const relativePath = path.relative(packageRoot, fullPath);
@@ -499,16 +593,39 @@ function get_mod_fqn(fullPath, packageRoot) {
     // const noExt = relativePath.replace(/\.node$/, ''); // remove .node
 }
 
-function check_bingo(obj, jsname) {
-    res = v8.getcb(obj)
+function check_bingo(obj, jsname, par) {
+    var jres
+    var lib
+    var cb
+    var overloads
+    var b
+    console.log(`dir(par) = ${dir(par)}`)
+    var res = mod.exports.getcb(obj)
     if (res == 'NONE') {
         // fqn2failed[jsname] = 'FAILED_GETCB'
         return
     } else {
+        // console.log('IN HERE')
         foreign_callable_objects += 1
         jres = JSON.parse(res)
         cb = jres['callback']
         overloads = jres['overloads']
+        if (overloads.length > 0 &&  "__GASKET_LIBRARY_PATH___" in par) {
+            console.log('IN HERE')
+            lib = par['__GASKET_LIBRARY_PATH___']
+            b = {
+                 'jsname': jsname,
+                 'cfunc': jsname.split(".").pop(),
+                 'library': lib,
+                 'DENO_FFI': true
+                 }
+
+            console.log(b)
+            final_result['bridges'].push(b)
+            if (!(final_result['jump_libs'].includes(lib)))
+                final_result['jump_libs'].push(lib)
+            return
+        }
         console.log(`FQN = ${jsname}`)
         console.log(`cb = ${cb}`)
         if (cb == '0') {
@@ -519,108 +636,48 @@ function check_bingo(obj, jsname) {
         // console.log('CBS = (next line)')
         // console.log(cbs_set)
         fqn2cbaddr[jsname] = cb
-        fqn2overloadsaddr[jsname] = overloads
+        // fqn2overloadsaddr[jsname] = overloads
         fqn2obj[jsname] = obj
     }
 }
 
-function recursive_inspect(obj, jsname) {
-    pending = [[obj, jsname]]
-    console.log(`pending = ${pending}`)
-    seen = new Set()
-
-    // XXX: BFS. Use queue: insert using .push(),
-    //      get head using .shift
-    while (pending.length > 0) {
-        [obj, jsname] = pending.shift()
-        console.log(`jsname = ${jsname}`)
-
-        if (!(obj instanceof(Object))) {
-            continue
-        }
-        desc_names = Object.getOwnPropertyNames(obj)
-        console.log(`NAMES: ${desc_names}`)
-        for (const name of Object.getOwnPropertyNames(obj)) {
-          desc = Object.getOwnPropertyDescriptor(obj, name);
-          descname = jsname + '.' + name
-          console.log(`DESC: ${descname}`)
-          getter = desc['get']
-          setter = desc['set']
-          if (typeof(getter) == 'function') {
-              check_bingo(getter, descname + '.' + 'GET')
-          }
-          if (typeof(setter) == 'function') {
-              check_bingo(setter, descname + '.' + 'SET')
-          }
-        }
-        if (typeof(obj) == 'function') {
-            check_bingo(obj, jsname)
-        }
-
-        for (const k of dir(obj)) {
-            console.log(`getattr(${jsname}, ${k})`)
-            try {
-              v = obj[k]
-            } catch(error) {
-              console.log(error)
-              continue
-            }
-            objects_examined += 1
-            if (typeof v == 'undefined' || !(v instanceof(Object))) {
-                continue
-            }
-
-            if (typeof(obj) == 'function')
-                callable_objects += 1
-
-            ident = v8.jid(v)
-            if (seen.has(ident)) {
-                console.log('ALREADY SEEN')
-                continue
-            } else {
-                seen.add(ident)
-            }
-
-            pending.push([v, jsname + '.' + k])
-        }
-        seen.add(v8.jid(obj))
-    }
-}
-
-function main() {
+async function foo() {
+    console.log('started!')
     var start = Date.now()
     const args = parse_args();
     var output_file = args.output
 
     console.log(`Package root = ${args.root}`)
+    console.log(`Output file = ${args.output}`)
 
-    so_files = locate_so_modules(args.root)
-    // so_files = deduplicate_paths(so_files)
-    console.log(`Native extension files :\n${so_files.join('\n')}`)
+    var so_files = locate_js_modules(args.root)
 
+    console.log(`FILES = ${so_files}`)
 
     for (const so_file of so_files) {
-      analyze_single(so_file, args.root);
-      final_result['modules'].push(so_file)
+      try {
+          await analyze_single(so_file, args.root);
+          self.final_result['modules'].push(so_file)
+      } catch(error){
+          console.log(`ERROR WHILE INSPECTING ${so_file}: ${error}`)
+      }
     }
 
     var end = Date.now()
 
     var duration_sec = Math.round((end - start) / 1000)
-    final_result['duration_sec'] = duration_sec
-    final_result['objects_examined'] = objects_examined
-    final_result['callable_objects'] = callable_objects
-    final_result['foreign_callable_objects'] = foreign_callable_objects
-    final_result['count'] = final_result['bridges'].length
+    self.final_result['duration_sec'] = duration_sec
+    self.final_result['objects_examined'] = objects_examined
+    self.final_result['callable_objects'] = callable_objects
+    self.final_result['foreign_callable_objects'] = foreign_callable_objects
 
-    final_result['failed'] = fqn2failed
     if (output_file !== undefined) {
-	    fs.writeFileSync(output_file, JSON.stringify(final_result, null, 2));
+	    Deno.writeTextFileSync(output_file, JSON.stringify(self.final_result, null, 2));
         console.log(`Wrote bridges to ${output_file}`)
     }
     else {
-        console.log(JSON.stringify(final_result, null, 2))
+        console.log(JSON.stringify(self.final_result, null, 2))
     }
 }
 
-main()
+await foo()
