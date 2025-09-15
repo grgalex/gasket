@@ -38,7 +38,9 @@ seen = new Set()
 cfuncs_in_bridges = new Set()
 heap_jsfunc_seen = new Set()
 heap_jsfunc_data = {}
-heap_jsfuncs = {}
+heap_jsfuncs = []
+heap_jsfuncs_before = []
+heap_jsfuncs_after = []
 
 final_result = {
     'objects_examined': 0,
@@ -317,6 +319,7 @@ function clear_dicts() {
 }
 
 function analyze_single(mod_file, pkg_root) {
+    analyze_heap_before()
 	clear_dicts()
     cur_file = mod_file
     try {
@@ -503,6 +506,7 @@ function get_mod_fqn(fullPath, packageRoot) {
 }
 
 function check_bingo(obj, jsname) {
+    console.log(`CHECK BINGO: ${jsname}`)
     res = v8.getcb(obj)
     if (res == 'NONE') {
         // fqn2failed[jsname] = 'FAILED_GETCB'
@@ -590,6 +594,20 @@ function recursive_inspect(obj, jsname) {
     }
 }
 
+function extractJSFunctions_before(input) {
+    const regex = /(0x[0-9a-fA-F]+)\s*<JSFunction\s+([^\s<(]+)/g;
+    let match;
+	let addr;
+
+    while ((match = regex.exec(input)) !== null) {
+	    addr = parseInt(match[1]).toString()
+	    if (!(seen.has(addr))) {
+		    heap_jsfuncs_before.push({ address: addr, name: match[2] });
+			seen.add(addr)
+		}
+    }
+}
+
 function extractJSFunctions(input) {
     const regex = /(0x[0-9a-fA-F]+)\s*<JSFunction\s+([^\s<(]+)/g;
     let match;
@@ -597,25 +615,43 @@ function extractJSFunctions(input) {
 
     while ((match = regex.exec(input)) !== null) {
 	    addr = parseInt(match[1]).toString()
-	    if !(seen.has(addr)) {
-		    heap_jsfuncs.push({ address: addr, name: match[2] });
+	    if (!(seen.has(addr))) {
+		    heap_jsfuncs_after.push({ address: addr, name: match[2] });
 			seen.add(addr)
 		}
     }
-    return results;
+}
+
+function analyze_heap_before() {
+	object_addresses = JSON.parse(v8.get_objects())
+	for (const addr of object_addresses) {
+		raw = v8.job_addr(addr)
+		extractJSFunctions(raw)
+	}
+
+	for (const func of heap_jsfuncs) {
+		addr = func.address
+		name = func.name
+        console.log(`HEAP FUNC: ${addr} NAME=${name}`)
+		check_bingo(addr, name)
+	}
 }
 
 
 function analyze_heap() {
 	object_addresses = JSON.parse(v8.get_objects())
-	for (addr of object_addresses) {
-		raw = v8.job_addr(i)
-		extractJSFunction(raw)
+	for (const addr of object_addresses) {
+		raw = v8.job_addr(addr)
+		extractJSFunctions(raw)
 	}
-
-	for (func of heap_jsfuncs) {
+    console.log(`HEAP FUNCS BEFORE: ${heap_jsfuncs_before.length}`)
+    console.log(`HEAP FUNCS AFTER: ${heap_jsfuncs_after.length}`)
+    heap_jsfuncs = heap_jsfuncs_after.filter(x => !heap_jsfuncs_before.includes(x));
+    console.log(`HEAP JSFUNCS FILTERED: ${heap_jsfuncs.length}`)
+	for (const func of heap_jsfuncs) {
 		addr = func.address
 		name = func.name
+        console.log(`HEAP FUNC: ${addr} NAME=${name}`)
 		check_bingo(addr, name)
 	}
 }
