@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+#! /home/thodoris/postdoc/projects/gasket-sp-eval/node
 
 const yargs = require('yargs');
 const fs = require('fs');
@@ -11,7 +11,7 @@ const { randomUUID } = require('crypto');
 const {SimplePropertyRetriever} = require('gasket-tools/ffdir');
 
 if (process.env.GASKET_ROOT) {
-  RESOLVE_SCRIPT_PATH = path.join(process.env.GASKET_ROOT, 'resolve_syms.py')
+  RESOLVE_SCRIPT_PATH = path.join(process.env.GASKET_ROOT, 'scripts/resolve_syms.py')
 } else {
   RESOLVE_SCRIPT_PATH = 'resolve-syms'
 }

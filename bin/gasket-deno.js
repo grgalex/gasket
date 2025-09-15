@@ -1,14 +1,24 @@
-#!/usr/bin/env deno
+#! /usr/bin/env -S /home/thodoris/postdoc/projects/gasket-sp-eval/deno --node-modules-dir=auto --allow-ffi --allow-run --allow-env --allow-read --allow-write
 
-import yargz from 'npm:yargs';
-import { hideBin } from 'npm:yargs/helpers'
+import yargz from "npm:yargs@^18.0.0/yargs";
+import { hideBin  } from "npm:yargs@^18.0.0/helpers";
+
 import * as fs from 'node:fs'
 import * as os from 'node:os'
 import * as path from 'node:path'
+import { pathToFileURL } from 'node:url';
 import {randomUUID}  from 'node:crypto'
 import { execSync, spawnSync } from 'node:child_process';
 
-import {SimplePropertyRetriever} from 'gasket-tools/ffdir.js'
+// Resolve the real path of this file (follow symlinks)
+const selfUrl = new URL(import.meta.url);
+const selfPath = selfUrl.protocol === "file:" ? selfUrl.pathname : selfUrl.toString();
+const realSelf = await Deno.realPath(selfPath);
+
+const ffdirPath = path.join(path.dirname(realSelf), "..", "src", "ffdir.js");
+
+const { SimplePropertyRetriever } = await import(pathToFileURL(ffdirPath).href);
+console.log(SimplePropertyRetriever)
 
 const yargs = yargz(hideBin(process.argv))
 
@@ -19,8 +29,7 @@ if (process.env.GASKET_ROOT) {
 }
 
 self.mod = {}
-// process.dlopen(mod, '/home/george.alexopoulos/jsxray/prv-jsxray/jid-1/build/Debug/native.node', 0)
-globalThis.JID_PATH = path.join(process.env.GASKET_ROOT, "jid-1/build/Release/native.node")
+globalThis.JID_PATH = path.join(process.env.GASKET_ROOT, "jid/build/Release/native.node")
 process.dlopen(mod, globalThis.JID_PATH, 0)
 
 self.objects_examined = 0

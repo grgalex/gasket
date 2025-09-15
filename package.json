@@ -2,15 +2,18 @@
   "name": "gasket-tools",
   "version": "0.1dev",
   "bin": {
-      "gasket": "./bin/gasket.js",
-      "gasket-deno": "./bin/gasket-deno.js",
-      "gasket-wasm": "./bin/gasket-wasm.js"
+    "gasket": "./bin/gasket.js",
+    "gasket-deno": "./bin/gasket-deno.js",
+    "gasket-wasm": "./bin/gasket-wasm.js"
   },
   "exports": {
-      ".": "./src/index.js",
-      "./ffdir": "./src/ffdir.js"
+    ".": "./src/index.js",
+    "./ffdir": "./src/ffdir.js"
   },
-  "files": ["bin", "src"],
+  "files": [
+    "bin",
+    "src"
+  ],
   "dependencies": {
     "node-addon-api": "^8.5.0",
     "yargs": "^18.0.0"
