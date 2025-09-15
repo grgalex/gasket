@@ -34,6 +34,12 @@ addr2sym = {}
 cbs_set = new Set()
 cbs = []
 
+seen = new Set()
+cfuncs_in_bridges = new Set()
+heap_jsfunc_seen = new Set()
+heap_jsfunc_data = {}
+heap_jsfuncs = {}
+
 final_result = {
     'objects_examined': 0,
     'callable_objects': 0,
@@ -323,6 +329,9 @@ function analyze_single(mod_file, pkg_root) {
     fqn2mod[jsname] = obj
     console.log(`${mod_file}: jsname = ${jsname}`)
     recursive_inspect(obj, jsname)
+
+	analyze_heap()
+
 	cbs = Array.from(cbs_set)
     // XXX: Initialize Set with CBS!
     var resolve_addresses = new Set(cbs)
@@ -521,7 +530,7 @@ function check_bingo(obj, jsname) {
 function recursive_inspect(obj, jsname) {
     pending = [[obj, jsname]]
     console.log(`pending = ${pending}`)
-    seen = new Set()
+    // seen = new Set()
 
     // XXX: BFS. Use queue: insert using .push(),
     //      get head using .shift
@@ -541,14 +550,14 @@ function recursive_inspect(obj, jsname) {
           getter = desc['get']
           setter = desc['set']
           if (typeof(getter) == 'function') {
-              check_bingo(getter, descname + '.' + 'GET')
+              check_bingo(v8.jid(getter), descname + '.' + 'GET')
           }
           if (typeof(setter) == 'function') {
-              check_bingo(setter, descname + '.' + 'SET')
+              check_bingo(v8.jid(setter), descname + '.' + 'SET')
           }
         }
         if (typeof(obj) == 'function') {
-            check_bingo(obj, jsname)
+            check_bingo(v8.jid(obj), jsname)
         }
 
         for (const k of dir(obj)) {
@@ -581,6 +590,36 @@ function recursive_inspect(obj, jsname) {
     }
 }
 
+function extractJSFunctions(input) {
+    const regex = /(0x[0-9a-fA-F]+)\s*<JSFunction\s+([^\s<(]+)/g;
+    let match;
+	let addr;
+
+    while ((match = regex.exec(input)) !== null) {
+	    addr = parseInt(match[1]).toString()
+	    if !(seen.has(addr)) {
+		    heap_jsfuncs.push({ address: addr, name: match[2] });
+			seen.add(addr)
+		}
+    }
+    return results;
+}
+
+
+function analyze_heap() {
+	object_addresses = JSON.parse(v8.get_objects())
+	for (addr of object_addresses) {
+		raw = v8.job_addr(i)
+		extractJSFunction(raw)
+	}
+
+	for (func of heap_jsfuncs) {
+		addr = func.address
+		name = func.name
+		check_bingo(addr, name)
+	}
+}
+
 function main() {
     var start = Date.now()
     const args = parse_args();
@@ -597,6 +636,8 @@ function main() {
       analyze_single(so_file, args.root);
       final_result['modules'].push(so_file)
     }
+
+	// analyze_heap()
 
     var end = Date.now()
 
