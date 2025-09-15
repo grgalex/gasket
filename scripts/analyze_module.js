@@ -7,7 +7,11 @@ const v8 = require('v8')
 const { execSync, spawnSync } = require('child_process');
 const { randomUUID } = require('crypto');
 
-RESOLVE_SCRIPT_PATH = '/home/george.alexopoulos/jsxray/prv-jsxray/scripts/resolve_syms.py'
+if (process.env.GASKET_ROOT) {
+  RESOLVE_SCRIPT_PATH = path.join(process.env.GASKET_ROOT, 'resolve_syms.py')
+} else {
+  RESOLVE_SCRIPT_PATH = 'resolve-syms'
+}
 
 objects_examined = 0
 callable_objects = 0
@@ -51,7 +55,7 @@ function sleepSync(seconds) {
 }
 
 function parse_args() {
-    return yargs
+    return yargs(process.argv.slice(2))
       .option('root', {
         alias: 'r',
         type: 'string',
