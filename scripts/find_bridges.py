@@ -14,7 +14,7 @@ import utils
 
 log = logging.getLogger(__name__)
 
-JSXRAY_ROOT = '/home/george.alexopoulos/jsxray'
+GASKET_ROOT = os.getenv("GASKET_ROOT")
 
 PRV_PYHIDRA_ROOT = '/prv-pyhidra-cg'
 
@@ -43,7 +43,7 @@ def setup_logging(args):
     logging.basicConfig(level=level, format=fmt, datefmt=datefmt)
 
 def parse_args():
-    p = argparse.ArgumentParser(description='Produce Unified Stitch for a CSV containing user/repo pairs (from GitHub).')
+    p = argparse.ArgumentParser(description='Produce Gasket bridges for a set of packages.')
     p.add_argument(
         "-l",
         "--log",
@@ -54,7 +54,7 @@ def parse_args():
         "-i",
         "--input",
         default=None,
-        help=("Provide path to the CSV containing the user/repo pairs"),
+        help=("Provide path to the CSV containing the package:version pairs"),
     )
     p.add_argument(
         "-A",
@@ -87,17 +87,17 @@ class JavascriptBridger():
         self.namesnip = self.name[0] + '/' + self.sname + '/' + self.sversion
 
         self.tempinst_uuid = self.sname + '___' + self.sversion
-        self.tmp_install_dir_root = os.path.join(JSXRAY_ROOT, 'data/install')
+        self.tmp_install_dir_root = os.path.join(GASKET_ROOT, 'data/install')
         self.tmp_install_dir = os.path.join(self.tmp_install_dir_root, self.tempinst_uuid)
 
         self.pkg_inner_dir = os.path.join(self.tmp_install_dir, 'node_modules', self.name)
 
-        self.bridges_root = os.path.join(JSXRAY_ROOT, 'data/bridges')
-        self.bridges_apps_root = os.path.join(JSXRAY_ROOT, 'data/bridges/npm')
+        self.bridges_root = os.path.join(GASKET_ROOT, 'data/bridges')
+        self.bridges_apps_root = os.path.join(GASKET_ROOT, 'data/bridges/npm')
         self.bridges_dir = os.path.join(self.bridges_apps_root, self.namesnip)
         self.bridges_path = os.path.join(self.bridges_dir, 'bridges.json')
 
-        self.bridges_csv_dir = os.path.join(JSXRAY_ROOT, 'data/jsxray_bridges')
+        self.bridges_csv_dir = os.path.join(GASKET_ROOT, 'data/gasket_bridges')
         utils.create_dir(self.bridges_csv_dir)
         self.bridges_csv_path = os.path.join(self.bridges_csv_dir, self.sname + '.txt')
 
@@ -169,7 +169,7 @@ class JavascriptBridger():
             log.info(err)
 
         return 0
-    
+
     def install_package_build_from_source(self):
         log.info(f"Installing (BUILD-FROM-SOURCE) {self.package}")
         # XXX: Remove old installation (prebuilt). Build from source!
