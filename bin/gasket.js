@@ -159,7 +159,7 @@ function gdb_resolve(addresses) {
 
 function extract_fcb_invoke(fqn) {
     obj = fqn2obj[fqn]
-	res = v8.extract_fcb_invoke(obj)
+	res = v8.extract_fcb_invoke(v8.jid(obj))
     if (res == 'NONE') {
         fqn2failed[fqn] = 'EXTRACT_FCB_INOKE'
     } else { /* res = address of cb2 */
@@ -171,7 +171,7 @@ function extract_fcb_invoke(fqn) {
 function extract_napi(fqn) {
     console.log(`Extract napi called: ${fqn}`)
     obj = fqn2obj[fqn]
-	res = v8.extract_napi(obj)
+	res = v8.extract_napi(v8.jid(obj))
     if (res == 'NONE') {
         fqn2failed[fqn] = 'EXTRACT_NAPI'
     } else {
@@ -182,7 +182,7 @@ function extract_napi(fqn) {
 
 function extract_nan(fqn) {
     obj = fqn2obj[fqn]
-	res = v8.extract_nan(obj)
+	res = v8.extract_nan(v8.jid(obj))
     if (res == 'NONE') {
         fqn2failed[fqn] = 'EXTRACT_NAN'
     } else {
@@ -501,7 +501,7 @@ function get_mod_fqn(fullPath, packageRoot) {
 }
 
 function check_bingo(obj, jsname) {
-    res = v8.getcb(obj)
+    res = v8.getcb(v8.jid(obj))
     if (res == 'NONE') {
         // fqn2failed[jsname] = 'FAILED_GETCB'
         return
