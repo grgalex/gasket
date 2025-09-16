@@ -679,8 +679,12 @@ async function foo() {
     self.final_result['objects_examined'] = objects_examined
     self.final_result['callable_objects'] = callable_objects
     self.final_result['foreign_callable_objects'] = foreign_callable_objects
+    self.final_result['count'] = self.final_result['bridges'].length
 
     if (output_file !== undefined) {
+      if (!path.isAbsolute(output_file)) {
+        output_file = path.join(Deno.env.get("PWD"), output_file)
+      }
 	    Deno.writeTextFileSync(output_file, JSON.stringify(self.final_result, null, 2));
         console.log(`Wrote bridges to ${output_file}`)
     }
