@@ -16,9 +16,10 @@ const selfPath = selfUrl.protocol === "file:" ? selfUrl.pathname : selfUrl.toStr
 const realSelf = await Deno.realPath(selfPath);
 
 const ffdirPath = path.join(path.dirname(realSelf), "..", "src", "ffdir.js");
+const addonPath = path.join(path.dirname(realSelf), "..", "src", "index.js");
 
 const { SimplePropertyRetriever } = await import(pathToFileURL(ffdirPath).href);
-console.log(SimplePropertyRetriever)
+const { jid } = await import(pathToFileURL(addonPath).href);
 
 const yargs = yargz(hideBin(process.argv))
 
@@ -28,9 +29,8 @@ if (process.env.GASKET_ROOT) {
   globalThis.RESOLVE_SCRIPT_PATH = 'resolve-syms'
 }
 
-self.mod = {}
-globalThis.JID_PATH = path.join(process.env.GASKET_ROOT, "jid/build/Release/native.node")
-process.dlopen(mod, globalThis.JID_PATH, 0)
+self.mod = jid
+console.log(jid)
 
 self.objects_examined = 0
 self.callable_objects = 0
@@ -173,7 +173,7 @@ function gdb_resolve(addresses) {
 
 function extract_fcb_invoke(fqn) {
     var obj = fqn2obj[fqn]
-	var res = mod.exports.extract_fcb_invoke(obj)
+	var res = mod.extract_fcb_invoke(obj)
     if (res == 'NONE') {
         fqn2failed[fqn] = 'EXTRACT_FCB_INOKE'
     } else { /* res = address of cb2 */
@@ -185,7 +185,7 @@ function extract_fcb_invoke(fqn) {
 function extract_napi(fqn) {
     console.log(`Extract napi called: ${fqn}`)
     var obj = fqn2obj[fqn]
-	var res = mod.exports.extract_napi(obj)
+	var res = mod.extract_napi(obj)
     if (res == 'NONE') {
         fqn2failed[fqn] = 'EXTRACT_NAPI'
     } else {
@@ -196,7 +196,7 @@ function extract_napi(fqn) {
 
 function extract_nan(fqn) {
     var obj = fqn2obj[fqn]
-	var res = mod.exports.extract_nan(obj)
+	var res = mod.extract_nan(obj)
     if (res == 'NONE') {
         fqn2failed[fqn] = 'EXTRACT_NAN'
     } else {
@@ -208,7 +208,7 @@ function extract_nan(fqn) {
 function extract_cfunc(fqn) {
 	var cb = fqn2cb[fqn]
 
-	if (cb.includes('mod.exports.mpl')
+	if (cb.includes('mod.mpl')
             && cb.includes('FunctionCallbackWrapper6Invoke')) {
 		extract_fcb_invoke(fqn)
 	}
@@ -253,7 +253,7 @@ function extract_cfunc_2(fqn) {
 	}
 
     else if (cb.includes('neon') && cb.includes('sys')) {
-        var name = mod.exports.extract_neon(fqn2obj[fqn])
+        var name = mod.extract_neon(fqn2obj[fqn])
         if (name !== 'NONE') {
             const match = name.match(/#([^>]+)>/);
             if (match) {
@@ -392,7 +392,7 @@ function recursive_inspect(obj, jsname) {
             if (typeof(obj) == 'function')
                 callable_objects += 1
 
-            var ident = mod.exports.id(v)
+            var ident = mod.id(v)
             if (seen.has(ident)) {
                 console.log('ALREADY SEEN')
                 continue
@@ -402,7 +402,7 @@ function recursive_inspect(obj, jsname) {
 
             pending.push([v, jsname + '.' + k, obj])
         }
-        seen.add(mod.exports.id(obj))
+        seen.add(mod.id(obj))
     }
 }
 
@@ -609,7 +609,7 @@ function check_bingo(obj, jsname, par) {
     var overloads
     var b
     console.log(`dir(par) = ${dir(par)}`)
-    var res = mod.exports.getcb(obj)
+    var res = mod.getcb(obj)
     if (res == 'NONE') {
         // fqn2failed[jsname] = 'FAILED_GETCB'
         return

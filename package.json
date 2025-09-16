@@ -1,10 +1,17 @@
 {
   "name": "gasket-tools",
   "version": "0.1dev",
+  "gypfile": true,
   "bin": {
     "gasket": "./bin/gasket.js",
     "gasket-deno": "./bin/gasket-deno.js",
     "gasket-wasm": "./bin/gasket-wasm.js"
+  },
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "rebuild": "node-gyp rebuild",
+    "build:debug": "node-gyp configure --debug && node-gyp build --debug",
+    "clean": "node-gyp clean"
   },
   "exports": {
     ".": "./src/index.js",
@@ -16,6 +23,7 @@
   ],
   "dependencies": {
     "node-addon-api": "^8.5.0",
-    "yargs": "^18.0.0"
+    "yargs": "^18.0.0",
+    "node-addon-api": "^7.1.0"
   }
 }
