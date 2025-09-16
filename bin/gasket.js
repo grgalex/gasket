@@ -1,4 +1,4 @@
-#! /home/thodoris/postdoc/projects/gasket-sp-eval/node
+#! /usr/bin/env node
 
 const yargs = require('yargs');
 const fs = require('fs');

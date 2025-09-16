@@ -1,4 +1,4 @@
-#! /usr/bin/env -S /home/thodoris/postdoc/projects/gasket-sp-eval/deno --node-modules-dir=auto --allow-ffi --allow-run --allow-env --allow-read --allow-write
+#! /usr/bin/env -S deno --node-modules-dir=auto --allow-ffi --allow-run --allow-env --allow-read --allow-write
 
 import yargz from "npm:yargs@^18.0.0/yargs";
 import { hideBin  } from "npm:yargs@^18.0.0/helpers";
