@@ -6,8 +6,6 @@ import argparse
 import logging
 from pathlib import Path
 import shutil
-import multiprocessing
-import concurrent.futures
 import tempfile
 
 import utils
@@ -15,7 +13,6 @@ import utils
 log = logging.getLogger(__name__)
 
 GASKET_ROOT = os.getenv("GASKET_ROOT")
-GASKET = os.path.join(GASKET_ROOT, 'bin/gasket.js')
 
 def setup_logging(args):
     levels = {
@@ -56,6 +53,12 @@ def parse_args():
         help=("Path to a CSV file with package:version pairs."),
     )
     p.add_argument(
+        "-o",
+        "--output",
+        default=None,
+        help=("Output directory to store bridges."),
+    )
+    p.add_argument(
         "-A",
         "--always",
         default=False,
@@ -65,9 +68,10 @@ def parse_args():
     return p.parse_args()
 
 class JavascriptBridger():
-    def __init__(self, package, always):
+    def __init__(self, package, output_dir, always):
         self.always = always
         self.package = package
+        self.output_dir = output_dir
         self.stripped = False
         self.sanitized_package = utils.sanitize_package_name(self.package)
         if ':' not in package:
@@ -91,12 +95,18 @@ class JavascriptBridger():
 
         self.pkg_inner_dir = os.path.join(self.tmp_install_dir, 'node_modules', self.name)
 
-        self.bridges_root = os.path.join(GASKET_ROOT, 'data/bridges')
-        self.bridges_apps_root = os.path.join(GASKET_ROOT, 'data/bridges/npm')
+        if self.output is None:
+            self.bridges_root = os.path.join(GASKET_ROOT, 'data/bridges')
+            self.bridges_apps_root = os.path.join(GASKET_ROOT, 'data/bridges/npm')
+            self.bridges_csv_dir = os.path.join(GASKET_ROOT, 'data/gasket_bridges')
+        else:
+            self.bridges_root = os.path.join(self.output_dir, 'data/bridges')
+            self.bridges_apps_root = os.path.join(self.output_dir, 'data/bridges/npm')
+            self.bridges_csv_dir = os.path.join(self.output_dir, 'data/gasket_bridges')
+
         self.bridges_dir = os.path.join(self.bridges_apps_root, self.namesnip)
         self.bridges_path = os.path.join(self.bridges_dir, 'bridges.json')
 
-        self.bridges_csv_dir = os.path.join(GASKET_ROOT, 'data/gasket_bridges')
         utils.create_dir(self.bridges_csv_dir)
         self.bridges_csv_path = os.path.join(self.bridges_csv_dir, self.sname + '.txt')
 
@@ -146,8 +156,7 @@ class JavascriptBridger():
             if not os.path.exists(bridges_dir):
                 utils.create_dir(bridges_dir)
             cmd = [
-                'node',
-                GASKET,
+                'gasket',
                 '-r', self.pkg_inner_dir,
                 '-o', self.bridges_path
             ]
@@ -226,7 +235,7 @@ class JavascriptBridger():
                     return -1
             return 0
         else:
-            # XXX: analyze_module.js blew up. No bridges were generated.
+            # XXX: Gasket terminated unexpectedly. No bridges were generated.
             return -1
 
     def generate_bridges_csv(self):
@@ -248,8 +257,8 @@ class JavascriptBridger():
                 # XXX: Keep only basename.
                 new_jsname = jsname.split('.')[-1].split('/')[-1]
                 # XXX: Keep only "last" function name.
-                #      Obliterate namespaces ("::")
-                #      Obliterate arg types ("(int...)")
+                #      Trim namespaces ("::")
+                #      Trim arg types ("(int...)")
                 match = re.search(r"(?:\w+::)?(\w+)(?:\(|$)", cfunc)
                 if match:
                     new_cfunc = match.group(1)
@@ -318,9 +327,9 @@ class JavascriptBridger():
 
         return ret
 
-def do_single(p, always):
+def do_single(p, output, always):
     log.info(f"Processing package '{p}'")
-    bridger = JavascriptBridger(p, always)
+    bridger = JavascriptBridger(p, output, always)
     bridger.process()
 
 def main():
@@ -334,7 +343,7 @@ def main():
     package_names = utils.load_csv(args.input)
 
     for pkg in package_names:
-        do_single(pkg, args.always)
+        do_single(pkg, args.output, args.always)
 
 
 if __name__ == "__main__":
