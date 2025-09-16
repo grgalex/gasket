@@ -95,7 +95,7 @@ class JavascriptBridger():
 
         self.pkg_inner_dir = os.path.join(self.tmp_install_dir, 'node_modules', self.name)
 
-        if self.output is None:
+        if self.output_dir is None:
             self.bridges_root = os.path.join(GASKET_ROOT, 'data/bridges')
             self.bridges_apps_root = os.path.join(GASKET_ROOT, 'data/bridges/npm')
             self.bridges_csv_dir = os.path.join(GASKET_ROOT, 'data/gasket_bridges')
