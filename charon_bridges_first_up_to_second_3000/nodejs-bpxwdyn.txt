@@ -1,2 +1,0 @@
-(execute,BpxwdynAsyncCallback)
-(execute_rtvars,BpxwdynAsyncCallbackReturnVars)

@@ -1,6 +1,0 @@
-(getArrayBuffer,RawBuffer)
-(toAddress,RawBuffer)
-(detach,RawBuffer)
-(equals,RawBuffer)
-(length,RawBuffer)
-(RawBuffer,RawBuffer)

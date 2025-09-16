@@ -1,3 +1,0 @@
-(compress,compress)
-(compressBound,compressBound)
-(decompress,decompress)

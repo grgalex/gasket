@@ -1,2 +1,0 @@
-(Renderer,func)
-(0,f)

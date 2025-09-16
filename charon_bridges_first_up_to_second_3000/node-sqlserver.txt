@@ -1,8 +1,0 @@
-(close,Connection)
-(open,Connection)
-(query,Connection)
-(readRow,Connection)
-(readColumn,Connection)
-(beginTransaction,Connection)
-(commit,Connection)
-(rollback,Connection)

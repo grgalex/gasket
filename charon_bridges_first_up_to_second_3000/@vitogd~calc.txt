@@ -1,4 +1,0 @@
-(sum,Sum)
-(sub,Subtraction)
-(mult,Multiply)
-(div,Division)

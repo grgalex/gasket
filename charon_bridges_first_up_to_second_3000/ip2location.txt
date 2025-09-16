@@ -1,2 +1,0 @@
-(getIpInfo,GetIpInfo)
-(close,close)

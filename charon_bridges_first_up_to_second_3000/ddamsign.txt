@@ -1,3 +1,0 @@
-(hello,HelloMethod)
-(sk2Pk,Sk2PkMethod)
-(signtx,SigntxMethod)

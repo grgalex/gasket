@@ -1,4 +1,0 @@
-(b2_file,HashFile)
-(b2_buffer,HashBufferSync)
-(update,AvonStream)
-(final,AvonStream)

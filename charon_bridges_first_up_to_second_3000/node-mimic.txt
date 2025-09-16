@@ -1,3 +1,0 @@
-(textToSpeech,TextToSpeech)
-(init,Init)
-(loadVoice,LoadVoice)

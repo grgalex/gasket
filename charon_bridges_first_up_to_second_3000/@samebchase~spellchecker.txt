@@ -1,8 +1,0 @@
-(end,end)
-(setDictionary,Spellchecker)
-(getAvailableDictionaries,Spellchecker)
-(getCorrectionsForMisspelling,Spellchecker)
-(isMisspelled,Spellchecker)
-(checkSpelling,Spellchecker)
-(add,Spellchecker)
-(remove,Spellchecker)

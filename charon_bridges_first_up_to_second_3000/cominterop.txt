@@ -1,2 +1,0 @@
-(getter,name)
-(setter,name)

@@ -1,8 +1,0 @@
-(push,Push)
-(encode,PngEncodeAsync)
-(encodeSync,PngEncodeSync)
-(dimensions,Dimensions)
-(x,Integer)
-(y,Integer)
-(width,Integer)
-(height,Integer)

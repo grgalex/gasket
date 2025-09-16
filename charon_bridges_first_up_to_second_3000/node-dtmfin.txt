@@ -1,3 +1,0 @@
-(list,listDevices)
-(open,openDevice)
-(close,closeDevice)

@@ -1,2 +1,0 @@
-(setPalette,setPalette)
-(setTitle,setTitle)

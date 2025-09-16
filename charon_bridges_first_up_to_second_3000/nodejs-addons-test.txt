@@ -1,2 +1,0 @@
-(teststring,TestString)
-(testnumber,TestNumber)

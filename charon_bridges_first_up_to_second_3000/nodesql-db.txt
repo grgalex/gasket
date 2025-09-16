@@ -1,4 +1,0 @@
-(query,query)
-(connect,connect)
-(end,end)
-(isConnected,isConnected)

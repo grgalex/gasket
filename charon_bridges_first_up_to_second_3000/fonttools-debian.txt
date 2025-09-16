@@ -1,3 +1,0 @@
-(decompile,Decompile)
-(compile,Compile)
-(default,SetFontToolsPath)

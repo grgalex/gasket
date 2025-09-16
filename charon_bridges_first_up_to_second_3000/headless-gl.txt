@@ -1,5 +1,0 @@
-(setError,WebGLRenderingContext)
-(size,size)
-(type,type)
-(name,name)
-(cleanup,WebGLRenderingContext)

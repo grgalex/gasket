@@ -1,6 +1,0 @@
-(fire,DTraceProbe)
-(addProbe,DTraceProvider)
-(removeProbe,DTraceProvider)
-(enable,DTraceProvider)
-(disable,DTraceProvider)
-(fire,DTraceProvider)

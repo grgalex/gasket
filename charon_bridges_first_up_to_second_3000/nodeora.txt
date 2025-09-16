@@ -1,3 +1,0 @@
-(open,Connection)
-(query,Connection)
-(close,Connection)

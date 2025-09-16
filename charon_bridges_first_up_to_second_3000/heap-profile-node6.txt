@@ -1,3 +1,0 @@
-(startSamplingHeapProfiler,StartSamplingHeapProfiler)
-(stopSamplingHeapProfiler,StopSamplingHeapProfiler)
-(getAllocationProfile,GetAllocationProfile)

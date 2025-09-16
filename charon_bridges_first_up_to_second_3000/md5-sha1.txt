@@ -1,4 +1,0 @@
-(update,Digest)
-(digest,Digest)
-(sign,Sign)
-(verify,Verify)

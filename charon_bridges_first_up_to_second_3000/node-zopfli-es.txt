@@ -1,2 +1,0 @@
-(adler32,Adler32)
-(pngcompress,PNGDeflate)

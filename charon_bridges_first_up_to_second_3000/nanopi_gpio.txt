@@ -1,3 +1,0 @@
-(node_gpio_write,async_node_gpio_write)
-(node_usleep,async_node_usleep)
-(node_sleep,async_node_sleep)

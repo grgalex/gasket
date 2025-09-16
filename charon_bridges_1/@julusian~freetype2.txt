@@ -1,6 +1,0 @@
-(setCharSize,FontFace)
-(setPixelSizes,FontFace)
-(setTransform,FontFace)
-(NewFace,NewFace)
-(NewMemoryFace,NewMemoryFace)
-(0,f)

@@ -1,3 +1,0 @@
-(open,Open)
-(write,Write)
-(close,Close)

@@ -1,3 +1,0 @@
-(hello,hello)
-(add,add)
-(asyncAdd,asyncAdd)

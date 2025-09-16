@@ -1,3 +1,0 @@
-(format,NumFormatter)
-(setAttributes,NumFormatter)
-(setAttributes,NumFormatter)

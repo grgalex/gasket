@@ -1,2 +1,0 @@
-(createFifo,createFifo)
-(createPipe,createPipe)

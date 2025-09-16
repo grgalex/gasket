@@ -1,2 +1,0 @@
-(whoami,WhoAmI)
-(getHomeDirectory,GetHomeDirectory)

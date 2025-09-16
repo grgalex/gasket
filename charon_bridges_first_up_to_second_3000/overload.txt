@@ -1,4 +1,0 @@
-(set,EphemeronSet)
-(get,EphemeronGet)
-(has,EphemeronHas)
-(keys,EphemeronKeys)

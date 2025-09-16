@@ -1,1 +1,0 @@
-(getCppTime,GetCppTime)

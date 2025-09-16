@@ -1,3 +1,0 @@
-(arc4random,node_arc4random)
-(arc4random_buf,node_arc4random_buf)
-(arc4random_uniform,node_arc4random_uniform)

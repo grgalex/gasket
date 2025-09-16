@@ -1,4 +1,0 @@
-(geteuid,GetEUid)
-(getegid,GetEGid)
-(seteuid,SetEUid)
-(setegid,SetEGid)

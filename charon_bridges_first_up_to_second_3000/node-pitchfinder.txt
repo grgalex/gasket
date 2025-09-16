@@ -1,2 +1,0 @@
-(getPitch,getPitch)
-(getResult,getResult)

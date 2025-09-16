@@ -1,4 +1,0 @@
-(setJoints,SetJoints)
-(startCOMTracking,StartCOMTracking)
-(stopCOMTracking,StopCOMTracking)
-(close,Close)

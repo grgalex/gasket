@@ -1,3 +1,0 @@
-(resetTripwire,resetTripwire)
-(clearTripwire,clearTripwire)
-(getContext,getContext)

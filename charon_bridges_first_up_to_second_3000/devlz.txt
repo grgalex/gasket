@@ -1,2 +1,0 @@
-(compressSync,Method)
-(add,Add)

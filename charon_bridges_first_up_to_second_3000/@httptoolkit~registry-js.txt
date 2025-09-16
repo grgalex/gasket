@@ -1,3 +1,0 @@
-(data,data)
-(readValues,ReadValues)
-(enumKeys,EnumKeys)

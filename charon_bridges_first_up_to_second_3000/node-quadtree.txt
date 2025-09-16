@@ -1,3 +1,0 @@
-(add,js_qtree_add)
-(intersecting,js_qtree_coll)
-(remove,js_qtree_remove)

@@ -1,5 +1,0 @@
-(connect,Connect)
-(write,Write)
-(end,End)
-(setNoDelay,SetNoDelay)
-(setKeepAlive,SetKeepAlive)

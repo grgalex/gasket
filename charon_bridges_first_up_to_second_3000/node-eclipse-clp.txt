@@ -1,6 +1,0 @@
-(cutTo,cutTo)
-(init,init)
-(cleanup,cleanup)
-(resume,resume)
-(post_goal,post_goal)
-(term,term)

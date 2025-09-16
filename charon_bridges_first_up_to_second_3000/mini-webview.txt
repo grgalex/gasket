@@ -1,3 +1,0 @@
-(debug,WebViewDebug)
-(printLog,WebViewPrintLog)
-(setFullscreen,Webview)

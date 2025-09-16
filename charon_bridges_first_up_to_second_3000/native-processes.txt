@@ -1,3 +1,0 @@
-(setProcessToForeground,SetProcessToForegroundCallback)
-(getProcessesByName,GetProcessesByNameCallback)
-(getProcessWindowTitle,GetProcessWindowTitleCallback)

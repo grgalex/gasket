@@ -1,2 +1,0 @@
-(initSocketCan,initSocketCan)
-(writeData,writeData)

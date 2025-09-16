@@ -1,2 +1,0 @@
-(setMotor,RoboInterface)
-(setOutput,RoboInterface)

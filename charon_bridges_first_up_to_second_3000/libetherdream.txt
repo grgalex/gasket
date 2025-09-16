@@ -1,7 +1,0 @@
-(connect,Connect)
-(disconnect,Disconnect)
-(write,Write)
-(isReady,IsReady)
-(whenReady,WhenReady)
-(start,EDStart)
-(getCount,EDGetCount)

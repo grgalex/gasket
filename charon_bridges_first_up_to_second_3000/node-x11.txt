@@ -1,5 +1,0 @@
-(init,init)
-(getImage,getImage)
-(keyPress,keyPress)
-(mouseMove,mouseMove)
-(mouseButton,mouseButton)

@@ -1,7 +1,0 @@
-(triggerReport,TriggerReport)
-(setEvents,SetEvents)
-(setCoreDump,SetCoreDump)
-(setSignal,SetSignal)
-(setFileName,SetFileName)
-(setDirectory,SetDirectory)
-(setVerbose,SetVerbose)

@@ -1,6 +1,0 @@
-(getpwent,getpwentMethod)
-(setpwent,setpwentMethod)
-(endpwent,endpwentMethod)
-(getgrent,getgrentMethod)
-(setgrent,setgrentMethod)
-(endgrent,endgrentMethod)

@@ -1,7 +1,0 @@
-(plusOne,PlusOne)
-(open,Open)
-(close,Close)
-(_put,Put)
-(_get,Get)
-(del,Del)
-(sync,Sync)

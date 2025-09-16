@@ -1,8 +1,0 @@
-(beginPolygon,BeginPolygon)
-(endPolygon,EndPolygon)
-(beginContour,BeginContour)
-(endContour,EndContour)
-(callback,Callback)
-(normal,Normal)
-(property,Property)
-(vertex,Vertex)

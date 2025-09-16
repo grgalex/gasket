@@ -1,3 +1,0 @@
-(getAttributes,GetAttributes)
-(getAttribute,GetAttribute)
-(setAttribute,SetAttribute)

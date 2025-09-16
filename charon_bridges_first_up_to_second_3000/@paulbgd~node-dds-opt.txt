@@ -1,2 +1,0 @@
-(width,Number)
-(height,Number)

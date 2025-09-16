@@ -1,2 +1,0 @@
-(hello,Method)
-(kill_self,kill_self)

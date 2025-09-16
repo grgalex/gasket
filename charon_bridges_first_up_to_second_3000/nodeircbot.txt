@@ -1,2 +1,0 @@
-(send,binding_send)
-(start,GetAsync)

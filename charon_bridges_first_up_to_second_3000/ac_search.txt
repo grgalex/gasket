@@ -1,3 +1,0 @@
-(add,acAdd)
-(compile,acCompile)
-(search,acSearch)

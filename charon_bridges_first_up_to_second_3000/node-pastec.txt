@@ -1,5 +1,0 @@
-(addImage,addImage)
-(removeImage,removeImage)
-(searchImage,searchImage)
-(searchSimilar,searchSimilar)
-(tag,dataStr)

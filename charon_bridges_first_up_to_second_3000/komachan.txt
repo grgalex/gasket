@@ -1,6 +1,0 @@
-(start,Start)
-(move,Move)
-(search,Search)
-(legal,Legal)
-(print,Print)
-(newKomachan,Komachan)

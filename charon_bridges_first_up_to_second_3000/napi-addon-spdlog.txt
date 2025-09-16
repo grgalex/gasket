@@ -1,3 +1,0 @@
-(setFormatter,setFormatter)
-(setLevel,setLevel)
-(Logger,func)

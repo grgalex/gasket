@@ -1,7 +1,0 @@
-(verify,Verify)
-(device,Device)
-(open,pcsc)
-(transmit,pcsc)
-(close,pcsc)
-(on,pcsc)
-(update,pcsc)

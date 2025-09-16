@@ -1,4 +1,0 @@
-(mount,Mount)
-(umount,Umount)
-(mountSync,MountSync)
-(umountSync,UmountSync)

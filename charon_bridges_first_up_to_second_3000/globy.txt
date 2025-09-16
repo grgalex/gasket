@@ -1,3 +1,0 @@
-(readdirSyncSafe,ReaddirSyncSafe)
-(isSymbolicLinkSync,IsSymbolicLinkSync)
-(existsSync,ExistsSync)

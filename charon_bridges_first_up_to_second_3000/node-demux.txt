@@ -1,8 +1,0 @@
-(LoadVideo,LoadVideo)
-(StartDemuxing,StartDemuxing)
-(DemuxFrame,DemuxFrame)
-(PauseDemuxing,PauseDemuxing)
-(StopDemuxing,StopDemuxing)
-(SeekVideo,SeekVideo)
-(On,On)
-(IsBusy,IsBusy)

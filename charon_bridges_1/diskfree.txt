@@ -1,4 +1,0 @@
-(check,DiskSpace)
-(isErrDenied,nodeIsErrDenied)
-(isErrBadPath,nodeIsErrBadPath)
-(isErrIO,nodeIsErrIO)

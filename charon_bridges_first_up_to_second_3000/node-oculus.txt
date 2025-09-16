@@ -1,8 +1,0 @@
-(destroyResources,destroyResources)
-(discoverSensor,discoverSensor)
-(getDeviceInfo,getDeviceInfo)
-(getPositionDeltas,getPositionDeltas)
-(getOrientationQuat,getOrientationQuat)
-(getTrackingData,getTrackingData)
-(getOvrMatrix4f_Projection,getOvrMatrix4f_Projection)
-(createOculus,nodeOculus)

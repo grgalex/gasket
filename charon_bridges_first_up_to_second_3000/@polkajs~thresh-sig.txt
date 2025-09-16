@@ -1,7 +1,0 @@
-(SetG,SetG)
-(Dealer,Dealer)
-(Encrypt,Encrypt)
-(VerifyCipherText,VerifyCipherText)
-(DecryptShare,DecryptShare)
-(VerifyShare,VerifyShare)
-(CombineShares,CombineShares)

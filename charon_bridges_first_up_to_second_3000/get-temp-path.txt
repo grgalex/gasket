@@ -1,2 +1,0 @@
-(gtp,Method)
-(getFullTFilePath,getFullTFilePath)

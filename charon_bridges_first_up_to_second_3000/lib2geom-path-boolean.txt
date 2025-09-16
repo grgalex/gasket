@@ -1,2 +1,0 @@
-(intersectPathData,IntersectPaths)
-(subtractPathData,SubtractPaths)

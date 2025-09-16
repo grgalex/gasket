@@ -1,3 +1,0 @@
-(end,End)
-(upon_gc,memwatch)
-(gc,memwatch)

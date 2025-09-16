@@ -1,5 +1,0 @@
-(state,Number)
-(maxMem,Number)
-(memory,Number)
-(nrVirtCpu,Number)
-(cpuTime,Number)

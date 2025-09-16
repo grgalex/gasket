@@ -1,7 +1,0 @@
-(glSetMultisamplefvAMD,NULL)
-(glSetFenceAPPLE,NULL)
-(glSetFragmentShaderConstantATI,NULL)
-(glSetInvariantEXT,NULL)
-(glSetLocalConstantEXT,NULL)
-(glSetFenceNV,NULL)
-(glXSet3DfxModeMESA,NULL)

@@ -1,5 +1,0 @@
-(generateDm,CreateDm)
-(decodeDm,DecodeDm)
-(width,data)
-(height,data)
-(channels,data)

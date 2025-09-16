@@ -1,7 +1,0 @@
-(drawColor,DrawColor)
-(drawText,DrawText)
-(setBitmapDevice,SetBitmapDevice)
-(allocPixels,AllocPixels)
-(setConfig,SetConfig)
-(setAntiAlias,SetAntiAlias)
-(setTextSize,SetTextSize)

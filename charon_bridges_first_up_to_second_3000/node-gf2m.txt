@@ -1,3 +1,0 @@
-(mod,Fmod)
-(mul,Fmul)
-(inv,Finv)

@@ -1,3 +1,0 @@
-(MODE_ENCODE,Number)
-(MODE_DECODE,Number)
-(ENCODE_FINISH,Number)

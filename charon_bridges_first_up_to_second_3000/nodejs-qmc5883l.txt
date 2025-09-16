@@ -1,7 +1,0 @@
-(initialize,InitCompass)
-(setOffsetMatrix,SetCompassOffset)
-(setScaleMatrix,SetCompassScale)
-(setDeclinationAngle,SetCompassDeclinationAngle)
-(readRawData,ReadRawCompassData)
-(readCorrectedData,ReadCorrectedCompassData)
-(readAzimuth,ReadAzimuth)

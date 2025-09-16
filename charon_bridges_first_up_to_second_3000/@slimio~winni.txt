@@ -1,4 +1,0 @@
-(getAdaptersAddresses,getAdaptersAddresses)
-(getIfEntry,getIfEntry)
-(getIfTable,getIfTable)
-(getNumberOfInterfaces,getNumberOfInterfaces)

@@ -1,6 +1,0 @@
-(open,ApoxUsbCan)
-(close,ApoxUsbCan)
-(sendBoardMessage,ApoxUsbCan)
-(sendCanBusMessage,ApoxUsbCan)
-(34,size)
-(28,size)

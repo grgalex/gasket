@@ -1,4 +1,0 @@
-(result,String)
-(solution,Array)
-(vars,Array)
-(simplex_wrapper,Solve)

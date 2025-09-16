@@ -1,1 +1,0 @@
-(native_argb32_to_png,NativeArgb32ToPng)

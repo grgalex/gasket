@@ -1,4 +1,0 @@
-(assemble,assemble)
-(execute,execute)
-(executeSync,executeSync)
-(dealloc,dealloc)

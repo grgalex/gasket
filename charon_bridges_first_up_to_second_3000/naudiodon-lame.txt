@@ -1,4 +1,0 @@
-(start,Start)
-(read,Read)
-(quit,Quit)
-(write,Write)

@@ -1,4 +1,0 @@
-(initializeClrFunc,initializeClrFunc)
-(SetCallV8FunctionDelegate,setCallV8Function)
-(message,message)
-(name,name)

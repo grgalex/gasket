@@ -1,3 +1,0 @@
-(initialize,Initialize)
-(testLogging,TestLogging)
-(unInitialize,UnInitialize)

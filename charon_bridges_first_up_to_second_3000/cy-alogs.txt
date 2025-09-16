@@ -1,6 +1,0 @@
-(new1,New1)
-(new2,New2)
-(new3,New3)
-(copy,Copy)
-(Cryptonight,Cryptonight)
-(X11,X11)

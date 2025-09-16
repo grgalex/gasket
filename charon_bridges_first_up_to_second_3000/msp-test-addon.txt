@@ -1,2 +1,0 @@
-(Compute,Compute)
-(0,C)

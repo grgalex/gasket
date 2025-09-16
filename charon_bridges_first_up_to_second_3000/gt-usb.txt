@@ -1,4 +1,0 @@
-(initdevice,initdevice)
-(receiverawdata,receiverawdata)
-(sendrawdata,sendrawdata)
-(RunCommand,runcommand)

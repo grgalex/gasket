@@ -1,2 +1,0 @@
-(_optimize,optimize)
-(_dumpdct,dumpdct)

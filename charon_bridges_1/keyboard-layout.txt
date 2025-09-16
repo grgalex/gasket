@@ -1,4 +1,0 @@
-(getCurrentKeyboardLayout,KeyboardLayoutManager)
-(getCurrentKeyboardLanguage,KeyboardLayoutManager)
-(getInstalledKeyboardLanguages,KeyboardLayoutManager)
-(getCurrentKeymap,KeyboardLayoutManager)

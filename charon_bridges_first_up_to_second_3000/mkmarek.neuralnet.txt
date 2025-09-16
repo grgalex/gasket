@@ -1,6 +1,0 @@
-(create,create)
-(clear,clear)
-(setInputValues,setInputValues)
-(getOutputValues,getOutputValues)
-(getValuesFromLayer,getValuesFromLayer)
-(backPropagate,backPropagate)

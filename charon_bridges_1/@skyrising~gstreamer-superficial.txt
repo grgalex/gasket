@@ -1,8 +1,0 @@
-(pull,GstAppSinkPull)
-(play,Play)
-(pause,Pause)
-(stop,Stop)
-(forceKeyUnit,ForceKeyUnit)
-(findChild,FindChild)
-(pollBus,PollBus)
-(name,name)

@@ -1,7 +1,0 @@
-(addBBox,addBBox)
-(addCircle,addCircle)
-(addAnnulus,addAnnulus)
-(addPolygon,addPolygon)
-(queryPoint,queryPoint)
-(queryIntersect,queryIntersect)
-(remove,remove)

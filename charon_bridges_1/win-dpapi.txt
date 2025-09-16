@@ -1,2 +1,0 @@
-(protectData,protectData)
-(unprotectData,unprotectData)

@@ -1,2 +1,0 @@
-(createConstructor,CreateConstructor)
-(createObject,CreateObject)

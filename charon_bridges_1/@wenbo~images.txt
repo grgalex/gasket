@@ -1,8 +1,0 @@
-(resize,Resize)
-(rotate,Rotate)
-(fillColor,FillColor)
-(loadFromBuffer,LoadFromBuffer)
-(copyFromImage,CopyFromImage)
-(drawImage,DrawImage)
-(toBuffer,ToBuffer)
-(gc,GC)

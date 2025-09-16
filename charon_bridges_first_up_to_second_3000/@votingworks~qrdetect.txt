@@ -1,7 +1,0 @@
-(type,Number)
-(orientation,Number)
-(x,Number)
-(y,Number)
-(quality,Number)
-(version,String)
-(detect,DetectQRCode)

@@ -1,2 +1,0 @@
-(evaluate,Evaluate)
-(evaluateSync,EvaluateSync)

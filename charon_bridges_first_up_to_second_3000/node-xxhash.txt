@@ -1,3 +1,0 @@
-(update,Update)
-(digest,Digest)
-(hash,StaticHash)

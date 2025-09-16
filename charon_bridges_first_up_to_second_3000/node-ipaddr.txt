@@ -1,8 +1,0 @@
-(add,add)
-(addv4,addv4)
-(addv6,addv6)
-(search,search)
-(searchv4,searchv4)
-(searchv6,searchv6)
-(dump,dump)
-(exports,Ippool)

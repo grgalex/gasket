@@ -1,3 +1,0 @@
-(initializeClrFunc,initializeClrFunc)
-(message,message)
-(name,name)

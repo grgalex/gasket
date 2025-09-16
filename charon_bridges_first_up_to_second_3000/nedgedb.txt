@@ -1,8 +1,0 @@
-(connect,connect)
-(connectSync,connectSync)
-(disconnect,disconnect)
-(disconnectSync,disconnectSync)
-(select,select)
-(selectSync,selectSync)
-(query,query)
-(querySync,querySync)

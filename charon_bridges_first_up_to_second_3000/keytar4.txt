@@ -1,6 +1,0 @@
-(getPassword,GetPassword)
-(setPassword,SetPassword)
-(deletePassword,DeletePassword)
-(findPassword,FindPassword)
-(findCredentials,FindCredentials)
-(password,password)

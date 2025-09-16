@@ -1,3 +1,0 @@
-(prepare,Prepare)
-(toUnicode,ToUnicode)
-(toASCII,ToASCII)

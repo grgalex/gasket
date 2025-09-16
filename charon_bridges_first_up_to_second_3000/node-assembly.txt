@@ -1,3 +1,0 @@
-(add,Add)
-(sub,Subtract)
-(mul,Multiply)

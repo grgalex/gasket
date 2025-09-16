@@ -1,6 +1,0 @@
-(connect,Connect)
-(disconnect,Disconnect)
-(setTarget,SetTarget)
-(setSpeed,SetSpeed)
-(setAccel,SetAccel)
-(getPosition,GetPosition)

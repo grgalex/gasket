@@ -1,7 +1,0 @@
-(wd,Number)
-(mask,Number)
-(cookie,Number)
-(init,Init)
-(addWatch,AddWatch)
-(rmWatch,RmWatch)
-(parseEvent,ParseEvent)

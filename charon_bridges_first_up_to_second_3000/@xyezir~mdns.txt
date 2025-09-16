@@ -1,7 +1,0 @@
-(fd,fd_getter)
-(initialized,initialized_getter)
-(demangle,FunctionTemplate)
-(TXTRecordSetValue,TXTRecordSetValue)
-(set,SocketWatcher)
-(start,SocketWatcher)
-(stop,SocketWatcher)

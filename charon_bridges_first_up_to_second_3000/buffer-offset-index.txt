@@ -1,3 +1,0 @@
-(splice,Splice)
-(positionForCharacterIndex,PositionForCharacterIndex)
-(characterIndexForPosition,CharacterIndexForPosition)

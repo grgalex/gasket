@@ -1,2 +1,0 @@
-(CloseMainWindowsByProcess,CloseMainWindowsByProcess)
-(CloseMainWindowsByProcess,CloseMainWindowsByProcess)

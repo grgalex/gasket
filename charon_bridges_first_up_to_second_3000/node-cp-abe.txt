@@ -1,4 +1,0 @@
-(setup,cpabe_setup)
-(encryptMessage,cpabe_encryptMessage)
-(keygen,cpabe_keygen)
-(decryptMessage,cpabe_decryptMessage)

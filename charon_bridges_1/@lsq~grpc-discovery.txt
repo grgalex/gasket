@@ -1,3 +1,0 @@
-(init,InitDynamic)
-(resolve,Resolve)
-(getServiceName,GetServiceName)

@@ -1,4 +1,0 @@
-(print,Print)
-(print_with_arg,PrintArg)
-(length,StrLen)
-(delay,Delay)

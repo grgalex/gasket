@@ -1,6 +1,0 @@
-(exports,Method)
-(close,Close)
-(isRunning,IsRunning)
-(queNum,QueueNum)
-(fastDiff,FastDiff)
-(terminate,Terminate)

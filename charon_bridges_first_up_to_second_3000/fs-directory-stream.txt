@@ -1,2 +1,0 @@
-(uv_fs_scandir,uv_fs_scandir)
-(uv_fs_scandir_next,uv_fs_scandir_next)

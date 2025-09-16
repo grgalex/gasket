@@ -1,3 +1,0 @@
-(GetUsageEx,SGetUsageEx)
-(GetSystemNonIdleTimes,SGetSystemNonIdleTimes)
-(GetProcessNonIdleTimes,SGetProcessNonIdleTimes)

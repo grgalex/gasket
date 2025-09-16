@@ -1,4 +1,0 @@
-(getImageTags,GetImageTags)
-(setImageTags,SetImageTags)
-(deleteImageTags,DeleteImageTags)
-(getImagePreviews,GetImagePreviews)

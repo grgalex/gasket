@@ -1,6 +1,0 @@
-(getVersion,getVersion)
-(encodeImage,encodeImage)
-(decodeJpg,decodeJpg)
-(encodeJpg,encodeJpg)
-(decodePng,decodePng)
-(encodePng,encodePng)

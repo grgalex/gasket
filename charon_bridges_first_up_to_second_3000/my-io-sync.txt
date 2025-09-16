@@ -1,3 +1,0 @@
-(print,Print)
-(println,Println)
-(raw_input,Raw_input)

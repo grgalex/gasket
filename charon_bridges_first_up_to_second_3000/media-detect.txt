@@ -1,4 +1,0 @@
-(SetWindowCreateCallback,MediaDetectWrapper)
-(SetWindowActivateCallback,MediaDetectWrapper)
-(SetWindowCloseCallback,MediaDetectWrapper)
-(SetWindowMonitorChangeCallback,MediaDetectWrapper)

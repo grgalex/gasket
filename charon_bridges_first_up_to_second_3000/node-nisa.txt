@@ -1,7 +1,0 @@
-(open,Open)
-(write,Write)
-(read,Read)
-(query,Query)
-(trigger,Trigger)
-(deviceClear,DeviceClear)
-(close,Close)

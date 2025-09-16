@@ -1,5 +1,0 @@
-(request,request)
-(get,get)
-(write,Request)
-(end,Request)
-(endFile,Request)

@@ -1,3 +1,0 @@
-(MakeKeypair,MakeKeypair)
-(Sign,Sign)
-(Verify,Verify)

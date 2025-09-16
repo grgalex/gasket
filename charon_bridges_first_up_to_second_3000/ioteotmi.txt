@@ -1,3 +1,0 @@
-(connection,CreateTmiContextObject)
-(store,TmiContext)
-(connect,TmiContext)

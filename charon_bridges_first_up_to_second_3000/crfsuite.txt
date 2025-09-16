@@ -1,3 +1,0 @@
-(Tagger,func)
-(set_params,TrainerClass)
-(Trainer,func)

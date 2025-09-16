@@ -1,7 +1,0 @@
-(init,InitSpeaker)
-(write,Write)
-(start,Start)
-(stop,Stop)
-(pause,Pause)
-(resume,Resume)
-(clean,Clean)

@@ -1,7 +1,0 @@
-(executor_construct,bitprim_executor_construct)
-(executor_destruct,bitprim_executor_destruct)
-(executor_stop,bitprim_executor_stop)
-(executor_initchain,bitprim_executor_initchain)
-(executor_run_wait,bitprim_executor_run_wait)
-(executor_get_chain,bitprim_executor_get_chain)
-(chain_fetch_last_height,bitprim_chain_fetch_last_height)

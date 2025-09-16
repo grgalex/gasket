@@ -1,5 +1,0 @@
-(compress,compress)
-(uncompress,uncompress)
-(metaCompress,onet_compress)
-(getCrc,getCrc)
-(estimate,estimate)

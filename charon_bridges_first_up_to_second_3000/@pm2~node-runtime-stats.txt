@@ -1,3 +1,0 @@
-(sense,sense)
-(start,start)
-(stop,stop)

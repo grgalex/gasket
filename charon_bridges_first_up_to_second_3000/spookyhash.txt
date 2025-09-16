@@ -1,3 +1,0 @@
-(hash128,Hash128)
-(hash64,Hash64)
-(hash32,Hash32)

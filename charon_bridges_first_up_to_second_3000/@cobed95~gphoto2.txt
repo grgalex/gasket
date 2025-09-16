@@ -1,8 +1,0 @@
-(getConfig,GetConfig)
-(setConfigValue,SetConfigValue)
-(takePicture,TakePicture)
-(downloadPicture,DownloadPicture)
-(list,List)
-(setLogLevel,SetLogLevel)
-(enableGC,CloseMemberHandle)
-(closeMemberHandle,CloseMemberHandle)

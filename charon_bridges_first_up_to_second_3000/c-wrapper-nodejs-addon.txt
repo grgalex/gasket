@@ -1,3 +1,0 @@
-(Bass_LoadLibrary,Bass_LoadLibrary)
-(BASS_GetVersion,BASS_GetVersion)
-(hello,Method)

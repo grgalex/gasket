@@ -1,7 +1,0 @@
-(addTracker,CTPParserWrap)
-(matchesTracker,CTPParserWrap)
-(addFirstPartyHosts,CTPParserWrap)
-(findFirstPartyHosts,CTPParserWrap)
-(serialize,CTPParserWrap)
-(deserialize,CTPParserWrap)
-(cleanup,CTPParserWrap)

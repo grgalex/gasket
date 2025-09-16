@@ -1,8 +1,0 @@
-(GetHeight,Screen)
-(SetHeight,Screen)
-(GetWidth,Screen)
-(SetWidth,Screen)
-(AddRectangle,Screen)
-(AddRectangles,Screen)
-(Listen,Screen)
-(ListenGazePoint,Screen)

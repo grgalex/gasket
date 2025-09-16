@@ -1,3 +1,0 @@
-(mutualInfo,inform)
-(activeInfo,inform)
-(transferEntropy,inform)

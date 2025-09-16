@@ -1,2 +1,0 @@
-(decompress,decompressFunction)
-(scale,scaleFunction)

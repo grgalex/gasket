@@ -1,3 +1,0 @@
-(SetAppUserModelIID,SetAppUserModelIID)
-(Hello,Hello)
-(GetAppUserModelIID,GetAppUserModelIID)

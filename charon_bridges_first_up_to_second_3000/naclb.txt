@@ -1,2 +1,0 @@
-(verify,verify)
-(sign,sign)

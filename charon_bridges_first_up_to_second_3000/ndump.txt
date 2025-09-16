@@ -1,5 +1,0 @@
-(writeSnapshot,HeapDump)
-(getProfile,CpuDump)
-(start,CpuDump)
-(stop,CpuDump)
-(deleteAll,CpuDump)

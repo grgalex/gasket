@@ -1,6 +1,0 @@
-(sayHiAsync,NanNew)
-(add,NanNew)
-(addAsync,NanNew)
-(sayHiAsync,RunCallback)
-(add,Add)
-(addAsync,AddAsync)

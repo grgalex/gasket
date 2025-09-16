@@ -1,5 +1,0 @@
-(lookupSync,lookupSync)
-(country_name,name)
-(city,name)
-(check,check)
-(isString,isString)

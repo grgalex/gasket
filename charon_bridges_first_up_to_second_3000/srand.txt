@@ -1,4 +1,0 @@
-(random,Random)
-(rand,Rand)
-(srand,SRand)
-(seed,SRand)

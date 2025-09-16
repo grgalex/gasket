@@ -1,7 +1,0 @@
-(readFileSync,readFileSync)
-(readFile,readFile)
-(copyFileSync,copyFileSync)
-(copyFile,copyFile)
-(count,get_prop)
-(names,get_prop)
-(v8,V8)

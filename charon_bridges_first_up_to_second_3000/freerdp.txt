@@ -1,5 +1,0 @@
-(connect,Connect)
-(sendKeyEventScancode,SendKeyEventScancode)
-(sendPointerEvent,SendPointerEvent)
-(setClipboard,SetClipboard)
-(close,Close)

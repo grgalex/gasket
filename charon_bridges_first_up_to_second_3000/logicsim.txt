@@ -1,7 +1,0 @@
-(newBoard,newBoard)
-(removeBoard,removeBoard)
-(startBoard,start)
-(stopBoard,stop)
-(getBoardStatus,getStatus)
-(getBoard,getBoard)
-(triggerInput,triggerInput)

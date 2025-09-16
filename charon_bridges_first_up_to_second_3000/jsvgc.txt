@@ -1,2 +1,0 @@
-(convertSVG,Convert)
-(convertSync,ConvertSync)

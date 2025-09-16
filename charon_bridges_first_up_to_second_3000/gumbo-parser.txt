@@ -1,2 +1,0 @@
-(nodeName,name)
-(gumbo,Method)

@@ -1,5 +1,0 @@
-(Start,Start)
-(Stop,Stop)
-(GetVersion,GetVersion)
-(IdentifyLicense,IdentifyLicense)
-(CheckQueue,CheckQueue)

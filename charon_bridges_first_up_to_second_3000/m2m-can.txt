@@ -1,2 +1,0 @@
-(sc_send,sc_send)
-(sc_read,sc_read)

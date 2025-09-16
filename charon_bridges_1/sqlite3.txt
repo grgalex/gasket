@@ -1,2 +1,0 @@
-(lastID,Number)
-(changes,Number)

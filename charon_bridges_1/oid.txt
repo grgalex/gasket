@@ -1,2 +1,0 @@
-(objectIdHash,ObjectIdHash)
-(numberIdHash,NumberIdHash)

@@ -1,6 +1,0 @@
-(version,QConfVersion)
-(getConf,QConfGetConf)
-(getBatchKeys,QConfGetBatchKeys)
-(getBatchConf,QConfGetBatchConf)
-(getAllHost,QConfGetAllHost)
-(getHost,QConfGetHost)

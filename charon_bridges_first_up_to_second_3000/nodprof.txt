@@ -1,3 +1,0 @@
-(profilerStart,NodProfProfilerStart)
-(profilerStop,NodProfProfilerStop)
-(heapSnapShotTake,NodProfHeapSnapShotTake)

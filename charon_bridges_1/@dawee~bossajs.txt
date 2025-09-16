@@ -1,8 +1,0 @@
-(connect,Connect)
-(close,Close)
-(erase,Erase)
-(info,Info)
-(read,Read)
-(verify,Verify)
-(write,Write)
-(lockRegions,lockRegions)

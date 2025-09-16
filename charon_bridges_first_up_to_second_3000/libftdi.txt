@@ -1,8 +1,0 @@
-(create_context,create_context)
-(ftdi_usb_open_desc,ftdi_usb_open_desc)
-(ftdi_set_bitmode,ftdi_set_bitmode)
-(ftdi_set_baudrate,ftdi_set_baudrate)
-(ftdi_get_error_string,ftdi_get_error_string)
-(ftdi_read_data,ftdi_read_data)
-(ftdi_write_data,ftdi_write_data)
-(ftdi_usb_purge_tx_buffer,ftdi_usb_purge_tx_buffer)

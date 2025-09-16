@@ -1,4 +1,0 @@
-(initialize,initializeDotnode)
-(isInitialized,isInitialized)
-(invokeMethod,callFunction)
-(shutdown,shutdownDotnode)

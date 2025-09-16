@@ -1,5 +1,0 @@
-(0,level)
-(56,Bits)
-(64,Bits)
-(index,index)
-(60,Bits)

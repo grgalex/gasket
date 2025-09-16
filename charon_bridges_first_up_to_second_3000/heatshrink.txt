@@ -1,6 +1,0 @@
-(decoder_alloc,_decoder_alloc)
-(decoder_free,_decoder_free)
-(decoder_reset,_decoder_reset)
-(decoder_sink,_decoder_sink)
-(decoder_poll,_decoder_poll)
-(decoder_finish,_decoder_finish)

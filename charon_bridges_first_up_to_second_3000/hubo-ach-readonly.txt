@@ -1,2 +1,0 @@
-(init,Init)
-(getState,getState)

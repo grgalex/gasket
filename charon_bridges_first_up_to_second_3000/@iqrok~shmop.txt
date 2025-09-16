@@ -1,2 +1,0 @@
-(ftok,SHMOP_ftok)
-(shmat,SHMOP_shmat)

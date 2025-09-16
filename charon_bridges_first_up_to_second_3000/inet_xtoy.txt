@@ -1,3 +1,0 @@
-(errno,Value)
-(inet_ntop,InetNtoP)
-(inet_pton,InetPtoN)

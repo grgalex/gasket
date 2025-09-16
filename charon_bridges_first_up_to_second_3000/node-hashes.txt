@@ -1,2 +1,0 @@
-(hash,GenHash)
-(murmurhash,MurmurHash)

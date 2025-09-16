@@ -1,3 +1,0 @@
-(setLogger,udeb_setLogger)
-(setLevel,udeb_setLevel)
-(setFileLevel,udeb_setFileLevel)

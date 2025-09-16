@@ -1,3 +1,0 @@
-(enqueue,Enqueue)
-(dequeue,Dequeue)
-(peek,Peek)

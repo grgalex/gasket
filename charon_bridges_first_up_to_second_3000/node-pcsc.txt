@@ -1,2 +1,0 @@
-(getReaders,getReaders)
-(scardRead,scardRead)

@@ -1,6 +1,0 @@
-(zero,zero)
-(cputime,cputime)
-(cpuusage,cpuusage)
-(gettimeofday,gettimeofday)
-(microtime,microtime)
-(getrusage_array,getrusage_array)

@@ -1,6 +1,0 @@
-(inspect,NodeMRubyObject)
-(loadString,NodeMRuby)
-(loadFile,NodeMRuby)
-(callMethod,NodeMRuby)
-(defineGlobalConst,NodeMRuby)
-(init,NodeMRuby)

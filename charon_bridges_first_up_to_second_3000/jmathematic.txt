@@ -1,4 +1,0 @@
-(plus,Plus)
-(minus,Minus)
-(multiple,Multiple)
-(divide,Divide)

@@ -1,4 +1,0 @@
-(open,NodeKytea)
-(getWS,NodeKytea)
-(getTags,NodeKytea)
-(getAllTags,NodeKytea)

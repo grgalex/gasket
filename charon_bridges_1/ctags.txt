@@ -1,4 +1,0 @@
-(end,Tags)
-(exists,Tags)
-(findTags,Tags)
-(getTags,Tags)

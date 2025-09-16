@@ -1,4 +1,0 @@
-(setSockOpt,NodeSRT)
-(setLogLevel,NodeSRT)
-(socket,Number)
-(events,Number)

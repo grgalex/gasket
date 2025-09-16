@@ -1,3 +1,0 @@
-(alloc,Alloc)
-(alignedAlloc,AlignedAlloc)
-(sync,Sync)

@@ -1,2 +1,0 @@
-(MurmurHash2,Method_MurmurHash2)
-(MurmurHash64,Method_MurmurHash64)

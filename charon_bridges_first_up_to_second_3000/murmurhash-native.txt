@@ -1,5 +1,0 @@
-(copy,Copy)
-(digest,Digest)
-(serialize,Serialize)
-(toJSON,Serialize)
-(update,Update)

@@ -1,2 +1,0 @@
-(ping,PingSync)
-(pingAsync,PingAsync)

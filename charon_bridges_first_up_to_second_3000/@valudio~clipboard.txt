@@ -1,4 +1,0 @@
-(copy,copy)
-(paste,paste)
-(getFromClipboard,getFromClipboard)
-(setToClipboard,setToClipboard)

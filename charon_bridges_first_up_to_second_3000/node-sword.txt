@@ -1,4 +1,0 @@
-(configure,Configure)
-(info,Info)
-(read,Read)
-(search,Search)

@@ -1,4 +1,0 @@
-(enableTransmit,EnableTransmit)
-(switchOn,SwitchOn)
-(switchOff,SwitchOff)
-(setRemoteCode,SetRemoteCode)

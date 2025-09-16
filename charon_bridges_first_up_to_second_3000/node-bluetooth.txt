@@ -1,7 +1,0 @@
-(write,Write)
-(read,Read)
-(close,Close)
-(inquireSync,InquireSync)
-(inquire,Inquire)
-(findSerialPortChannel,SdpSearch)
-(listPairedDevices,ListPairedDevices)

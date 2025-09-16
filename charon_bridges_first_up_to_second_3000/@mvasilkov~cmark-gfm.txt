@@ -1,2 +1,0 @@
-(renderHtmlSync,render_html_sync)
-(version,String)

@@ -1,3 +1,0 @@
-(ReqSettlementInfoConfirm,TraderApi)
-(ReqQrySettlementInfo,TraderApi)
-(ReqQrySettlementInfoConfirm,TraderApi)

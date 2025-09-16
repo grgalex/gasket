@@ -1,6 +1,0 @@
-(connect,NanNew)
-(printLine,NanNew)
-(clearLine,NanNew)
-(connect,connect)
-(printLine,printLine)
-(clearLine,clearLine)

@@ -1,4 +1,0 @@
-(memorize,memorize)
-(remember,remember)
-(stats,stats)
-(mh3,murmur32)

@@ -1,2 +1,0 @@
-(_update,Update)
-(result,Result)

@@ -1,5 +1,0 @@
-(convert,Convert)
-(identify,Identify)
-(quantizeColors,QuantizeColors)
-(composite,Composite)
-(version,Version)

@@ -1,2 +1,0 @@
-(deflate,ZLib_deflate)
-(inflate,ZLib_inflate)

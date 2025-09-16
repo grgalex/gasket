@@ -1,6 +1,0 @@
-(push,Push)
-(chunkSize,GetChunkSize)
-(err,GetErr)
-(msg,GetMsg)
-(result,GetResult)
-(windowBits,GetWindowBits)

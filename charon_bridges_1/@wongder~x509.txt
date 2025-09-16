@@ -1,6 +1,0 @@
-(getAltNames,get_altnames)
-(getSubject,get_subject)
-(getIssuer,get_issuer)
-(parseCert,parse_cert)
-(altNames,altNames)
-(extensions,extensions)

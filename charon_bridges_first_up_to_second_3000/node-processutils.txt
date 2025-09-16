@@ -1,6 +1,0 @@
-(killProcess,killProcess)
-(createProcess,createProcess)
-(createProcessScheme,createProcessScheme)
-(getProcessId,getProcessId)
-(injectProcess,injectProcess)
-(executeInject,executeInject)

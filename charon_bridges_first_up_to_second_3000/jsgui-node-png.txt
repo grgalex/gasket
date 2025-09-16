@@ -1,8 +1,0 @@
-(fib,fib_number)
-(rgba_buffer_self_simple_fade,rgba_buffer_self_simple_fade)
-(buffer_copy,buffer_copy)
-(filter_all_scanlines,filter_all_scanlines)
-(reverse_filter_all_scanlines,reverse_filter_all_scanlines)
-(read_jpeg_to_rgb,read_jpeg_to_rgb)
-(copy_unfiltered_scanlines_buffer_32_bpp_to_rgba_buffer_cpp,copy_unfiltered_scanlines_buffer_32_bpp_to_rgba_buffer_cpp)
-(copy_rgba_pixel_buffer_to_rgba_pixel_buffer_region,copy_rgba_pixel_buffer_to_rgba_pixel_buffer_region)

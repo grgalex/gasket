@@ -1,2 +1,0 @@
-(calculate,Calculate)
-(calculateAsync,CalculateAsync)

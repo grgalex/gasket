@@ -1,2 +1,0 @@
-(encode,base64_encode_binding)
-(decode,base64_decode_binding)

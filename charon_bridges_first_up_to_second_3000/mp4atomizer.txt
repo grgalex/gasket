@@ -1,3 +1,0 @@
-(write,Write)
-(onChunk,OnChunk)
-(onInit,OnInit)

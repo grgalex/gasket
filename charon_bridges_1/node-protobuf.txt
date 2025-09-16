@@ -1,4 +1,0 @@
-(parse,NativeProtobuf)
-(parseWithUnknown,NativeProtobuf)
-(serialize,NativeProtobuf)
-(info,NativeProtobuf)

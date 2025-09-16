@@ -1,4 +1,0 @@
-(start,Start)
-(stop,Stop)
-(write,Write)
-(close,Close)

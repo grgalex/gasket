@@ -1,5 +1,0 @@
-(create,Method_Create)
-(open,Method_Open)
-(read,Method_Read)
-(write,Method_Write)
-(delete,Method_Delete)

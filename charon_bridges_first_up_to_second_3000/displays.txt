@@ -1,5 +1,0 @@
-(height,DisplayImpl)
-(width,DisplayImpl)
-(left,DisplayImpl)
-(top,DisplayImpl)
-(get,GetDisplays)

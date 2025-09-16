@@ -1,3 +1,0 @@
-(process,Processor)
-(width,Number)
-(height,Number)

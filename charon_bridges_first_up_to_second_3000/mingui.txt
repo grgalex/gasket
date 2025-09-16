@@ -1,6 +1,0 @@
-(notification,notification)
-(dialog,dialog)
-(getDialogTypes,getDialogTypes)
-(getResponseTypes,getResponseTypes)
-(answerToString,answerToString)
-(typeToString,typeToString)

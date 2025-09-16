@@ -1,3 +1,0 @@
-(make_buffer_diff,MakeBufferDiff)
-(apply_fwd_patch,ApplyFwdPatch)
-(apply_bck_patch,ApplyBckPatch)

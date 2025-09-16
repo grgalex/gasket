@@ -1,7 +1,0 @@
-(open,Open)
-(close,Close)
-(search,Search)
-(modify,Modify)
-(simpleBind,SimpleBind)
-(rename,Rename)
-(add,Add)

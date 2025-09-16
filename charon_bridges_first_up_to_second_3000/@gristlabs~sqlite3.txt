@@ -1,5 +1,0 @@
-(serialize,Serialize)
-(parse,Parse)
-(testOppositeEndianness,TestOppositeEndianness)
-(lastID,Number)
-(changes,Number)

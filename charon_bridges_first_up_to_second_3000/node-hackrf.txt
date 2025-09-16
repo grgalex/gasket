@@ -1,4 +1,0 @@
-(devices,Devices)
-(setFrequency,SetFrequency)
-(getVersion,GetVersion)
-(startRx,StartRx)

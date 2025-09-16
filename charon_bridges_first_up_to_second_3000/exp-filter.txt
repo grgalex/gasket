@@ -1,2 +1,0 @@
-(murmur3_sum,murmur3_sum)
-(murmur3_tweak,murmur3_tweak)

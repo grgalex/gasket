@@ -1,3 +1,0 @@
-(add,add)
-(get,get)
-(rem,rem)

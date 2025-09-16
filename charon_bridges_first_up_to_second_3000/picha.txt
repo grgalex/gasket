@@ -1,4 +1,0 @@
-(colorConvert,colorConvert)
-(colorConvertSync,colorConvertSync)
-(resize,resize)
-(resizeSync,resizeSync)

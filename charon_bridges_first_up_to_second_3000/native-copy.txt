@@ -1,2 +1,0 @@
-(NativeCopy,Copy)
-(ConvertRule,ConvertRule)

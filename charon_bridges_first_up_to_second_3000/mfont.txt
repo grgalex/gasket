@@ -1,4 +1,0 @@
-(hasFont,HasFont)
-(installFont,InstallFont)
-(removeFont,RemoveFont)
-(getError,GetError)

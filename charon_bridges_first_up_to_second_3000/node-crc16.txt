@@ -1,2 +1,0 @@
-(checkSum,NODECRC16CheckSum)
-(verifySum,NODECRC16VerifySum)

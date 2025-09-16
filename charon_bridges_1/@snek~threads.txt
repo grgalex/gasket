@@ -1,8 +1,0 @@
-(getPromise,GetPromise)
-(getId,GetId)
-(getState,GetState)
-(send,Send)
-(terminate,Terminate)
-(checkOutgoingMessages,CheckOutgoingMessages)
-(lock,Lock)
-(unlock,Unlock)

@@ -1,2 +1,0 @@
-(ushort,byteswap_ushort)
-(ulong,byteswap_ulong)

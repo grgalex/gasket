@@ -1,6 +1,0 @@
-(next_solution,NextSolution)
-(close,Close)
-(exception,Exception)
-(initialise,Initialise)
-(term_type,TermType)
-(cleanup,Cleanup)

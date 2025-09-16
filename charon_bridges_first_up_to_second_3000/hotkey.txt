@@ -1,2 +1,0 @@
-(Hotkey,CreateInstance)
-(getHelloWorldString,Hotkey)

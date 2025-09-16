@@ -1,3 +1,0 @@
-(connect,Connect)
-(disconnect,Disconnect)
-(redisCmd,RedisCmd)

@@ -1,6 +1,0 @@
-(init,init)
-(setParam,setParam)
-(setChannelParam,setChannelParam)
-(setChannelData,setChannelData)
-(render,render)
-(finalize,finalize)

@@ -1,4 +1,0 @@
-(getBufferAddress,get_buffer_address)
-(open,process_open)
-(read,process_read)
-(write,process_write)

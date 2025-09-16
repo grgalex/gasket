@@ -1,2 +1,0 @@
-(done,Boolean)
-(value,String)

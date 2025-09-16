@@ -1,4 +1,0 @@
-(hex2dec,NanNew)
-(dec2hex,NanNew)
-(hex2dec,Hex2dec)
-(dec2hex,Dec2hex)

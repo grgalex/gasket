@@ -1,6 +1,0 @@
-(open,Database)
-(close,Database)
-(delete,Database)
-(get,Database)
-(list,Database)
-(set,Database)

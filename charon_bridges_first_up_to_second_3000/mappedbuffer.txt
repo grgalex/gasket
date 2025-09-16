@@ -1,3 +1,0 @@
-(unmap,MappedBuffer)
-(fill,MappedBuffer)
-(sync,MappedBuffer)

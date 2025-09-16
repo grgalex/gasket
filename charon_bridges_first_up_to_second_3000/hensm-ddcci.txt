@@ -1,4 +1,0 @@
-(getMonitorList,getMonitorList)
-(refresh,refresh)
-(setVCP,setVCP)
-(getVCP,getVCP)

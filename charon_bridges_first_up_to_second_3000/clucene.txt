@@ -1,8 +1,0 @@
-(addField,AddField)
-(clear,Clear)
-(addDocument,AddDocumentAsync)
-(deleteDocument,DeleteDocumentAsync)
-(deleteDocumentsByType,DeleteDocumentsByTypeAsync)
-(search,SearchAsync)
-(optimize,OptimizeAsync)
-(closeWriter,CloseWriter)

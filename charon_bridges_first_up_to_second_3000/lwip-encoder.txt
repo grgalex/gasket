@@ -1,6 +1,0 @@
-(jpeg,NanNew)
-(png,NanNew)
-(gif,NanNew)
-(jpeg,encodeToJpegBuffer)
-(png,encodeToPngBuffer)
-(gif,encodeToGifBuffer)

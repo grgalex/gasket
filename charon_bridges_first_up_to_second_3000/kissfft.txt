@@ -1,2 +1,0 @@
-(fft,NanNew)
-(fft,_fft)

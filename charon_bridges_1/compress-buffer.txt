@@ -1,2 +1,0 @@
-(compress,MOZ_Z_compress)
-(uncompress,MOZ_Z_uncompress)

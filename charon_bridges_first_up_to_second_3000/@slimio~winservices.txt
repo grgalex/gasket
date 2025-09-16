@@ -1,4 +1,0 @@
-(enumServicesStatus,enumServicesStatus)
-(enumDependentServices,enumDependentServices)
-(getServiceConfiguration,getServiceConfiguration)
-(getServiceTriggers,getServiceTriggers)

@@ -1,6 +1,0 @@
-(start,Start)
-(let_worker_work,LetWorkerWork)
-(startCashInsert,StartCashInsert)
-(stopCashInsert,StopCashInsert)
-(start,Start)
-(cancel,Stop)

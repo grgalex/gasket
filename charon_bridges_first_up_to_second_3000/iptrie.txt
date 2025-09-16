@@ -1,3 +1,0 @@
-(add,Add)
-(del,Del)
-(find,Find)

@@ -1,3 +1,0 @@
-(getColors,GetColors)
-(getCorners,GetCorners)
-(getRoi,GetRoi)

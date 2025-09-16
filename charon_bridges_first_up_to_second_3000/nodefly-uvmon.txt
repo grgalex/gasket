@@ -1,2 +1,0 @@
-(getData,getData)
-(stop,stop)

@@ -1,8 +1,0 @@
-(name,String)
-(type,String)
-(data,String)
-(data,Number)
-(readValues,ReadValues)
-(enumKeys,EnumKeys)
-(createKey,CreateKey)
-(setValue,SetValue)

@@ -1,2 +1,0 @@
-(MakePanel,MakePanel)
-(MakeKeyWindow,MakeKeyWindow)

@@ -1,3 +1,0 @@
-(findLibraries,FindLibraries)
-(checkChild,CheckChild)
-(forkCore,ForkCore)

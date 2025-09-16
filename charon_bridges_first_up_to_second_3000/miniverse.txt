@@ -1,2 +1,0 @@
-(extractPublic,extractPublic)
-(generate,generate)

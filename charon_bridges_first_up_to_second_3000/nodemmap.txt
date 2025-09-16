@@ -1,2 +1,0 @@
-(mmap,mmap)
-(munmap,munmap)

@@ -1,2 +1,0 @@
-(is_finished,Boolean)
-(buf_index,String)

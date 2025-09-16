@@ -1,8 +1,0 @@
-(addProbe,DTraceProvider)
-(removeProbe,DTraceProvider)
-(enable,DTraceProvider)
-(disable,DTraceProvider)
-(fire,DTraceProvider)
-(fire,DTraceProbe)
-(start,FSEvents)
-(stop,FSEvents)

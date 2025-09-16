@@ -1,2 +1,0 @@
-(NodeGetSteamId,NodeGetSteamId)
-(NodeGetSteam64Id,NodeGetSteam64Id)

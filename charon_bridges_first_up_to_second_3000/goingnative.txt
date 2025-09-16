@@ -1,4 +1,0 @@
-(delay,Delay)
-(print,Print)
-(length,Length)
-(hello,Method)

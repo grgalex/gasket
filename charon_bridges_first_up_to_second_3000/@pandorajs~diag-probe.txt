@@ -1,3 +1,0 @@
-(setup,Setup)
-(teardown,Teardown)
-(getStatistics,GetStatistics)

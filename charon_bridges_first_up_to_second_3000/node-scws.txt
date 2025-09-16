@@ -1,4 +1,0 @@
-(segment,segment)
-(topwords,topwords)
-(getwords,getwords)
-(hasword,hasword)

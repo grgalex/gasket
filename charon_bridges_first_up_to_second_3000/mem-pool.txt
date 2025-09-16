@@ -1,3 +1,0 @@
-(truncate,Truncate)
-(whole,Whole)
-(recycle,Recycle)

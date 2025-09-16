@@ -1,2 +1,0 @@
-(loadConfig,LoadConfig)
-(rewriteURLString,RewriteURL)

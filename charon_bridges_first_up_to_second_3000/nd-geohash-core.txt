@@ -1,5 +1,0 @@
-(getHash,GetHash)
-(getHashKey,GetHashKey)
-(getHashRanges,GetHashRanges)
-(filterItems,FilterItems)
-(exports,GeohashConstructor)

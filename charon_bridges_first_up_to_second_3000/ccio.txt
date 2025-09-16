@@ -1,3 +1,0 @@
-(input,Input)
-(output,Output)
-(readline,ReadLine)

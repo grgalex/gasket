@@ -1,3 +1,0 @@
-(getKey,GetKey)
-(verifyKey,VerifyKey)
-(getActivationKey,GetActivationKey)

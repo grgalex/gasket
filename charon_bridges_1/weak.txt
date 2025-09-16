@@ -1,7 +1,0 @@
-(get,Get)
-(isWeakRef,IsWeakRef)
-(isNearDeath,IsNearDeath)
-(isDead,IsDead)
-(_create,Create)
-(_getEmitter,GetEmitter)
-(_setCallback,SetCallback)

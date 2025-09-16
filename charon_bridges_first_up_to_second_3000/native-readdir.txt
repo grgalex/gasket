@@ -1,3 +1,0 @@
-(open,Directory)
-(read,Directory)
-(close,Directory)

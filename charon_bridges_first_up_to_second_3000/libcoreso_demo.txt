@@ -1,8 +1,0 @@
-(OpenLogFull,NodeOpenLogFull)
-(OpenLog,NodeOpenLog)
-(CloseLog,NodeCloseLog)
-(LogImpt,NodeLogImpt)
-(LogErr,NodeLogErr)
-(LogDebug,NodeLogDebug)
-(LogInfo,NodeLogInfo)
-(test,Test)

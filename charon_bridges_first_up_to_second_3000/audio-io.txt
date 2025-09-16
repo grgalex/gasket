@@ -1,6 +1,0 @@
-(audioDeviceInfo,AudioDeviceInfo)
-(initialize,Initialize)
-(play,Play)
-(capture,Capture)
-(loadwav,LoadWav)
-(wrapup,Wrapup)

@@ -1,2 +1,0 @@
-(mount,_mount)
-(umount,_umount)

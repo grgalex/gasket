@@ -1,4 +1,0 @@
-(setLogFile,SetLogFile)
-(unmount,Unmount)
-(get,GetDevice)
-(poll,PollDevices)

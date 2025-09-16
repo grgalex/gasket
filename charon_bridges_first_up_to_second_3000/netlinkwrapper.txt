@@ -1,6 +1,0 @@
-(disconnect,disconnect)
-(receive,receive)
-(send,send)
-(accept,accept)
-(receiveFrom,receive_from)
-(sendTo,send_to)

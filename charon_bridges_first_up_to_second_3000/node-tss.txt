@@ -1,3 +1,0 @@
-(getPCR,getPCR)
-(getQuote,getQuote)
-(extendPCR,extendPCR)

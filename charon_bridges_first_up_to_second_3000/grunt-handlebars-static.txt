@@ -1,3 +1,0 @@
-(xor,xorBuffer)
-(render,Render)
-(isValidUTF8,Validation)

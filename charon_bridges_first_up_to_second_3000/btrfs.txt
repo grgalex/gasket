@@ -1,3 +1,0 @@
-(create_subvolume,CreateSubvolume)
-(delete_subvolume,DeleteSubvolume)
-(create_snapshot,CreateSnapshot)

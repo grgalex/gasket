@@ -1,4 +1,0 @@
-(w,size)
-(h,size)
-(desktopSize,desktopSize)
-(SetLabel,WxButton)

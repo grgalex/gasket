@@ -1,3 +1,0 @@
-(generate,Generate)
-(byteLength,ByteLength)
-(bitLength,BitLength)

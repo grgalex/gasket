@@ -1,3 +1,0 @@
-(pack,pack)
-(unpack,unpack)
-(setdebug,setdebug)

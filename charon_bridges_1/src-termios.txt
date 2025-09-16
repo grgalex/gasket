@@ -1,5 +1,0 @@
-(dup,Dup)
-(fork,Fork)
-(setControllingTTY,SetControllingTTY)
-(vhangup,VHangUp)
-(setsid,SetSID)

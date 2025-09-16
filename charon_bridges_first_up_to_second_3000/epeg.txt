@@ -1,4 +1,0 @@
-(downsize,Downsize)
-(crop,Crop)
-(process,Process)
-(saveTo,SaveTo)

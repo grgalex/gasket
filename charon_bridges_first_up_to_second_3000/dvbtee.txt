@@ -1,8 +1,0 @@
-(reset,reset)
-(feed,feed)
-(enableEttCollection,enableEttCollection)
-(enableParseISO6937,enableParseISO6937)
-(logLevel,logLevel)
-(libVersion,libVersion)
-(getTableDecoderIds,getTableDecoderIds)
-(getDescriptorDecoderIds,getDescriptorDecoderIds)

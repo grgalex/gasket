@@ -1,4 +1,0 @@
-(SimpleConsoleMessage,ConsoleSync)
-(GetFileCcsid,GetFileCcsid)
-(SetFileCcsid,SetFileCcsid)
-(GuessFileCcsid,GuessFileCcsid)

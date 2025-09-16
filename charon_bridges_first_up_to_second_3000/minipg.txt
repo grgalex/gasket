@@ -1,8 +1,0 @@
-(connect,Connect)
-(query,Query)
-(close,Close)
-(getResult,GetResult)
-(getResults,GetResults)
-(lastError,LastError)
-(finished,IsFinished)
-(setNoticeProcessor,SetNoticeProcessor)

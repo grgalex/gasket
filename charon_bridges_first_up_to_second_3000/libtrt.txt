@@ -1,4 +1,0 @@
-(stack,String)
-(maxBatchSize,Number)
-(name,String)
-(type,String)

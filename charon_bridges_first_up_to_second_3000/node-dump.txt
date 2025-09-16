@@ -1,7 +1,0 @@
-(writeSnapshot,WriteSnapshot)
-(getProfilesCount,CpuProfiler)
-(getProfile,CpuProfiler)
-(findProfile,CpuProfiler)
-(startProfiling,CpuProfiler)
-(stopProfiling,CpuProfiler)
-(deleteAllProfiles,CpuProfiler)

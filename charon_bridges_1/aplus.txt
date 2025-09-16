@@ -1,3 +1,0 @@
-(then,Then)
-(fulfill,Fulfill)
-(reject,Reject)

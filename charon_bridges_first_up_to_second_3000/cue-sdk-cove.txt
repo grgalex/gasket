@@ -1,6 +1,0 @@
-(CorsairSetLedsColors,corsairSetLedsColors)
-(CorsairSetLedsColorsBufferByDeviceIndex,corsairSetLedsColorsBufferByDeviceIndex)
-(CorsairSetLedsColorsFlushBuffer,corsairSetLedsColorsFlushBuffer)
-(CorsairSetLedsColorsFlushBufferAsync,corsairSetLedsColorsFlushBufferAsync)
-(CorsairSetLedsColorsAsync,corsairSetLedsColorsAsync)
-(CorsairSetLayerPriority,corsairSetLayerPriority)

@@ -1,2 +1,0 @@
-(getIdentity,GetIdentity)
-(addIdentity,AddIdentity)

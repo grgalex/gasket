@@ -1,2 +1,0 @@
-(lambertTowgs84,lambertTowgs84)
-(lambertTowgs84Deg,lambertTowgs84Deg)

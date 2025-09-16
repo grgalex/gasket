@@ -1,4 +1,0 @@
-(getCapability,getCapability)
-(getData,getData)
-(setData,setData)
-(aString,aString)

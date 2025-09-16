@@ -1,8 +1,0 @@
-(lamp,Number)
-(command,Number)
-(hue,Number)
-(saturation,Number)
-(value,Number)
-(cmd,cmd)
-(setup,setup)
-(stop,stop)

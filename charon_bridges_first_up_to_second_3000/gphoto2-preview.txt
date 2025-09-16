@@ -1,6 +1,0 @@
-(list,List)
-(setLogLevel,SetLogLevel)
-(getConfig,GetConfig)
-(setConfigValue,SetConfigValue)
-(takePicture,TakePicture)
-(downloadPicture,DownloadPicture)

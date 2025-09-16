@@ -1,3 +1,0 @@
-(getJsonData,getJsonData)
-(saveCMakeLists,saveCMakeLists)
-(checkFuncValid,checkFuncValid)

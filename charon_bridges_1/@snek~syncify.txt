@@ -1,4 +1,0 @@
-(loop,Loop)
-(isPromise,IsPromise)
-(setTickCallback,SetTickCallback)
-(0,Integer)

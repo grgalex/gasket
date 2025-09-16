@@ -1,7 +1,0 @@
-(loadURL,loadURL)
-(play,play)
-(stop,stop)
-(pause,pause)
-(setSpeed,setSpeed)
-(setLoop,setLoop)
-(getTime,getTime)

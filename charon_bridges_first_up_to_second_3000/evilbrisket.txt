@@ -1,5 +1,0 @@
-(init,init)
-(use_probe,use_probe)
-(measure_temperature,measure_temperature)
-(measure_temperature_cb,measure_temperature_cb)
-(led,led)

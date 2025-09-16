@@ -1,2 +1,0 @@
-(setsid,SetSid)
-(closeStdio,CloseStdio)

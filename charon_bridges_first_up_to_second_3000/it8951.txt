@@ -1,8 +1,0 @@
-(init,Initialise)
-(writeWords,writeWords)
-(writeBytes,writeBytes)
-(readWords,readWords)
-(waitForReady,waitForReady)
-(readPin,readPin)
-(setPin,setPin)
-(reset,reset)

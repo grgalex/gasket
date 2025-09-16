@@ -1,2 +1,0 @@
-(displayIndex,DisplayIndex)
-(displayTopic,DisplayTopic)

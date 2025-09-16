@@ -1,8 +1,0 @@
-(autolink,Autolink)
-(isSafe,IsSafe)
-(do,Do)
-(isTag,IsTag)
-(inspect,Inspect)
-(toString,ToString)
-(HTML,html)
-(AutolinkType,autolink)

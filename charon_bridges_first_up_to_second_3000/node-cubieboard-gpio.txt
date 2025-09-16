@@ -1,6 +1,0 @@
-(init,GPIO_init)
-(cleanup,GPIO_cleanup)
-(output,GPIO_output)
-(setcfg,GPIO_setcfg)
-(input,GPIO_input)
-(getcfg,GPIO_getcfg)

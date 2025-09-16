@@ -1,3 +1,0 @@
-(crc32c,crc32c)
-(crc32,crc32By32)
-(zlib,crcZlib)

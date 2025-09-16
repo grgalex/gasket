@@ -1,4 +1,0 @@
-(fascistCheck,fascistCheck)
-(fascistCheckAsync,fascistCheckAsync)
-(fascistCheckUser,fascistCheckUser)
-(fascistCheckUserAsync,fascistCheckUserAsync)

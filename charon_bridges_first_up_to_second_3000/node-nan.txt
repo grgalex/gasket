@@ -1,8 +1,0 @@
-(latitude,data)
-(longitude,data)
-(speed,data)
-(altitude,data)
-(course,data)
-(Start,gps_on)
-(GetData,GetData)
-(Stop,gps_off)

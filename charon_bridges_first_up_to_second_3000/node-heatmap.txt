@@ -1,2 +1,0 @@
-(compile_canvas,CompileCanvas)
-(compile_vertical_scroll,CompileVScroll)

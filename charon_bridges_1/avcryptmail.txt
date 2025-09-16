@@ -1,5 +1,0 @@
-(AvCmInit,AvCmInitJS)
-(AvCmLogin,AvCmLoginJS)
-(AvCmLogout,AvCmLogoutJS)
-(AvCmSign,AvCmSignJS)
-(AvCmImport,AvCmImportJS)

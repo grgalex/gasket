@@ -1,4 +1,0 @@
-(joinGroup,joinGroup)
-(leaveGroup,leaveGroup)
-(setTTL,setTTL)
-(setInterface,setInterface)

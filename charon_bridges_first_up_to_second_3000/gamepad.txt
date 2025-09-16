@@ -1,7 +1,0 @@
-(init,nGamepad_init)
-(shutdown,nGamepad_shutdown)
-(numDevices,nGamepad_numDevices)
-(deviceAtIndex,nGamepad_deviceAtIndex)
-(detectDevices,nGamepad_detectDevices)
-(processEvents,nGamepad_processEvents)
-(context,handle)

@@ -1,3 +1,0 @@
-(getFiles,get_files)
-(getIcon,get_icon)
-(getExtendedInfos,get_extended_infos)

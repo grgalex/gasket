@@ -1,3 +1,0 @@
-(createClass,CreateClass)
-(createObject,CreateObject)
-(init,InitEnv)

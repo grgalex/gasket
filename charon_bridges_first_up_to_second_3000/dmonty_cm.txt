@@ -1,2 +1,0 @@
-(srnd,Seed)
-(rnd,Random)

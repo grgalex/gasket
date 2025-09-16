@@ -1,4 +1,0 @@
-(init,InitTclTk)
-(eval,TclEval)
-(createCommand,TclCreateCommand)
-(getVar,TclGetVar)

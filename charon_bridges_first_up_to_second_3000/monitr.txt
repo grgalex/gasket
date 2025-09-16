@@ -1,3 +1,0 @@
-(setIpcMonitorPath,SetterIPCMonitorPath)
-(start,StartMonitor)
-(stop,StopMonitor)

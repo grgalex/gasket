@@ -1,6 +1,0 @@
-(name,String)
-(path,String)
-(contentType,String)
-(contentId,String)
-(sizeInBytes,Number)
-(ExtractFiles,ExtractFiles)

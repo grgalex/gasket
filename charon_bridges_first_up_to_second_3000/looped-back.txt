@@ -1,7 +1,0 @@
-(destroy,Destroy)
-(getDevices,GetDevices)
-(getLoopback,GetLoopback)
-(setLoopback,SetLoopback)
-(getDefaultEndpoint,GetDefaultEndpoint)
-(setDefaultEndpoint,SetDefaultEndpoint)
-(isInitialized,IsInitialized)

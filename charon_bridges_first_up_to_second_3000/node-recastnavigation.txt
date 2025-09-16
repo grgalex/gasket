@@ -1,8 +1,0 @@
-(load,Load)
-(addOffMeshConnection,AddOffMeshConnection)
-(deleteOffMeshConnection,DeleteOffMeshConnection)
-(getOffMeshConnectionCount,GetOffMeshConnectionCount)
-(build,Build)
-(findPath,FindPath)
-(findNearestPoly,FindNearestPoly)
-(ref,nearestRef)

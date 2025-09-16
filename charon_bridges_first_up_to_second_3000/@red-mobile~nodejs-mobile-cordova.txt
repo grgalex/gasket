@@ -1,3 +1,0 @@
-(sendMessage,Method_SendMessage)
-(registerChannel,Method_RegisterChannel)
-(getDataDir,Method_GetDataDir)

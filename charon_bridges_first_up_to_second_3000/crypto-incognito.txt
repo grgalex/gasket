@@ -1,6 +1,0 @@
-(create_privkey,CreatePrivkey)
-(pubkey_from_privkey,PubkeyFromPrivkey)
-(load_mG,LoadmG)
-(selector_create,SelectorCreate)
-(selector_create_fast,SelectorCreateFast)
-(reply_decrypt,ReplyDecrypt)

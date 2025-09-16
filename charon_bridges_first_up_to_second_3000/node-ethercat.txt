@@ -1,8 +1,0 @@
-(addSlave,addSlave)
-(printSlave,printSlave)
-(start,start)
-(activate,activate)
-(readPin,readPin)
-(writePin,writePin)
-(configSdo,configSdo)
-(getMasterState,getMasterState)

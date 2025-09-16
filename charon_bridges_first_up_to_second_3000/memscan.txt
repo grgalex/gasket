@@ -1,6 +1,0 @@
-(getProcesses,memscan_getProcesses)
-(openProcess,memscan_openProcess)
-(close,Close)
-(readAtAddress,ReadAtAddress)
-(writeAtAddress,WriteAtAddress)
-(scanForData,ScanForData)

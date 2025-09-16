@@ -1,6 +1,0 @@
-(ready,notify)
-(stopping,notify)
-(watchdog,notify)
-(watchdogInterval,notify)
-(sendState,notify)
-(journalPrint,notify)

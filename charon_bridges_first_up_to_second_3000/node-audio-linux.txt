@@ -1,4 +1,0 @@
-(getVolume,GetVolume)
-(setVolume,SetVolume)
-(isMuted,IsMuted)
-(setMute,SetMute)

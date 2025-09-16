@@ -1,2 +1,0 @@
-(getProcessList,GetProcessList)
-(getProcessCpuUsage,GetProcessCpuUsage)

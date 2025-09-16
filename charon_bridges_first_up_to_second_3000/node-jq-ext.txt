@@ -1,3 +1,0 @@
-(test,testFunction)
-(parse,Parse)
-(code,code)

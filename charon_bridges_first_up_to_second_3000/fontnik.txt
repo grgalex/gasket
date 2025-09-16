@@ -1,3 +1,0 @@
-(load,Load)
-(range,Range)
-(composite,Composite)

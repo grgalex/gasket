@@ -1,6 +1,0 @@
-(closeStdin,CloseStdin)
-(closeStdout,CloseStdout)
-(closeStderr,CloseStderr)
-(reopenStdout,ReopenStdout)
-(reopenStderr,ReopenStderr)
-(acquireLock,AcquireLock)

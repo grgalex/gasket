@@ -1,4 +1,0 @@
-(name,name)
-(length,length)
-(author,name)
-(parse,ParseFeed)

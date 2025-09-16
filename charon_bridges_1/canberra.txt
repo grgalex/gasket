@@ -1,5 +1,0 @@
-(play,Play)
-(cancel,Cancel)
-(destroy,Destroy)
-(cache,Cache)
-(playing,Playing)

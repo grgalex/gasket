@@ -1,5 +1,0 @@
-(getBlockSize,GetBlockSize)
-(copy,Copy)
-(decompress,Decompress)
-(compress,Compress)
-(- Set a larger chainLog (eg. --zstd=chainLog=%u)\n,size_t)

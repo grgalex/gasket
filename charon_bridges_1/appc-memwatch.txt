@@ -1,3 +1,0 @@
-(gc,gc)
-(upon_gc,upon_gc)
-(end,End)

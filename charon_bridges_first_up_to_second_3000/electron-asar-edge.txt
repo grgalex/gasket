@@ -1,3 +1,0 @@
-(initializeClrFunc,initializeClrFunc)
-(name,name)
-(SetCallV8FunctionDelegate,setCallV8Function)

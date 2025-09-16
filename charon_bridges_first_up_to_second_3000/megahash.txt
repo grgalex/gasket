@@ -1,2 +1,0 @@
-(_set,MegaHash)
-(numIndexes,Index)

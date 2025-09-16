@@ -1,4 +1,0 @@
-(vapash_light_new,vapash_light_new)
-(vapash_light_compute,vapash_light_compute)
-(vapash_light_new_internal,vapash_light_new_internal)
-(vapash_light_compute_internal,vapash_light_compute_internal)

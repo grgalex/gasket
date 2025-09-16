@@ -1,8 +1,0 @@
-(findAllDevices,Pcap)
-(libraryVersion,Pcap)
-(openOnline,Pcap)
-(setFilter,Pcap)
-(stats,Pcap)
-(dispatch,Pcap)
-(inject,Pcap)
-(close,Pcap)

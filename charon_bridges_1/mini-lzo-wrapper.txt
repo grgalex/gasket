@@ -1,2 +1,0 @@
-(compress,lzo_compress)
-(decompress,lzo_decompress)

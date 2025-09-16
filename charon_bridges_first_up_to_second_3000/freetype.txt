@@ -1,4 +1,0 @@
-(setCharSize,SetCharSize)
-(renderGlyph,RenderGlyph)
-(getBitmap,GetBitmap)
-(getMetrics,GetMetrics)

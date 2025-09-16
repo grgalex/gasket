@@ -1,5 +1,0 @@
-(now,Now)
-(nowDouble,NowDouble)
-(nowStruct,NowStruct)
-(0,Uint32)
-(1,Uint32)

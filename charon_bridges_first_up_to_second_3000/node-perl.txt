@@ -1,7 +1,0 @@
-(callList,NodePerlMethod)
-(getClassName,getClassName)
-(evaluate,NodePerl)
-(getClass,NodePerl)
-(call,NodePerl)
-(callList,NodePerl)
-(blessed,NodePerl)

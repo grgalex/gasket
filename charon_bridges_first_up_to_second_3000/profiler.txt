@@ -1,5 +1,0 @@
-(gc,GC)
-(pause,Pause)
-(resume,Resume)
-(profile,Resume)
-(profileEnd,Pause)

@@ -1,2 +1,0 @@
-(sbcEncode,sbcEncode)
-(sbcDecode,sbcDecode)

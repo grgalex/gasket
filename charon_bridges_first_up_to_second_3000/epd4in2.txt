@@ -1,6 +1,0 @@
-(init,init)
-(clear,clear)
-(sleep,sleep)
-(width,width)
-(height,height)
-(displayFrame,displayFrame)

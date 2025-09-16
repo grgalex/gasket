@@ -1,3 +1,0 @@
-(scan,iwlib)
-(get_basic_config,iwlib)
-(get_kernel_we_version,iwlib)

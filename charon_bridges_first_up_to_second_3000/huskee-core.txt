@@ -1,2 +1,0 @@
-(send,Send)
-(save,Save)

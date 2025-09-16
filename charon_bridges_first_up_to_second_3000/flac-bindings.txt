@@ -1,2 +1,0 @@
-(status,status)
-(statusString,String)
