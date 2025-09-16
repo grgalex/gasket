@@ -15,6 +15,7 @@ import utils
 log = logging.getLogger(__name__)
 
 GASKET_ROOT = os.getenv("GASKET_ROOT")
+GASKET = os.path.join(GASKET_ROOT, 'prv-jsxray/bin/gasket.js')
 
 PRV_PYHIDRA_ROOT = '/prv-pyhidra-cg'
 
@@ -147,8 +148,8 @@ class JavascriptBridger():
             if not os.path.exists(bridges_dir):
                 utils.create_dir(bridges_dir)
             cmd = [
-                'node_g',
-                'analyze_module.js',
+                'node',
+                GASKET,
                 '-r', self.pkg_inner_dir,
                 '-o', self.bridges_path
             ]
@@ -269,7 +270,7 @@ class JavascriptBridger():
             return 0
 
     def process(self):
-        log.info(f"Processing 'package': {self.package}")
+        log.info(f"Processing package: '{self.package}'")
         if os.path.exists(self.bridges_csv_path) and not self.always:
             log.info(f"Bridges .txt for {self.package} already exist at {self.bridges_csv_path} - Skipping...")
             log.info(f"Use -A to force recreation.")
@@ -320,7 +321,7 @@ class JavascriptBridger():
         return ret
 
 def do_single(p, always):
-    log.info(f"Processing 'package' {p}")
+    log.info(f"Processing package '{p}'")
     bridger = JavascriptBridger(p, always)
     bridger.process()
 
@@ -341,12 +342,12 @@ def main():
 
     # log.info(f"package_names = {package_names}")
 
-    # for pkg in package_names:
-    #     do_single(pkg, args.always)
+    for pkg in package_names:
+        do_single(pkg, args.always)
 
-    with concurrent.futures.ProcessPoolExecutor(max_workers=10) as executor:
-        for pkg in package_names:
-            executor.submit(do_single, pkg, args.always)
+    # with concurrent.futures.ProcessPoolExecutor(max_workers=10) as executor:
+    #     for pkg in package_names:
+    #         executor.submit(do_single, pkg, args.always)
 
 if __name__ == "__main__":
     main()
