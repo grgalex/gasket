@@ -1,6 +1,0 @@
-(close,Close)
-(socket,Socket)
-(bind,Bind)
-(send,Send)
-(sendto,SendTo)
-(connect,Connect)

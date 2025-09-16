@@ -1,4 +1,0 @@
-coba: 8 downloads last week
-@digigov-oss/auditrecord-postgresql-engine: 6 downloads last week
-nodesql-db: 1 downloads last week
-pg-jc: 0 downloads last week

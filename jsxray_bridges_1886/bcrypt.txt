@@ -1,7 +1,0 @@
-(compare_sync,CompareSync)
-(compare,Compare)
-(get_rounds,GetRounds)
-(encrypt,Encrypt)
-(encrypt_sync,EncryptSync)
-(gen_salt_sync,GenerateSaltSync)
-(gen_salt,GenerateSalt)

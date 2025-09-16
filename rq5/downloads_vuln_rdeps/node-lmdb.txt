@@ -1,4 +1,0 @@
-kval: 1 downloads last week
-@agoric/swing-store-lmdb: 1 downloads last week
-lmdb-leveldown: 1 downloads last week
-non-memory-map: 0 downloads last week

@@ -1,4 +1,0 @@
-(createTensor,CreateTensor)
-(tensorDataSync,TensorDataSync)
-(deleteTensor,DeleteTensor)
-(executeOp,ExecuteOp)

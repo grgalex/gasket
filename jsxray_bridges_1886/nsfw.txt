@@ -1,8 +1,0 @@
-(resume,Resume)
-(getExcludedPaths,GetExcludedPaths)
-(pause,Pause)
-(stop,Stop)
-(start,Start)
-(updateExcludedPaths,UpdateExcludedPaths)
-(target/nsfw,NSFW)
-(nsfw/build/Debug/nsfw,NSFW)

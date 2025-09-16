@@ -1,2 +1,0 @@
-(table_crc,table_crc)
-(sse42_crc,sse42_crc)

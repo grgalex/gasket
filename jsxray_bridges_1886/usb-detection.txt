@@ -1,5 +1,0 @@
-(startMonitoring,StartMonitoring)
-(registerRemoved,RegisterRemoved)
-(registerAdded,RegisterAdded)
-(find,Find)
-(stopMonitoring,StopMonitoring)

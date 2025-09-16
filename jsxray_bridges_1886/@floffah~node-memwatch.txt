@@ -1,4 +1,0 @@
-(HeapDiff,New)
-(end,End)
-(gc,trigger_gc)
-(upon_gc,upon_gc)

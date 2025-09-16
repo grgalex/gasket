@@ -1,7 +1,0 @@
-(OpusEncoder,New)
-(decode,Decode)
-(getBitrate,GetBitrate)
-(encode,Encode)
-(setBitrate,SetBitrate)
-(applyEncoderCTL,ApplyEncoderCTL)
-(applyDecoderCTL,ApplyDecoderCTL)

@@ -1,5 +1,0 @@
-(stop,Stop)
-(start,Start)
-(getEntries,GetEntries)
-(poll,Poll)
-(Inotify,New)

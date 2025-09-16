@@ -1,6 +1,0 @@
-(decompress,Decompress)
-(StreamDecompressor,New)
-(getBlockSize,GetBlockSize)
-(compress,Compress)
-(copy,Copy)
-(StreamCompressor,New)

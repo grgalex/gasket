@@ -1,3 +1,0 @@
-@acupofjose/noodle: 0 downloads last week
-noodle.js: 0 downloads last week
-@nia3208/eris: 0 downloads last week

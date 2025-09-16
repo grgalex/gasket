@@ -1,1 +1,0 @@
-(detect-character-encoding/build/Debug/icuWrapper,DetectCharacterEncoding)

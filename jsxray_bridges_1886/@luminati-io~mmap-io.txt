@@ -1,4 +1,0 @@
-(advise,mmap_advise)
-(sync_lib_private__,mmap_sync_lib_private_)
-(map,mmap_map)
-(incore,mmap_incore)

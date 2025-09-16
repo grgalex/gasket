@@ -1,2 +1,0 @@
-(startbyindex,startbyindex)
-(callbyindex,callbyindex)

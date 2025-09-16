@@ -1,8 +1,0 @@
-(get,xattr_get)
-(set,xattr_set)
-(listSync,xattr_list_sync)
-(list,xattr_list)
-(removeSync,xattr_remove_sync)
-(setSync,xattr_set_sync)
-(getSync,xattr_get_sync)
-(remove,xattr_remove)

@@ -1,2 +1,0 @@
-(writeSnapshot,WriteSnapshot)
-(configure,Configure)

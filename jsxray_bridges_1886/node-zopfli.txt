@@ -1,4 +1,0 @@
-(deflate,Async)
-(adler32,Adler32)
-(deflateSync,Sync)
-(pngcompress,PNGDeflate)

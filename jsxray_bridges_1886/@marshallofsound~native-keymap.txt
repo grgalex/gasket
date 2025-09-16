@@ -1,5 +1,0 @@
-(getCurrentKeyboardLayout,_GetCurrentKeyboardLayout)
-(ignoreAllEvents,_ignoreAllEvents)
-(getKeyMap,_GetKeyMap)
-(onDidChangeKeyboardLayout,_OnDidChangeKeyboardLayout)
-(isISOKeyboard,_isISOKeyboard)

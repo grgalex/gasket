@@ -1,2 +1,0 @@
-(node-addons-callbacks/build/Debug/hello,RunCallback)
-(target/hello,RunCallback)

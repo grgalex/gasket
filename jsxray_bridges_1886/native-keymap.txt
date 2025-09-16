@@ -1,4 +1,0 @@
-(getCurrentKeyboardLayout,GetCurrentKeyboardLayoutImpl)
-(onDidChangeKeyboardLayout,OnDidChangeKeyboardLayoutImpl)
-(isISOKeyboard,IsISOKeyboardImpl)
-(getKeyMap,GetKeyMapImpl)

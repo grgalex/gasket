@@ -1,8 +1,0 @@
-(getBoard,getBoard)
-(stop,stop)
-(getStatus,getStatus)
-(start,start)
-(getLinks,getLinks)
-(init,init)
-(triggerInput,triggerInput)
-(destroy,destroy)

@@ -1,8 +1,0 @@
-(ClassExample,ClassExample)
-(devide,DevideWrapped)
-(subtract,SubtactWrapped)
-(add,AddWrapped)
-(addN,AddNWrapped)
-(getValue,GetValue)
-(add,Add)
-(multiply,MultiplyWrapped)

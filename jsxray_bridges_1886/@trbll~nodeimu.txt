@@ -1,3 +1,0 @@
-(getValueSync,GetValueSync)
-(IMU,New)
-(getValue,GetValue)

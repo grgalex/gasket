@@ -1,2 +1,0 @@
-(ALACEncoder,New)
-(encodeChunk,EncodeChunk)

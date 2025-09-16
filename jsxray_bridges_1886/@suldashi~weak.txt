@@ -1,6 +1,0 @@
-(get,Get)
-(_setCallback,SetCallback)
-(isDead,IsDead)
-(_getEmitter,GetEmitter)
-(_create,Create)
-(isWeakRef,IsWeakRef)

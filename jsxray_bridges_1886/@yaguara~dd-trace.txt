@@ -1,5 +1,0 @@
-(stop,stop)
-(stats,stats)
-(finish,finish)
-(start,start)
-(track,track)

@@ -1,4 +1,0 @@
-(deriveSecret,DeriveSecret)
-(decrypt,Decrypt)
-(createKeyPair,CreateKeyPair)
-(encrypt,Encrypt)

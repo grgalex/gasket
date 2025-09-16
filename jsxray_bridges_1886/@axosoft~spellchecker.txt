@@ -1,8 +1,0 @@
-(getCorrectionsForMisspelling,GetCorrectionsForMisspelling)
-(remove,Remove)
-(Spellchecker,Spellchecker)
-(checkSpelling,CheckSpelling)
-(getAvailableDictionaries,GetAvailableDictionaries)
-(add,Add)
-(setDictionary,SetDictionary)
-(isMisspelled,IsMisspelled)

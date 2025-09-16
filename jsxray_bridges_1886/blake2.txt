@@ -1,4 +1,0 @@
-(update,Update)
-(digest,Digest)
-(copy,Copy)
-(Hash,New)

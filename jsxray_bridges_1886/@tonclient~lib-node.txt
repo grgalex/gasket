@@ -1,4 +1,0 @@
-(sendRequest,sendRequest)
-(createContext,createContext)
-(setResponseHandler,setResponseHandler)
-(destroyContext,destroyContext)

@@ -1,5 +1,0 @@
-(KeyboardLayoutManager,New)
-(getCurrentKeyboardLanguage,GetCurrentKeyboardLanguage)
-(getCurrentKeymap,GetCurrentKeymap)
-(getInstalledKeyboardLanguages,GetInstalledKeyboardLanguages)
-(getCurrentKeyboardLayout,GetCurrentKeyboardLayout)

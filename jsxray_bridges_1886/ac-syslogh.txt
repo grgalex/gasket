@@ -1,3 +1,0 @@
-(syslog,syslog)
-(openlog,openlog)
-(closelog,closelog)

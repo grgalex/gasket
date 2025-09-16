@@ -1,2 +1,0 @@
-(target/findGitRepos,FindGitRepos)
-(find-git-repositories/build/Debug/findGitRepos,FindGitRepos)

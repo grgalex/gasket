@@ -1,2 +1,0 @@
-(getattr,Getattr)
-(setattr,Setattr)

@@ -1,7 +1,0 @@
-(siphash64,siphash64)
-(siphash32k256,siphash32k256)
-(siphash,siphash)
-(siphash64k256,siphash64k256)
-(sipmod,sipmod)
-(siphash32,siphash32)
-(siphash256,siphash)

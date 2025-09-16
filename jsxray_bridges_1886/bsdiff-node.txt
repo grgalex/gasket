@@ -1,4 +1,0 @@
-(diff,diff)
-(patch,patch)
-(patchSync,patchSync)
-(diffSync,diffSync)

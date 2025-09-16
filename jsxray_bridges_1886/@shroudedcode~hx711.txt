@@ -1,8 +1,0 @@
-(tare,tare)
-(getUnits,getUnits)
-(read,read)
-(HX711,HX711Wrapper)
-(getScale,getScale)
-(getOffset,getOffset)
-(setOffset,setOffset)
-(setScale,setScale)

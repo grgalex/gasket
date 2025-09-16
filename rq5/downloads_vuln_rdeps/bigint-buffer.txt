@@ -1,9 +1,0 @@
-@solana/buffer-layout-utils: 458,149 downloads last week
-@exodus/solana-web3.js: 3,313 downloads last week
-@lodestar/utils: 3,074 downloads last week
-@chainsafe/lodestar-utils: 315 downloads last week
-@dydxprotocol/starkex-lib: 168 downloads last week
-@imqueue/net: 136 downloads last week
-@safecoin/web3.js: 31 downloads last week
-@bbachain/web3.js: 31 downloads last week
-@bbachain/buffer-layout-utils: 26 downloads last week

@@ -1,2 +1,0 @@
-(NewMemoryFace,NewMemoryFace)
-(NewFace,NewFace)

@@ -1,2 +1,0 @@
-(target/bcrypt,hash_password)
-(bcrypt-small/build/Debug/bcrypt,hash_password)

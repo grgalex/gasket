@@ -1,5 +1,0 @@
-(gid,Gid)
-(gids,Gids)
-(ids,Ids)
-(username,UserName)
-(groupname,GroupName)

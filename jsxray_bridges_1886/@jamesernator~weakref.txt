@@ -1,3 +1,0 @@
-(target/WeakRef,WeakRef)
-(weakref/build/Debug/WeakRef,WeakRef)
-(deref,deref)

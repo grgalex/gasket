@@ -1,1 +1,0 @@
-(pixelsGroups,detect_groups_async)

@@ -1,5 +1,0 @@
-(AsUInt32Low,AsUInt32Low)
-(AsUInt32High,AsUInt32High)
-(AsString,AsString)
-(AsBuffer,AsBuffer)
-(AsHexString,AsHexString)

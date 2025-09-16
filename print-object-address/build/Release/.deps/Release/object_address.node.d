@@ -1,1 +1,0 @@
-cmd_Release/object_address.node := ln -f "Release/obj.target/object_address.node" "Release/object_address.node" 2>/dev/null || (rm -rf "Release/object_address.node" && cp -af "Release/obj.target/object_address.node" "Release/object_address.node")

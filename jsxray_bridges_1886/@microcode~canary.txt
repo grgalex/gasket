@@ -1,3 +1,0 @@
-(start,start)
-(ping,ping)
-(stop,stop)

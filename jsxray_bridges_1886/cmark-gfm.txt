@@ -1,6 +1,0 @@
-(Parser,StreamingParser)
-(destroy,Destroy)
-(isFinished,IsFinished)
-(write,Write)
-(renderHtmlSync,render_html_sync)
-(finalize,FinalizeMethod)

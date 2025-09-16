@@ -1,4 +1,0 @@
-(open,PtyOpen)
-(resize,PtyResize)
-(fork,PtyFork)
-(process,PtyGetProc)

@@ -1,6 +1,0 @@
-(up,up)
-(down,down)
-(arpcache,arpcache)
-(list,list)
-(gratarp,gratarp)
-(IFE,New)
