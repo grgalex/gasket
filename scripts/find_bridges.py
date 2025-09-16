@@ -14,9 +14,8 @@ import utils
 
 log = logging.getLogger(__name__)
 
-JSXRAY_ROOT = '/home/george.alexopoulos/jsxray'
-
-PRV_PYHIDRA_ROOT = '/prv-pyhidra-cg'
+GASKET_ROOT = os.getenv("GASKET_ROOT")
+GASKET = os.path.join(GASKET_ROOT, 'bin/gasket.js')
 
 def setup_logging(args):
     levels = {
@@ -43,7 +42,7 @@ def setup_logging(args):
     logging.basicConfig(level=level, format=fmt, datefmt=datefmt)
 
 def parse_args():
-    p = argparse.ArgumentParser(description='Produce Unified Stitch for a CSV containing user/repo pairs (from GitHub).')
+    p = argparse.ArgumentParser(description='Use Gasket to generate bridges for a set of Node.js packages.')
     p.add_argument(
         "-l",
         "--log",
@@ -54,14 +53,14 @@ def parse_args():
         "-i",
         "--input",
         default=None,
-        help=("Provide path to the CSV containing the user/repo pairs"),
+        help=("Path to a CSV file with package:version pairs."),
     )
     p.add_argument(
         "-A",
         "--always",
         default=False,
         action='store_true',
-        help=("Always generate artifacts, never reuse existing stuff."),
+        help=("Always generate artifacts; do not reuse existing data (e.g., installs)."),
     )
     return p.parse_args()
 
@@ -72,7 +71,7 @@ class JavascriptBridger():
         self.stripped = False
         self.sanitized_package = utils.sanitize_package_name(self.package)
         if ':' not in package:
-            log.error('MUST PROVIDE VERSIONED PACKAGE')
+            log.error(f'{package} does not include a version delimiter ":"')
         self.name = package.split(':')[0]
         self.sname = self.sanitized_package.split(':')[0]
         self.version = package.split(':')[1]
@@ -87,17 +86,17 @@ class JavascriptBridger():
         self.namesnip = self.name[0] + '/' + self.sname + '/' + self.sversion
 
         self.tempinst_uuid = self.sname + '___' + self.sversion
-        self.tmp_install_dir_root = os.path.join(JSXRAY_ROOT, 'data/install')
+        self.tmp_install_dir_root = os.path.join(GASKET_ROOT, 'data/install')
         self.tmp_install_dir = os.path.join(self.tmp_install_dir_root, self.tempinst_uuid)
 
         self.pkg_inner_dir = os.path.join(self.tmp_install_dir, 'node_modules', self.name)
 
-        self.bridges_root = os.path.join(JSXRAY_ROOT, 'data/bridges')
-        self.bridges_apps_root = os.path.join(JSXRAY_ROOT, 'data/bridges/npm')
+        self.bridges_root = os.path.join(GASKET_ROOT, 'data/bridges')
+        self.bridges_apps_root = os.path.join(GASKET_ROOT, 'data/bridges/npm')
         self.bridges_dir = os.path.join(self.bridges_apps_root, self.namesnip)
         self.bridges_path = os.path.join(self.bridges_dir, 'bridges.json')
 
-        self.bridges_csv_dir = os.path.join(JSXRAY_ROOT, 'data/jsxray_bridges')
+        self.bridges_csv_dir = os.path.join(GASKET_ROOT, 'data/gasket_bridges')
         utils.create_dir(self.bridges_csv_dir)
         self.bridges_csv_path = os.path.join(self.bridges_csv_dir, self.sname + '.txt')
 
@@ -147,8 +146,8 @@ class JavascriptBridger():
             if not os.path.exists(bridges_dir):
                 utils.create_dir(bridges_dir)
             cmd = [
-                'node_g',
-                'analyze_module.js',
+                'node',
+                GASKET,
                 '-r', self.pkg_inner_dir,
                 '-o', self.bridges_path
             ]
@@ -169,7 +168,7 @@ class JavascriptBridger():
             log.info(err)
 
         return 0
-    
+
     def install_package_build_from_source(self):
         log.info(f"Installing (BUILD-FROM-SOURCE) {self.package}")
         # XXX: Remove old installation (prebuilt). Build from source!
@@ -269,7 +268,7 @@ class JavascriptBridger():
             return 0
 
     def process(self):
-        log.info(f"Processing 'package': {self.package}")
+        log.info(f"Processing package: '{self.package}'")
         if os.path.exists(self.bridges_csv_path) and not self.always:
             log.info(f"Bridges .txt for {self.package} already exist at {self.bridges_csv_path} - Skipping...")
             log.info(f"Use -A to force recreation.")
@@ -320,7 +319,7 @@ class JavascriptBridger():
         return ret
 
 def do_single(p, always):
-    log.info(f"Processing 'package' {p}")
+    log.info(f"Processing package '{p}'")
     bridger = JavascriptBridger(p, always)
     bridger.process()
 
@@ -333,20 +332,10 @@ def main():
         sys.exit(1)
 
     package_names = utils.load_csv(args.input)
-    # raw_package_names = []
 
-    # for p in raw_package_names:
-    #     sanitized = utils.sanitize_package_name(p)
-    #     package_names.append(sanitized)
+    for pkg in package_names:
+        do_single(pkg, args.always)
 
-    # log.info(f"package_names = {package_names}")
-
-    # for pkg in package_names:
-    #     do_single(pkg, args.always)
-
-    with concurrent.futures.ProcessPoolExecutor(max_workers=10) as executor:
-        for pkg in package_names:
-            executor.submit(do_single, pkg, args.always)
 
 if __name__ == "__main__":
     main()
