@@ -151,8 +151,8 @@ function gdb_resolve(addresses) {
 
 	const raw = fs.readFileSync(res_file, 'utf-8');
 	result = JSON.parse(raw);
-	console.log('GDB RESULT:')
-	console.log(result)
+	// console.log('GDB RESULT:')
+	// console.log(result)
 
 	return result
 }
@@ -349,12 +349,13 @@ function analyze_single(mod_file, pkg_root) {
         fqn2overloadsaddr[key].forEach(item => resolve_addresses.add(item))
     }
 
-    console.log(`FQN2OVERLOADSADDR = ${JSON.stringify(fqn2overloadsaddr, null, 2)}`)
-
-	var res1 = gdb_resolve(Array.from(resolve_addresses))
-    for (let addr in res1) {
-      addr2sym[addr] = res1[addr]
-    }
+    // console.log(`FQN2OVERLOADSADDR = ${JSON.stringify(fqn2overloadsaddr, null, 2)}`)
+	if (resolve_addresses.size > 0) {
+		var res1 = gdb_resolve(Array.from(resolve_addresses))
+		for (let addr in res1) {
+		  addr2sym[addr] = res1[addr]
+		}
+	}
 
     for (let fqn in fqn2overloadsaddr) {
         for (let addr of fqn2overloadsaddr[fqn]) {
@@ -391,7 +392,7 @@ function analyze_single(mod_file, pkg_root) {
         extract_cfunc(fqn)
     }
 
-    console.log(`FQN2CBADDR2 = ${JSON.stringify(fqn2cbaddr2, null, 2)}`)
+    // console.log(`FQN2CBADDR2 = ${JSON.stringify(fqn2cbaddr2, null, 2)}`)
 
     // sleepSync(1000)
 
@@ -400,22 +401,25 @@ function analyze_single(mod_file, pkg_root) {
         addr = fqn2cbaddr2[fqn]
         resolve_addresses.add(addr)
     }
-	var res2 = gdb_resolve(Array.from(resolve_addresses))
-    console.log('RES2:')
-    console.log(res2)
-    for (let addr in res2) {
-        addr_dec = String(Number(addr))
-        addr2sym[addr_dec] = res2[addr]
-    }
 
-    console.log(addr2sym)
+
+	if (resolve_addresses.size > 0) {
+		var res2 = gdb_resolve(Array.from(resolve_addresses))
+		// console.log('RES2:')
+		// console.log(res2)
+		for (let addr in res2) {
+			addr_dec = String(Number(addr))
+			addr2sym[addr_dec] = res2[addr]
+		}
+	}
+    // console.log(addr2sym)
 
     for (let fqn in fqn2cbaddr2) {
         addr = fqn2cbaddr2[fqn]
         try {
             cb = addr2sym[addr].cfunc
         } catch (error) {
-            console.log(`fqn = ${fqn}, fqn2cbaddr2 resolve ${error}`)
+            // console.log(`fqn = ${fqn}, fqn2cbaddr2 resolve ${error}`)
         }
             fqn2cb2[fqn] = cb
     }
@@ -424,8 +428,8 @@ function analyze_single(mod_file, pkg_root) {
         extract_cfunc_2(fqn)
     }
 
-    console.log('FQN2CFUNCADDR')
-    console.log(fqn2cfuncaddr)
+    // console.log('FQN2CFUNCADDR')
+    // console.log(fqn2cfuncaddr)
 
     resolve_addresses.clear()
     for (let fqn in fqn2cfuncaddr) {
@@ -433,19 +437,22 @@ function analyze_single(mod_file, pkg_root) {
         fqn2cfuncaddr[fqn] = addr_dec
         resolve_addresses.add(addr_dec)
     }
-    console.log('RESOLVE_ADDRESSES FOR FINAL CFUNCS')
-    console.log(resolve_addresses)
-	var res3 = gdb_resolve(Array.from(resolve_addresses))
-    for (let addr in res3) {
-      addr_dec = String(Number(addr))
-      addr2sym[addr_dec] = res3[addr]
-    }
+    // console.log('RESOLVE_ADDRESSES FOR FINAL CFUNCS')
+    // console.log(resolve_addresses)
 
-    console.log('ADDR2SYM')
-    console.log(addr2sym)
+	if (resolve_addresses.size > 0) {
+		var res3 = gdb_resolve(Array.from(resolve_addresses))
+		for (let addr in res3) {
+		  addr_dec = String(Number(addr))
+		  addr2sym[addr_dec] = res3[addr]
+		}
+	}
 
-    console.log('FQN2CFUNCADDR')
-    console.log(fqn2cfuncaddr)
+	// console.log('ADDR2SYM')
+    // console.log(addr2sym)
+
+    // console.log('FQN2CFUNCADDR')
+    // console.log(fqn2cfuncaddr)
 
 
     for (let fqn in fqn2cfuncaddr) {
@@ -527,24 +534,24 @@ function check_bingo(obj, jsname) {
 
 function recursive_inspect(obj, jsname) {
     pending = [[obj, jsname]]
-    console.log(`pending = ${pending}`)
+    // console.log(`pending = ${pending}`)
     seen = new Set()
 
     // XXX: BFS. Use queue: insert using .push(),
     //      get head using .shift
     while (pending.length > 0) {
         [obj, jsname] = pending.shift()
-        console.log(`jsname = ${jsname}`)
+        // console.log(`jsname = ${jsname}`)
 
         if (!(obj instanceof(Object))) {
             continue
         }
         desc_names = Object.getOwnPropertyNames(obj)
-        console.log(`NAMES: ${desc_names}`)
+        // console.log(`NAMES: ${desc_names}`)
         for (const name of Object.getOwnPropertyNames(obj)) {
           desc = Object.getOwnPropertyDescriptor(obj, name);
           descname = jsname + '.' + name
-          console.log(`DESC: ${descname}`)
+          // console.log(`DESC: ${descname}`)
           getter = desc['get']
           setter = desc['set']
           if (typeof(getter) == 'function') {
@@ -559,11 +566,11 @@ function recursive_inspect(obj, jsname) {
         }
 
         for (const k of dir(obj)) {
-            console.log(`getattr(${jsname}, ${k})`)
+            // console.log(`getattr(${jsname}, ${k})`)
             try {
               v = obj[k]
             } catch(error) {
-              console.log(error)
+              // console.log(error)
               continue
             }
             objects_examined += 1
