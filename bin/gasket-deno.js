@@ -1,4 +1,4 @@
-#! /usr/bin/env -S deno --node-modules-dir=auto --allow-ffi --allow-run --allow-env --allow-read --allow-write
+#! /usr/bin/env -S deno --node-modules-dir=auto --allow-net --allow-ffi --allow-run --allow-env --allow-read --allow-write
 
 import yargz from "npm:yargs@^18.0.0/yargs";
 import { hideBin  } from "npm:yargs@^18.0.0/helpers";
@@ -30,7 +30,6 @@ if (process.env.GASKET_ROOT) {
 }
 
 self.mod = jid
-console.log(jid)
 
 self.objects_examined = 0
 self.callable_objects = 0
